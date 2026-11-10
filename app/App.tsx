@@ -298,7 +298,7 @@ function Chat() {
           {messages.length === 0 && (
             <View style={st.welcome}>
               <Image source={require("./assets/logo-mark.png")} style={{ width: 72, height: 66 }} />
-              <Text style={st.welcomeText}>{t.welcome}</Text>
+              <Text style={st.welcomeText}>{t.welcome(new Date().getHours())}</Text>
               <Text style={st.note}>{t.disclaimer}</Text>
             </View>
           )}

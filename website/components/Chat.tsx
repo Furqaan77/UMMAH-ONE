@@ -346,7 +346,7 @@ export default function Chat() {
           {messages.length === 0 && (
             <div className="welcome">
               <Image src="/logo-mark.png" alt="Ummah One" width={72} height={66} priority />
-              <p>{t.welcome}</p>
+              <p>{ready ? t.welcome(new Date().getHours()) : "\u00a0"}</p>
               <span className="note">{t.disclaimer}</span>
             </div>
           )}
