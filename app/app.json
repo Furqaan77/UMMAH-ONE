@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "Ummah One",
+    "slug": "ummah-one",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "org.ummahone.app",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Ummah One uses the microphone for voice input.",
+        "NSSpeechRecognitionUsageDescription": "Ummah One turns your voice into text.",
+        "NSPhotoLibraryUsageDescription": "Ummah One lets you add a photo to ask about a place."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FFFFFF",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "org.ummahone.app"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-localization",
+      "expo-speech-recognition"
+    ],
+    "scheme": "ummahone",
+    "extra": {
+      "apiUrl": "http://localhost:3000"
+    }
+  }
+}

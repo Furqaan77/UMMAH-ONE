@@ -1,0 +1,38 @@
+# Build Decisions (website + app)
+
+Answers from the build question round, 10 November 2026. Skipped questions are in SKIPPED_QUESTIONS.md.
+
+| # | Topic | Decision |
+|---|---|---|
+| 1 | Screens | Chat plus separate screens later. **For now: chatbot only** (Q4) |
+| 2 | Builds | Two separate builds: website in Next.js, mobile app separately |
+| 3 | App | React Native + Expo (iOS and Android), TypeScript |
+| 5 | Content | None yet. Use sample data marked "sample, to verify"; real content added later |
+| 6 | AI model | Qwen running locally. **Changes prompt.md** (which said Claude first) |
+| 7 | Model runner | Ollama |
+| 8 | Model size | Qwen 7B/8B (about 16 GB RAM). Model name is a setting. Photos go to Qwen2.5-VL 7B |
+| 9 | Login and database | Supabase (phone OTP needs an SMS provider such as Twilio behind it; test code until then) |
+| 10 | Logo | Star + "1" + path logo, English and Arabic wordmark. Save it at brand/logo.png. Name and logo still need a lawyer's check (to verify) |
+| 11 | Code location | Inside this repo: `website/` and `app/` |
+| 12 | Chat history | Saved in Supabase for logged-in users; users can delete it (GDPR) |
+| 13 | Model hosting | On the owner's machine for testing; choose a server before launch |
+| 14 | Build order | Website chat first, then the app |
+| 15 | Line above each answer | "Sources used (N) >", which opens the sources |
+| 16 | Language | Automatic (reply in the user's language; screen follows the browser) plus a language button in the menu. Arabic is right-to-left |
+| 17 | 👍 👎 | Saved for team review; 👎 asks "What was wrong?" |
+| 18 | + button | Quick options (Plan a trip, Find a university, Find a business) plus photo upload |
+| 19 | Mic | Shown now, using the browser's free speech-to-text |
+
+## Later decisions (10 Nov 2026)
+- 6 travel places removed for safety: Grozny, Makhachkala, Derbent (Russia), Srinagar (India), Erbil (Iraq), Lahore (Pakistan). The list is now 81.
+- After the website, the mobile app was built next. Login waits for Supabase keys and an SMS sender.
+- The app uses the website's backend, so both give the same answers.
+
+## Design (from the Qwen chat screenshots)
+- Plain white background; large, bold, dark text; long answers in short paragraphs
+- Top bar: ☰ menu (left), "Ummah One" title (centre-left), new-chat icon (right)
+- User message: light grey rounded bubble, on the right
+- AI answer: plain text with no bubble; "Sources used (N) >" line above it
+- Actions under each answer: copy, 👍, 👎, share, retry, more (…)
+- Round floating scroll button on the right, above the input bar
+- Input bar: rounded, light grey, with + on the left, mic, and a round send button

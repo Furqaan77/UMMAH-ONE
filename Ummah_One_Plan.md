@@ -16,7 +16,7 @@ Generated from prompt.md · 5 November 2026 · Draft for internal leadership
 ## 2. What Ummah One is, and who it serves
 
 - **One AI engine (RAG)** that powers the Ummah One app and also runs as a standalone product.
-- Encourages well-to-do Muslims to travel to the **87 Muslim cities**, matched to their preferences.
+- Encourages well-to-do Muslims to travel to the **81 Muslim cities**, matched to their preferences.
 - Points students to the **18 education cities**. Helps people discover and support **Muslim businesses and artists**.
 - Open to everyone, including non-Muslims. Under-18s have full access.
 - Mobile app, website and WhatsApp bot. English and Arabic at launch. Voice input later.
@@ -33,8 +33,8 @@ Generated from prompt.md · 5 November 2026 · Draft for internal leadership
 
 | Part | What it includes | Not included |
 |---|---|---|
-| City pages (87) | Halal food; safety; budget; best season; family- and women-friendly ratings; heritage, palaces and museums; culture, art and music; local food and snacks; clothes, fashion and markets; Muslim businesses; wheelchair and elderly access; events calendar; safety disclaimer on every page | Mosques and prayer times; visas; prices; maps; itineraries; group trips; Umrah add-ons |
-| Labels | **Halal-friendliness** label: Bali, Kotor, Budva, Podgorica, Ohrid. **Safety section** with official travel advisories: Srinagar, Grozny, Derbent, Makhachkala, Erbil | – |
+| City pages (81) | Halal food; safety; budget; best season; family- and women-friendly ratings; heritage, palaces and museums; culture, art and music; local food and snacks; clothes, fashion and markets; Muslim businesses; wheelchair and elderly access; events calendar; safety disclaimer on every page | Mosques and prayer times; visas; prices; maps; itineraries; group trips; Umrah add-ons |
+| Labels | **Halal-friendliness** label: Bali, Kotor, Budva, Podgorica, Ohrid. **Removed for safety** (terrorism / extreme violence): Grozny, Makhachkala, Derbent (Russia); Srinagar (India); Erbil (Iraq); Lahore (Pakistan) | – |
 | Businesses and artists | Free listing for now; location and contact; individual artists and craftspeople get profiles; trust grows through verified customer reviews; owners can reply. Music: all music by Muslim artists | Online shop links |
 | Education (18 cities) | All good universities; undergraduate, master's/PhD, medicine, short courses; estimated fees and living costs (estimate); information only | Scholarships; application help |
 | Recommendations | AI asks: budget, month, interests, travel style, number of days (students: field and level). Ranking: **interests and budget, then safety, then heritage and culture, then halal-friendliness**. Always shows **why** and **sources** | – |
@@ -67,7 +67,7 @@ Generated from prompt.md · 5 November 2026 · Draft for internal leadership
 | When | Step |
 |---|---|
 | Weeks 1–2 (Nov 2026) | BMAD planning: brief, requirements, architecture. Page templates for cities, universities, businesses and artists |
-| Weeks 3–6 (to mid-Dec) | AI drafts 87 city pages and 18 education cities from approved sources; travel experts review; load into the knowledge base |
+| Weeks 3–6 (to mid-Dec) | AI drafts 81 city pages and 18 education cities from approved sources; travel experts review; load into the knowledge base |
 | Weeks 7–10 (to mid-Jan) | App, website and WhatsApp bot; OTP login; photo-checked reviews; badges; team override; English and Arabic |
 | Weeks 11–12 (late Jan) | Test with contact mosques (QR posters, WhatsApp); fix issues |
 | **Early Feb 2027** | **First version live** |
@@ -79,29 +79,29 @@ Generated from prompt.md · 5 November 2026 · Draft for internal leadership
 
 | # | Number | How we measure it |
 |---|---|---|
-| 1 | Money spent in the 87 cities | Each city's official economic data (tourism revenue, GDP), shown beside our verified trips |
+| 1 | Money spent in the 81 cities | Each city's official economic data (tourism revenue, GDP), shown beside our verified trips |
 | 2 | Muslim businesses listed and visited | Live profiles; verified customer reviews |
 | 3 | Students who applied to the 18 cities | Users reporting an application |
 | 4 | Verified reviews | OTP login plus a photo |
 | 5 | Active users | Monthly active users across app, web and WhatsApp |
 | 6 | Verified trips taken | Trips confirmed by a photo review |
 
-## 8. The 87 travel cities
+## 8. The 81 travel cities
 
-[H] = halal-friendliness label · [S] = safety section with official advisories
+[H] = halal-friendliness label
 
 | Region | Cities |
 |---|---|
-| Middle East and Gulf (19) | Dubai, Abu Dhabi, Sharjah, AlUla, Jeddah, Riyadh, Abha, Al Ahsa, Doha, Muscat, Salalah, Manama, Kuwait City, Amman, Aqaba, Baku, Ganja, Erbil [S], Dammam |
+| Middle East and Gulf (18) | Dubai, Abu Dhabi, Sharjah, AlUla, Jeddah, Riyadh, Abha, Al Ahsa, Doha, Muscat, Salalah, Manama, Kuwait City, Amman, Aqaba, Baku, Ganja, Dammam |
 | Türkiye (13) | Istanbul, Cappadocia/Göreme, Antalya, Bodrum, Pamukkale, Fethiye, Izmir, Trabzon, Bursa, Marmaris, Alanya, Konya, Ankara |
 | Balkans (11) | Kotor [H], Budva [H], Mostar, Sarajevo, Ohrid [H], Skopje, Tirana, Prizren, Pristina, Podgorica [H], Tetovo |
 | North Africa (12) | Marrakesh, Essaouira, Cairo, Sharm El Sheikh, Hurghada, Alexandria, Tangier, Rabat, Casablanca, Tunis, Djerba, Sousse |
 | Central Asia (10) | Samarkand, Bukhara, Almaty, Tashkent, Khiva, Astana, Bishkek, Turkistan, Dushanbe, Shymkent |
-| Southeast and South Asia (10) | Bali [H], Langkawi, Kuala Lumpur, Penang, Yogyakarta, Baa Atoll, Malé, Hunza Valley, Skardu, Lahore |
+| Southeast and South Asia (9) | Bali [H], Langkawi, Kuala Lumpur, Penang, Yogyakarta, Baa Atoll, Malé, Hunza Valley, Skardu |
 | East Africa (1) | Zanzibar City / Stone Town |
 | Thailand (2) | Satun, Koh Lanta |
-| India (5) | Srinagar [S], Kozhikode, Lakshadweep, Hyderabad, Lucknow |
-| Russia (4) | Kazan, Derbent [S], Makhachkala [S], Grozny [S] |
+| India (4) | Kozhikode, Lakshadweep, Hyderabad, Lucknow |
+| Russia (1) | Kazan |
 
 Corrections before publishing:
 - Lucknow is about 26% Muslim (city, 2011 census), not 40%.
