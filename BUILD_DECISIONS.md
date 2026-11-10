@@ -10,7 +10,7 @@ Answers from the build question round, 10 November 2026. Skipped questions are i
 | 5 | Content | None yet. Use sample data marked "sample, to verify"; real content added later |
 | 6 | AI model | Qwen running locally. **Changes prompt.md** (which said Claude first) |
 | 7 | Model runner | Ollama |
-| 8 | Model size | Qwen 7B/8B (about 16 GB RAM). Model name is a setting. Photos go to Qwen2.5-VL 7B |
+| 8 | Model size | Chosen: Qwen 7B/8B. **This Mac (M3, 8 GB) runs Qwen3 4B Instruct, with Qwen2.5-VL 3B for photos.** Model name is a setting |
 | 9 | Login and database | Supabase (phone OTP needs an SMS provider such as Twilio behind it; test code until then) |
 | 10 | Logo | Star + "1" + path logo, English and Arabic wordmark. Save it at brand/logo.png. Name and logo still need a lawyer's check (to verify) |
 | 11 | Code location | Inside this repo: `website/` and `app/` |

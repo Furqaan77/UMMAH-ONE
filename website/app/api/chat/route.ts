@@ -6,8 +6,8 @@ export const runtime = "nodejs";
 type Msg = { role: "user" | "assistant"; content: string; image?: string };
 
 const OLLAMA_URL = process.env.OLLAMA_URL ?? "http://localhost:11434";
-const TEXT_MODEL = process.env.OLLAMA_MODEL ?? "qwen3:8b";
-const VISION_MODEL = process.env.OLLAMA_VISION_MODEL ?? "qwen2.5vl:7b";
+const TEXT_MODEL = process.env.OLLAMA_MODEL ?? "qwen3:4b-instruct";
+const VISION_MODEL = process.env.OLLAMA_VISION_MODEL ?? "qwen2.5vl:3b";
 
 function systemPrompt(context: string, lang: Lang | "auto") {
   const langRule =
@@ -19,7 +19,7 @@ function systemPrompt(context: string, lang: Lang | "auto") {
   return `You are Ummah One, a friendly AI guide to Muslim travel cities, education cities, and Muslim businesses and artists.
 
 RULES
-- Answer ONLY from the CONTEXT below. If the answer is not in the context, say you don't have that information yet and that the team is adding it. Never guess or use outside knowledge. Never cite Wikipedia.
+- Answer ONLY from the CONTEXT below. If the answer is not in the context, reply: "I don't have that information yet. The Ummah One team is adding it." (in the user's language). Never guess or use outside knowledge. Never cite Wikipedia.
 - Use plain, simple language and short paragraphs.
 - Do not give visa rules, prices, maps, day-by-day itineraries, or prayer times.
 - No sectarian or political content.
@@ -61,7 +61,7 @@ export async function POST(req: Request) {
             think: false,
             messages: [
               { role: "system", content: systemPrompt(context, body.lang) },
-              ...messages.map((m) => ({
+              ...messages.map((m, i) => ({
                 role: m.role,
                 content: m.content,
                 ...(m.image ? { images: [m.image.replace(/^data:image\/\w+;base64,/, "")] } : {}),
@@ -70,6 +70,26 @@ export async function POST(req: Request) {
           }),
         });
         if (!res.ok || !res.body) throw new Error(`Ollama ${res.status}: ${await res.text().catch(() => "")}`);
+
+        // Use an Instruct model (no thinking). As a safety net, if the answer starts with "<think>",
+        // hold it back until "</think>" and drop the thinking part.
+        let pending = "";
+        let passed = false;
+        const push = (chunk: string) => {
+          if (passed) return void send({ type: "text", text: chunk });
+          pending += chunk;
+          const head = pending.trimStart();
+          if (head.length < 7 && "<think>".startsWith(head)) return; // could still be "<think>"
+          if (!head.startsWith("<think>")) passed = true;
+          else {
+            const end = pending.indexOf("</think>");
+            if (end === -1) return;
+            pending = pending.slice(end + "</think>".length).replace(/^\s+/, "");
+            passed = true;
+          }
+          if (pending) send({ type: "text", text: pending });
+          pending = "";
+        };
 
         const reader = res.body.getReader();
         const dec = new TextDecoder();
@@ -84,9 +104,11 @@ export async function POST(req: Request) {
             if (!line.trim()) continue;
             const j = JSON.parse(line) as { message?: { content?: string }; error?: string };
             if (j.error) throw new Error(j.error);
-            if (j.message?.content) send({ type: "text", text: j.message.content });
+            if (j.message?.content) push(j.message.content);
           }
         }
+        // Stream ended without a closing tag: send it only if it was not thinking.
+        if (!passed && pending && !pending.includes("<think>")) send({ type: "text", text: pending.trim() });
       } catch (err) {
         console.error("[chat]", err);
         const offline =

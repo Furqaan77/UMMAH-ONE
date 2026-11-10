@@ -55,6 +55,35 @@ const education: [string, string][] = [
   ["Rabat", "Mohammed V University"],
 ];
 
+
+// Arabic search words (so Arabic questions find the same entries).
+const AR_REGION: Record<string, string[]> = {
+  "Middle East and Gulf": ["الشرق", "الأوسط", "الخليج", "الخليجية"],
+  "Türkiye": ["تركيا"],
+  "Balkans": ["البلقان"],
+  "North Africa": ["شمال", "أفريقيا", "افريقيا", "المغرب", "مصر", "تونس"],
+  "Central Asia": ["آسيا", "اسيا", "الوسطى"],
+  "Southeast and South Asia": ["آسيا", "اسيا", "جنوب", "شرق", "ماليزيا", "إندونيسيا", "اندونيسيا", "باكستان", "المالديف"],
+  "East Africa": ["زنجبار", "تنزانيا"],
+  "Thailand": ["تايلاند"],
+  "India": ["الهند"],
+  "Russia": ["روسيا"],
+};
+const AR_CITY: Record<string, string[]> = {
+  Dubai: ["دبي"], "Abu Dhabi": ["أبوظبي", "ابوظبي", "أبو", "ظبي"], Sharjah: ["الشارقة"], AlUla: ["العلا"], Jeddah: ["جدة"],
+  Riyadh: ["الرياض"], Abha: ["أبها"], Doha: ["الدوحة"], Muscat: ["مسقط"], Salalah: ["صلالة"], Manama: ["المنامة"],
+  "Kuwait City": ["الكويت"], Amman: ["عمان", "عمّان"], Aqaba: ["العقبة"], Baku: ["باكو"], Dammam: ["الدمام"],
+  Istanbul: ["إسطنبول", "اسطنبول"], Antalya: ["أنطاليا", "انطاليا"], Ankara: ["أنقرة", "انقرة"], Konya: ["قونية"], Bursa: ["بورصة"], Izmir: ["إزمير", "ازمير"],
+  Sarajevo: ["سراييفو"], Mostar: ["موستار"], Tirana: ["تيرانا"], Skopje: ["سكوبيه"],
+  Marrakesh: ["مراكش"], Cairo: ["القاهرة"], Alexandria: ["الإسكندرية", "الاسكندرية"], Tangier: ["طنجة"], Rabat: ["الرباط"],
+  Casablanca: ["الدار", "البيضاء"], Tunis: ["تونس"], Djerba: ["جربة"], Sousse: ["سوسة"], Hurghada: ["الغردقة"], "Sharm El Sheikh": ["شرم", "الشيخ"],
+  Samarkand: ["سمرقند"], Bukhara: ["بخارى"], Tashkent: ["طشقند"], Khiva: ["خيوة"], Almaty: ["ألماتي", "الماتي"], Astana: ["أستانا", "استانا"],
+  Bali: ["بالي"], "Kuala Lumpur": ["كوالالمبور"], Penang: ["بينانغ"], Langkawi: ["لنكاوي"], Malé: ["ماليه"],
+  "Zanzibar City / Stone Town": ["زنجبار"], Hyderabad: ["حيدر", "أباد", "حيدرآباد"], Lucknow: ["لكناو"], Kazan: ["قازان"],
+};
+const AR_EDU = ["جامعة", "جامعات", "الجامعات", "الجامعة", "دراسة", "الدراسة", "أدرس", "ادرس", "طالب", "طلاب", "الطلاب", "تعليم", "التعليم", "طب", "الطب", "ماجستير", "دكتوراه"];
+const AR_TRAVEL = ["مدن", "المدن", "سفر", "السفر", "وجهات", "سياحة", "السياحة", "رحلة", "أسافر", "اسافر", "حلال"];
+
 function norm(s: string): string {
   return s.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase().replace(/ı/g, "i").trim();
 }
@@ -73,7 +102,7 @@ function build(): KbEntry[] {
       title: `${region}: travel cities`,
       text: `Ummah One travel cities in ${region} (${cities.length}): ${cities.join(", ")}.`,
       source: SOURCE,
-      keywords: [...words(region), ...cities.flatMap(words), "region", "cities", "travel"],
+      keywords: [...words(region), ...cities.flatMap(words), ...(AR_REGION[region] ?? []), ...cities.flatMap((c) => AR_CITY[c] ?? []), "region", "cities", "travel", ...AR_TRAVEL],
     });
 
     for (const city of cities) {
@@ -83,7 +112,7 @@ function build(): KbEntry[] {
       const edu = education.find(([c]) => c.split("/").some((x) => norm(city) === norm(x)));
       if (edu) parts.push(`${city} is also one of the 18 education cities. Flagship institutions: ${edu[1]}.`);
       parts.push("Detailed city information (halal food, budget, best season, family and women ratings, heritage) will be added by the team.");
-      out.push({ id: `city-${city}`, title: city, text: parts.join(" "), source: SOURCE, keywords: [...words(city), ...words(region)] });
+      out.push({ id: `city-${city}`, title: city, text: parts.join(" "), source: SOURCE, keywords: [...words(city), ...words(region), ...(AR_CITY[city] ?? []), ...(AR_REGION[region] ?? [])] });
     }
   }
 
@@ -92,7 +121,7 @@ function build(): KbEntry[] {
     title: `The ${total} travel cities`,
     text: `Ummah One covers ${total} travel cities: ${Object.entries(regions).map(([r, c]) => `${r} (${c.length})`).join("; ")}. Cities with a halal-friendliness label: ${halalFriendliness.join(", ")}.`,
     source: SOURCE,
-    keywords: [String(total), "cities", "places", "all", "list", "travel", "where", "destinations", "halal", "safety", "safe", "label"],
+    keywords: [String(total), "cities", "places", "all", "list", "travel", "where", "destinations", "halal", "safety", "safe", "label", ...AR_TRAVEL],
   });
 
   out.push({
@@ -100,7 +129,7 @@ function build(): KbEntry[] {
     title: "The 18 education cities",
     text: `Ummah One points students to 18 education cities (ranked): ${education.map(([c, u], i) => `${i + 1}. ${c}: ${u}`).join("; ")}. Information only: no scholarships and no application help.`,
     source: SOURCE,
-    keywords: ["education", "study", "student", "students", "university", "universities", "college", "degree", "medicine", "phd", "masters", "course", "qs", "the", "ranking"],
+    keywords: ["education", "study", "student", "students", "university", "universities", "college", "degree", "medicine", "phd", "masters", "course", "qs", "the", "ranking", ...AR_EDU],
   });
 
   for (const [city, unis] of education) {
@@ -109,7 +138,7 @@ function build(): KbEntry[] {
       title: `Study in ${city}`,
       text: `${city} is an Ummah One education city. Flagship institutions: ${unis}. Estimated tuition and living costs will be added later (information only).`,
       source: SOURCE,
-      keywords: [...words(city), ...words(unis), "study", "university", "education", "student"],
+      keywords: [...words(city), ...words(unis), ...Object.entries(AR_CITY).filter(([k]) => city.split("/").some((c) => norm(c) === norm(k))).flatMap(([, v]) => v), "study", "university", "education", "student", ...AR_EDU],
     });
   }
 

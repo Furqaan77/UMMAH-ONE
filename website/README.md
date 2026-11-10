@@ -8,8 +8,8 @@ Design follows the Qwen chat screenshots: plain white, large bold text, grey use
 1. Install Ollama: https://ollama.com/download
 2. Get the models:
    ```
-   ollama pull qwen3:8b
-   ollama pull qwen2.5vl:7b    # only needed for photos
+   ollama pull qwen3:4b-instruct   # 8 GB Mac (16 GB+: qwen3:8b)
+   ollama pull qwen2.5vl:3b        # photos (16 GB+: qwen2.5vl:7b)
    ```
 3. Start the website:
    ```
