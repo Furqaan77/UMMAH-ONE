@@ -1,5 +1,6 @@
 // Ingest pipeline: chunk → embed (only new/changed) → write index (AD-4).
 import { chunkAllDetailed } from "./chunk";
+import { deriveChunks } from "./derive";
 import type { Embedder } from "./embed";
 import type { ChunkStore } from "./store";
 import type { Chunk } from "./types";
@@ -29,6 +30,7 @@ export function embedText(c: Chunk): string {
 export async function ingest(opts: { dataDir: string; store: ChunkStore; embedder: Embedder }): Promise<IngestReport> {
   const { dataDir, store, embedder } = opts;
   const r = chunkAllDetailed(dataDir);
+  r.chunks.push(...deriveChunks(r.chunks));
   const report: IngestReport = {
     ok: true,
     written: false,

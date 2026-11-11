@@ -1,4 +1,5 @@
-import { retrieve } from "@/lib/retrieve";
+import { search, label, IndexMissing } from "@/lib/rag/search";
+import type { Chunk } from "@/lib/rag/types";
 import { detectLang, type Lang } from "@/lib/i18n";
 
 export const runtime = "nodejs";
@@ -37,9 +38,15 @@ export async function POST(req: Request) {
   const last = messages[messages.length - 1];
   if (!last || last.role !== "user") return new Response("Bad request", { status: 400 });
 
-  const hits = retrieve(last.content);
-  const context = hits.map((h, i) => `[${i + 1}] ${h.title}: ${h.text}`).join("\n");
-  const sources = hits.map((h) => ({ id: h.id, title: h.title, source: h.source }));
+  let hits: Chunk[] = [];
+  let searchError = "";
+  try {
+    hits = (await search(last.content)).chunks;
+  } catch (e) {
+    searchError = e instanceof IndexMissing ? e.message : `Search failed: ${e instanceof Error ? e.message : e}`;
+  }
+  const context = hits.map((h, i) => `[${i + 1}] (${h.category}) ${label(h)}\n${h.text}`).join("\n\n");
+  const sources = hits.map((h) => ({ id: h.id, title: label(h), source: h.source }));
   const replyLang: Lang = body.lang === "auto" ? detectLang(last.content) : body.lang;
 
   const hasImage = messages.some((m) => m.image);
@@ -50,6 +57,11 @@ export async function POST(req: Request) {
     async start(controller) {
       const send = (obj: unknown) => controller.enqueue(enc.encode(JSON.stringify(obj) + "\n"));
       send({ type: "sources", sources });
+      if (searchError) {
+        send({ type: "error", text: searchError });
+        controller.close();
+        return;
+      }
 
       try {
         const res = await fetch(`${OLLAMA_URL}/api/chat`, {

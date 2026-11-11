@@ -23,6 +23,8 @@ export type Chunk = {
 export type FileMeta = ChunkMeta & {
   /** Read region/country/city from "# Region — …" and "## City, Country" headings. Default true. */
   placeHeadings?: boolean;
+  /** Use the "#" heading as region. Default true; set false when "#" is just a file title. */
+  regionFromHeading?: boolean;
 };
 
 export class Unreadable extends Error {

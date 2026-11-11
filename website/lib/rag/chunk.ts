@@ -130,7 +130,7 @@ function placeMeta(path: string[], fm: FileMeta): ChunkMeta {
     const region = path[0].split(" — ")[0].trim();
     const m = /^(.+),\s*([^,]+)$/.exec(path[1]);
     if (m) {
-      meta.region = region;
+      if (fm.regionFromHeading !== false) meta.region = region;
       meta.city = m[1].trim();
       meta.country = m[2].trim();
     }
@@ -191,7 +191,7 @@ export function slug(s: string): string {
   return fold(s).replace(/[^\p{L}\p{N}]+/gu, "-").replace(/^-+|-+$/g, "");
 }
 
-function sha256(s: string): string {
+export function sha256(s: string): string {
   return createHash("sha256").update(s).digest("hex");
 }
 

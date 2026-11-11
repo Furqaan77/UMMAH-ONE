@@ -52,7 +52,7 @@ The search index is saved in `.data/index.json`. It is not committed; rebuild it
 | `app/globals.css` | The design system (colours, sizes, layout) |
 | `app/api/chat/route.ts` | Finds sources, sends them to Qwen, streams the answer |
 | `app/api/feedback/route.ts` | Saves 👍 / 👎 |
-| `data/travel/ALL-81-CITIES.md` | Travel data: 81 city guides (overview, ratings, 20 things to do). Replace this file to update travel answers |
-| `lib/kb.ts` | Builds the knowledge base from the guides + 18 education cities |
-| `lib/retrieve.ts` | Simple keyword search. Replace with vector search when real content arrives |
+| `data/<category>/` | Team data. Travel: `travel/ALL-81-CITIES.md`. Samples: `education/`, `about/`. Run `npm run ingest` after any change |
+| `lib/rag/` | The RAG: parsers, chunker, embeddings, index, hybrid search |
+| `scripts/ingest.ts` | `npm run ingest`: data → `.data/index.json` |
 | `lib/i18n.ts` | English and Arabic text |
