@@ -1,7 +1,12 @@
 // Shared shapes for the RAG pipeline (architecture AD-1, AD-2). Defined once, used everywhere.
 
 /** What every parser returns: a heading path and the text under it. */
-export type Section = { headingPath: string[]; text: string };
+export type Section = {
+  headingPath: string[];
+  text: string;
+  /** Place set by the parser itself, e.g. from City/Country columns in a table. Overrides headings. */
+  meta?: ChunkMeta;
+};
 
 export type ChunkMeta = { region?: string; country?: string; city?: string };
 

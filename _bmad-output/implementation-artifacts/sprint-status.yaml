@@ -38,7 +38,7 @@ development_status:
   epic-1: in-progress
   1-1-chunks-from-markdown-with-categories-and-blocked-places: review
   1-2-embeddings-local-index-and-npm-run-ingest: review
-  1-3-pdf-word-excel-and-csv-parsers: backlog
+  1-3-pdf-word-excel-and-csv-parsers: review
   epic-1-retrospective: optional
 
   epic-2: in-progress

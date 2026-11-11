@@ -29,7 +29,7 @@ export function embedText(c: Chunk): string {
 
 export async function ingest(opts: { dataDir: string; store: ChunkStore; embedder: Embedder }): Promise<IngestReport> {
   const { dataDir, store, embedder } = opts;
-  const r = chunkAllDetailed(dataDir);
+  const r = await chunkAllDetailed(dataDir);
   r.chunks.push(...deriveChunks(r.chunks));
   const report: IngestReport = {
     ok: true,

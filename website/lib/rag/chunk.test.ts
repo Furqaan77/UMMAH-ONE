@@ -18,8 +18,8 @@ function tmpData(files: Record<string, string>): string {
   return dir;
 }
 
-test("city guides: all 81 cities, overview + things to do, with place meta", () => {
-  const { chunks } = chunkAll(DATA);
+test("city guides: all 81 cities, overview + things to do, with place meta", async () => {
+  const { chunks } = (await chunkAll(DATA));
   const travel = chunks.filter((c) => c.file === "ALL-81-CITIES.md");
   const cities = new Set(travel.map((c) => c.meta.city));
   assert.equal(cities.size, 81);
@@ -37,79 +37,79 @@ test("city guides: all 81 cities, overview + things to do, with place meta", () 
   assert.ok(travel.every((c) => c.text.length <= MAX_CHARS));
 });
 
-test("ids and hashes are stable across runs", () => {
-  const a = chunkAll(DATA).chunks.map((c) => c.id + c.hash);
-  const b = chunkAll(DATA).chunks.map((c) => c.id + c.hash);
+test("ids and hashes are stable across runs", async () => {
+  const a = (await chunkAll(DATA)).chunks.map((c) => c.id + c.hash);
+  const b = (await chunkAll(DATA)).chunks.map((c) => c.id + c.hash);
   assert.deepEqual(a, b);
   assert.equal(new Set(a).size, a.length, "ids are unique");
 });
 
-test("long section is split at paragraph breaks with -2, -3 ids", () => {
+test("long section is split at paragraph breaks with -2, -3 ids", async () => {
   const para = "Word ".repeat(100).trim(); // ~500 chars
   const dir = tmpData({ "travel/long.md": `# R — x\n## Town, Land\n${Array(6).fill(para).join("\n\n")}` });
-  const { chunks } = chunkFile(dir, join(dir, "travel/long.md"));
+  const { chunks } = await chunkFile(dir, join(dir, "travel/long.md"));
   assert.equal(chunks.length, 3);
   assert.ok(chunks.every((c) => c.text.length <= MAX_CHARS && c.title === "Town, Land"));
   assert.match(chunks[1].id, /-2$/);
   assert.match(chunks[2].id, /-3$/);
 });
 
-test("one very long line is still split under the limit", () => {
+test("one very long line is still split under the limit", async () => {
   const dir = tmpData({ "travel/line.md": `# R — x\n## Town, Land\n${"A short sentence here. ".repeat(200)}` });
-  const { chunks } = chunkFile(dir, join(dir, "travel/line.md"));
+  const { chunks } = await chunkFile(dir, join(dir, "travel/line.md"));
   assert.ok(chunks.length > 1);
   assert.ok(chunks.every((c) => c.text.length <= MAX_CHARS));
 });
 
-test("bad meta.json names the file", () => {
+test("bad meta.json names the file", async () => {
   const dir = tmpData({ "travel/m.md": "# A\nText", "travel/m.meta.json": "{oops" });
-  assert.throws(() => chunkAll(dir), /m\.meta\.json: not valid JSON/);
+  await assert.rejects(chunkAll(dir), /m\.meta\.json: not valid JSON/);
 });
 
-test("blocked place in a heading fails the file", () => {
+test("blocked place in a heading fails the file", async () => {
   const dir = tmpData({ "travel/bad.md": "# Asia — x\n## Lahore, Pakistan\nText." });
-  assert.throws(() => chunkFile(dir, join(dir, "travel/bad.md")), (e) => e instanceof BlockedPlaceError && e.place === "Lahore");
-  assert.throws(() => chunkAll(dir), BlockedPlaceError);
+  await assert.rejects(chunkFile(dir, join(dir, "travel/bad.md")), (e) => e instanceof BlockedPlaceError && e.place === "Lahore");
+  await assert.rejects(chunkAll(dir), BlockedPlaceError);
 });
 
-test("blocked place mentioned in text keeps the chunk and warns", () => {
+test("blocked place mentioned in text keeps the chunk and warns", async () => {
   const dir = tmpData({ "travel/ok.md": "# Middle East — x\n## Duhok, Iraq\nA day from Erbil." });
-  const { chunks, warnings } = chunkFile(dir, join(dir, "travel/ok.md"));
+  const { chunks, warnings } = await chunkFile(dir, join(dir, "travel/ok.md"));
   assert.equal(chunks.length, 1);
   assert.equal(warnings.length, 1);
   assert.match(warnings[0], /ok\.md › Duhok, Iraq: .*Erbil/);
 });
 
-test("blocked match is whole-word and accent-insensitive", () => {
+test("blocked match is whole-word and accent-insensitive", async () => {
   assert.deepEqual(findBlocked("GROZNY trip"), ["Grozny"]);
   assert.deepEqual(findBlocked("Lahorei"), []);
 });
 
-test("empty file is unreadable", () => {
+test("empty file is unreadable", async () => {
   const dir = tmpData({ "travel/empty.md": "# Only a heading\n\n---\n" });
-  assert.throws(() => chunkFile(dir, join(dir, "travel/empty.md")), Unreadable);
+  await assert.rejects(chunkFile(dir, join(dir, "travel/empty.md")), Unreadable);
 });
 
-test("file at data root is skipped with a warning", () => {
+test("file at data root is skipped with a warning", async () => {
   const dir = tmpData({ "x.md": "# A\nText", "travel/y.md": "# A\nText" });
-  const { chunks, warnings } = chunkAll(dir);
+  const { chunks, warnings } = await chunkAll(dir);
   assert.equal(chunks.length, 1);
   assert.match(warnings.join("\n"), /x\.md: file must be inside a category folder/);
 });
 
-test("meta.json overrides place headings", () => {
+test("meta.json overrides place headings", async () => {
   const dir = tmpData({
     "education/unis.md": "# Universities\n## Universiti Malaya, Kuala Lumpur\nText.",
     "education/unis.meta.json": JSON.stringify({ placeHeadings: false, city: "Kuala Lumpur", country: "Malaysia" }),
   });
-  const { chunks } = chunkAll(dir);
+  const { chunks } = await chunkAll(dir);
   assert.deepEqual(chunks[0].meta, { city: "Kuala Lumpur", country: "Malaysia" });
   assert.equal(chunks[0].category, "education");
 });
 
-test("plain text: one section per block", () => {
+test("plain text: one section per block", async () => {
   const dir = tmpData({ "food/notes.txt": "First block.\n\nSecond block." });
-  const { chunks } = chunkAll(dir);
+  const { chunks } = await chunkAll(dir);
   assert.equal(chunks.length, 2);
   assert.equal(chunks[0].section, "notes.txt");
   assert.notEqual(chunks[0].id, chunks[1].id);

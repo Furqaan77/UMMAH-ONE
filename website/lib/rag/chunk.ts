@@ -3,21 +3,28 @@ import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { basename, extname, join, relative, sep } from "node:path";
 import { findBlocked, fold } from "./blocked";
 import { parseMarkdown, parseText } from "./parsers/markdown";
+import { parsePdf } from "./parsers/pdf";
+import { parseDocx } from "./parsers/docx";
+import { parseCsv, parseXlsx } from "./parsers/table";
 import { BlockedPlaceError, type Chunk, type ChunkMeta, type FileMeta, type Section } from "./types";
 
 export const MAX_CHARS = 1200;
 
-/** File type → parser. Story 1.3 adds pdf, docx, xlsx, csv here. */
-export const PARSERS: Record<string, (path: string) => Section[]> = {
+/** File type → parser (AD-2). Every parser returns sections; only parsers know file formats. */
+export const PARSERS: Record<string, (path: string) => Section[] | Promise<Section[]>> = {
   ".md": parseMarkdown,
   ".markdown": parseMarkdown,
   ".txt": parseText,
+  ".pdf": parsePdf,
+  ".docx": parseDocx,
+  ".xlsx": parseXlsx,
+  ".csv": parseCsv,
 };
 
 export type ChunkResult = { chunks: Chunk[]; warnings: string[] };
 
 /** All supported files under dataDir/<category>/… → chunks. Throws on a blocked place or an unreadable file. */
-export function chunkAll(dataDir: string): ChunkResult {
+export async function chunkAll(dataDir: string): Promise<ChunkResult> {
   return walk(dataDir, (dir, path) => chunkFile(dir, path));
 }
 
@@ -29,15 +36,15 @@ export type DetailedResult = ChunkResult & {
 };
 
 /** Like chunkAll, but keeps going: per-file problems are collected instead of thrown. */
-export function chunkAllDetailed(dataDir: string): DetailedResult {
+export async function chunkAllDetailed(dataDir: string): Promise<DetailedResult> {
   const files: string[] = [];
   const unreadable: string[] = [];
   const unreadableFiles: string[] = [];
   const blocked: string[] = [];
-  const r = walk(dataDir, (dir, path) => {
+  const r = await walk(dataDir, async (dir, path) => {
     const key = relative(dir, path).split(sep).join("/");
     try {
-      const out = chunkFile(dir, path);
+      const out = await chunkFile(dir, path);
       files.push(key);
       return out;
     } catch (e) {
@@ -52,7 +59,7 @@ export function chunkAllDetailed(dataDir: string): DetailedResult {
   return { ...r, files, unreadable, unreadableFiles, blocked };
 }
 
-function walk(dataDir: string, each: (dataDir: string, path: string) => ChunkResult): ChunkResult {
+async function walk(dataDir: string, each: (dataDir: string, path: string) => Promise<ChunkResult>): Promise<ChunkResult> {
   const chunks: Chunk[] = [];
   const warnings: string[] = [];
   for (const path of listFiles(dataDir)) {
@@ -65,19 +72,19 @@ function walk(dataDir: string, each: (dataDir: string, path: string) => ChunkRes
       warnings.push(`${rel}: file type not supported yet — skipped`);
       continue;
     }
-    const r = each(dataDir, path);
+    const r = await each(dataDir, path);
     chunks.push(...r.chunks);
     warnings.push(...r.warnings);
   }
   return { chunks, warnings };
 }
 
-export function chunkFile(dataDir: string, path: string): ChunkResult {
+export async function chunkFile(dataDir: string, path: string): Promise<ChunkResult> {
   const file = basename(path);
   const category = relative(dataDir, path).split(sep)[0];
   const parse = PARSERS[extname(path).toLowerCase()];
   const fileMeta = readFileMeta(path);
-  const sections = parse(path);
+  const sections = await parse(path);
   const warnings: string[] = [];
 
   // A blocked place in any heading stops the whole file (AD-8).
@@ -90,7 +97,7 @@ export function chunkFile(dataDir: string, path: string): ChunkResult {
   const chunks: Chunk[] = [];
   const used = new Set<string>();
   for (const s of sections) {
-    const meta = placeMeta(s.headingPath, fileMeta);
+    const meta = { ...placeMeta(s.headingPath, fileMeta), ...s.meta };
     const title = itemHeading(s.headingPath) ?? s.headingPath[s.headingPath.length - 1];
     const section = s.headingPath[s.headingPath.length - 1];
     const mentioned = findBlocked(s.text);
