@@ -18,6 +18,41 @@ export type ChunkResult = { chunks: Chunk[]; warnings: string[] };
 
 /** All supported files under dataDir/<category>/… → chunks. Throws on a blocked place or an unreadable file. */
 export function chunkAll(dataDir: string): ChunkResult {
+  return walk(dataDir, (dir, path) => chunkFile(dir, path));
+}
+
+export type DetailedResult = ChunkResult & {
+  files: string[]; // "category/file" of every file that produced chunks
+  unreadable: string[]; // messages
+  unreadableFiles: string[]; // "category/file"
+  blocked: string[]; // messages
+};
+
+/** Like chunkAll, but keeps going: per-file problems are collected instead of thrown. */
+export function chunkAllDetailed(dataDir: string): DetailedResult {
+  const files: string[] = [];
+  const unreadable: string[] = [];
+  const unreadableFiles: string[] = [];
+  const blocked: string[] = [];
+  const r = walk(dataDir, (dir, path) => {
+    const key = relative(dir, path).split(sep).join("/");
+    try {
+      const out = chunkFile(dir, path);
+      files.push(key);
+      return out;
+    } catch (e) {
+      if (e instanceof BlockedPlaceError) blocked.push(e.message);
+      else {
+        unreadable.push(`${key}: ${e instanceof Error ? e.message.replace(/^[^:]+: /, "") : String(e)}`);
+        unreadableFiles.push(key);
+      }
+      return { chunks: [], warnings: [] };
+    }
+  });
+  return { ...r, files, unreadable, unreadableFiles, blocked };
+}
+
+function walk(dataDir: string, each: (dataDir: string, path: string) => ChunkResult): ChunkResult {
   const chunks: Chunk[] = [];
   const warnings: string[] = [];
   for (const path of listFiles(dataDir)) {
@@ -30,7 +65,7 @@ export function chunkAll(dataDir: string): ChunkResult {
       warnings.push(`${rel}: file type not supported yet — skipped`);
       continue;
     }
-    const r = chunkFile(dataDir, path);
+    const r = each(dataDir, path);
     chunks.push(...r.chunks);
     warnings.push(...r.warnings);
   }

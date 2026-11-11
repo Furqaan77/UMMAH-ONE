@@ -10,6 +10,7 @@ Design follows the Qwen chat screenshots: plain white, large bold text, grey use
    ```
    ollama pull qwen3:4b-instruct   # 8 GB Mac (16 GB+: qwen3:8b)
    ollama pull qwen2.5vl:3b        # photos (16 GB+: qwen2.5vl:7b)
+   ollama pull qwen3-embedding:0.6b  # search by meaning
    ```
 3. Start the website:
    ```
@@ -21,6 +22,14 @@ Design follows the Qwen chat screenshots: plain white, large bold text, grey use
 4. Open http://localhost:3000
 
 If Ollama is not running, the chat shows "The AI model is offline".
+
+## Add or change data
+
+1. Put the file in `data/<category>/`, for example `data/travel/` or `data/education/`.
+2. Run `npm run ingest`. Only new or changed parts are processed.
+3. Read the report: added, changed, removed, **unreadable** and **blocked** files.
+
+The search index is saved in `.data/index.json`. It is not committed; rebuild it with `npm run ingest`.
 
 ## What works now
 
