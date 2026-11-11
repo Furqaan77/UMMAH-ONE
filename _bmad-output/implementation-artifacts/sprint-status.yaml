@@ -45,6 +45,6 @@ development_status:
   2-1-hybrid-search-in-api-chat: review
   epic-2-retrospective: optional
 
-  epic-3: backlog
-  3-1-eval-set-and-npm-run-eval: backlog
+  epic-3: in-progress
+  3-1-eval-set-and-npm-run-eval: review
   epic-3-retrospective: optional

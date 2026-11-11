@@ -29,6 +29,8 @@ If Ollama is not running, the chat shows "The AI model is offline".
 2. Run `npm run ingest`. Only new or changed parts are processed.
 3. Read the report: added, changed, removed, **unreadable** and **blocked** files.
 
+4. Run `npm run eval` to check search quality. It asks 44 fixed test questions in English and Arabic and must score 90% or more. Add your own questions to `eval/questions.json` when you add new data.
+
 The search index is saved in `.data/index.json`. It is not committed; rebuild it with `npm run ingest`.
 
 ## What works now
