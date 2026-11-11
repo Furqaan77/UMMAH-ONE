@@ -1,5 +1,8 @@
-// Sample knowledge base. Built ONLY from prompt.md (the master decisions file).
-// Every entry is marked "sample, to verify". Real content will be added by the team later.
+// Knowledge base.
+// Travel: the team's "Halal Travel — 81 City Guides" (data/city-guides.md). Marked "to verify".
+// Education and About: from prompt.md (sample, to verify).
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 
 export type KbEntry = {
   id: string;
@@ -7,22 +10,35 @@ export type KbEntry = {
   text: string;
   source: string;
   keywords: string[];
+  names?: string[]; // city names; a strong match when the question contains one
 };
 
 const SOURCE = "Ummah One team research (prompt.md) — sample, to verify";
+const GUIDE_SOURCE = "Halal Travel — 81 City Guides (Ummah One team) — to verify";
 
-const regions: Record<string, string[]> = {
-  "Middle East and Gulf": ["Dubai", "Abu Dhabi", "Sharjah", "AlUla", "Jeddah", "Riyadh", "Abha", "Al Ahsa", "Doha", "Muscat", "Salalah", "Manama", "Kuwait City", "Amman", "Aqaba", "Baku", "Ganja", "Dammam"],
-  "Türkiye": ["Istanbul", "Cappadocia/Göreme", "Antalya", "Bodrum", "Pamukkale", "Fethiye", "Izmir", "Trabzon", "Bursa", "Marmaris", "Alanya", "Konya", "Ankara"],
-  "Balkans": ["Kotor", "Budva", "Mostar", "Sarajevo", "Ohrid", "Skopje", "Tirana", "Prizren", "Pristina", "Podgorica", "Tetovo"],
-  "North Africa": ["Marrakesh", "Essaouira", "Cairo", "Sharm El Sheikh", "Hurghada", "Alexandria", "Tangier", "Rabat", "Casablanca", "Tunis", "Djerba", "Sousse"],
-  "Central Asia": ["Samarkand", "Bukhara", "Almaty", "Tashkent", "Khiva", "Astana", "Bishkek", "Turkistan", "Dushanbe", "Shymkent"],
-  "Southeast and South Asia": ["Bali", "Langkawi", "Kuala Lumpur", "Penang", "Yogyakarta", "Baa Atoll", "Malé", "Hunza Valley", "Skardu"],
-  "East Africa": ["Zanzibar City / Stone Town"],
-  "Thailand": ["Satun", "Koh Lanta"],
-  "India": ["Kozhikode", "Lakshadweep", "Hyderabad", "Lucknow"],
-  "Russia": ["Kazan"],
-};
+type Guide = { city: string; country: string; region: string; names: string[]; overview: string; things: string };
+
+// Parse data/city-guides.md: "# Region — subtitle", "## City, Country", then overview text and "### 20 Things to Do".
+function loadGuides(): Guide[] {
+  const md = readFileSync(join(process.cwd(), "data", "city-guides.md"), "utf8");
+  const out: Guide[] = [];
+  let region = "";
+  for (const block of md.split(/^(?=#{1,2} )/m)) {
+    const head = block.split("\n", 1)[0];
+    if (/^# /.test(head)) {
+      if (!/City Guides/.test(head)) region = head.slice(2).split(" — ")[0].trim();
+      continue;
+    }
+    if (!/^## /.test(head)) continue;
+    const [cityPart, country = ""] = head.slice(3).split(/,\s*(?=[^,]+$)/);
+    const body = block.slice(head.length).replace(/^---\s*$/gm, "").trim();
+    const [overview, things = ""] = body.split(/^### .*$/m);
+    const city = cityPart.trim();
+    const names = [city, ...city.split(/[()]/).map((x) => x.trim())].filter((x) => x.length > 2);
+    out.push({ city, country: country.trim(), region, names: [...new Set(names)], overview: overview.replace(/\*\*/g, "").trim(), things: things.trim() });
+  }
+  return out;
+}
 
 const halalFriendliness = ["Bali", "Kotor", "Budva", "Podgorica", "Ohrid"];
 // Removed 10 Nov 2026 (terrorism / extreme violence risk): Grozny, Makhachkala, Derbent, Srinagar, Erbil, Lahore.
@@ -92,28 +108,74 @@ function words(s: string): string[] {
   return s.toLowerCase().split(/[^\p{L}\p{N}]+/u).filter(Boolean);
 }
 
+const RATING_WORDS = ["calm", "quiet", "peaceful", "peace", "tranquil", "tranquility", "relax", "relaxing", "healing", "busy", "loud", "crowded", "tourism", "tourists", "touristy", "modern", "traditional", "historic", "history", "vintage", "cultural", "culture", "rating", "ratings", "score", "best", "most", "least", "calmest", "quietest", "busiest", "peaceful", "oldest", "modernest", "compare"];
+const STOPWORDS = new Set(["the", "and", "for", "with", "from", "that", "this", "are", "its", "into", "your", "you", "but", "can", "all", "has", "was", "one", "out", "over", "their", "they", "where", "which", "while", "more", "most", "also", "here", "there", "city"]);
+
+function arCity(city: string): string[] {
+  return Object.entries(AR_CITY).filter(([k]) => k.split("/").some((x) => norm(city).includes(norm(x).split(" (")[0]) || norm(x).includes(norm(city)))).flatMap(([, v]) => v);
+}
+
 function build(): KbEntry[] {
   const out: KbEntry[] = [];
-  const total = Object.values(regions).flat().length;
+  const guides = loadGuides();
+  const total = guides.length;
+  const regions: Record<string, string[]> = {};
+  for (const g of guides) (regions[g.region] ??= []).push(g.city);
+
+  for (const g of guides) {
+    const base = [...g.names.flatMap(words), ...words(g.country), ...words(g.region), ...arCity(g.city), ...(AR_REGION[g.region] ?? [])];
+    const extra: string[] = [];
+    if (halalFriendliness.includes(g.city)) extra.push(`${g.city} has a "halal-friendliness" label: check halal food and Muslim-friendly options before you go.`);
+    const fact = Object.entries(extraFacts).find(([c]) => norm(c) === norm(g.city));
+    if (fact) extra.push(fact[1]);
+    const edu = education.find(([c]) => c.split("/").some((x) => norm(g.city) === norm(x)));
+    if (edu) extra.push(`${g.city} is also one of the 18 education cities. Flagship institutions: ${edu[1]}.`);
+    const where = `${g.city}, ${g.country} (${g.region}).`;
+    const overview = [where, g.overview, ...extra].join("\n");
+    out.push({
+      id: `city-${g.city}`,
+      title: `${g.city}, ${g.country}`,
+      text: overview,
+      source: GUIDE_SOURCE,
+      names: g.names,
+      keywords: [...base, ...words(g.overview.replace(/^(Calm|Character|Energy):.*$/gm, "")).filter((w) => w.length > 2 && !STOPWORDS.has(w)), "masjid", "mosque", "halal"],
+    });
+    if (g.things) {
+      out.push({
+        id: `todo-${g.city}`,
+        title: `Things to do in ${g.city}`,
+        text: `${where}\nThings to do:\n${g.things}`,
+        source: GUIDE_SOURCE,
+        names: g.names,
+        keywords: [...base, ...words(g.things).filter((w) => w.length > 2 && !STOPWORDS.has(w)), "things", "do", "see", "visit", "activities", "attractions", "places", "sights", "trip", "plan"],
+      });
+    }
+  }
+
+  // One ratings table per region, so "calmest / most historic" questions can compare cities.
+  for (const [region, cities] of Object.entries(regions)) {
+    const lines = guides
+      .filter((g) => g.region === region)
+      .map((g) => `${g.city}, ${g.country}: ${g.overview.split("\n").filter((l) => /^(Calm|Character|Energy):/.test(l)).map((l) => l.replace(/^(Calm|Character|Energy):\s*/, "")).join(" · ")}`);
+    out.push({
+      id: `ratings-${region}`,
+      title: `${region}: city ratings`,
+      text: `Ratings out of 10 for ${region} cities (Tranquility & Peace, Healing, Traditional, Historic & Vintage, Cultural, Modern, Busy & Loud, Too Much Tourism):\n${lines.join("\n")}`,
+      source: GUIDE_SOURCE,
+      names: [region],
+      keywords: [...words(region), ...cities.flatMap(words), ...(AR_REGION[region] ?? []), ...RATING_WORDS, "compare", "which", "region"],
+    });
+  }
 
   for (const [region, cities] of Object.entries(regions)) {
     out.push({
       id: `region-${region}`,
       title: `${region}: travel cities`,
       text: `Ummah One travel cities in ${region} (${cities.length}): ${cities.join(", ")}.`,
-      source: SOURCE,
-      keywords: [...words(region), ...cities.flatMap(words), ...(AR_REGION[region] ?? []), ...cities.flatMap((c) => AR_CITY[c] ?? []), "region", "cities", "travel", ...AR_TRAVEL],
+      source: GUIDE_SOURCE,
+      names: [region],
+      keywords: [...words(region), ...cities.flatMap(words), ...(AR_REGION[region] ?? []), ...cities.flatMap(arCity), "region", "cities", "travel", ...AR_TRAVEL],
     });
-
-    for (const city of cities) {
-      const parts = [`${city} is one of the ${total} Ummah One travel cities, in the ${region} region.`];
-      if (halalFriendliness.includes(city)) parts.push(`${city} has a "halal-friendliness" label: check halal food and Muslim-friendly options before you go.`);
-      if (extraFacts[city]) parts.push(extraFacts[city]);
-      const edu = education.find(([c]) => c.split("/").some((x) => norm(city) === norm(x)));
-      if (edu) parts.push(`${city} is also one of the 18 education cities. Flagship institutions: ${edu[1]}.`);
-      parts.push("Detailed city information (halal food, budget, best season, family and women ratings, heritage) will be added by the team.");
-      out.push({ id: `city-${city}`, title: city, text: parts.join(" "), source: SOURCE, keywords: [...words(city), ...words(region), ...(AR_CITY[city] ?? []), ...(AR_REGION[region] ?? [])] });
-    }
   }
 
   out.push({

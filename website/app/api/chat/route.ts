@@ -59,6 +59,7 @@ export async function POST(req: Request) {
             model,
             stream: true,
             think: false,
+            options: { num_ctx: 8192 }, // room for the longer city guides
             messages: [
               { role: "system", content: systemPrompt(context, body.lang) },
               ...messages.map((m, i) => ({

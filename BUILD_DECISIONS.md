@@ -28,6 +28,13 @@ Answers from the build question round, 10 November 2026. Skipped questions are i
 - After the website, the mobile app was built next. Login waits for Supabase keys and an SMS sender.
 - The app uses the website's backend, so both give the same answers.
 
+## Travel data (11 Nov 2026)
+- Travel answers now use the team's "Halal Travel — 81 City Guides", saved at `website/data/city-guides.md`. Marked "to verify".
+- Two files were given: a PDF (10 Nov) and a Markdown copy (11 Nov). The Markdown copy is used: it is newer, adds the ratings (calm, character, energy), and is easier for the computer to read.
+- Each city gives the AI: overview + halal food line + ratings, and 20 things to do. Each region also has a ratings table, so the AI can compare cities.
+- None of the 6 removed places is in the guides.
+- Other categories (education, culture, food, clothes, heritage, handicrafts, business) will be added later by the team.
+
 ## Design (from the Qwen chat screenshots)
 - Plain white background; large, bold, dark text; long answers in short paragraphs
 - Top bar: ☰ menu (left), "Ummah One" title (centre-left), new-chat icon (right)

@@ -27,7 +27,7 @@ If Ollama is not running, the chat shows "The AI model is offline".
 | Feature | Status |
 |---|---|
 | Chat with local Qwen (streaming) | Done |
-| Answers only from the knowledge base, "Sources used (N) >" | Done (sample data from prompt.md, marked "to verify") |
+| Answers only from the knowledge base, "Sources used (N) >" | Done. Travel: 81 city guides (`data/city-guides.md`). Education: sample from prompt.md. All "to verify" |
 | English + Arabic, automatic + language button, right-to-left | Done |
 | + menu: Plan a trip, Find a university, Find a business, Add a photo | Done (photos use Qwen2.5-VL) |
 | Mic (browser speech-to-text) | Done (Chrome, Edge, Safari) |
@@ -43,6 +43,7 @@ If Ollama is not running, the chat shows "The AI model is offline".
 | `app/globals.css` | The design system (colours, sizes, layout) |
 | `app/api/chat/route.ts` | Finds sources, sends them to Qwen, streams the answer |
 | `app/api/feedback/route.ts` | Saves 👍 / 👎 |
-| `lib/kb.ts` | Sample knowledge base (87 cities, 18 education cities) |
+| `data/city-guides.md` | Travel data: 81 city guides (overview, ratings, 20 things to do). Replace this file to update travel answers |
+| `lib/kb.ts` | Builds the knowledge base from the guides + 18 education cities |
 | `lib/retrieve.ts` | Simple keyword search. Replace with vector search when real content arrives |
 | `lib/i18n.ts` | English and Arabic text |
