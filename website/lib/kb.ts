@@ -1,5 +1,5 @@
 // Knowledge base.
-// Travel: the team's "Halal Travel — 81 City Guides" (data/city-guides.md). Marked "to verify".
+// Travel: the team's "Halal Travel — 81 City Guides" (data/travel/ALL-81-CITIES.md). Marked "to verify".
 // Education and About: from prompt.md (sample, to verify).
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
@@ -18,9 +18,9 @@ const GUIDE_SOURCE = "Halal Travel — 81 City Guides (Ummah One team) — to ve
 
 type Guide = { city: string; country: string; region: string; names: string[]; overview: string; things: string };
 
-// Parse data/city-guides.md: "# Region — subtitle", "## City, Country", then overview text and "### 20 Things to Do".
+// Parse data/travel/ALL-81-CITIES.md: "# Region — subtitle", "## City, Country", then overview text and "### 20 Things to Do".
 function loadGuides(): Guide[] {
-  const md = readFileSync(join(process.cwd(), "data", "city-guides.md"), "utf8");
+  const md = readFileSync(join(process.cwd(), "data", "travel", "ALL-81-CITIES.md"), "utf8");
   const out: Guide[] = [];
   let region = "";
   for (const block of md.split(/^(?=#{1,2} )/m)) {
