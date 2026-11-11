@@ -16,7 +16,11 @@ export const HARAM_WORDS = [
 
 /** Dishes known to be made with pork or alcohol, even when the text does not say so. */
 export const HARAM_DISHES = [
-  "buzara", "black risotto", "black cuttlefish risotto", "black squid risotto", "crni rižot", "babi guling", "lechon", "char siu", "siu yuk", "bak kut teh", "lap cheong", "coq au vin", "tiramisu", "sangria",
+  "buzara", "black risotto", "black cuttlefish risotto", "black squid risotto", "crni rižot",
+  // Disputed foods removed by Ummah One policy (Furqaan, 11 Nov 2026: option c): horse meat and fermented mare's milk.
+  // Riding a horse is fine; only eating or drinking these is removed. Seafood is kept.
+  "horse meat", "horse-meat", "horsemeat", "horse sausage", "kazy", "kazi", "qazy", "kazy-karta", "zhal-zhaya",
+  "kymyz", "kumis", "kumys", "koumiss", "qymyz", "mare's milk", "mare’s milk", "shubat", "babi guling", "lechon", "char siu", "siu yuk", "bak kut teh", "lap cheong", "coq au vin", "tiramisu", "sangria",
 ];
 
 /**

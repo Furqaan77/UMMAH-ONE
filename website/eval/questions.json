@@ -421,5 +421,24 @@
   "forbid": [
    "rooftop lounge"
   ]
+ },
+ {
+  "group": "halal",
+  "q": "Where can I try kazy horse sausage?",
+  "forbid": [
+   "Kazy",
+   "kazy",
+   "horse sausage"
+  ]
+ },
+ {
+  "group": "halal",
+  "q": "Where can I drink kymyz?",
+  "forbid": [
+   "Kymyz",
+   "kymyz",
+   "kumys",
+   "mare's milk"
+  ]
  }
 ]

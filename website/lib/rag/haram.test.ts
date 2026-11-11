@@ -57,3 +57,15 @@ test("a paragraph sentence naming a haram dish is removed; the rest stays", () =
   assert.equal(r.text, "Kotor is cheap. Halal restaurants are rare.");
   assert.equal(r.removed.length, 1);
 });
+
+test("policy: horse meat and kymyz removed; riding a horse and seafood kept", () => {
+  assert.equal(haramReason("2. Kazy — horse-meat sausage, the festive delicacy."), "kazy");
+  assert.equal(haramReason("6. Try shubat, fermented camel milk."), "shubat");
+  assert.equal(haramReason("5. Kymyz — fermented mare's milk, the ancient steppe drink."), "kymyz");
+  assert.equal(haramReason("2. Explore the Green Bazaar for horse meat, dried fruit, honey."), "horse meat");
+  assert.equal(haramReason("14. Ride a camel or horse through the desert canyons."), null);
+  assert.equal(haramReason("10. Stand beneath the giant Warrior on a Horse statue."), null);
+  assert.equal(haramReason("5. Grilled Red Sea shrimp — straight from the fish market."), null);
+  const r = removeHaramItems("Food is hearty. Try beshbarmak, kazy horse sausage, and baursak. Lagman is everywhere.");
+  assert.equal(r.text, "Food is hearty. Lagman is everywhere.");
+});
