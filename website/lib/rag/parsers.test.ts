@@ -109,3 +109,41 @@ test("ingest-level: every type becomes chunks; the scan is listed as unreadable"
   assert.deepEqual(perfume.meta, { city: "Dubai", country: "UAE" });
   assert.equal(perfume.source, "shops.xlsx › Al Fahidi Perfumes — to verify");
 });
+
+test("PDF lines: an empty end-of-line piece does not lend its font size to the line", async () => {
+  const { itemsToLines } = await import("./parsers/pdf");
+  const lines = itemsToLines([
+    { str: "5. Knafeh — molten cheese", fontSize: 10.5, y: 589, hasEOL: false },
+    { str: "", fontSize: 14.5, y: 557, hasEOL: true },
+    { str: "Abu Dhabi, UAE", fontSize: 14.5, y: 557, hasEOL: true },
+  ]);
+  assert.deepEqual(lines, [
+    { text: "5. Knafeh — molten cheese", size: 10.5 },
+    { text: "Abu Dhabi, UAE", size: 14.5 },
+  ]);
+});
+
+test("PDF noise: running headers, page numbers, dot leaders and rules are removed", async () => {
+  const { dropNoise } = await import("./parsers/pdf");
+  const L = (text: string) => ({ text, size: 10 });
+  const page = (n: number, body: string) => [L("THE HALAL FOOD COMPANION"), L(`Page ${n}`), L("— — — — —"), L(body)];
+  const out = dropNoise([page(1, ". . . . . . . 5 Dubai"), page(2, "Dubai text"), page(3, "Doha text")]);
+  assert.deepEqual(out.map((p) => p.map((l) => l.text)), [[], ["Dubai text"], ["Doha text"]]);
+});
+
+test("place spellings are matched across files", async () => {
+  const { canonicalizePlaces } = await import("./canon");
+  const mk = (city: string, region: string) => ({ id: city + region, category: "x", file: "f", title: "", section: "", text: "", source: "", hash: "", meta: { city, region } });
+  const cs = [mk("Cappadocia (Göreme)", "Türkiye"), mk("Cappadocia (Göreme)", "Türkiye"), mk("Cappadocia / Göreme", "TÜRKIYE")];
+  canonicalizePlaces(cs);
+  assert.ok(cs.every((c) => c.meta.city === "Cappadocia (Göreme)" && c.meta.region === "Türkiye"));
+});
+
+test("region is the heading just above 'City, Country', even under a cover title", async () => {
+  const dir = mkdtempSync(join(tmpdir(), "r-"));
+  mkdirSync(join(dir, "food"));
+  writeFileSync(join(dir, "food", "f.md"), "# THE COMPANION\n## MIDDLE EAST AND GULF\n### Dubai, UAE\n1. Machboos.");
+  const r = await chunkAllDetailed(dir);
+  assert.deepEqual(r.chunks[0].meta, { region: "MIDDLE EAST AND GULF", city: "Dubai", country: "UAE" });
+  assert.equal(r.chunks[0].title, "Dubai, UAE");
+});

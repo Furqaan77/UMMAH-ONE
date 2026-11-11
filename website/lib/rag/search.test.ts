@@ -44,7 +44,11 @@ A huge historic city on the Nile.
 # Southeast and South Asia
 ## Malé, Maldives
 Calm: Tranquility & Peace 5/10 · Healing 5/10
-A small island capital.`;
+A small island capital.
+# Russia
+## Kazan, Russia
+Calm: Tranquility & Peace 6/10 · Healing 6/10
+The Tatar capital on the Volga.`;
 
 const EDU = `# Education cities — sample
 ## Cairo, Egypt
@@ -126,4 +130,14 @@ test("'male' is not read as the city Malé", async () => {
   assert.deepEqual(r.places.map((p) => p.value), ["Dubai"]);
   const m = await search("things to do in Malé", { store, embedder: fake() });
   assert.deepEqual(m.places.map((p) => p.value), ["Malé"]);
+});
+
+test("'kazan' the cooking pot is not the city, but 'in Kazan' is", async () => {
+  const store = await setup();
+  const pot = await search("where can I watch plov cooked in a giant kazan?", { store, embedder: fake() });
+  assert.equal(pot.places.length, 0);
+  for (const q of ["Typical dishes in Kazan", "Kazan halal food", "I want to visit Kazan"]) {
+    const r = await search(q, { store, embedder: fake() });
+    assert.deepEqual(r.places.map((p) => p.value), ["Kazan"], q);
+  }
 });

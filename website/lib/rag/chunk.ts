@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { basename, extname, join, relative, sep } from "node:path";
 import { findBlocked, fold } from "./blocked";
+import { removeHaramItems } from "./haram";
 import { parseMarkdown, parseText } from "./parsers/markdown";
 import { parsePdf } from "./parsers/pdf";
 import { parseDocx } from "./parsers/docx";
@@ -103,7 +104,11 @@ export async function chunkFile(dataDir: string, path: string): Promise<ChunkRes
     const mentioned = findBlocked(s.text);
     if (mentioned.length) warnings.push(`${file} › ${section}: mentions blocked place ${mentioned.join(", ")} — check the text`);
 
-    const parts = split(s.text, MAX_CHARS);
+    // Halal rule: drop dishes/activities that name pork, alcohol or alcohol venues (listed in the report).
+    const halal = removeHaramItems(s.text);
+    for (const r of halal.removed) warnings.push(`NOT HALAL, removed: ${file} › ${section}: ${r}`);
+    if (!halal.text) continue;
+    const parts = split(halal.text, MAX_CHARS);
     const baseId = `${category}/${file}#${slug(s.headingPath.join(" "))}`;
     parts.forEach((text, i) => {
       let id = i === 0 ? baseId : `${baseId}-${i + 1}`;
@@ -125,22 +130,29 @@ export async function chunkFile(dataDir: string, path: string): Promise<ChunkRes
   return { chunks, warnings };
 }
 
-/** "## City, Country" is the item. Without one, there is no item heading. */
-function itemHeading(path: string[]): string | undefined {
-  return path.length >= 2 ? path[1] : undefined;
+const CITY_COUNTRY = /^(.+),\s*([^,]+)$/;
+
+/** Index of the item heading: the first "City, Country" heading below the top level. */
+function itemIndex(path: string[]): number {
+  for (let i = 1; i < path.length; i++) if (CITY_COUNTRY.test(path[i])) return i;
+  return -1;
 }
 
-/** Region from "# Region — subtitle", city and country from "## City, Country"; meta.json overrides (AD-3). */
+/** The item is the "City, Country" heading; otherwise the second heading; otherwise none. */
+function itemHeading(path: string[]): string | undefined {
+  const i = itemIndex(path);
+  return i > 0 ? path[i] : path.length >= 2 ? path[1] : undefined;
+}
+
+/** City and country from "City, Country"; region from the heading just above it (text before " — "); meta.json overrides (AD-3). */
 function placeMeta(path: string[], fm: FileMeta): ChunkMeta {
   const meta: ChunkMeta = {};
-  if (fm.placeHeadings !== false && path.length >= 2) {
-    const region = path[0].split(" — ")[0].trim();
-    const m = /^(.+),\s*([^,]+)$/.exec(path[1]);
-    if (m) {
-      if (fm.regionFromHeading !== false) meta.region = region;
-      meta.city = m[1].trim();
-      meta.country = m[2].trim();
-    }
+  const i = itemIndex(path);
+  if (fm.placeHeadings !== false && i > 0) {
+    const m = CITY_COUNTRY.exec(path[i])!;
+    if (fm.regionFromHeading !== false) meta.region = path[i - 1].split(" — ")[0].trim();
+    meta.city = m[1].trim();
+    meta.country = m[2].trim();
   }
   for (const k of ["region", "country", "city"] as const) if (fm[k]) meta[k] = fm[k];
   return meta;

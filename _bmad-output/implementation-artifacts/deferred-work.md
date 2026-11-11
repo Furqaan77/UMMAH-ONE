@@ -13,3 +13,6 @@
 - source_spec: `_bmad-output/implementation-artifacts/spec-1-3-pdf-word-excel-csv-parsers.md`
   summary: RESOLVED 11 Nov 2026 — Next.js upgraded to 15.5.29 (security backport); postcss 8.5.32, sharp 0.35.5, uuid 11.1.1 pinned via overrides. npm audit: 0 vulnerabilities. Build, tests (46) and a production chat request pass.
   evidence: npm audit --omit=dev; npm run build; next start + /api/chat.
+- source_spec: food data + halal rule (11 Nov 2026)
+  summary: Arabic answers from qwen3:4b mistranslate some ingredients (e.g. "apricots" → "apples", harira called a salad), even with correct sources.
+  evidence: live chat "ماذا آكل في مراكش؟" vs data. Model limit on 8 GB; options: a larger model on a 16 GB+ machine/server, or answer dish lists in English with Arabic notes.

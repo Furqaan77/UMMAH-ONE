@@ -59,7 +59,7 @@ const ALIASES: Record<string, Place> = {
 
 const CATEGORY_WORDS: Record<string, string[]> = {
   education: ["study", "studying", "student", "university", "universitie", "college", "degree", "school", "medicine", "master", "phd", "bachelor", "education", "campus"],
-  food: ["food", "eat", "restaurant", "cuisine", "dish"],
+  food: ["food", "eat", "eating", "restaurant", "cuisine", "dish", "dishe", "meal", "dessert", "sweet", "breakfast", "street", "taste", "try"],
   clothes: ["clothe", "clothing", "fashion", "abaya", "wear", "modest"],
   handicraft: ["craft", "handicraft", "carpet", "calligraphy", "pottery"],
   heritage: ["heritage", "unesco", "monument"],
@@ -94,6 +94,9 @@ function buildNames(chunks: Chunk[]): [string, Place][] {
 
 // Place names that are also everyday English words: only match the exact spelling (e.g. "Malé", not "male").
 const EXACT_ONLY = new Set(["male"]);
+// Place names that are also common nouns (a kazan is a cooking pot): only a place after "in", "to", "visit"…
+const PLACE_CONTEXT_ONLY = new Set(["kazan"]);
+const PLACE_WORDS = "in|to|visit|visiting|from|about|around|near|at|of";
 
 export function detectPlaces(q: string, names: [string, Place][]): Place[] {
   let text = fold(q);
@@ -101,6 +104,7 @@ export function detectPlaces(q: string, names: [string, Place][]): Place[] {
   const out: Place[] = [];
   for (const [name, p] of names) {
     if (EXACT_ONLY.has(name) && !raw.includes(p.value.toLowerCase())) continue;
+    if (PLACE_CONTEXT_ONLY.has(name) && !new RegExp(`(^|\\s)(${PLACE_WORDS})\\s+${name}($|[^\\p{L}])|^${name}($|[^\\p{L}])`, "u").test(text)) continue;
     if (hasPhrase(text, name)) {
       out.push(p);
       text = text.replace(name, " "); // do not count "kuwait" again inside "kuwait city"

@@ -35,6 +35,12 @@ Answers from the build question round, 10 November 2026. Skipped questions are i
 - None of the 6 removed places is in the guides.
 - Other categories (education, culture, food, clothes, heritage, handicrafts, business) will be added later by the team.
 
+## Food data and halal rule (11 Nov 2026)
+- Food answers use the team's "Halal Food — 81 Cities.pdf" (5 dishes per city), saved at `website/data/food/`. Marked "to verify".
+- **Halal rule (Furqaan):** never include food that might involve alcohol, pork or anything haram. At ingest, any dish or activity that names pork, alcohol, a dish known to contain them (e.g. buzara, black risotto) or an alcohol venue (pub, beach club, rooftop lounge) is removed and listed in the report. Prose that warns travellers ("some stalls use pork") is kept. The AI is also told never to recommend haram food or drink.
+- Removed on 11 Nov: Kotor black risotto and buzara mussels, Bali ayam betutu, Dubai rooftop lounge/beach club, Kotor konoba item and one Kotor food sentence.
+- Lists to extend: `website/lib/rag/haram.ts`.
+
 ## Design (from the Qwen chat screenshots)
 - Plain white background; large, bold, dark text; long answers in short paragraphs
 - Top bar: ☰ menu (left), "Ummah One" title (centre-left), new-chat icon (right)

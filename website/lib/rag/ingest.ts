@@ -1,6 +1,7 @@
 // Ingest pipeline: chunk → embed (only new/changed) → write index (AD-4).
 import { chunkAllDetailed } from "./chunk";
 import { deriveChunks } from "./derive";
+import { canonicalizePlaces } from "./canon";
 import type { Embedder } from "./embed";
 import type { ChunkStore } from "./store";
 import type { Chunk } from "./types";
@@ -30,6 +31,7 @@ export function embedText(c: Chunk): string {
 export async function ingest(opts: { dataDir: string; store: ChunkStore; embedder: Embedder }): Promise<IngestReport> {
   const { dataDir, store, embedder } = opts;
   const r = await chunkAllDetailed(dataDir);
+  canonicalizePlaces(r.chunks);
   r.chunks.push(...deriveChunks(r.chunks));
   const report: IngestReport = {
     ok: true,
@@ -103,7 +105,8 @@ export function formatReport(r: IngestReport): string {
     ...list("Removed files", r.removed),
     ...list("UNREADABLE files", r.unreadable),
     ...list("BLOCKED (index not written)", r.blocked),
-    ...list("Warnings", r.warnings),
+    ...list("Removed as not halal", r.warnings.filter((w) => w.startsWith("NOT HALAL")).map((w) => w.replace("NOT HALAL, removed: ", ""))),
+    ...list("Warnings", r.warnings.filter((w) => !w.startsWith("NOT HALAL"))),
   ];
   if (!r.added.length && !r.changed.length && !r.removed.length && !r.fullRebuild && !r.blocked.length) lines.push("Nothing changed.");
   return lines.join("\n");
