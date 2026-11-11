@@ -10,3 +10,6 @@
 - source_spec: `_bmad-output/implementation-artifacts/spec-1-3-pdf-word-excel-csv-parsers.md`
   summary: Upgrade Next.js 15.5.4 before launch: npm audit lists critical/high advisories (DoS, cache poisoning, middleware bypass, SSRF), plus postcss and sharp.
   evidence: npm audit --omit=dev on 11 Nov 2026. Pre-existing; not caused by the RAG work. exceljs pulls uuid <11.1.1 (moderate), used only by local ingest.
+- source_spec: `_bmad-output/implementation-artifacts/spec-1-3-pdf-word-excel-csv-parsers.md`
+  summary: RESOLVED 11 Nov 2026 — Next.js upgraded to 15.5.29 (security backport); postcss 8.5.32, sharp 0.35.5, uuid 11.1.1 pinned via overrides. npm audit: 0 vulnerabilities. Build, tests (46) and a production chat request pass.
+  evidence: npm audit --omit=dev; npm run build; next start + /api/chat.

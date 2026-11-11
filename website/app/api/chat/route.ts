@@ -74,7 +74,7 @@ export async function POST(req: Request) {
             options: { num_ctx: 8192 }, // room for the longer city guides
             messages: [
               { role: "system", content: systemPrompt(context, body.lang) },
-              ...messages.map((m, i) => ({
+              ...messages.map((m) => ({
                 role: m.role,
                 content: m.content,
                 ...(m.image ? { images: [m.image.replace(/^data:image\/\w+;base64,/, "")] } : {}),
