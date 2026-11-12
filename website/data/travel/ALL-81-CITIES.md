@@ -135,6 +135,8 @@ Food here is simple and satisfying: shawarma and grilled meats from Syrian and L
 
 **Energy:** Busy & Loud 2/10 · Too Much Tourism 5/10
 
+**Heritage (old cities, palaces, monuments):** Hegra
+
 AlUla feels almost otherworldly—an ancient desert valley of sandstone towers, palm oases, and silence so deep you can hear the wind move across the rock. For thousands of years it sat on the incense route, and the Nabataeans carved monumental tombs here, at Hegra, Saudi Arabia's first UNESCO World Heritage Site.
 
 The pace is slow and spacious, ruled by sunrise, sunset, and starlight. AlUla is not cheap: luxury desert resorts and guided site tours put it closer to a premium safari than a budget trip, though simpler guesthouses and farm stays do exist. October to March is the best time to go—summer days are intensely hot.
@@ -298,6 +300,8 @@ The food is hearty highland fare. Look for areeka, a rich dough dish soaked in g
 **Character:** Traditional 9/10 · Historic & Vintage 9/10 · Cultural 7/10 · Modern 4/10
 
 **Energy:** Busy & Loud 3/10 · Too Much Tourism 2/10
+
+**Heritage (old cities, palaces, monuments):** oasis
 
 Al Ahsa is an oasis on an extraordinary scale—one of the largest palm oases in the world, with millions of date palms fed by ancient springs. A UNESCO World Heritage Site, it has been farmed and settled for thousands of years, and its towns of Hofuf and Al Mubarraz still carry the rhythm of an older Arabia.
 
@@ -671,6 +675,8 @@ Seafood is the star here. Try sayadieh, Aqaba's signature dish of spiced fish ov
 
 **Energy:** Busy & Loud 7/10 · Too Much Tourism 6/10
 
+**Heritage (old cities, palaces, monuments):** old city, Palace of the Shirvanshahs
+
 Baku is bold and theatrical—a city of fire, wind and ambition on the shores of the Caspian Sea. Its medieval walled Old City, with masjids, caravanserais and the mysterious Maiden Tower, sits just below the shimmering Flame Towers and Zaha Hadid's flowing Heydar Aliyev Center. Oil wealth built grand boulevards and Belle Époque mansions, and the city wears it all with flair.
 
 The pace is lively but not frantic, with evening promenades along the seaside boulevard and long hours over tea. Baku is good value compared with Western Europe or the Gulf: mid-range hotels, taxis and restaurants are affordable, though luxury hotels can be pricey. Summers are hot and the famous wind blows year-round; spring and autumn are lovely.
@@ -753,6 +759,8 @@ The food is classic Azerbaijani home cooking: plov, dolma, piti, tandir bread an
 **Character:** Traditional 7/10 · Historic & Vintage 10/10 · Cultural 10/10 · Modern 7/10
 
 **Energy:** Busy & Loud 10/10 · Too Much Tourism 10/10
+
+**Heritage (old cities, palaces, monuments):** Topkapı Palace, old city
 
 Istanbul is magnificent—a city stretched across two continents, where minarets rise above the Bosphorus and the call to prayer rolls from hill to hill five times a day. Ferries cut across the water, street vendors sell simit on every corner, and centuries of Byzantine and Ottoman history sit side by side with modern cafés and busy shopping streets. Life here is fast, loud, and endlessly alive.
 
@@ -1082,6 +1090,8 @@ The food is famously hearty. Try Akçaabat köfte, buttery Trabzon pide, kuymak 
 
 **Energy:** Busy & Loud 7/10 · Too Much Tourism 4/10
 
+**Heritage (old cities, palaces, monuments):** first Ottoman capital
+
 Bursa is where the Ottoman story began. The first capital of the empire, it sits at the foot of towering Uludağ mountain, and its oldest quarters are filled with early Ottoman masjids, tombs, and silk-trading caravanserais. It is a green, gracious city with a quietly spiritual atmosphere that Muslim travellers often find deeply moving.
 
 Bursa is a busy industrial city in its modern parts, but the historic centre feels calm and dignified. It is very affordable compared with Istanbul—just a short ferry and drive away—and easily works as a day trip, though it rewards a longer stay. In winter, Uludağ becomes one of Türkiye's main ski resorts.
@@ -1204,6 +1214,8 @@ Alanya's Seljuk heritage gives it real depth: the Red Tower and the medieval shi
 **Character:** Traditional 9/10 · Historic & Vintage 9/10 · Cultural 8/10 · Modern 5/10
 
 **Energy:** Busy & Loud 5/10 · Too Much Tourism 4/10
+
+**Heritage (old cities, palaces, monuments):** Seljuk heritage
 
 Konya is the spiritual heart of Türkiye. This is the city of Mevlana Jalaluddin Rumi, the 13th-century poet and scholar whose words still move millions, and his green-tiled tomb draws pilgrims from across the world. As the capital of the Seljuk Sultanate of Rum, Konya is also filled with exquisite medieval masjids and madrasas.
 
@@ -1405,6 +1417,8 @@ It is one of the more affordable capitals in Europe, far cheaper than Western Eu
 
 **Energy:** Busy & Loud 5/10 · Too Much Tourism 8/10
 
+**Heritage (old cities, palaces, monuments):** Old Bridge
+
 Mostar is a city of stone, water, and memory. At its heart is the Stari Most, the elegant Ottoman bridge arching over the emerald Neretva River, flanked by cobbled lanes, slender minarets, and old stone houses. The bridge was destroyed in 1993 during the Bosnian war and painstakingly rebuilt, reopening in 2004—today it stands as a quiet symbol of resilience and reconciliation. By day the old bazaar hums with visitors; by evening the town settles into a gentler rhythm of river sounds and the call to prayer.
 
 Mostar is very affordable compared with Western Europe, and even cheaper once you step a few streets away from the bridge. Halal food is easy to find, especially on the east bank. Herzegovinian cooking is generous and sun-warmed: Mostar-style ćevapi, klepe dumplings, stuffed vegetables, and fresh figs and pomegranates from the surrounding hills.
@@ -1443,6 +1457,8 @@ Mostar is very affordable compared with Western Europe, and even cheaper once yo
 **Character:** Traditional 8/10 · Historic & Vintage 9/10 · Cultural 9/10 · Modern 5/10
 
 **Energy:** Busy & Loud 5/10 · Too Much Tourism 5/10
+
+**Heritage (old cities, palaces, monuments):** Baščaršija old bazaar
 
 Sarajevo is where East meets West—not as a slogan, but as something you can see on a single street. Ottoman domes and bazaars give way to Austro-Hungarian façades within a few steps, and masjids, churches, and synagogues stand within sight of one another. The city also carries the weight of the 1992–1995 siege with quiet dignity; memorials and museums tell that story honestly, while everyday life is full of warmth, humour, and hospitality.
 
@@ -1639,6 +1655,8 @@ Life is lively, sociable, and lived outdoors—coffee culture here is close to a
 
 **Energy:** Busy & Loud 4/10 · Too Much Tourism 3/10
 
+**Heritage (old cities, palaces, monuments):** Ottoman old town
+
 Prizren is Kosovo's most beautiful town—a small, poetic place of stone bridges, minarets, and red-roofed houses gathered beneath a hilltop fortress. The Bistrica River runs through its centre, lined with cafés and plane trees, and the old town feels gently Ottoman in rhythm: the call to prayer, the clink of tea glasses, and craftsmen working silver filigree in tiny workshops. Albanian, Turkish, and Bosnian are all heard on its streets, a reminder of its long, layered history.
 
 The pace is slow and friendly, and the town is very affordable—among the cheapest places to travel in Europe. As a Muslim-majority town, halal food is the norm. Expect excellent qebapa and grilled meats, flaky burek, fresh bread, and Ottoman-style sweets. Every August, the town's quiet charm is joined by the buzz of DokuFest, its renowned documentary film festival.
@@ -1719,6 +1737,8 @@ Pristina is one of the most affordable capitals on the continent, with prices fa
 **Character:** Traditional 9/10 · Historic & Vintage 9/10 · Cultural 10/10 · Modern 4/10
 
 **Energy:** Busy & Loud 10/10 · Too Much Tourism 10/10
+
+**Heritage (old cities, palaces, monuments):** medina, palaces
 
 Marrakesh is intoxicating—a rose-red city of spice-scented souks, snake charmers, and the call to prayer drifting from the Koutoubia's minaret, with the snow-capped Atlas Mountains on the horizon. Life in the medina moves at full volume: scooters weave through alleys, merchants call out, and every evening Jemaa el-Fnaa becomes a smoky open-air theatre of food stalls, storytellers, and musicians. Touts and over-eager "guides" are part of the experience, so a firm, friendly *la, shukran* goes a long way.
 
@@ -1843,6 +1863,8 @@ Food here blends Moroccan and Mediterranean: hearty bissara for breakfast, fried
 
 **Energy:** Busy & Loud 5/10 · Too Much Tourism 4/10
 
+**Heritage (old cities, palaces, monuments):** Kasbah of the Udayas
+
 Rabat is Morocco's calm, cultured capital—green, orderly, and refreshingly relaxed. Wide boulevards, a tidy riverfront, and a smooth tram network give it a polished feel, while the Kasbah of the Udayas and the old medina keep its history close at hand. Tourists are fewer here, which means little hassle and a city that feels lived-in rather than performed.
 
 Life moves at an easy pace: families stroll the Bouregreg riverside in the evening, surfers paddle out below the Kasbah walls, and the medina's lanes are pleasant rather than overwhelming. Prices sit between Marrakesh and Casablanca—still much cheaper than Europe, especially for everyday dining.
@@ -1924,6 +1946,8 @@ The food scene is the country's most varied: seafood straight from the port, tra
 **Character:** Traditional 8/10 · Historic & Vintage 10/10 · Cultural 10/10 · Modern 5/10
 
 **Energy:** Busy & Loud 10/10 · Too Much Tourism 9/10
+
+**Heritage (old cities, palaces, monuments):** Islamic Cairo
 
 Cairo is overwhelming in the best possible way—a vast, roaring megacity where twenty-odd million people, five thousand years of history, and the Nile all collide. It is known as the "City of a Thousand Minarets," and the call to prayer echoing across Islamic Cairo at dusk is unforgettable. From the Pyramids on the desert edge to the Mamluk masjids, madrasas, and bazaars of the old city, few places on earth hold so much history.
 
@@ -2089,6 +2113,8 @@ The food is simple and satisfying: fish grilled by the kilo, flaky feteer meshal
 
 **Energy:** Busy & Loud 6/10 · Too Much Tourism 4/10
 
+**Heritage (old cities, palaces, monuments):** medina
+
 Tunis is graceful and quietly sophisticated—a capital where a UNESCO-listed medina of vaulted souks and centuries-old masjids sits beside a French-built ville nouvelle of tree-lined boulevards and café terraces. At its heart stands the Zitouna Masjid, one of the oldest seats of Islamic learning in the Maghreb, around which the markets fan out in a gentle maze.
 
 The pace is relaxed and deeply Mediterranean: long coffees on Avenue Habib Bourguiba, evening strolls, and weekends by the sea in La Marsa or Sidi Bou Said. Tunisia is one of the most affordable destinations around the Mediterranean, with meals and transport costing a fraction of nearby Italy or France. Hassle is modest, though some medina "guides" will steer you towards carpet shops.
@@ -2171,6 +2197,8 @@ The food is a treat: riz djerbien, rice steamed with herbs, vegetables, and fish
 
 **Energy:** Busy & Loud 7/10 · Too Much Tourism 7/10
 
+**Heritage (old cities, palaces, monuments):** medina
+
 Sousse is a lively blend of ancient and easygoing—a historic port whose UNESCO-listed medina, fortified ribat, and Great Masjid sit just steps from a long strip of golden beaches and resort hotels. Known as the "Pearl of the Sahel," it is one of Tunisia's most popular holiday cities, yet its walled old town still feels authentically local, especially on Fridays when the call to prayer rings out across the rooftops.
 
 The pace splits in two: busy and beachy along the hotel zone and Port El Kantaoui, slower and more traditional within the medina walls. It is excellent value—a beach holiday here typically costs well under half the price of Spain or Italy—though medina shopkeepers can be pushy and July and August get crowded.
@@ -2213,6 +2241,8 @@ The food is classic Sahel: fish couscous, grilled sea bream, smoky salata mechou
 
 **Energy:** Busy & Loud 5/10 · Too Much Tourism 7/10
 
+**Heritage (old cities, palaces, monuments):** Registan
+
 Samarkand is the Silk Road made real. Turquoise domes rise above wide, tree-lined avenues, and the Registan—three tiled madrasas facing one another across a great square—stops first-time visitors in their tracks. This was Timur's capital, and the ambition still shows in every portal and minaret. Yet the modern city is relaxed and friendly, with families strolling in the evenings and tea served at every turn.
 
 Life here moves at an easy pace, and it is very affordable. Guesthouses, taxis, and meals cost a fraction of what you would pay in Istanbul or Dubai, and even the nicer hotels feel like good value. For Muslim travellers, it is deeply moving—centuries of Islamic scholarship, architecture, and devotion are written into the city's stones.
@@ -2253,6 +2283,8 @@ The food is generous and comforting. Samarkand plov—rice, carrots, and tender 
 **Character:** Traditional 9/10 · Historic & Vintage 10/10 · Cultural 9/10 · Modern 3/10
 
 **Energy:** Busy & Loud 4/10 · Too Much Tourism 6/10
+
+**Heritage (old cities, palaces, monuments):** old city
 
 Bukhara feels older and quieter than Samarkand—an adobe-coloured city of domes, lanes, and pools where you can still lose yourself on foot. For more than a thousand years it was one of the great centres of Islamic learning, and over a hundred madrasas and masjids survive within the historic centre. Imam al-Bukhari came from this region, and the city still carries the gentle weight of that scholarly past.
 
@@ -2335,6 +2367,8 @@ Food is everywhere and taken seriously. Tashkent's plov centres serve hundreds o
 **Character:** Traditional 9/10 · Historic & Vintage 10/10 · Cultural 8/10 · Modern 2/10
 
 **Energy:** Busy & Loud 2/10 · Too Much Tourism 6/10
+
+**Heritage (old cities, palaces, monuments):** Itchan Kala walled city
 
 Khiva is a walled city that seems to have stepped straight out of a legend. Inside the mud-brick ramparts of Itchan Kala, minarets, palaces, and madrasas are packed so tightly that the whole old town feels like an open-air museum—one where people still live, pray, and hang laundry between ancient walls.
 
@@ -2458,6 +2492,8 @@ Food leans traditional Kazakh—beshbarmak, kazy, kuyrdak, and baursak—alongsi
 **Character:** Traditional 8/10 · Historic & Vintage 9/10 · Cultural 8/10 · Modern 5/10
 
 **Energy:** Busy & Loud 3/10 · Too Much Tourism 4/10
+
+**Heritage (old cities, palaces, monuments):** Mausoleum of Khoja Ahmed Yasawi
 
 Turkistan is Kazakhstan's spiritual heart. At its centre stands the magnificent Mausoleum of Khoja Ahmed Yasawi—the 12th-century Sufi poet and saint—whose vast, turquoise-domed shrine, built by Timur, is a UNESCO World Heritage Site and a beloved place of pilgrimage. Many Kazakhs call a visit here the "lesser Hajj."
 
@@ -2625,6 +2661,8 @@ The food is simple, fresh, and delicious. Qurutob—flatbread layered with yoghu
 
 **Energy:** Busy & Loud 6/10 · Too Much Tourism 5/10
 
+**Heritage (old cities, palaces, monuments):** Kazan Kremlin
+
 Kazan is where East meets West on the banks of the Volga. The capital of Tatarstan, it is a city where masjids and churches stand side by side, Tatar and Russian are both spoken, and centuries of Islamic heritage blend with grand imperial architecture. It is one of the most important centres of Islam in Europe.
 
 The city is lively, clean, and easy to explore, with pedestrian streets, riverside parks, and a youthful energy from its many universities. Kazan is moderately priced—more affordable than Moscow or St Petersburg, with good-value hotels, transport, and meals.
@@ -2708,6 +2746,8 @@ It is good value by Western standards, though prices in the trendy beach areas c
 
 **Energy:** Busy & Loud 6/10 · Too Much Tourism 6/10
 
+**Heritage (old cities, palaces, monuments):** Kraton palace
+
 Yogyakarta—"Jogja" to almost everyone—is the soulful heart of Javanese culture. A sultan still lives in the palace, batik artists work in quiet back lanes, and students fill the cafés late into the night. It is creative, gentle, and proud of its traditions, with the smoking cone of Mount Merapi on the horizon and two of Asia's greatest temples within easy reach.
 
 It is also one of Indonesia's most affordable cities. A comfortable guesthouse, a becak ride, and a hearty meal cost very little, and the pace is unhurried. As a Muslim-majority city, halal food is everywhere, and the call to prayer rises from the royal masjid beside the Kraton. Jogja's signature dish is gudeg—young jackfruit slow-cooked in palm sugar and coconut milk—while evenings belong to the angkringan, humble street stalls serving rice parcels, satay skewers, and the famous charcoal-dunked kopi joss.
@@ -2785,6 +2825,8 @@ For a city of its polish, KL is remarkably affordable, far cheaper than Singapor
 **Character:** Traditional 8/10 · Historic & Vintage 9/10 · Cultural 9/10 · Modern 6/10
 
 **Energy:** Busy & Loud 7/10 · Too Much Tourism 7/10
+
+**Heritage (old cities, palaces, monuments):** George Town
 
 Penang is Malaysia's great food island—and its most charming. In George Town, a UNESCO World Heritage Site, faded shophouses, clan temples, masjids, and churches stand within a few streets of each other, and street art peeks out from old walls. The mood is relaxed, a little bohemian, and full of history from its days as a spice-trading port.
 
@@ -3180,6 +3222,8 @@ It is not a casual trip. All visitors need an entry permit from the Lakshadweep 
 
 **Energy:** Busy & Loud 9/10 · Too Much Tourism 5/10
 
+**Heritage (old cities, palaces, monuments):** Charminar, Golconda Fort
+
 Hyderabad is a city of two worlds. The Old City is a swirl of bazaars, minarets, and centuries of Nizami grandeur, while the gleaming tech districts of HITEC City look firmly toward the future. Between them lies a city that is proud, hospitable, and absolutely serious about its food.
 
 It is very affordable, even compared with other major Indian cities. For Muslim travellers, Hyderabad is a joy: the Qutb Shahi and Nizam dynasties left behind magnificent masjids and palaces, and a rich Deccani culinary tradition. Hyderabadi dum biryani is world-famous, cooked slowly in sealed pots. In Ramadan, the city comes alive at night with steaming bowls of haleem. Mornings start with Irani chai and Osmania biscuits, and desserts like qubani ka meetha and double ka meetha round off every feast. Summers are very hot, so the cooler months from November to February are ideal.
@@ -3218,6 +3262,8 @@ It is very affordable, even compared with other major Indian cities. For Muslim 
 **Character:** Traditional 9/10 · Historic & Vintage 10/10 · Cultural 10/10 · Modern 5/10
 
 **Energy:** Busy & Loud 8/10 · Too Much Tourism 3/10
+
+**Heritage (old cities, palaces, monuments):** Bara Imambara
 
 Lucknow is elegant and gracious—the City of Nawabs, famous for its tehzeeb, or refined courtesy. People still say "pehle aap" ("after you"), poetry is cherished, and grand imambaras and gateways recall the golden age of the Awadh court. The city moves at a measured, dignified pace, with old-world charm around every corner.
 
@@ -3260,6 +3306,8 @@ It is very affordable, and it is a dream for food lovers. Lucknow's Awadhi cuisi
 
 **Energy:** Busy & Loud 6/10 · Too Much Tourism 7/10
 
+**Heritage (old cities, palaces, monuments):** Stone Town
+
 Stone Town is a labyrinth of history. Narrow alleys twist between coral-stone houses, carved wooden doors hide quiet courtyards, and the call to prayer drifts across rooftops where Swahili, Arab, Persian, Indian, and European influences meet. Once the seat of the Omani sultans, it is a UNESCO World Heritage Site, and it moves to its own gentle rhythm.
 
 Zanzibar is mostly Muslim, so halal food is easy to find and the island feels welcoming for Muslim visitors—dress modestly in town, especially during Ramadan. It is moderately priced: local meals are cheap, while beach resorts and tours can be expensive. Food is a highlight, shaped by the spice trade: pilau, biryani, coconut curries, fresh seafood, and the famous Forodhani night market with its "Zanzibar pizza" and urojo soup. The long rains from roughly March to May are the quietest time to visit.
@@ -3289,4 +3337,31 @@ Zanzibar is mostly Muslim, so halal food is easy to find and the island feels we
 
 ---
 
+# Heritage Cities (old cities, palaces, monuments)
 
+The 24 heritage cities in the One Ummah guide:
+
+- Samarkand, Uzbekistan: Registan
+- Bukhara, Uzbekistan: old city
+- Khiva, Uzbekistan: Itchan Kala walled city
+- Turkistan, Kazakhstan: Mausoleum of Khoja Ahmed Yasawi
+- Istanbul, Türkiye: Topkapı Palace, old city
+- Bursa, Türkiye: first Ottoman capital
+- Konya, Türkiye: Seljuk heritage
+- Cairo, Egypt: Islamic Cairo
+- Marrakesh, Morocco: medina, palaces
+- Rabat, Morocco: Kasbah of the Udayas
+- Tunis, Tunisia: medina
+- Sousse, Tunisia: medina
+- Mostar, Bosnia and Herzegovina: Old Bridge
+- Sarajevo, Bosnia and Herzegovina: Baščaršija old bazaar
+- Prizren, Kosovo: Ottoman old town
+- AlUla, Saudi Arabia: Hegra
+- Al Ahsa, Saudi Arabia: oasis
+- Baku, Azerbaijan: old city, Palace of the Shirvanshahs
+- Kazan, Russia: Kazan Kremlin
+- Zanzibar, Tanzania: Stone Town
+- Hyderabad, India: Charminar, Golconda Fort
+- Lucknow, India: Bara Imambara
+- Penang, Malaysia: George Town
+- Yogyakarta, Indonesia: Kraton palace

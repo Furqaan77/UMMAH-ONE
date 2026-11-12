@@ -236,6 +236,35 @@
   ]
  },
  {
+  "group": "education",
+  "q": "Compare the student cities on affordability and safety",
+  "expect": [
+   "Score table"
+  ]
+ },
+ {
+  "group": "education",
+  "q": "Is Riyadh good for career readiness as a student?",
+  "expect": [
+   "Riyadh"
+  ],
+  "category": "education"
+ },
+ {
+  "group": "education",
+  "q": "Where is KFUPM and how affordable is it?",
+  "expect": [
+   "Dhahran"
+  ]
+ },
+ {
+  "group": "education",
+  "q": "What are the 10 priorities for university students?",
+  "expect": [
+   "10 priorities"
+  ]
+ },
+ {
   "group": "about",
   "q": "What is Ummah One?",
   "expect": [
@@ -320,85 +349,39 @@
   "none": true
  },
  {
-  "group": "food",
-  "q": "What should I eat in Dubai?",
+  "group": "heritage",
+  "q": "Which cities have the most heritage, like old cities and palaces?",
   "expect": [
-   "Dubai, UAE"
-  ],
-  "category": "food"
+   "Heritage Cities"
+  ]
  },
  {
-  "group": "food",
-  "q": "What is Jordan's national dish?",
+  "group": "heritage",
+  "q": "Where can I see the Kasbah of the Udayas?",
   "expect": [
-   "Amman"
-  ],
-  "category": "food"
+   "Rabat"
+  ]
  },
  {
-  "group": "food",
-  "q": "Where can I try mansaf?",
+  "group": "heritage",
+  "q": "Where is the Bara Imambara?",
   "expect": [
-   "Amman"
-  ],
-  "category": "food"
+   "Lucknow"
+  ]
  },
  {
-  "group": "food",
-  "q": "Best halal food in Sarajevo",
+  "group": "heritage",
+  "q": "Which city was the first Ottoman capital?",
   "expect": [
-   "Sarajevo"
-  ],
-  "category": "food"
+   "Bursa"
+  ]
  },
  {
-  "group": "food",
-  "q": "Where can I watch plov cooked in a giant kazan?",
+  "group": "heritage",
+  "q": "I want to visit a Kraton palace",
   "expect": [
-   "Tashkent"
-  ],
-  "category": "food"
- },
- {
-  "group": "food",
-  "q": "Which city is known for testi kebab in a clay pot?",
-  "expect": [
-   "Cappadocia"
-  ],
-  "category": "food"
- },
- {
-  "group": "food",
-  "q": "Typical dishes in Kazan",
-  "expect": [
-   "Kazan"
-  ],
-  "category": "food"
- },
- {
-  "group": "food",
-  "q": "What is beshbarmak and where can I eat it?",
-  "expect": [
-   "Almaty",
-   "Astana"
-  ],
-  "category": "food"
- },
- {
-  "group": "food",
-  "q": "ماذا آكل في مراكش؟",
-  "expect": [
-   "Marrakesh"
-  ],
-  "category": "food"
- },
- {
-  "group": "food",
-  "q": "أفضل طعام حلال في إسطنبول",
-  "expect": [
-   "Istanbul"
-  ],
-  "category": "food"
+   "Yogyakarta"
+  ]
  },
  {
   "group": "halal",

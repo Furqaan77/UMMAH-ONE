@@ -36,7 +36,7 @@ Answers from the build question round, 10 November 2026. Skipped questions are i
 - Other categories (education, culture, food, clothes, heritage, handicrafts, business) will be added later by the team.
 
 ## Food data and halal rule (11 Nov 2026)
-- Food answers use the team's "Halal Food — 81 Cities.pdf" (5 dishes per city), saved at `website/data/food/`. Marked "to verify".
+- **Removed 12 Nov 2026 (Furqaan):** the food database ("Halal Food — 81 Cities.pdf") is no longer used. `website/data/food/` was deleted. The city guides still mention local food; the halal rule below still applies to them.
 - **Halal rule (Furqaan):** never include food that might involve alcohol, pork or anything haram. At ingest, any dish or activity that names pork, alcohol, a dish known to contain them (e.g. buzara, black risotto) or an alcohol venue (pub, beach club, rooftop lounge) is removed and listed in the report. Prose that warns travellers ("some stalls use pork") is kept. The AI is also told never to recommend haram food or drink.
 - Removed on 11 Nov: Kotor black risotto and buzara mussels, Bali ayam betutu, Dubai rooftop lounge/beach club, Kotor konoba item and one Kotor food sentence.
 - **Disputed foods (Furqaan, 11 Nov, option c):** horse meat (kazy) and fermented milks with some alcohol (kymyz/kumys, shubat) are removed. Seafood (shrimp, squid, octopus, mussels) is kept. Riding a horse is not affected.
@@ -50,3 +50,7 @@ Answers from the build question round, 10 November 2026. Skipped questions are i
 - Actions under each answer: copy, 👍, 👎, share, retry, more (…)
 - Round floating scroll button on the right, above the input bar
 - Input bar: rounded, light grey, with + on the left, mic, and a round send button
+
+## Education data (12 Nov 2026)
+- The education sample was replaced by `website/data/education/university-city-compass.md`: the University City Compass, 18 cities, scores out of 10 on Furqaan's 10 priorities (scores doubled from 5, then 12 scores moved by 1 point against the new wording; each change is noted in the city section).
+- No overall ranking, totals or averages (the report says so). The old sample's "ranked 1–18" wording is gone.

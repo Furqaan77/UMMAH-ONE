@@ -21,8 +21,14 @@ function tmpData(files: Record<string, string>): string {
 test("city guides: all 81 cities, overview + things to do, with place meta", async () => {
   const { chunks } = (await chunkAll(DATA));
   const travel = chunks.filter((c) => c.file === "ALL-81-CITIES.md");
-  const cities = new Set(travel.map((c) => c.meta.city));
+  const cities = new Set(travel.map((c) => c.meta.city).filter(Boolean));
   assert.equal(cities.size, 81);
+  // The heritage list (24 places, user's list only) is one chunk with no single city.
+  const heritage = travel.filter((c) => c.title.startsWith("Heritage Cities"));
+  assert.equal(heritage.length, 1);
+  assert.equal(heritage[0].meta.city, undefined);
+  assert.equal(heritage[0].text.split("\n").filter((l) => l.startsWith("- ")).length, 24);
+  assert.equal(travel.filter((c) => /Heritage \(old cities, palaces, monuments\):/.test(c.text)).length, 24);
   for (const city of cities) {
     const mine = travel.filter((c) => c.meta.city === city);
     assert.ok(mine.some((c) => c.section === c.title), `${city}: overview`);
