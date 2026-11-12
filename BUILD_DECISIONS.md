@@ -54,3 +54,11 @@ Answers from the build question round, 10 November 2026. Skipped questions are i
 ## Education data (12 Nov 2026)
 - The education sample was replaced by `website/data/education/university-city-compass.md`: the University City Compass, 18 cities, scores out of 10 on Furqaan's 10 priorities (scores doubled from 5, then 12 scores moved by 1 point against the new wording; each change is noted in the city section).
 - No overall ranking, totals or averages (the report says so). The old sample's "ranked 1–18" wording is gone.
+
+## Chatbot parts (12 Nov 2026, Furqaan)
+The chatbot has 3 parts for now:
+1. **Travel and heritage**: `travel/ALL-81-CITIES.md` (81 cities; heritage line for the 24 heritage places plus a heritage list).
+2. **Universities**: `education/university-city-compass.md`.
+3. **Art and culture**: `culture/art-and-culture.md`. It covers culture, art and music; clothes, fashion and markets; and handicrafts (carpets, calligraphy, crafts, perfume). Only the 28 places on Furqaan's lists, in their wording. The handicrafts list is kept as given (by craft) and also turned around by city.
+- Also in Art and culture: `culture/what-to-buy.md` (added 12 Nov), made from "What to Buy — 81 Cities": 20 signature buys, 72 cities with what and where to buy, 9 cities marked "needs research".
+- Not in the chatbot: the halal food PDF.

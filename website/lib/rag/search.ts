@@ -63,7 +63,8 @@ const CATEGORY_WORDS: Record<string, string[]> = {
   clothes: ["clothe", "clothing", "fashion", "abaya", "wear", "modest"],
   handicraft: ["craft", "handicraft", "carpet", "calligraphy", "pottery"],
   heritage: ["heritage", "unesco", "monument"],
-  culture: ["culture", "festival", "music"],
+  // Art and culture (12 Nov 2026) covers culture, art, music, clothes, fashion, markets and handicrafts.
+  culture: ["culture", "festival", "music", "art", "museum", "poetry", "dance", "theatre", "dervish", "clothe", "clothing", "fashion", "abaya", "kaftan", "modest", "market", "bazaar", "souk", "souq", "craft", "handicraft", "carpet", "calligraphy", "pottery", "silk", "embroidery", "perfume", "oud", "frankincense", "copperwork", "filigree", "leather", "batik", "buy", "buying", "shopping", "souvenir", "gift"],
   business: ["business", "shop", "brand", "artist", "seller"],
   about: ["ummah", "halal-friendliness", "label", "population"],
 };

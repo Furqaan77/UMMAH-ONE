@@ -384,6 +384,107 @@
   ]
  },
  {
+  "group": "culture",
+  "q": "Where can I see whirling dervishes?",
+  "expect": [
+   "Konya",
+   "Culture art and music"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "Where is the Gnawa music festival?",
+  "expect": [
+   "Essaouira"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "Where can I find modest fashion in Kuala Lumpur?",
+  "expect": [
+   "Kuala Lumpur"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "Which cities are known for carpets?",
+  "expect": [
+   "Handicrafts"
+  ]
+ },
+ {
+  "group": "culture",
+  "q": "Where can I buy Bidriware?",
+  "expect": [
+   "Hyderabad"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "Where can I hear mugham music?",
+  "expect": [
+   "Baku"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "أين أجد الخط العربي في إسطنبول؟",
+  "expect": [
+   "Istanbul"
+  ]
+ },
+ {
+  "group": "buy",
+  "q": "What should I buy in Khiva?",
+  "expect": [
+   "Khiva"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "buy",
+  "q": "Where can I buy frankincense?",
+  "expect": [
+   "Salalah",
+   "Signature buys"
+  ]
+ },
+ {
+  "group": "buy",
+  "q": "Best souvenirs from Sarajevo",
+  "expect": [
+   "Sarajevo"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "buy",
+  "q": "Where do I buy argan oil?",
+  "expect": [
+   "Essaouira"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "buy",
+  "q": "What are the best things to buy on a trip?",
+  "expect": [
+   "Signature buys"
+  ]
+ },
+ {
+  "group": "buy",
+  "q": "ماذا أشتري من حيدر آباد؟",
+  "expect": [
+   "Hyderabad"
+  ]
+ },
+ {
   "group": "halal",
   "q": "Where can I try buzara mussels in Kotor?",
   "forbid": [
