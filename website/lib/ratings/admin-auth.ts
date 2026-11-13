@@ -1,6 +1,6 @@
 import { createHash, createHmac, timingSafeEqual } from "node:crypto";
 
-// Admin access for Furqaan: one password in ADMIN_PASSWORD (.env.local), at least 12 characters.
+// Admin access for the team (Bushra): one password in ADMIN_PASSWORD (.env.local), at least 12 characters.
 // The cookie holds "<issued-at>.<HMAC>", never the password, and the server rejects it after 12 hours.
 export const ADMIN_COOKIE = "uo_admin";
 export const MIN_PASSWORD = 12;

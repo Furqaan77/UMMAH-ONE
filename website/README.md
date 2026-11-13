@@ -5,6 +5,8 @@ Design follows the Qwen chat screenshots: plain white, large bold text, grey use
 
 ## Run it
 
+**Windows PC (main machine from 13 Nov 2026):** follow `../HANDOFF.md` section 4 (models: `qwen3:8b`, `qwen2.5vl:7b`, `qwen3-embedding:0.6b`; then `npm run ingest`, `npm test`, `npm run eval`, `npm run dev`). The steps below are for the Mac.
+
 1. Install Ollama: https://ollama.com/download
 2. Get the models:
    ```

@@ -13,9 +13,9 @@ context: []
 
 ## Intent
 
-**Problem:** Ummah One wants to tell travellers how enjoyable each of the 81 cities is, but the labels must come from the team (Furqaan), informed by real visitors. Today there is no way to collect visitor feelings or publish a team label.
+**Problem:** Ummah One wants to tell travellers how enjoyable each of the 81 cities is, but the labels must come from the team (Bushra), informed by real visitors. Today there is no way to collect visitor feelings or publish a team label.
 
-**Approach:** Under chat answers about one travel city, visitors who tick "I have been to [city]" pick one of 4 labels (Very boring, Boring, Enjoyable, Most enjoyable) with an optional comment. Inputs are stored privately. A password-protected admin page shows per-city counts and comments; Furqaan sets or clears each city's label by hand. Only approved labels are shown in chat and given to the chatbot.
+**Approach:** Under chat answers about one travel city, visitors who tick "I have been to [city]" pick one of 4 labels (Very boring, Boring, Enjoyable, Most enjoyable) with an optional comment. Inputs are stored privately. A password-protected admin page shows per-city counts and comments; Bushra sets or clears each city's label by hand. Only approved labels are shown in chat and given to the chatbot.
 
 ## Boundaries & Constraints
 
@@ -75,8 +75,8 @@ context: []
 
 **Acceptance Criteria:**
 - Given no labels set, when a user asks "Which places are most enjoyable?", then the chatbot says no city has been rated yet by the team.
-- Given Furqaan sets Konya to "Most enjoyable" in admin, when a user asks that question, then the answer names Konya and the Konya answer shows the badge.
-- Given ratings exist, when Furqaan opens `/admin`, then each city shows counts per label and comments; the public site shows none of them.
+- Given Bushra sets Konya to "Most enjoyable" in admin, when a user asks that question, then the answer names Konya and the Konya answer shows the badge.
+- Given ratings exist, when Bushra opens `/admin`, then each city shows counts per label and comments; the public site shows none of them.
 
 ## Design Notes
 

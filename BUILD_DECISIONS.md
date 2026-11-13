@@ -36,10 +36,10 @@ Answers from the build question round, 10 November 2026. Skipped questions are i
 - Other categories (education, culture, food, clothes, heritage, handicrafts, business) will be added later by the team.
 
 ## Food data and halal rule (11 Nov 2026)
-- **Removed 12 Nov 2026 (Furqaan):** the food database ("Halal Food — 81 Cities.pdf") is no longer used. `website/data/food/` was deleted. The city guides still mention local food; the halal rule below still applies to them.
-- **Halal rule (Furqaan):** never include food that might involve alcohol, pork or anything haram. At ingest, any dish or activity that names pork, alcohol, a dish known to contain them (e.g. buzara, black risotto) or an alcohol venue (pub, beach club, rooftop lounge) is removed and listed in the report. Prose that warns travellers ("some stalls use pork") is kept. The AI is also told never to recommend haram food or drink.
+- **Removed 12 Nov 2026 (Bushra):** the food database ("Halal Food — 81 Cities.pdf") is no longer used. `website/data/food/` was deleted. The city guides still mention local food; the halal rule below still applies to them.
+- **Halal rule (Bushra):** never include food that might involve alcohol, pork or anything haram. At ingest, any dish or activity that names pork, alcohol, a dish known to contain them (e.g. buzara, black risotto) or an alcohol venue (pub, beach club, rooftop lounge) is removed and listed in the report. Prose that warns travellers ("some stalls use pork") is kept. The AI is also told never to recommend haram food or drink.
 - Removed on 11 Nov: Kotor black risotto and buzara mussels, Bali ayam betutu, Dubai rooftop lounge/beach club, Kotor konoba item and one Kotor food sentence.
-- **Disputed foods (Furqaan, 11 Nov, option c):** horse meat (kazy) and fermented milks with some alcohol (kymyz/kumys, shubat) are removed. Seafood (shrimp, squid, octopus, mussels) is kept. Riding a horse is not affected.
+- **Disputed foods (Bushra, 11 Nov, option c):** horse meat (kazy) and fermented milks with some alcohol (kymyz/kumys, shubat) are removed. Seafood (shrimp, squid, octopus, mussels) is kept. Riding a horse is not affected.
 - Lists to extend: `website/lib/rag/haram.ts`.
 
 ## Design (from the Qwen chat screenshots)
@@ -52,20 +52,20 @@ Answers from the build question round, 10 November 2026. Skipped questions are i
 - Input bar: rounded, light grey, with + on the left, mic, and a round send button
 
 ## Education data (12 Nov 2026)
-- The education sample was replaced by `website/data/education/university-city-compass.md`: the University City Compass, 18 cities, scores out of 10 on Furqaan's 10 priorities (scores doubled from 5, then 12 scores moved by 1 point against the new wording; each change is noted in the city section).
+- The education sample was replaced by `website/data/education/university-city-compass.md`: the University City Compass, 18 cities, scores out of 10 on Bushra's 10 priorities (scores doubled from 5, then 12 scores moved by 1 point against the new wording; each change is noted in the city section).
 - No overall ranking, totals or averages (the report says so). The old sample's "ranked 1–18" wording is gone.
 
-## Chatbot parts (12 Nov 2026, Furqaan)
+## Chatbot parts (12 Nov 2026, Bushra)
 The chatbot has 3 parts for now:
 1. **Travel and heritage**: `travel/ALL-81-CITIES.md` (81 cities; heritage line for the 24 heritage places plus a heritage list).
 2. **Universities**: `education/university-city-compass.md`.
-3. **Art and culture**: `culture/art-and-culture.md`. It covers culture, art and music; clothes, fashion and markets; and handicrafts (carpets, calligraphy, crafts, perfume). Only the 28 places on Furqaan's lists, in their wording. The handicrafts list is kept as given (by craft) and also turned around by city.
+3. **Art and culture**: `culture/art-and-culture.md`. It covers culture, art and music; clothes, fashion and markets; and handicrafts (carpets, calligraphy, crafts, perfume). Only the 28 places on Bushra's lists, in their wording. The handicrafts list is kept as given (by craft) and also turned around by city.
 - Also in Art and culture: `culture/what-to-buy.md` (added 12 Nov), made from "What to Buy — 81 Cities": 20 signature buys, 72 cities with what and where to buy, 9 cities marked "needs research".
 - Not in the chatbot: the halal food PDF.
 
-## Art and culture for all 81 cities (13 Nov 2026, Furqaan)
-- Source: Furqaan's "Ummah One Art & Culture Guide 2026" PDF (81 cities × culture/art/music, markets/fashion, handicraft places). It replaces the 28-city sections; Furqaan's three lists are kept word for word.
+## Art and culture for all 81 cities (13 Nov 2026, Bushra)
+- Source: Bushra's "Ummah One Art & Culture Guide 2026" PDF (81 cities × culture/art/music, markets/fashion, handicraft places). It replaces the 28-city sections; Bushra's three lists are kept word for word.
 - **No music for Saudi Arabia, Qatar and Kuwait.** Label there is "Culture and art". Removed: Maraya Concert Hall and Winter at Tantora (AlUla), Sheikh Jaber Al Ahmad Cultural Centre (Kuwait). Travel guide lines reworded the same way (Maraya as a mirrored building, Tantora as the old sundial, Sheikh Jaber centre for its architecture, Riyadh Season without "concerts").
-- 13 Nov, Furqaan: "don't mention music in Saudi, Qatar and Kuwait since they are purely religious places." Also removed music-led events and venues: Riyadh Season, Abha summer festivals, Katara amphitheatre, and the Sheikh Jaber centre (replaced by other sights). "Oud" in Doha now says "oud perfume".
+- 13 Nov, Bushra: "don't mention music in Saudi, Qatar and Kuwait since they are purely religious places." Also removed music-led events and venues: Riyadh Season, Abha summer festivals, Katara amphitheatre, and the Sheikh Jaber centre (replaced by other sights). "Oud" in Doha now says "oud perfume".
 - Refinements: fixed broken Turkish/Balkan letters, removed stray region names, editor notes turned into "Good to know" facts, list items missing from the PDF merged in (modest fashion, abaya designers, kaftans, pearls, Bukhara carpets, oud), Galičnik marked as a day trip from Tetovo, Bidriware added to Hyderabad's What to Buy.
 - Eval: 82 cases, 100%; 3 "nomusic" cases guard the removal.
