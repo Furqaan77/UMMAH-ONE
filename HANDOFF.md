@@ -114,17 +114,11 @@ The rules are built into the data and code:
 6. `website/README.md`: how to run it, the limits, the file map
 7. `_bmad-output/`: BMAD specs, architecture, epics and deferred work (`implementation-artifacts/deferred-work.md`)
 
-## 7. Files on the Mac that are NOT in GitHub
+## 7. Source documents
 
-They are in the Mac folder `Desktop/One Ummah/`, outside the repo. Copy them by hand if you need them; the chatbot data already holds what was approved.
-
-| File | Note |
-|---|---|
-| `Halal Travel — 81 City Guides.pdf` | Source of the travel data |
-| `Halal Food — 81 Cities.pdf` | Original kept. **Not in the chatbot** (Bushra's decision) |
-| `University Cities — 18 Cities, 10 Priorities.pdf`, `University-Cities-Rated-out-of-10.pdf` / `.md` | Sources of Part 2 |
-| `Ummah_One_Art_Culture_Guide_2026 (1) (1).pdf` | Bushra's guide; source of Part 3 |
-| `What-to-Buy-81-Cities.pdf` / `.md`, `Art-and-Culture-81-Cities-DRAFT.pdf`, `ALL-81-CITIES.md` | Drafts and copies |
+The original PDFs behind the data are in **`sources/`**; see `sources/README.md`. That folder isn't read by the chatbot.
+- The halal food PDF is there but stays out of the chatbot.
+- Only a design screenshot is left on the Mac (`Desktop/One Ummah/`).
 
 ## 8. Next steps (open)
 

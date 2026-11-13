@@ -30,6 +30,7 @@ Newest first. Each entry: what was done, the decisions taken (and by whom), and 
   - admin login: 5 wrong passwords per 15 minutes;
   - sizes: photos up to 1.5 MB, messages up to 4,000 characters.
 - Handoff files for the PC: `HANDOFF.md`, this `WORKLOG.md`, and updates to `CLAUDE.md` and `PROJECT_CONTEXT.md`. Decisions credited to Bushra.
+- Source PDFs copied into `sources/` (not read by the chatbot), so the PC has them.
 - Checks: 87/87 tests, eval 82/82, `next build` OK.
 
 ## 12 Nov 2026 (Mac)
