@@ -48,6 +48,7 @@ This folder holds everything needed to continue this work on any machine, with a
   - Ummah_One_Product_Plan.pdf: 4 pages, made before the prompt.md approach. Replaced by Ummah_One_Plan.pdf.
 - **Fact corrections already applied** (the original brief had these wrong):
   - The list has **87** travel places, not 100 or 75. Furqaan chose "87 places only."
+  - **Update 10 Nov 2026:** 6 places removed for safety (terrorism / extreme violence): Grozny, Makhachkala, Derbent (Russia), Srinagar (India), Erbil (Iraq), Lahore (Pakistan). The list is now **81**. prompt.md is updated; Ummah_One_Plan.md/.pdf still say 87.
   - Lucknow is about 26% Muslim (city, 2011 census), not 40%.
   - Hyderabad is about 30% (city) and 43% (district).
   - Satun is 68–77% Muslim, depending on the source. No verified figure was found for Koh Lanta.

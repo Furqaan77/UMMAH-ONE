@@ -1,0 +1,25 @@
+- source_spec: `_bmad-output/implementation-artifacts/spec-1-1-chunks-from-markdown.md`
+  summary: In non-travel files, a top "# Title" heading is read as region when items look like "## Name, Place".
+  evidence: placeMeta takes region from headingPath[0]; workaround is a .meta.json with placeHeadings:false. Revisit when the first education/business file arrives.
+- source_spec: `_bmad-output/implementation-artifacts/spec-2-1-hybrid-search-in-chat.md`
+  summary: Follow-up questions ("what about food there?") are searched without the earlier messages, so the place is lost.
+  evidence: route.ts calls search(last.content) only; fix by adding the previous user message when the last one names no place.
+- source_spec: `_bmad-output/implementation-artifacts/spec-2-1-hybrid-search-in-chat.md`
+  summary: The 4B model sometimes adds small claims that are not in the context.
+  evidence: "well-known for education in various fields" in the Cairo answer; measure in the Story 3.1 eval and tighten the prompt.
+- source_spec: `_bmad-output/implementation-artifacts/spec-1-3-pdf-word-excel-csv-parsers.md`
+  summary: Upgrade Next.js 15.5.4 before launch: npm audit lists critical/high advisories (DoS, cache poisoning, middleware bypass, SSRF), plus postcss and sharp.
+  evidence: npm audit --omit=dev on 11 Nov 2026. Pre-existing; not caused by the RAG work. exceljs pulls uuid <11.1.1 (moderate), used only by local ingest.
+- source_spec: `_bmad-output/implementation-artifacts/spec-1-3-pdf-word-excel-csv-parsers.md`
+  summary: RESOLVED 11 Nov 2026 — Next.js upgraded to 15.5.29 (security backport); postcss 8.5.32, sharp 0.35.5, uuid 11.1.1 pinned via overrides. npm audit: 0 vulnerabilities. Build, tests (46) and a production chat request pass.
+  evidence: npm audit --omit=dev; npm run build; next start + /api/chat.
+- source_spec: food data + halal rule (11 Nov 2026)
+  summary: Arabic answers from qwen3:4b mistranslate some ingredients (e.g. "apricots" → "apples", harira called a salad), even with correct sources.
+  evidence: live chat "ماذا آكل في مراكش؟" vs data. Model limit on 8 GB; options: a larger model on a 16 GB+ machine/server, or answer dish lists in English with Arabic notes.
+
+- source_spec: `_bmad-output/implementation-artifacts/spec-city-ratings.md`
+  summary: Rate-limit /api/place-rating (per IP per city) and /api/admin/login (failed attempts), so one person cannot flood ratings or guess the admin password.
+  evidence: deviceId is chosen by the client and there is no throttling (review findings 1 and 3). Fits hosting step 1 (rate and size limits), which is waiting for approval.
+- source_spec: `_bmad-output/implementation-artifacts/spec-city-ratings.md`
+  summary: Add a component or end-to-end test that a "place" stream event shows the rating box under a finished answer in Chat.tsx.
+  evidence: The server side is tested (routes.test.ts); the repo has no component/e2e test setup yet (review finding 28).

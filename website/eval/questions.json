@@ -1,0 +1,616 @@
+[
+ {
+  "group": "city",
+  "q": "Tell me about Istanbul",
+  "expect": [
+   "Istanbul"
+  ]
+ },
+ {
+  "group": "city",
+  "q": "What can I do in Marrakesh?",
+  "expect": [
+   "Marrakesh"
+  ]
+ },
+ {
+  "group": "city",
+  "q": "Is Sarajevo good for a family trip?",
+  "expect": [
+   "Sarajevo"
+  ]
+ },
+ {
+  "group": "city",
+  "q": "things to do in Malé",
+  "expect": [
+   "Malé"
+  ]
+ },
+ {
+  "group": "city",
+  "q": "Tell me about Stone Town",
+  "expect": [
+   "Zanzibar"
+  ]
+ },
+ {
+  "group": "city",
+  "q": "What is Cappadocia like?",
+  "expect": [
+   "Cappadocia"
+  ]
+ },
+ {
+  "group": "city",
+  "q": "Halal food in Kazan",
+  "expect": [
+   "Kazan"
+  ]
+ },
+ {
+  "group": "city",
+  "q": "Is there anything to do in Kuwait City?",
+  "expect": [
+   "Kuwait City"
+  ]
+ },
+ {
+  "group": "landmark",
+  "q": "Where is the Stari Most bridge?",
+  "expect": [
+   "Mostar"
+  ]
+ },
+ {
+  "group": "landmark",
+  "q": "I want to see the Registan square",
+  "expect": [
+   "Samarkand"
+  ]
+ },
+ {
+  "group": "landmark",
+  "q": "Where can I visit the tomb of Rumi?",
+  "expect": [
+   "Konya"
+  ]
+ },
+ {
+  "group": "landmark",
+  "q": "Where is the Forodhani night market?",
+  "expect": [
+   "Zanzibar"
+  ]
+ },
+ {
+  "group": "landmark",
+  "q": "Which city has the Kul Sharif mosque?",
+  "expect": [
+   "Kazan"
+  ]
+ },
+ {
+  "group": "landmark",
+  "q": "Where is Jemaa el-Fnaa square?",
+  "expect": [
+   "Marrakesh"
+  ]
+ },
+ {
+  "group": "landmark",
+  "q": "I want to see the Petronas Towers",
+  "expect": [
+   "Kuala Lumpur"
+  ]
+ },
+ {
+  "group": "landmark",
+  "q": "Where can I walk inside the walls of Itchan Kala?",
+  "expect": [
+   "Khiva"
+  ]
+ },
+ {
+  "group": "landmark",
+  "q": "Where can I see the Pyramids?",
+  "expect": [
+   "Cairo"
+  ]
+ },
+ {
+  "group": "landmark",
+  "q": "Which city is near Wadi Rum and Petra?",
+  "expect": [
+   "Aqaba"
+  ]
+ },
+ {
+  "group": "landmark",
+  "q": "Where can I ski indoors?",
+  "expect": [
+   "Dubai"
+  ]
+ },
+ {
+  "group": "landmark",
+  "q": "Where is Attabad Lake?",
+  "expect": [
+   "Hunza"
+  ]
+ },
+ {
+  "group": "meaning",
+  "q": "old silk road cities with madrasas",
+  "expect": [
+   "Samarkand",
+   "Bukhara",
+   "Khiva"
+  ]
+ },
+ {
+  "group": "meaning",
+  "q": "white travertine terraces with warm pools",
+  "expect": [
+   "Pamukkale"
+  ]
+ },
+ {
+  "group": "meaning",
+  "q": "hot air balloon over fairy chimneys",
+  "expect": [
+   "Cappadocia"
+  ]
+ },
+ {
+  "group": "meaning",
+  "q": "a quiet tropical island for a honeymoon",
+  "expect": [
+   "Maldives",
+   "Langkawi",
+   "Lakshadweep",
+   "Baa Atoll",
+   "Koh Lanta",
+   "Zanzibar",
+   "Bali"
+  ]
+ },
+ {
+  "group": "filter",
+  "q": "quiet beach town in Turkey",
+  "expect": [
+   "Bodrum",
+   "Fethiye",
+   "Marmaris",
+   "Alanya",
+   "Antalya"
+  ]
+ },
+ {
+  "group": "filter",
+  "q": "Which is the calmest city in the Balkans?",
+  "expect": [
+   "Balkans: city ratings"
+  ]
+ },
+ {
+  "group": "filter",
+  "q": "Compare the cities in Central Asia by how traditional they are",
+  "expect": [
+   "Central Asia: city ratings"
+  ]
+ },
+ {
+  "group": "filter",
+  "q": "Which cities in Montenegro have a halal-friendliness label?",
+  "expect": [
+   "Halal-friendliness"
+  ]
+ },
+ {
+  "group": "filter",
+  "q": "List all the travel cities",
+  "expect": [
+   "All 81 travel cities"
+  ]
+ },
+ {
+  "group": "education",
+  "q": "I want to study in Cairo",
+  "expect": [
+   "Cairo"
+  ]
+ },
+ {
+  "group": "education",
+  "q": "Which are the 18 education cities?",
+  "expect": [
+   "The 18 education cities"
+  ]
+ },
+ {
+  "group": "education",
+  "q": "Universities in Kuala Lumpur",
+  "expect": [
+   "Kuala Lumpur"
+  ]
+ },
+ {
+  "group": "education",
+  "q": "Compare the student cities on affordability and safety",
+  "expect": [
+   "Score table"
+  ]
+ },
+ {
+  "group": "education",
+  "q": "Is Riyadh good for career readiness as a student?",
+  "expect": [
+   "Riyadh"
+  ],
+  "category": "education"
+ },
+ {
+  "group": "education",
+  "q": "Where is KFUPM and how affordable is it?",
+  "expect": [
+   "Dhahran"
+  ]
+ },
+ {
+  "group": "education",
+  "q": "What are the 10 priorities for university students?",
+  "expect": [
+   "10 priorities"
+  ]
+ },
+ {
+  "group": "about",
+  "q": "What is Ummah One?",
+  "expect": [
+   "What Ummah One is"
+  ]
+ },
+ {
+  "group": "about",
+  "q": "What share of Hyderabad is Muslim?",
+  "expect": [
+   "Muslim population facts"
+  ]
+ },
+ {
+  "group": "arabic",
+  "q": "أريد السفر إلى دبي",
+  "expect": [
+   "Dubai"
+  ]
+ },
+ {
+  "group": "arabic",
+  "q": "ماذا أفعل في إسطنبول؟",
+  "expect": [
+   "Istanbul"
+  ]
+ },
+ {
+  "group": "arabic",
+  "q": "مكان هادئ بجانب البحر في تركيا",
+  "expect": [
+   "Bodrum",
+   "Fethiye",
+   "Marmaris",
+   "Alanya",
+   "Antalya",
+   "Izmir"
+  ]
+ },
+ {
+  "group": "arabic",
+  "q": "ما هي أفضل الجامعات في ماليزيا؟",
+  "expect": [
+   "Kuala Lumpur",
+   "Penang"
+  ]
+ },
+ {
+  "group": "arabic",
+  "q": "أخبرني عن سمرقند",
+  "expect": [
+   "Samarkand"
+  ]
+ },
+ {
+  "group": "arabic",
+  "q": "مدن البلقان الهادئة",
+  "expect": [
+   "Balkans: city ratings",
+   "Ohrid",
+   "Prizren"
+  ]
+ },
+ {
+  "group": "blocked",
+  "q": "Tell me about Grozny",
+  "none": true
+ },
+ {
+  "group": "blocked",
+  "q": "Is Lahore safe to visit?",
+  "none": true
+ },
+ {
+  "group": "blocked",
+  "q": "Things to do in Srinagar",
+  "none": true
+ },
+ {
+  "group": "blocked",
+  "q": "أريد زيارة أربيل",
+  "none": true
+ },
+ {
+  "group": "heritage",
+  "q": "Which cities have the most heritage, like old cities and palaces?",
+  "expect": [
+   "Heritage Cities"
+  ]
+ },
+ {
+  "group": "heritage",
+  "q": "Where can I see the Kasbah of the Udayas?",
+  "expect": [
+   "Rabat"
+  ]
+ },
+ {
+  "group": "heritage",
+  "q": "Where is the Bara Imambara?",
+  "expect": [
+   "Lucknow"
+  ]
+ },
+ {
+  "group": "heritage",
+  "q": "Which city was the first Ottoman capital?",
+  "expect": [
+   "Bursa"
+  ]
+ },
+ {
+  "group": "heritage",
+  "q": "I want to visit a Kraton palace",
+  "expect": [
+   "Yogyakarta"
+  ]
+ },
+ {
+  "group": "culture",
+  "q": "Where can I see whirling dervishes?",
+  "expect": [
+   "Konya",
+   "Culture art and music"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "Where is the Gnawa music festival?",
+  "expect": [
+   "Essaouira"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "Where can I find modest fashion in Kuala Lumpur?",
+  "expect": [
+   "Kuala Lumpur"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "Which cities are known for carpets?",
+  "expect": [
+   "Handicrafts"
+  ]
+ },
+ {
+  "group": "culture",
+  "q": "Where can I buy Bidriware?",
+  "expect": [
+   "Hyderabad"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "Where can I hear mugham music?",
+  "expect": [
+   "Baku"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "أين أجد الخط العربي في إسطنبول؟",
+  "expect": [
+   "Istanbul"
+  ]
+ },
+ {
+  "group": "buy",
+  "q": "What should I buy in Khiva?",
+  "expect": [
+   "Khiva"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "buy",
+  "q": "Where can I buy frankincense?",
+  "expect": [
+   "Salalah",
+   "Signature buys"
+  ]
+ },
+ {
+  "group": "buy",
+  "q": "Best souvenirs from Sarajevo",
+  "expect": [
+   "Sarajevo"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "buy",
+  "q": "Where do I buy argan oil?",
+  "expect": [
+   "Essaouira"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "buy",
+  "q": "What are the best things to buy on a trip?",
+  "expect": [
+   "Signature buys"
+  ]
+ },
+ {
+  "group": "buy",
+  "q": "ماذا أشتري من حيدر آباد؟",
+  "expect": [
+   "Hyderabad"
+  ]
+ },
+ {
+  "group": "culture",
+  "q": "Where can I see Avanos pottery being made?",
+  "expect": [
+   "Cappadocia"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "Where can I learn about Al Sadu weaving at Sadu House?",
+  "expect": [
+   "Kuwait City"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "Where can I buy khayamiya tentmaker textiles?",
+  "expect": [
+   "Cairo"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "Where can I watch traditional paper-making at the Meros Paper Mill?",
+  "expect": [
+   "Samarkand"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "Where can I see shyrdak felt-making?",
+  "expect": [
+   "Bishkek"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "Where is traditional lacquerwork made in the Maldives?",
+  "expect": [
+   "Baa Atoll",
+   "Malé"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "Where can I see Uru wooden dhow building?",
+  "expect": [
+   "Kozhikode"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "Markets and handicrafts in Ganja",
+  "expect": [
+   "Ganja"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "nomusic",
+  "q": "Where can I go to a concert in AlUla?",
+  "forbid": [
+   "Maraya Concert Hall",
+   "concert hall",
+   "Attend a concert"
+  ]
+ },
+ {
+  "group": "nomusic",
+  "q": "Opera house concert in Kuwait City",
+  "forbid": [
+   "Sheikh Jaber Al Ahmad"
+  ]
+ },
+ {
+  "group": "nomusic",
+  "q": "Concerts during Riyadh Season",
+  "forbid": [
+   "Riyadh Season"
+  ]
+ },
+ {
+  "group": "halal",
+  "q": "Where can I try buzara mussels in Kotor?",
+  "forbid": [
+   "buzara",
+   "Buzara"
+  ]
+ },
+ {
+  "group": "halal",
+  "q": "Ayam betutu in Bali",
+  "forbid": [
+   "Ayam betutu"
+  ]
+ },
+ {
+  "group": "halal",
+  "q": "rooftop lounge in Dubai",
+  "forbid": [
+   "rooftop lounge"
+  ]
+ },
+ {
+  "group": "halal",
+  "q": "Where can I try kazy horse sausage?",
+  "forbid": [
+   "Kazy",
+   "kazy",
+   "horse sausage"
+  ]
+ },
+ {
+  "group": "halal",
+  "q": "Where can I drink kymyz?",
+  "forbid": [
+   "Kymyz",
+   "kymyz",
+   "kumys",
+   "mare's milk"
+  ]
+ }
+]
