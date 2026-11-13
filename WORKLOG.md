@@ -10,6 +10,7 @@ Newest first. Each entry: what was done, the decisions taken (and by whom), and 
 - Kept as they are: the fixed replies, the feedback reasons, the consent text, the placeholder and the "Try asking" examples.
 - Changed: the note under answers is now just "Ummah One is AI and can make mistakes." ("Check official travel advice" removed, English and Arabic).
 - Bushra's git identity set for this repo. PR #9 merged by Furqaan.
+- New answer rule (Bushra): simple English word first, local word in brackets, e.g. "the market (souk)", "incense (bukhoor)". Place names stay as they are. Live tests: Doha, Riyadh and Fes follow it. Still open: for places outside the guides (e.g. Fes), the AI adds outside facts.
 
 **Later on 13 Nov: 3 new guides added to the chatbot (Bushra's PDFs, now in `sources/`)**
 - `culture/shopping-craft-guide.md`: what to buy in 76 cities, with "where it comes from" notes. Plus Malaysia's 20 crafts (also listed under Kuala Lumpur, Penang and Langkawi). The "before paying" advice is written once at the top.
