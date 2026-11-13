@@ -100,6 +100,7 @@ System prompt addition: `ENJOYMENT LABELS (set by the Ummah One team only): Kony
 - Old chat messages keep the badge they were sent with; a label changed later shows on new answers.
 - Verified: 66/66 unit tests (9 new), eval 82/82, `tsc` and lint clean (2 old `<img>` warnings). Live via `next dev`: rating 200; not visited, unknown city and bad label → 400; admin without cookie or with a wrong password → 401; summary lists 81 cities; `place` event without and with a label; none for "Compare Bodrum and Fethiye"; "Which places are most enjoyable?" with no labels → "The Ummah One team has not rated any city yet…".
 - Not re-verified: model answers with labels set after the context change. Ollama stopped during testing (Metal could not start from the sandbox). Re-run when Ollama is open.
+- 13 Nov, re-verified with Ollama: no labels → "not rated any city yet"; Konya labelled → named correctly (English and Arabic); Bodrum unrated → "The Ummah One team has not rated Bodrum yet." (added that reply to the asked-city line); normal questions unchanged.
 - Test ratings and labels were deleted from `.data/`.
 
 ## Spec Change Log

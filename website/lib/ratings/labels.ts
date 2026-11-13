@@ -26,7 +26,7 @@ export function labelsForPrompt(labels: Record<string, EnjoymentLabel>, city?: s
   const lines = ["[0] Ummah One enjoyment labels (set by the Ummah One team)"];
   if (rows.length) lines.push(...rows, "Every other city: not rated yet.");
   else lines.push(`No city has been rated yet. If asked which places are boring or enjoyable, reply: "The Ummah One team has not rated any city yet. Visitors can share how a city felt to them under answers about that city."`);
-  if (city) lines.push(labels[city] ? `This question is about ${city}: rated ${LABEL_NAMES.en[labels[city]]}.` : `This question is about ${city}: NOT rated yet by the Ummah One team. Do not give ${city} any enjoyment label.`);
+  if (city) lines.push(labels[city] ? `This question is about ${city}: rated ${LABEL_NAMES.en[labels[city]]}.` : `This question is about ${city}: NOT rated yet by the Ummah One team. Do not give ${city} any enjoyment label. If asked whether ${city} is boring or enjoyable, reply: "The Ummah One team has not rated ${city} yet." Then you may share what the guide says about ${city}.`);
   return lines.join("\n");
 }
 
