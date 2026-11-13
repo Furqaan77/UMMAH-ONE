@@ -41,8 +41,8 @@ Do NOT change any file in this step.
 
 STEP 4 — Then help me set up this PC, following HANDOFF.md section 4, one step at a
 time. Check each step worked before the next. At the end, run in website\:
-  npm test     (expected: all tests pass — 91 on 13 Nov 2026)
-  npm run eval (expected: 87/87, pass mark 90%)
+  npm test     (expected: all tests pass — 95 on 13 Nov 2026)
+  npm run eval (expected: 99/99, pass mark 90%)
   npm run dev  (then open http://localhost:3000 and http://localhost:3000/admin)
 Then test a few questions with qwen3:8b (English and Arabic), including
 "Tell me about Konya" (the rating box should appear) and "Which places are most

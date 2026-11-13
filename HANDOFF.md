@@ -80,8 +80,8 @@ Older files and commit messages say "Furqaan" where they mean the person making 
    - Never commit `.env.local`.
 6. Build the search index, then check it. Run each command in `website\`:
    - `npm run ingest`: builds `website\.data\index.json`. It isn't in git, so every machine builds its own.
-   - `npm test`: expected all tests pass (91 on 13 Nov 2026).
-   - `npm run eval`: expected 87/87 (the pass mark is 90%).
+   - `npm test`: expected all tests pass (95 on 13 Nov 2026, after the rule-guards fix).
+   - `npm run eval`: expected 99/99 (the pass mark is 90%).
    - `npm run dev`: then open http://localhost:3000 for the chat and http://localhost:3000/admin for ratings.
 
 Windows notes:
@@ -93,7 +93,7 @@ Windows notes:
 | Part | Where | Status |
 |---|---|---|
 | Chat website (Next.js 15.5.29, React 19) | `website/` | Done. English and Arabic; local Qwen through Ollama |
-| Mobile app (Expo) | `app/` | Done, uses the same `/api/chat`. No rating box yet |
+| Mobile app (Expo) | `app/` | Done, uses the same `/api/chat`. Rating box and limit messages added 13 Nov; not yet tried on a phone |
 | RAG: ingest, hybrid search (BM25 + meaning, RRF), blocked places, eval | `website/lib/rag/`, `website/scripts/` | Done (BMAD stories 1.1–3.1) |
 | Part 1: Travel and heritage | `website/data/travel/ALL-81-CITIES.md` | 81 cities plus 24 heritage places |
 | Part 2: Universities | `website/data/education/university-city-compass.md` | 18 cities, scored out of 10 |
@@ -104,7 +104,8 @@ Windows notes:
 
 The rules are built into the data and code:
 - **Halal filter at ingest** (`lib/rag/haram.ts`): pork, alcohol, horse meat and fermented milks are removed.
-- **Blocked places never returned:** Grozny, Makhachkala, Derbent, Srinagar, Erbil, Lahore.
+- **Blocked places never returned:** Grozny, Makhachkala, Derbent, Srinagar, Erbil, Lahore. A question about one gets a fixed reply; the model is not asked (`lib/rag/rules.ts`).
+- **No music for Saudi Arabia, Qatar, Kuwait:** music questions about them get a fixed reply; the model is not asked.
 
 ## 6. Files to read, in order
 
@@ -126,10 +127,10 @@ The original PDFs behind the data are in **`sources/`**; see `sources/README.md`
 
 | # | Step | Needs |
 |---|---|---|
-| 1 | Run everything on the PC (section 4) and check the answers with `qwen3:8b` | — |
+| 1 | Run everything on the PC (section 4) and check the answers with `qwen3:8b` | Done 13 Nov. Two rule breaks fixed in code; the model still adds facts not in the data (see WORKLOG) |
 | 2 | Hosting choice for launch. Recommended: hosted Qwen (DeepInfra or Alibaba), about $200–250 a month for 1,000 users (estimate, to verify) | Bushra's choice |
 | 3 | Supabase: online ratings, chats, login. Move the rate-limit counters there. Set `TRUST_PROXY_HOPS` for the host | Supabase keys, SMS sender |
-| 4 | Rating box in the mobile app | — |
+| 4 | Try the mobile app (with its rating box) on a phone | A phone with Expo Go |
 | 5 | Local contributors (photos and tips): contract and brief | Bushra's approval |
 | 6 | The model's "brain": keep search plus rules, or fine-tune Qwen | Bushra's choice |
 | 7 | Deferred work: UI tests for the rating box and limit messages | — |

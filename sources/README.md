@@ -15,3 +15,6 @@ The original documents behind the chatbot data. Kept here so every machine has t
 | `Art-and-Culture-81-Cities-DRAFT.pdf` | Claude's earlier research draft | Superseded by Bushra's guide |
 | `What-to-Buy-81-Cities.pdf` / `.md` | What to buy (72 cities, 20 signature buys) | Yes, as `website/data/culture/what-to-buy.md` |
 | `What-to-Buy-9-Cities.pdf` | The 9 missing cities, researched; confirmed by Bushra 13 Nov | Yes, same file |
+| `Ummah_One_76_City_Shopping_Craft_Guide_Verified_2026.pdf` | Shopping and craft ideas plus "where it really comes from" (76 cities; no Morocco) | Yes, as `website/data/culture/shopping-craft-guide.md` (added 13 Nov) |
+| `Malaysia_Authentic_Crafts_Souvenirs_Guide.pdf` | 20 Malaysia-wide crafts and souvenirs | Yes, in the same file ("tiramisu" and "tankards" taken out) |
+| `Ummah_One_Travel_Convenience_Guide_ALL_DESTINATIONS.pdf` | How easy each place is to visit, scores out of 10 (73 cities, plus Morocco and Malaysia lists) | Yes, as `website/data/travel/travel-convenience.md` (wine, beach club and Saudi/Kuwait music venues taken out) |

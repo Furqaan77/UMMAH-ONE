@@ -5,11 +5,13 @@ import Image from "next/image";
 import * as I from "./Icons";
 import Answer from "./Answer";
 import PlaceRating from "./PlaceRating";
+import FeedbackSheet, { type FeedbackInput } from "./FeedbackSheet";
 import type { EnjoymentLabel } from "@/lib/ratings/labels";
-import { T, type Lang, type LangSetting } from "@/lib/i18n";
+import { T, detectLang, type Lang, type LangSetting } from "@/lib/i18n";
 import { CHAT_ERRORS, LIMITS, withLatestPhotos } from "@/lib/limits-config";
 
 type Source = { id: string; title: string; source: string };
+type Style = "longer" | "shorter";
 type Message = {
   id: string;
   role: "user" | "assistant";
@@ -19,6 +21,8 @@ type Message = {
   error?: boolean;
   rating?: "up" | "down";
   place?: { city: string; label: EnjoymentLabel | null };
+  at?: number; // when the answer was made
+  model?: string | null; // null: a fixed reply from Ummah One's rules
 };
 type ChatT = { id: string; title: string; messages: Message[]; updatedAt: number };
 
@@ -62,15 +66,27 @@ async function resizeImage(file: File, max = 1024): Promise<string> {
   }
 }
 
+/** Plain text for reading aloud: no markdown marks. */
+function plain(md: string): string {
+  return md.replace(/[#*_`>]+/g, "").replace(/\[(\d+)\]/g, "").replace(/\s+/g, " ").trim();
+}
+
 type SpeechRec = {
   lang: string;
   interimResults: boolean;
+  continuous?: boolean;
   onresult: (e: { results: ArrayLike<ArrayLike<{ transcript: string }>> }) => void;
   onend: () => void;
   onerror: () => void;
   start: () => void;
   stop: () => void;
 };
+function speechRec(): (new () => SpeechRec) | null {
+  const W = window as unknown as { SpeechRecognition?: new () => SpeechRec; webkitSpeechRecognition?: new () => SpeechRec };
+  return W.SpeechRecognition ?? W.webkitSpeechRecognition ?? null;
+}
+
+type Menu = { kind: "more"; id: string; up: boolean } | { kind: "lang" } | { kind: "chat" } | null;
 
 export default function Chat() {
   const [chats, setChats] = useState<ChatT[]>([]);
@@ -84,12 +100,12 @@ export default function Chat() {
   const [plusOpen, setPlusOpen] = useState(false);
   const [openSources, setOpenSources] = useState<Record<string, boolean>>({});
   const [copied, setCopied] = useState<string | null>(null);
-  const [dislikeFor, setDislikeFor] = useState<string | null>(null);
-  const [dislikeText, setDislikeText] = useState("");
-  const [moreFor, setMoreFor] = useState<string | null>(null);
+  const [sheet, setSheet] = useState<{ id: string; rating: "up" | "down" } | null>(null);
+  const [menu, setMenu] = useState<Menu>(null);
   const [toast, setToast] = useState<string | null>(null);
   const [atBottom, setAtBottom] = useState(true);
-  const [listening, setListening] = useState(false);
+  const [listening, setListening] = useState<"mic" | "voice" | null>(null);
+  const [speaking, setSpeaking] = useState<string | null>(null);
   const [ready, setReady] = useState(false);
 
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -109,6 +125,13 @@ export default function Chat() {
     setLangSetting(load<LangSetting>(LANG_KEY, "auto"));
     setBrowserLang(navigator.language?.toLowerCase().startsWith("ar") ? "ar" : "en");
     setReady(true);
+    return () => {
+      try {
+        window.speechSynthesis?.cancel();
+      } catch {
+        /* ignore */
+      }
+    };
   }, []);
 
   useEffect(() => {
@@ -131,10 +154,23 @@ export default function Chat() {
     document.documentElement.dir = uiLang === "ar" ? "rtl" : "ltr";
   }, [uiLang]);
 
-  const flash = (msg: string) => {
+  // Escape closes any open menu.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setMenu(null);
+        setPlusOpen(false);
+        setDrawer(false);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
+  const flash = useCallback((msg: string) => {
     setToast(msg);
-    setTimeout(() => setToast(null), 2200);
-  };
+    setTimeout(() => setToast(null), 2400);
+  }, []);
 
   const scrollToBottom = (smooth = true) => {
     const el = scrollRef.current;
@@ -150,6 +186,7 @@ export default function Chat() {
     const el = scrollRef.current;
     if (!el) return;
     setAtBottom(el.scrollHeight - el.scrollTop - el.clientHeight < 80);
+    if (menu?.kind === "more") setMenu(null);
   };
 
   // Auto-grow the input.
@@ -170,13 +207,36 @@ export default function Chat() {
     [updateChat],
   );
 
-  async function runAssistant(chatId: string, history: Message[]) {
+  // ---------- reading aloud ----------
+  function speak(id: string, text: string) {
+    const synth = typeof window !== "undefined" ? window.speechSynthesis : undefined;
+    if (!synth) {
+      flash(t.voiceUnsupported);
+      return;
+    }
+    synth.cancel();
+    if (speaking === id) {
+      setSpeaking(null);
+      return;
+    }
+    const u = new SpeechSynthesisUtterance(plain(text));
+    u.lang = detectLang(text) === "ar" ? "ar-SA" : "en-US";
+    u.onend = () => setSpeaking((s) => (s === id ? null : s));
+    u.onerror = () => setSpeaking((s) => (s === id ? null : s));
+    setSpeaking(id);
+    synth.speak(u);
+  }
+
+  // ---------- chat ----------
+  async function runAssistant(chatId: string, history: Message[], opts: { style?: Style; speakAfter?: boolean } = {}) {
     const aId = uid();
-    updateChat(chatId, (c) => ({ ...c, messages: [...history, { id: aId, role: "assistant", content: "" }] }));
+    updateChat(chatId, (c) => ({ ...c, messages: [...history, { id: aId, role: "assistant", content: "", at: Date.now() }] }));
     setStreaming(true);
     setAtBottom(true);
     const ctrl = new AbortController();
     abortRef.current = ctrl;
+    let full = "";
+    let failed = false;
     try {
       const res = await fetch("/api/chat", {
         method: "POST",
@@ -184,6 +244,7 @@ export default function Chat() {
         signal: ctrl.signal,
         body: JSON.stringify({
           lang: langSetting,
+          style: opts.style,
           messages: withLatestPhotos(history.filter((m) => !m.error).slice(-LIMITS.messagesPerRequest).map((m) => (m.role === "assistant" && m.content.length > LIMITS.historyChars ? { ...m, content: m.content.slice(0, LIMITS.historyChars) } : m))).map((m) => ({ role: m.role, content: m.content, image: m.image && m.image !== "attached" ? m.image : undefined })),
         }),
       });
@@ -198,6 +259,7 @@ export default function Chat() {
           : why === CHAT_ERRORS.tooManyPhotos ? t.tooManyPhotos
           : why === CHAT_ERRORS.photo ? t.photoBad
           : t.genericError;
+        failed = true;
         patchMsg(chatId, aId, (m) => ({ ...m, sources: [], content: text, error: true }));
         return;
       }
@@ -213,23 +275,29 @@ export default function Chat() {
         buf = lines.pop() ?? "";
         for (const line of lines) {
           if (!line.trim()) continue;
-          const ev = JSON.parse(line) as { type: string; text?: string; sources?: Source[]; city?: string; label?: EnjoymentLabel | null };
-          if (ev.type === "sources") patchMsg(chatId, aId, (m) => ({ ...m, sources: ev.sources }));
+          const ev = JSON.parse(line) as { type: string; text?: string; sources?: Source[]; model?: string | null; city?: string; label?: EnjoymentLabel | null };
+          if (ev.type === "sources") patchMsg(chatId, aId, (m) => ({ ...m, sources: ev.sources, model: ev.model === undefined ? undefined : ev.model }));
           else if (ev.type === "place" && ev.city) patchMsg(chatId, aId, (m) => ({ ...m, place: { city: ev.city!, label: ev.label ?? null } }));
-          else if (ev.type === "text") patchMsg(chatId, aId, (m) => ({ ...m, content: m.content + (ev.text ?? "") }));
-          else if (ev.type === "error") patchMsg(chatId, aId, (m) => ({ ...m, content: ev.text ?? "Error", error: true }));
+          else if (ev.type === "text") {
+            full += ev.text ?? "";
+            patchMsg(chatId, aId, (m) => ({ ...m, content: m.content + (ev.text ?? "") }));
+          } else if (ev.type === "error") {
+            failed = true;
+            patchMsg(chatId, aId, (m) => ({ ...m, content: ev.text ?? "Error", error: true }));
+          }
         }
       }
     } catch (e) {
-      if ((e as Error).name !== "AbortError")
-        patchMsg(chatId, aId, (m) => ({ ...m, error: true, content: t.genericError }));
+      failed = true;
+      if ((e as Error).name !== "AbortError") patchMsg(chatId, aId, (m) => ({ ...m, error: true, content: t.genericError }));
     } finally {
       setStreaming(false);
       abortRef.current = null;
+      if (opts.speakAfter && !failed && full) speak(aId, full);
     }
   }
 
-  function send(textArg?: string) {
+  function send(textArg?: string, opts: { speakAfter?: boolean } = {}) {
     const text = (textArg ?? input).trim();
     if ((!text && !image) || streaming) return;
     const userMsg: Message = { id: uid(), role: "user", content: text || (uiLang === "ar" ? "ما هذا المكان؟" : "What is this place?"), image: image ?? undefined };
@@ -247,20 +315,25 @@ export default function Chat() {
     setInput("");
     setImage(null);
     setPlusOpen(false);
-    void runAssistant(chatId!, history);
+    void runAssistant(chatId!, history, opts);
   }
 
-  function retry(msgId: string) {
+  /** Answer the same question again, optionally longer or shorter. Replaces that answer. */
+  function redo(msgId: string, style?: Style) {
+    setMenu(null);
     if (!current || streaming) return;
     const idx = current.messages.findIndex((m) => m.id === msgId);
     const history = current.messages.slice(0, idx);
-    if (history.length && history[history.length - 1].role === "user") void runAssistant(current.id, history);
+    if (history.length && history[history.length - 1].role === "user") void runAssistant(current.id, history, { style });
   }
 
   function newChat() {
     abortRef.current?.abort();
+    window.speechSynthesis?.cancel();
+    setSpeaking(null);
     setCurrentId(null);
     setDrawer(false);
+    setMenu(null);
     setInput("");
     setImage(null);
     setTimeout(() => inputRef.current?.focus(), 50);
@@ -269,6 +342,7 @@ export default function Chat() {
   function deleteChat(id: string) {
     setChats((cs) => cs.filter((c) => c.id !== id));
     if (id === currentId) setCurrentId(null);
+    setMenu(null);
   }
 
   async function copy(m: Message) {
@@ -281,8 +355,7 @@ export default function Chat() {
     }
   }
 
-  async function share(m: Message) {
-    const text = `${m.content}\n\n— Ummah One`;
+  async function shareText(text: string) {
     try {
       if (navigator.share) await navigator.share({ title: "Ummah One", text });
       else {
@@ -293,8 +366,16 @@ export default function Chat() {
       /* user cancelled */
     }
   }
+  const share = (m: Message) => shareText(`${m.content}\n\n— Ummah One`);
+  function shareChat() {
+    setMenu(null);
+    if (!current) return;
+    const text = current.messages.filter((m) => !m.error).map((m) => `${m.role === "user" ? "Q" : "A"}: ${m.content}`).join("\n\n");
+    void shareText(`${text}\n\n— Ummah One`);
+  }
 
-  async function sendFeedback(m: Message, rating: "up" | "down", comment?: string) {
+  // ---------- feedback ----------
+  async function sendFeedback(m: Message, rating: "up" | "down", f?: FeedbackInput) {
     if (!current) return;
     patchMsg(current.id, m.id, (x) => ({ ...x, rating }));
     const idx = current.messages.findIndex((x) => x.id === m.id);
@@ -303,38 +384,68 @@ export default function Chat() {
       const res = await fetch("/api/feedback", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ chatId: current.id, messageId: m.id, rating, comment, question, answer: m.content }),
+        body: JSON.stringify({
+          chatId: current.id,
+          messageId: m.id,
+          rating,
+          reasons: f?.reasons,
+          comment: f?.comment || undefined,
+          // The question and answer are saved only when the visitor ticks the consent box.
+          ...(f?.consent ? { question, answer: m.content } : {}),
+        }),
       });
       flash(res.ok ? t.thanks : res.status === 429 ? t.tooManyFeedback : t.feedbackError);
     } catch {
       flash(t.feedbackError);
     }
   }
+  function openSheet(m: Message, rating: "up" | "down") {
+    setMenu(null);
+    if (current) patchMsg(current.id, m.id, (x) => ({ ...x, rating }));
+    setSheet({ id: m.id, rating });
+  }
+  function closeSheet(f?: FeedbackInput) {
+    const s = sheet;
+    setSheet(null);
+    const m = s && messages.find((x) => x.id === s.id);
+    if (s && m) void sendFeedback(m, s.rating, f);
+  }
 
-  function toggleMic() {
+  // ---------- voice ----------
+  function stopListening() {
+    recRef.current?.stop();
+  }
+  /** mic: speech fills the input. voice: speech is sent, and the answer is read aloud. */
+  function listen(kind: "mic" | "voice") {
     if (listening) {
-      recRef.current?.stop();
+      stopListening();
       return;
     }
-    const W = window as unknown as { SpeechRecognition?: new () => SpeechRec; webkitSpeechRecognition?: new () => SpeechRec };
-    const Ctor = W.SpeechRecognition ?? W.webkitSpeechRecognition;
+    const Ctor = speechRec();
     if (!Ctor) {
-      flash(t.micUnsupported);
+      flash(kind === "mic" ? t.micUnsupported : t.voiceUnsupported);
       return;
     }
+    window.speechSynthesis?.cancel();
+    setSpeaking(null);
     const rec = new Ctor();
     rec.lang = uiLang === "ar" ? "ar-SA" : "en-US";
     rec.interimResults = true;
     const base = input ? input.trimEnd() + " " : "";
+    let heard = "";
     rec.onresult = (e) => {
       let s = "";
       for (let i = 0; i < e.results.length; i++) s += e.results[i][0].transcript;
+      heard = s;
       setInput(base + s);
     };
-    rec.onend = () => setListening(false);
-    rec.onerror = () => setListening(false);
+    rec.onend = () => {
+      setListening(null);
+      if (kind === "voice" && heard.trim()) send(base + heard, { speakAfter: true });
+    };
+    rec.onerror = () => setListening(null);
     recRef.current = rec;
-    setListening(true);
+    setListening(kind);
     rec.start();
   }
 
@@ -351,20 +462,74 @@ export default function Chat() {
     }
   }
 
+  function openMore(e: React.MouseEvent<HTMLButtonElement>, id: string) {
+    if (menu?.kind === "more" && menu.id === id) return setMenu(null);
+    const r = e.currentTarget.getBoundingClientRect();
+    setMenu({ kind: "more", id, up: r.top > 380 });
+  }
+
+  const timeOf = (ms?: number) => {
+    if (!ms) return "";
+    const d = new Date(ms);
+    const time = new Intl.DateTimeFormat(uiLang === "ar" ? "ar" : "en", { hour: "numeric", minute: "2-digit" }).format(d);
+    const sameDay = d.toDateString() === new Date().toDateString();
+    return sameDay ? `${t.today} · ${time}` : `${new Intl.DateTimeFormat(uiLang === "ar" ? "ar" : "en", { day: "numeric", month: "short" }).format(d)} · ${time}`;
+  };
+
   const lastAssistantId = [...messages].reverse().find((m) => m.role === "assistant")?.id;
   const canSend = (input.trim() !== "" || image !== null) && !streaming;
+  const langName = langSetting === "auto" ? t.auto : langSetting === "en" ? "English" : "العربية";
+  const sheetMsg = sheet && messages.find((m) => m.id === sheet.id);
 
   return (
     <div className="app">
-      {/* Top bar */}
+      {/* Top bar: floating round buttons over the conversation */}
       <header className="topbar">
-        <button className="icon-btn" aria-label="Menu" onClick={() => setDrawer(true)}>
-          <I.Menu size={26} />
+        <button className="round-btn" aria-label="Menu" onClick={() => setDrawer(true)}>
+          <I.Menu size={24} />
         </button>
-        <h1 className="title">Ummah One</h1>
-        <button className="icon-btn push" aria-label={t.newChat} onClick={newChat}>
-          <I.NewChat size={26} />
-        </button>
+        <div className="brand">
+          <span className="brand-name">Ummah One</span>
+          <div className="pop-anchor">
+            <button className="lang-btn" aria-haspopup="menu" aria-expanded={menu?.kind === "lang"} aria-label={t.language} onClick={() => setMenu(menu?.kind === "lang" ? null : { kind: "lang" })}>
+              <I.Globe size={15} />
+              <span>{langName}</span>
+              <I.ChevronDown size={15} />
+            </button>
+            {menu?.kind === "lang" && (
+              <div className="pop pop-down" role="menu">
+                <div className="pop-label">{t.language}</div>
+                {(["auto", "en", "ar"] as const).map((l) => (
+                  <button key={l} role="menuitemradio" aria-checked={langSetting === l} onClick={() => { setLangSetting(l); setMenu(null); }}>
+                    <span className="pop-check">{langSetting === l && <I.Check size={18} />}</span>
+                    {l === "auto" ? t.auto : l === "en" ? "English" : "العربية"}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+        <div className="top-pill pop-anchor">
+          <button className="pill-btn" aria-label={t.newChat} title={t.newChat} onClick={newChat}>
+            <I.Pencil size={22} />
+          </button>
+          <button className="pill-btn" aria-label={t.chatOptions} title={t.chatOptions} aria-haspopup="menu" aria-expanded={menu?.kind === "chat"} onClick={() => setMenu(menu?.kind === "chat" ? null : { kind: "chat" })}>
+            <I.More size={22} />
+          </button>
+          {menu?.kind === "chat" && (
+            <div className="pop pop-down pop-end" role="menu">
+              <button role="menuitem" onClick={newChat}>
+                <I.Pencil size={20} /> {t.newChat}
+              </button>
+              <button role="menuitem" disabled={!current} onClick={shareChat}>
+                <I.Upload size={20} /> {t.shareChat}
+              </button>
+              <button role="menuitem" className="danger" disabled={!current} onClick={() => current && deleteChat(current.id)}>
+                <I.Trash size={20} /> {t.deleteChat}
+              </button>
+            </div>
+          )}
+        </div>
       </header>
 
       {/* Messages */}
@@ -372,9 +537,27 @@ export default function Chat() {
         <div className="thread">
           {messages.length === 0 && (
             <div className="welcome">
-              <Image src="/logo-mark.png" alt="Ummah One" width={72} height={66} priority />
-              <p>{ready ? t.welcome(new Date().getHours()) : "\u00a0"}</p>
-              <span className="note">{t.disclaimer}</span>
+              <Image src="/logo-mark.png" alt="Ummah One" width={64} height={59} priority />
+              <h1>{ready ? t.welcome(new Date().getHours()) : " "}</h1>
+              <div className="starters">
+                <button className="starter" onClick={() => send(t.planTripPrompt)}>
+                  <I.Plane size={20} /> {t.planTrip}
+                </button>
+                <button className="starter" onClick={() => send(t.findUniPrompt)}>
+                  <I.Cap size={20} /> {t.findUni}
+                </button>
+                <button className="starter" onClick={() => send(t.findBizPrompt)}>
+                  <I.Store size={20} /> {t.findBiz}
+                </button>
+              </div>
+              <div className="suggest">
+                <div className="suggest-label">{t.suggestions}</div>
+                {t.suggest.map((s) => (
+                  <button key={s} className="suggest-item" dir="auto" onClick={() => send(s)}>
+                    {s}
+                  </button>
+                ))}
+              </div>
             </div>
           )}
 
@@ -390,20 +573,15 @@ export default function Chat() {
               <div key={m.id} className="ai">
                 {m.sources === undefined && !m.content ? (
                   <div className="meta pulse">
-                    <I.Book size={22} />
+                    <I.Book size={20} />
                     <span>{t.thinking}</span>
                   </div>
                 ) : (
                   <>
-                    <button
-                      className="meta"
-                      onClick={() => setOpenSources((o) => ({ ...o, [m.id]: !o[m.id] }))}
-                      disabled={!m.sources?.length}
-                      aria-expanded={!!openSources[m.id]}
-                    >
-                      <I.Book size={22} />
+                    <button className="meta" onClick={() => setOpenSources((o) => ({ ...o, [m.id]: !o[m.id] }))} disabled={!m.sources?.length} aria-expanded={!!openSources[m.id]}>
+                      <I.Book size={20} />
                       <span>{m.sources?.length ? t.sources(m.sources.length) : t.noSources}</span>
-                      {!!m.sources?.length && <I.Chevron size={18} className={`chev ${openSources[m.id] ? "open" : ""}`} />}
+                      {!!m.sources?.length && <I.Chevron size={16} className={`chev ${openSources[m.id] ? "open" : ""}`} />}
                     </button>
                     {openSources[m.id] && m.sources && (
                       <ol className="sources">
@@ -425,85 +603,101 @@ export default function Chat() {
 
                 {!(streaming && m.id === lastAssistantId) && m.content && (
                   <div className="actions">
-                    <button className="icon-btn sm" aria-label={t.copy} title={t.copy} onClick={() => copy(m)}>
+                    <button className="act" aria-label={t.copy} title={t.copy} onClick={() => copy(m)}>
                       {copied === m.id ? <I.Check /> : <I.Copy />}
                     </button>
-                    <button className={`icon-btn sm ${m.rating === "up" ? "on" : ""}`} aria-label={t.like} title={t.like} onClick={() => sendFeedback(m, "up")}>
-                      <I.ThumbUp />
+                    <button className="act" aria-label={t.share} title={t.share} onClick={() => share(m)}>
+                      <I.Upload />
                     </button>
-                    <button
-                      className={`icon-btn sm ${m.rating === "down" ? "on" : ""}`}
-                      aria-label={t.dislike}
-                      title={t.dislike}
-                      onClick={() => {
-                        setDislikeFor(m.id);
-                        setDislikeText("");
-                      }}
-                    >
-                      <I.ThumbDown />
-                    </button>
-                    <button className="icon-btn sm" aria-label={t.share} title={t.share} onClick={() => share(m)}>
-                      <I.Share />
-                    </button>
-                    <button className="icon-btn sm" aria-label={t.retry} title={t.retry} onClick={() => retry(m.id)}>
-                      <I.Retry />
-                    </button>
-                    <div className="more-wrap">
-                      <button className="icon-btn sm" aria-label={t.more} title={t.more} onClick={() => setMoreFor(moreFor === m.id ? null : m.id)}>
+                    {!m.error && (
+                      <button className={`act ${speaking === m.id ? "on" : ""}`} aria-label={speaking === m.id ? t.stopReading : t.readAloud} title={speaking === m.id ? t.stopReading : t.readAloud} onClick={() => speak(m.id, m.content)}>
+                        {speaking === m.id ? <I.Stop size={20} /> : <I.Speaker />}
+                      </button>
+                    )}
+                    {!m.error && (
+                      <>
+                        <button className={`act ${m.rating === "up" ? "on" : ""}`} aria-pressed={m.rating === "up"} aria-label={t.like} title={t.like} onClick={() => openSheet(m, "up")}>
+                          <I.ThumbUp />
+                        </button>
+                        <button className={`act ${m.rating === "down" ? "on" : ""}`} aria-pressed={m.rating === "down"} aria-label={t.dislike} title={t.dislike} onClick={() => openSheet(m, "down")}>
+                          <I.ThumbDown />
+                        </button>
+                      </>
+                    )}
+                    <>
+                      <button className={`act ${menu?.kind === "more" && menu.id === m.id ? "on" : ""}`} aria-label={t.more} title={t.more} aria-haspopup="menu" aria-expanded={menu?.kind === "more" && menu.id === m.id} onClick={(e) => openMore(e, m.id)}>
                         <I.More />
                       </button>
-                      {moreFor === m.id && (
-                        <div className="menu" onMouseLeave={() => setMoreFor(null)}>
-                          <button
-                            onClick={() => {
-                              setMoreFor(null);
-                              setDislikeFor(m.id);
-                              setDislikeText("");
-                            }}
-                          >
+                      {menu?.kind === "more" && menu.id === m.id && (
+                        <div className={`pop ${menu.up ? "pop-up" : "pop-down"}`} role="menu">
+                          {m.at && <div className="pop-label">{timeOf(m.at)}</div>}
+                          <button role="menuitem" disabled={!m.sources?.length} onClick={() => { setOpenSources((o) => ({ ...o, [m.id]: true })); setMenu(null); }}>
+                            <I.Sources size={20} /> {t.showSources}
+                          </button>
+                          <button role="menuitem" onClick={() => openSheet(m, "down")}>
                             <I.Flag size={20} /> {t.report}
+                          </button>
+                          <div className="pop-sep" />
+                          {m.model !== undefined && <div className="pop-label">{m.model ? t.answeredWith(m.model) : t.answeredByRules}</div>}
+                          <button role="menuitem" disabled={streaming || m.model === null} onClick={() => redo(m.id, "longer")}>
+                            <I.Longer size={20} /> {t.longer}
+                          </button>
+                          <button role="menuitem" disabled={streaming || m.model === null} onClick={() => redo(m.id, "shorter")}>
+                            <I.Shorter size={20} /> {t.shorter}
+                          </button>
+                          <button role="menuitem" disabled={streaming} onClick={() => redo(m.id)}>
+                            <I.Retry size={20} /> {t.retry}
                           </button>
                         </div>
                       )}
-                    </div>
+                    </>
                   </div>
                 )}
 
                 {m.place && !m.error && !(streaming && m.id === lastAssistantId) && m.content && (
                   <PlaceRating city={m.place.city} label={m.place.label} lang={uiLang} t={t} flash={flash} />
                 )}
+
+                {m.id === lastAssistantId && !streaming && m.content && <p className="ai-note">{t.aiNote}</p>}
               </div>
             ),
           )}
         </div>
       </main>
 
+      {/* Click-away layer for menus */}
+      {menu && <div className="click-away" onClick={() => setMenu(null)} />}
+
       {/* Floating scroll button */}
       {!atBottom && messages.length > 0 && (
         <button className="fab" aria-label={t.scrollDown} onClick={() => scrollToBottom()}>
-          <I.ArrowDown size={24} />
+          <I.ArrowDown size={22} />
         </button>
       )}
 
       {/* Input bar */}
       <footer className="composer-wrap">
         {plusOpen && (
-          <div className="plus-menu">
-            <button onClick={() => send(t.planTripPrompt)}>
-              <I.Plane size={22} /> {t.planTrip}
-            </button>
-            <button onClick={() => send(t.findUniPrompt)}>
-              <I.Cap size={22} /> {t.findUni}
-            </button>
-            <button onClick={() => send(t.findBizPrompt)}>
-              <I.Store size={22} /> {t.findBiz}
-            </button>
-            <button onClick={() => fileRef.current?.click()}>
-              <I.Photo size={22} /> {t.addPhoto}
-            </button>
-          </div>
+          <>
+            <div className="click-away" onClick={() => setPlusOpen(false)} />
+            <div className="pop plus-menu" role="menu">
+              <button role="menuitem" onClick={() => fileRef.current?.click()}>
+                <I.Photo size={22} /> {t.addPhoto}
+              </button>
+              <div className="pop-sep" />
+              <button role="menuitem" onClick={() => send(t.planTripPrompt)}>
+                <I.Plane size={22} /> {t.planTrip}
+              </button>
+              <button role="menuitem" onClick={() => send(t.findUniPrompt)}>
+                <I.Cap size={22} /> {t.findUni}
+              </button>
+              <button role="menuitem" onClick={() => send(t.findBizPrompt)}>
+                <I.Store size={22} /> {t.findBiz}
+              </button>
+            </div>
+          </>
         )}
-        <div className="composer">
+        <div className={`composer ${listening ? "is-listening" : ""}`}>
           {image && (
             <div className="preview">
               <img src={image} alt="" />
@@ -513,7 +707,7 @@ export default function Chat() {
             </div>
           )}
           <div className="composer-row">
-            <button className={`plus ${plusOpen ? "on" : ""}`} aria-label={t.attach} onClick={() => setPlusOpen((v) => !v)}>
+            <button className={`plus ${plusOpen ? "on" : ""}`} aria-label={t.attach} aria-expanded={plusOpen} onClick={() => setPlusOpen((v) => !v)}>
               <I.Plus size={26} />
             </button>
             <textarea
@@ -522,7 +716,7 @@ export default function Chat() {
               maxLength={LIMITS.messageChars}
               dir="auto"
               value={input}
-              placeholder={t.placeholder}
+              placeholder={listening ? t.voiceListening : t.placeholder}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => {
                 if (e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing) {
@@ -531,16 +725,20 @@ export default function Chat() {
                 }
               }}
             />
-            <button className={`icon-btn mic ${listening ? "live" : ""}`} aria-label={t.mic} onClick={toggleMic}>
+            <button className={`mic ${listening === "mic" ? "live" : ""}`} aria-label={t.mic} title={t.mic} aria-pressed={listening === "mic"} onClick={() => listen("mic")}>
               <I.Mic size={24} />
             </button>
             {streaming ? (
-              <button className="send active" aria-label="Stop" onClick={() => abortRef.current?.abort()}>
-                <I.Stop size={20} />
+              <button className="go" aria-label="Stop" onClick={() => abortRef.current?.abort()}>
+                <I.Stop size={18} />
+              </button>
+            ) : canSend ? (
+              <button className="go" aria-label={t.send} title={t.send} onClick={() => send()}>
+                <I.ArrowUp size={22} />
               </button>
             ) : (
-              <button className={`send ${canSend ? "active" : ""}`} aria-label={t.send} disabled={!canSend} onClick={() => send()}>
-                <I.ArrowUp size={22} />
+              <button className={`go voice ${listening === "voice" ? "live" : ""}`} aria-label={t.voiceMode} title={t.voiceMode} aria-pressed={listening === "voice"} onClick={() => listen("voice")}>
+                <I.Voice size={24} />
               </button>
             )}
           </div>
@@ -554,12 +752,12 @@ export default function Chat() {
         <div className="drawer-head">
           <Image src="/logo-mark.png" alt="" width={30} height={28} />
           <span>Ummah One</span>
-          <button className="icon-btn push" aria-label="Close" onClick={() => setDrawer(false)}>
-            <I.Close />
+          <button className="round-btn flat push" aria-label={t.close} onClick={() => setDrawer(false)}>
+            <I.Close size={22} />
           </button>
         </div>
         <button className="drawer-new" onClick={newChat}>
-          <I.NewChat size={22} /> {t.newChat}
+          <I.Pencil size={20} /> {t.newChat}
         </button>
         <div className="drawer-label">{t.history}</div>
         <div className="drawer-list">
@@ -578,7 +776,7 @@ export default function Chat() {
                 >
                   {c.title}
                 </button>
-                <button className="icon-btn sm" aria-label={t.deleteChat} title={t.deleteChat} onClick={() => deleteChat(c.id)}>
+                <button className="act sm" aria-label={t.deleteChat} title={t.deleteChat} onClick={() => deleteChat(c.id)}>
                   <I.Trash size={18} />
                 </button>
               </div>
@@ -597,32 +795,14 @@ export default function Chat() {
         </div>
       </aside>
 
-      {/* Dislike dialog */}
-      {dislikeFor && (
-        <div className="modal-scrim" onClick={() => setDislikeFor(null)}>
-          <div className="modal" onClick={(e) => e.stopPropagation()} role="dialog" aria-label={t.whatWrong}>
-            <h2>{t.whatWrong}</h2>
-            <textarea autoFocus dir="auto" value={dislikeText} onChange={(e) => setDislikeText(e.target.value)} rows={4} />
-            <div className="modal-actions">
-              <button className="btn ghost" onClick={() => setDislikeFor(null)}>
-                {t.cancel}
-              </button>
-              <button
-                className="btn"
-                onClick={() => {
-                  const m = messages.find((x) => x.id === dislikeFor);
-                  if (m) void sendFeedback(m, "down", dislikeText.trim() || undefined);
-                  setDislikeFor(null);
-                }}
-              >
-                {t.send}
-              </button>
-            </div>
-          </div>
+      {/* Feedback sheet (👍 / 👎 / report) */}
+      {sheet && sheetMsg && <FeedbackSheet rating={sheet.rating} t={t} onClose={() => closeSheet()} onSubmit={(f) => closeSheet(f)} />}
+
+      {toast && (
+        <div className="toast" role="status">
+          {toast}
         </div>
       )}
-
-      {toast && <div className="toast">{toast}</div>}
     </div>
   );
 }

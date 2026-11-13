@@ -19,6 +19,8 @@ test("alcohol venues you are sent to are caught; passing by is fine", () => {
   assert.equal(haramReason("9. Have dinner at a konoba on the bay."), "konoba");
   assert.equal(haramReason("3. Visit a pub in the old town."), "pub");
   assert.equal(haramReason("6. Stroll the Corniche, lined with beach clubs, cafés, and restaurants."), null);
+  assert.equal(haramReason("10. Relax on the beaches of the South Coast and the Berenice Beach Club."), "beach club");
+  assert.equal(haramReason("17. Suhareka vineyards: 7/10."), "vineyards");
 });
 
 test("false alarms are not removed", () => {

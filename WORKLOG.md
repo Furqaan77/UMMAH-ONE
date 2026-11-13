@@ -4,6 +4,52 @@ Newest first. Each entry: what was done, the decisions taken (and by whom), and 
 
 ---
 
+## 13 Nov 2026 (Windows PC)
+
+**Later on 13 Nov: 3 new guides added to the chatbot (Bushra's PDFs, now in `sources/`)**
+- `culture/shopping-craft-guide.md`: what to buy in 76 cities, with "where it comes from" notes. Plus Malaysia's 20 crafts (also listed under Kuala Lumpur, Penang and Langkawi). The "before paying" advice is written once at the top.
+- `travel/travel-convenience.md`: ease-of-visit scores out of 10 for 73 cities (about 20 places each, easiest first), plus country lists for Morocco and Malaysia. Each score is also given in words (very easy … very hard).
+- Taken out (halal or no-music rule):
+  - Ganja wine region, Rahovec wine region, Suhareka vineyards, Samarkand wine museum, Meram vineyards (Konya), Berenice Beach Club (Aqaba);
+  - Maraya, Boulevard City and Riyadh Boulevard World (Riyadh), and the Sheikh Jaber Al-Ahmad Cultural Centre (Kuwait);
+  - "tiramisu" (Malaysian chocolates) and "tankards" (pewter).
+- Changed: "Oud" in Jeddah, Riyadh, Dammam and Doha now reads "Oud perfume".
+- Found in the PDFs:
+  - the travel guide repeats Dubai → Ganja twice (identical; used once);
+  - 1,096 of 1,499 places have only a general note, and some notes clash with low scores; the two vague notes were dropped;
+  - the numbering is not always in score order, so places are sorted by score;
+  - the page header says "76-City Shopping & Craft Guide".
+- Fixes:
+  - the halal filter missed plural "vineyards"/"wineries" and named beach clubs, which also removed "Berenice Beach Club" from the old Aqaba guide;
+  - the AI no longer adds its own "some stalls use pork" warnings;
+  - the "keep it very simple" rule is stronger.
+- Checks: ingest 758 chunks; tests 95/95; eval 99/99 (12 new cases); type-check clean.
+
+**Setup (HANDOFF section 4), first session on the PC**
+- Already installed: Git 2.55, Node 24.20, Python 3.12, NVIDIA driver 610.88. Installed: Ollama 0.40.16 (winget).
+- Models: `qwen3:8b` (5.2 GB), `qwen2.5vl:7b` (6.0 GB), `qwen3-embedding:0.6b` (0.6 GB).
+- `.env.local` created with the PC models and an admin password (kept on the PC only).
+- `npm run ingest`: 545 chunks, 11 non-halal lines removed. Tests 91/91, eval 87/87. Chat and `/admin` run; admin login works.
+- `npm audit`: 0 in the app's packages; 6 moderate in `minimatch` (lint tool only).
+
+**Live tests with qwen3:8b**
+- Good: Konya (rating box, no label), "most enjoyable" (no city rated yet), medicine universities, oud perfume in Doha. Answers take 1–6 s once the model is loaded (47 s the first time).
+- Broken, now fixed: "Tell me about Lahore" was answered from the model's own knowledge; "music in Riyadh" got made-up live music.
+- Still open (deferred): the model adds facts that are not in the data (e.g. "Istanbul is the capital" in Arabic; "music in the Gulf"); Arabic answers mix Latin letters into words.
+
+**Decision (Bushra: "you decide")**
+- Blocked places and music in Saudi Arabia, Qatar and Kuwait are answered in code with a fixed reply; the model is not asked. Spec: `_bmad-output/implementation-artifacts/spec-rule-guards.md`. Branch `fix/rule-guards`.
+- Fixed reply texts are new wording for Bushra to check: "Ummah One does not cover [place]. Ask me about another city in the guide." and "Ummah One does not cover music in Saudi Arabia, Qatar or Kuwait. I can tell you about culture, art, heritage and markets there." (Arabic versions in `website/lib/rag/rules.ts`).
+- Checks: tests 95/95, eval 87/87, type-check and lint clean.
+- BMAD's render script could not run on the PC (permission check; `uv` not checked), so the BMAD spec format was followed by hand.
+
+**Later on 13 Nov: new chat design (website)**
+- From Bushra's 3 screenshots in `Desktop\Ummah One\PICS FOR DESIGN` (Gemini app). Style and layout only; Ummah One's own name and logo.
+- New: floating round top-bar buttons; language picker under the title; new chat and chat options (share, delete) in a pill; welcome with quick options and example questions; read aloud; voice mode (speak → send → answer read aloud); feedback sheet for 👍 and 👎 with reason chips, a comment and an opt-in to save the question and answer; frosted "…" menu with time, show sources, report, model name, Longer, Shorter, Retry; "Ummah One is AI and can make mistakes" under the last answer; placeholder "Ask Ummah One".
+- Left out: "Don't personalize" (Ummah One has no personalisation).
+- Server: `/api/chat` accepts `style` (longer/shorter) and sends the model name; `/api/feedback` accepts `reasons` (kept inside `comment`, so the Supabase table does not change).
+- Checks: tests 95/95, eval 87/87, type-check clean. Screenshots: `Desktop\Ummah One\UI-screenshots`. The mobile app (`app/`) still has the old design.
+
 ## 13 Nov 2026 (Mac)
 
 **Later on 13 Nov:** `START_HERE_PROMPT.md` added: a copy-paste first message for Claude on the PC. It says which files to read, asks for a summary, then walks through setup and tests.

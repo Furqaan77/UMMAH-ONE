@@ -105,3 +105,57 @@ export const Trash = (p: P) => (
 );
 export const Check = (p: P) => <Svg {...p}><path d="m5 12.5 4.5 4.5L19 7.5" /></Svg>;
 export const Flag = (p: P) => <Svg {...p}><path d="M5 21V4.5M5 4.5h12l-2.5 4 2.5 4H5" /></Svg>;
+export const Speaker = (p: P) => (
+  <Svg {...p}>
+    <path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" />
+    <path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" />
+  </Svg>
+);
+export const Upload = (p: P) => (
+  <Svg {...p}>
+    <path d="M12 15V4M7.5 8.5 12 4l4.5 4.5" />
+    <path d="M5 14.5V18a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3.5" />
+  </Svg>
+);
+export const Pencil = (p: P) => (
+  <Svg {...p}>
+    <path d="M14.5 5.5 18.5 9.5M4.5 19.5l1-4.5L16 4.5a2 2 0 0 1 3 0l.5.5a2 2 0 0 1 0 3L9 18.5z" />
+  </Svg>
+);
+export const ChevronDown = (p: P) => <Svg {...p}><path d="m6.5 9.5 5.5 5.5 5.5-5.5" /></Svg>;
+/** Voice mode: a speaking head with sound waves. */
+export const Voice = (p: P) => (
+  <Svg {...p}>
+    <path d="M5 21v-4A6 6 0 0 1 9.5 5a5.5 5.5 0 0 1 5 3.5l1.2 3.5H14v2.5a1.5 1.5 0 0 1-1.5 1.5H10V21" />
+    <path d="M18 9.5a3.5 3.5 0 0 1 0 5M20.5 7.5a6.5 6.5 0 0 1 0 9" />
+  </Svg>
+);
+export const Longer = (p: P) => (
+  <Svg {...p}>
+    <path d="M12 4v16M8.5 7.5 12 4l3.5 3.5M8.5 16.5 12 20l3.5-3.5M6 4h12M6 20h12" />
+  </Svg>
+);
+export const Shorter = (p: P) => (
+  <Svg {...p}>
+    <path d="M12 3v6M12 15v6M8.5 6.5 12 9.5l3.5-3M8.5 17.5l3.5-3 3.5 3M5.5 12h13" />
+  </Svg>
+);
+export const Sources = (p: P) => (
+  <Svg {...p}>
+    <circle cx="7" cy="6" r="2.5" />
+    <circle cx="17" cy="18" r="2.5" />
+    <path d="M7 8.5v4a3 3 0 0 0 3 3h4.5" />
+  </Svg>
+);
+export const Globe = (p: P) => (
+  <Svg {...p}>
+    <circle cx="12" cy="12" r="8.5" />
+    <path d="M3.5 12h17M12 3.5c2.5 2.5 3.5 5.5 3.5 8.5s-1 6-3.5 8.5c-2.5-2.5-3.5-5.5-3.5-8.5s1-6 3.5-8.5Z" />
+  </Svg>
+);
+export const Info = (p: P) => (
+  <Svg {...p}>
+    <circle cx="12" cy="12" r="8.5" />
+    <path d="M12 11v5.5M12 7.8v.2" />
+  </Svg>
+);
