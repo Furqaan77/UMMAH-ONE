@@ -40,3 +40,28 @@ create policy "own messages" on messages for all
   using (exists (select 1 from chats c where c.id = chat_id and c.user_id = auth.uid()))
   with check (exists (select 1 from chats c where c.id = chat_id and c.user_id = auth.uid()));
 -- No policies on feedback: only the server (service role key) can write or read it.
+
+-- City enjoyment ratings (13 Nov 2026). Visitors suggest a label for a city they have been to;
+-- only the team sets the label shown in the chat (admin page). Both tables: server (service role) only.
+create table if not exists place_ratings (
+  id bigint generated always as identity primary key,
+  device_id text not null,
+  city text not null,
+  label text not null check (label in ('very_boring', 'boring', 'enjoyable', 'most_enjoyable')),
+  visited boolean not null check (visited),
+  comment text check (char_length(comment) <= 500),
+  created_at timestamptz not null default now(),
+  unique (device_id, city)
+);
+
+create table if not exists place_labels (
+  city text primary key,
+  label text not null check (label in ('very_boring', 'boring', 'enjoyable', 'most_enjoyable')),
+  updated_at timestamptz not null default now()
+);
+
+create index if not exists place_ratings_city on place_ratings (city);
+
+alter table place_ratings enable row level security;
+alter table place_labels enable row level security;
+-- No policies: visitor ratings are private, and labels are changed only by the server for the admin page.

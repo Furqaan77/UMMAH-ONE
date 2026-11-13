@@ -4,6 +4,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import * as I from "./Icons";
 import Answer from "./Answer";
+import PlaceRating from "./PlaceRating";
+import type { EnjoymentLabel } from "@/lib/ratings/labels";
 import { T, type Lang, type LangSetting } from "@/lib/i18n";
 
 type Source = { id: string; title: string; source: string };
@@ -15,6 +17,7 @@ type Message = {
   sources?: Source[];
   error?: boolean;
   rating?: "up" | "down";
+  place?: { city: string; label: EnjoymentLabel | null };
 };
 type ChatT = { id: string; title: string; messages: Message[]; updatedAt: number };
 
@@ -108,7 +111,15 @@ export default function Chat() {
   }, []);
 
   useEffect(() => {
-    if (ready) save(CHATS_KEY, chats.map((c) => ({ ...c, messages: c.messages.map(({ image, ...m }) => ({ ...m, image: image ? "attached" : undefined })) })));
+    // Saved chats keep the rating box but not the label: a label the team later changes or clears must not linger.
+    if (ready)
+      save(
+        CHATS_KEY,
+        chats.map((c) => ({
+          ...c,
+          messages: c.messages.map(({ image, place, ...m }) => ({ ...m, image: image ? "attached" : undefined, place: place ? { city: place.city, label: null } : undefined })),
+        })),
+      );
   }, [chats, ready]);
   useEffect(() => {
     if (ready) save(LANG_KEY, langSetting);
@@ -187,8 +198,9 @@ export default function Chat() {
         buf = lines.pop() ?? "";
         for (const line of lines) {
           if (!line.trim()) continue;
-          const ev = JSON.parse(line) as { type: string; text?: string; sources?: Source[] };
+          const ev = JSON.parse(line) as { type: string; text?: string; sources?: Source[]; city?: string; label?: EnjoymentLabel | null };
           if (ev.type === "sources") patchMsg(chatId, aId, (m) => ({ ...m, sources: ev.sources }));
+          else if (ev.type === "place" && ev.city) patchMsg(chatId, aId, (m) => ({ ...m, place: { city: ev.city!, label: ev.label ?? null } }));
           else if (ev.type === "text") patchMsg(chatId, aId, (m) => ({ ...m, content: m.content + (ev.text ?? "") }));
           else if (ev.type === "error") patchMsg(chatId, aId, (m) => ({ ...m, content: ev.text ?? "Error", error: true }));
         }
@@ -440,6 +452,10 @@ export default function Chat() {
                       )}
                     </div>
                   </div>
+                )}
+
+                {m.place && !m.error && !(streaming && m.id === lastAssistantId) && m.content && (
+                  <PlaceRating city={m.place.city} label={m.place.label} lang={uiLang} t={t} flash={flash} />
                 )}
               </div>
             ),
