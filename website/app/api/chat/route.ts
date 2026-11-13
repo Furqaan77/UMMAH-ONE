@@ -4,6 +4,7 @@ import { detectLang, type Lang } from "@/lib/i18n";
 import { LABEL_RULE, buildContext, type EnjoymentLabel } from "@/lib/ratings/labels";
 import { ratableCity, travelCities } from "@/lib/ratings/cities";
 import { ratingStore } from "@/lib/ratings/store";
+import { LIMITS, checkChatMessages, clientIp, limit, readJson, tooMany } from "@/lib/limits";
 
 export const runtime = "nodejs";
 
@@ -39,8 +40,18 @@ ${context}`;
 }
 
 export async function POST(req: Request) {
-  const body = (await req.json()) as { messages: Msg[]; lang: Lang | "auto" };
-  const messages = (body.messages ?? []).slice(-12);
+  // Rate limit first (every request counts, even rejected ones), then size and content checks.
+  // A rejected request never reaches search or the model.
+  const rl = limit(`chat:${clientIp(req)}`, { minute: LIMITS.chatPerMinute, day: LIMITS.chatPerDay });
+  if (!rl.ok) return tooMany(rl.retryAfter);
+  const read = await readJson<{ messages?: unknown; lang?: Lang | "auto" }>(req, LIMITS.body.chat);
+  if (!read.ok) return read.res;
+  const all = Array.isArray(read.value?.messages) ? (read.value.messages as unknown[]) : [];
+  const recentMsgs = all.slice(-LIMITS.messagesPerRequest);
+  const bad = checkChatMessages(recentMsgs);
+  if (bad) return new Response(bad, { status: 400 });
+  const body = { messages: recentMsgs as Msg[], lang: read.value?.lang ?? "auto" };
+  const messages = body.messages;
   const last = messages[messages.length - 1];
   if (!last || last.role !== "user") return new Response("Bad request", { status: 400 });
 

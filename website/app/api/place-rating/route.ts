@@ -1,16 +1,16 @@
 import { citiesOr503, validateRating, type RatingInput } from "@/lib/ratings/cities";
 import { ratingStore } from "@/lib/ratings/store";
+import { LIMITS, clientIp, limit, readJson, tooMany } from "@/lib/limits";
 
 export const runtime = "nodejs";
 
 // A visitor's feeling about a city they have been to. Saved privately; the team decides the city's label.
 export async function POST(req: Request) {
-  let body: RatingInput | null;
-  try {
-    body = (await req.json()) as RatingInput | null;
-  } catch {
-    return new Response("Bad request", { status: 400 });
-  }
+  const rl = limit(`rating:${clientIp(req)}`, { hour: LIMITS.ratingsPerHour });
+  if (!rl.ok) return tooMany(rl.retryAfter);
+  const read = await readJson<RatingInput | null>(req, LIMITS.body.rating);
+  if (!read.ok) return read.res;
+  const body = read.value;
   const cities = citiesOr503();
   if (cities instanceof Response) return cities;
   const v = validateRating(body, cities);

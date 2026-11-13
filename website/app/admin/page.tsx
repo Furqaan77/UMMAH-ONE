@@ -58,6 +58,11 @@ export default function Admin() {
       return setError("Network error: could not reach the server.");
     }
     if (res.status === 503) return setState("off");
+    if (res.status === 429) {
+      const s = Number(res.headers.get("retry-after"));
+      const mins = Math.ceil((Number.isFinite(s) && s > 0 ? s : 900) / 60);
+      return setError(`Too many wrong passwords. Try again in about ${mins} minute${mins > 1 ? "s" : ""}.`);
+    }
     if (!res.ok) return setError("Wrong password");
     setPassword("");
     await loadSummary();

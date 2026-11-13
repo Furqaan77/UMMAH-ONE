@@ -47,6 +47,20 @@ The search index is saved in `.data/index.json`. It is not committed; rebuild it
 | City ratings: "How did [city] feel to you?" under answers about one travel city (visitors tick "I have been to", pick Very boring / Boring / Enjoyable / Most enjoyable, optional comment) | Done. Inputs are private (`.data/place-ratings.json`, or Supabase). No city has a label until the team sets one at `/admin` |
 | Phone OTP login + history in Supabase | Next. Tables are ready in `../supabase/schema.sql` |
 
+## Limits (estimates; change them in `lib/limits.ts`)
+
+| What | Limit per IP |
+|---|---|
+| Chat | 20 a minute, 300 a day |
+| City ratings | 20 an hour |
+| 👍 / 👎 feedback | 30 an hour |
+| Admin login | At most 5 wrong passwords in any 15 minutes (a slot frees up 15 minutes after each wrong try) |
+| Sizes | Chat body 4 MB, message 4,000 characters, photos JPEG/PNG/WebP up to 1.5 MB (2 per request), rating 4 KB, feedback 32 KB |
+
+Over a limit: 429 with `Retry-After` (413 or 400 for size). The chat shows a friendly message in English or Arabic. Counters are in memory on one server; move them to Supabase or Redis when hosting is chosen.
+
+The IP is read from `x-forwarded-for`, counting `TRUST_PROXY_HOPS` entries from the right (default 1: one proxy, such as the host, in front). Set it to match the hosting setup. With no proxy (this Mac), all visitors share one counter.
+
 ## Review city ratings (team)
 
 1. Add `ADMIN_PASSWORD=<a long password>` to `.env.local` and restart `npm run dev`.

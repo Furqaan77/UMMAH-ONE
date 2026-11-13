@@ -7,6 +7,7 @@ import Answer from "./Answer";
 import PlaceRating from "./PlaceRating";
 import type { EnjoymentLabel } from "@/lib/ratings/labels";
 import { T, type Lang, type LangSetting } from "@/lib/i18n";
+import { CHAT_ERRORS, LIMITS, withLatestPhotos } from "@/lib/limits-config";
 
 type Source = { id: string; title: string; source: string };
 type Message = {
@@ -183,9 +184,23 @@ export default function Chat() {
         signal: ctrl.signal,
         body: JSON.stringify({
           lang: langSetting,
-          messages: history.map((m) => ({ role: m.role, content: m.content, image: m.image && m.image !== "attached" ? m.image : undefined })),
+          messages: withLatestPhotos(history.slice(-LIMITS.messagesPerRequest)).map((m) => ({ role: m.role, content: m.content, image: m.image && m.image !== "attached" ? m.image : undefined })),
         }),
       });
+      if (!res.ok) {
+        // Limits: 429 too many, 413 too large, 400 message or photo rejected.
+        const why = res.status === 400 ? await res.text().catch(() => "") : "";
+        const wait = Number(res.headers.get("retry-after"));
+        const text =
+          res.status === 429 ? (Number.isFinite(wait) && wait > 120 ? t.tooManyToday : t.tooManyMessages)
+          : res.status === 413 ? t.tooLarge
+          : why === CHAT_ERRORS.tooLong ? t.msgTooLong
+          : why === CHAT_ERRORS.tooManyPhotos ? t.tooManyPhotos
+          : why === CHAT_ERRORS.photo ? t.photoBad
+          : t.genericError;
+        patchMsg(chatId, aId, (m) => ({ ...m, sources: [], content: text, error: true }));
+        return;
+      }
       if (!res.body) throw new Error("No response");
       const reader = res.body.getReader();
       const dec = new TextDecoder();
@@ -207,7 +222,7 @@ export default function Chat() {
       }
     } catch (e) {
       if ((e as Error).name !== "AbortError")
-        patchMsg(chatId, aId, (m) => ({ ...m, error: true, content: uiLang === "ar" ? "حدث خطأ. حاول مرة أخرى." : "Something went wrong. Please try again." }));
+        patchMsg(chatId, aId, (m) => ({ ...m, error: true, content: t.genericError }));
     } finally {
       setStreaming(false);
       abortRef.current = null;
@@ -285,14 +300,14 @@ export default function Chat() {
     const idx = current.messages.findIndex((x) => x.id === m.id);
     const question = current.messages.slice(0, idx).reverse().find((x) => x.role === "user")?.content;
     try {
-      await fetch("/api/feedback", {
+      const res = await fetch("/api/feedback", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ chatId: current.id, messageId: m.id, rating, comment, question, answer: m.content }),
       });
-      flash(t.thanks);
+      flash(res.ok ? t.thanks : res.status === 429 ? t.tooManyFeedback : t.feedbackError);
     } catch {
-      flash("Could not send feedback");
+      flash(t.feedbackError);
     }
   }
 
@@ -504,6 +519,7 @@ export default function Chat() {
             <textarea
               ref={inputRef}
               rows={1}
+              maxLength={LIMITS.messageChars}
               dir="auto"
               value={input}
               placeholder={t.placeholder}
