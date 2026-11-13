@@ -1,4 +1,4 @@
-// Halal rule (Furqaan, 11 Nov 2026): never include food that might involve alcohol, pork or anything haram.
+// Halal rule (Bushra, 11 Nov 2026): never include food that might involve alcohol, pork or anything haram.
 // Applied at ingest to every list item (dishes, things to do). Removed items are listed in the ingest report.
 // Prose that WARNS about pork/alcohol ("some stalls use pork", "alcohol is not sold") is kept: it helps travellers.
 // The team can extend these lists.
@@ -17,7 +17,7 @@ export const HARAM_WORDS = [
 /** Dishes known to be made with pork or alcohol, even when the text does not say so. */
 export const HARAM_DISHES = [
   "buzara", "black risotto", "black cuttlefish risotto", "black squid risotto", "crni rižot",
-  // Disputed foods removed by Ummah One policy (Furqaan, 11 Nov 2026: option c): horse meat and fermented mare's milk.
+  // Disputed foods removed by Ummah One policy (Bushra, 11 Nov 2026: option c): horse meat and fermented mare's milk.
   // Riding a horse is fine; only eating or drinking these is removed. Seafood is kept.
   "horse meat", "horse-meat", "horsemeat", "horse sausage", "kazy", "kazi", "qazy", "kazy-karta", "zhal-zhaya",
   "kymyz", "kumis", "kumys", "koumiss", "qymyz", "mare's milk", "mare’s milk", "shubat", "babi guling", "lechon", "char siu", "siu yuk", "bak kut teh", "lap cheong", "coq au vin", "tiramisu", "sangria",

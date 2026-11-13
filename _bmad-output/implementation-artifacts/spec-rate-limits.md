@@ -20,7 +20,7 @@ context: []
 ## Boundaries & Constraints
 
 **Always:**
-- All limits live in one file with plain names, marked "estimate" (Furqaan can change them):
+- All limits live in one file with plain names, marked "estimate" (Bushra can change them):
   - chat: 20/minute and 300/day per IP;
   - place-rating: 20/hour per IP;
   - feedback: 30/hour per IP;

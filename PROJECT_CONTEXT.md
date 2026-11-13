@@ -1,16 +1,21 @@
 # Project Context: Read This First
 
-This folder holds everything needed to continue this work on any machine, with any account or any AI model. The work was done with Claude Code from 5 to 10 November 2026.
+This folder holds everything needed to continue this work on any machine, with any account or any AI model. The work was done with Claude Code from 5 November 2026.
+
+**New machine? Read `HANDOFF.md` first, then `WORKLOG.md`.** This file is the history of the plan (sections 3–8 describe 5–10 Nov).
 
 ## 1. People
 
 | Who | Role |
 |---|---|
-| Furqaan Ahmed | Owns this work. Product lead for Ummah One. Wrote all the answers in QUESTIONS.md |
-| Tanveer bhai | Boss. Wrote the Meta Model test prompt (Meta_Model_Prompt.md). Is now testing other AI models against Claude |
+| Mr Tanveer ("Tanveer bhai") | **Project owner.** Wrote the Meta Model test prompt (Meta_Model_Prompt.md). Is testing other AI models against Claude |
+| Bushra | Runs the Claude sessions and makes the day-to-day decisions |
+| Furqaan | Developer. GitHub account: Furqaan77 |
 | Teammates | Argued that a domain AI can't be built without subject-matter experts (SMEs) |
 
-## 2. How Furqaan wants answers (follow this)
+Correction (13 Nov 2026, confirmed by Bushra): this file first named "Furqaan Ahmed" as the owner. Mr Tanveer is the owner, Furqaan is the developer, and Bushra is the person working with Claude. Below, "Furqaan" is the name used in the 5–10 Nov sessions for the person giving the answers.
+
+## 2. How Bushra wants answers (follow this)
 
 - **Short and simple.** Plain English, tables and bullets. Furqaan rejected a 26-page report as "too much English but of no use."
 - **No money planning.** No revenue, pricing or earnings unless asked. ("I never asked you to make money.")

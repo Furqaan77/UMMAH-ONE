@@ -1,4 +1,4 @@
-// The 4 enjoyment labels (Furqaan, 13 Nov 2026). Visitors suggest one; only the team sets a city's label.
+// The 4 enjoyment labels (Bushra, 13 Nov 2026). Visitors suggest one; only the team sets a city's label.
 export const LABELS = ["very_boring", "boring", "enjoyable", "most_enjoyable"] as const;
 export type EnjoymentLabel = (typeof LABELS)[number];
 

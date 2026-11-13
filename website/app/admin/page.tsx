@@ -13,7 +13,7 @@ type City = {
 
 const N = LABEL_NAMES.en;
 
-// Team only. Visitor inputs per city; Furqaan sets or clears each city's label. Nothing here is public.
+// Team only. Visitor inputs per city; the team sets or clears each city's label. Nothing here is public.
 export default function Admin() {
   const [state, setState] = useState<"loading" | "login" | "off" | "ready" | "error">("loading");
   const [password, setPassword] = useState("");
