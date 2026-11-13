@@ -61,6 +61,7 @@ The chatbot has 3 parts for now:
 2. **Universities**: `education/university-city-compass.md`.
 3. **Art and culture**: `culture/art-and-culture.md`. It covers culture, art and music; clothes, fashion and markets; and handicrafts (carpets, calligraphy, crafts, perfume). Only the 28 places on Bushra's lists, in their wording. The handicrafts list is kept as given (by craft) and also turned around by city.
 - Also in Art and culture: `culture/what-to-buy.md` (added 12 Nov), made from "What to Buy — 81 Cities": 20 signature buys, 72 cities with what and where to buy, 9 cities marked "needs research".
+- 13 Nov 2026 (Bushra confirmed): the 9 missing cities (Antalya, Alanya, Budva, Podgorica, Pristina, Tangier, Astana, Baa Atoll, Koh Lanta) added from the Art & Culture guide plus web research (`sources/What-to-Buy-9-Cities.pdf`). Left out: pork (pršut, smoked meats), alcohol (wine, rakija, banana cologne), horse meat (kazy), shubat, an Orthodox prayer bracelet (brojanica), the unconfirmed plis cap, and shells, coral and butterfly wings. All 81 cities now have What to Buy.
 - Not in the chatbot: the halal food PDF.
 
 ## Art and culture for all 81 cities (13 Nov 2026, Bushra)

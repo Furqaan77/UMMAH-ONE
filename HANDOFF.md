@@ -95,7 +95,7 @@ Windows notes:
 | RAG: ingest, hybrid search (BM25 + meaning, RRF), blocked places, eval | `website/lib/rag/`, `website/scripts/` | Done (BMAD stories 1.1–3.1) |
 | Part 1: Travel and heritage | `website/data/travel/ALL-81-CITIES.md` | 81 cities plus 24 heritage places |
 | Part 2: Universities | `website/data/education/university-city-compass.md` | 18 cities, scored out of 10 |
-| Part 3: Art and culture | `website/data/culture/art-and-culture.md`, `what-to-buy.md` | 81 cities; What to Buy has 72 cities (9 need research) |
+| Part 3: Art and culture | `website/data/culture/art-and-culture.md`, `what-to-buy.md` | 81 cities; What to Buy covers all 81 cities |
 | City enjoyment ratings | `website/lib/ratings/`, `/admin` | Done. Visitors suggest; the team sets the label. No city labelled yet |
 | Rate and size limits | `website/lib/limits.ts`, `limits-config.ts` | Done (hosting step 1) |
 | Supabase (online storage, login) | `supabase/schema.sql` | Tables written; **keys not added yet** |
@@ -128,7 +128,6 @@ The original PDFs behind the data are in **`sources/`**; see `sources/README.md`
 | 2 | Hosting choice for launch. Recommended: hosted Qwen (DeepInfra or Alibaba), about $200–250 a month for 1,000 users (estimate, to verify) | Bushra's choice |
 | 3 | Supabase: online ratings, chats, login. Move the rate-limit counters there. Set `TRUST_PROXY_HOPS` for the host | Supabase keys, SMS sender |
 | 4 | Rating box in the mobile app | — |
-| 5 | What to Buy: the 9 cities marked "needs research" | Bushra checks |
-| 6 | Local contributors (photos and tips): contract and brief | Bushra's approval |
-| 7 | The model's "brain": keep search plus rules, or fine-tune Qwen | Bushra's choice |
-| 8 | Deferred work: UI tests for the rating box and limit messages | — |
+| 5 | Local contributors (photos and tips): contract and brief | Bushra's approval |
+| 6 | The model's "brain": keep search plus rules, or fine-tune Qwen | Bushra's choice |
+| 7 | Deferred work: UI tests for the rating box and limit messages | — |
