@@ -6,6 +6,11 @@ Newest first. Each entry: what was done, the decisions taken (and by whom), and 
 
 ## 13 Nov 2026 (Windows PC)
 
+**Later on 13 Nov: wording check (Bushra)**
+- Kept as they are: the fixed replies, the feedback reasons, the consent text, the placeholder and the "Try asking" examples.
+- Changed: the note under answers is now just "Ummah One is AI and can make mistakes." ("Check official travel advice" removed, English and Arabic).
+- Bushra's git identity set for this repo. PR #9 merged by Furqaan.
+
 **Later on 13 Nov: 3 new guides added to the chatbot (Bushra's PDFs, now in `sources/`)**
 - `culture/shopping-craft-guide.md`: what to buy in 76 cities, with "where it comes from" notes. Plus Malaysia's 20 crafts (also listed under Kuala Lumpur, Penang and Langkawi). The "before paying" advice is written once at the top.
 - `travel/travel-convenience.md`: ease-of-visit scores out of 10 for 73 cities (about 20 places each, easiest first), plus country lists for Morocco and Malaysia. Each score is also given in words (very easy … very hard).
