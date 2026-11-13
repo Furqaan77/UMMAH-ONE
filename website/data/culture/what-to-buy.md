@@ -1,6 +1,6 @@
 # What to Buy — best things to buy in the One Ummah cities
 
-Part of Ummah One's art and culture guide: the best things to buy in each city and where to buy them. Taken from the One Ummah city guides; items marked (to verify) are not in the guides yet. Nothing haram is included. Gold and silk are fine to buy as gifts or for women; in Islam, men do not wear gold or silk.
+Part of Ummah One's art and culture guide: the best things to buy in each city and where to buy them. Taken from the One Ummah city guides and, for 9 cities (13 Nov 2026), from the Ummah One Art & Culture Guide plus web research checked by Bushra; items marked (to verify) are not confirmed yet. All 81 cities are covered. Nothing haram is included. Gold and silk are fine to buy as gifts or for women; in Islam, men do not wear gold or silk.
 
 ## Signature buys — the 20 best things to buy
 
@@ -385,6 +385,47 @@ Where to buy: Chowk, Aminabad.
 What to buy in Zanzibar City (Stone Town): Spices (cloves, nutmeg, vanilla, cinnamon).
 Where to buy: Spice farms, Darajani Market.
 
-## Cities with no shopping details yet
+## Antalya, Türkiye
 
-No shopping details yet (needs research): Antalya, Türkiye, Alanya, Türkiye, Budva, Montenegro, Podgorica, Montenegro, Pristina, Kosovo, Tangier, Morocco, Astana, Kazakhstan, Baa Atoll, Maldives, Koh Lanta, Thailand.
+What to buy in Antalya: crafts: handwoven carpets and kilims; copperware (coppersmiths' street beside the Old Bazaar); hand-painted ceramics; nazar (evil-eye) beads; leather goods; silver jewellery; textiles: scarves, throws, peshtemal (cotton hammam towels); food: loose Turkish delight (lokum); spices — sumac, saffron, pul biber; dried figs and apricots; Turkish tea; citrus jams and candied citrus; care: olive-oil soap and cosmetics.
+Where to buy: Kaleiçi Old Town and the Antalya Old Bazaar; Tek Kapılı Han and İki Kapılı Han (carpets, leather); weekly neighbourhood markets in Konyaaltı and Lara.
+
+## Alanya, Türkiye
+
+What to buy in Alanya: crafts: locally woven Alanya silk (scarves, shawls); peshtemal; madder-dyed carpets; gourd (pumpkin) lamps and candle holders; mosaic lamps; handmade ceramics and tiles; handmade jewellery; food: village jams (including aubergine and watermelon); Turkish delight; pomegranate-flower tea and apple tea; Anatolian spices; Alanya bananas (to verify).
+Where to buy: The Bedesten in the castle area; the municipality's art streets (İskele, Damlataş, Mahmutlar, Oba Sanat Sokağı) and Kale Sanat Tezgâhları; Alanya Bazaar; weekly markets — Friday in the centre, Tuesday in Tosmur (days to verify).
+
+## Budva, Montenegro
+
+What to buy in Budva: crafts: the Montenegrin kapa (embroidered cap); embroidered tablecloths; wool socks and rugs; olive-wood spoons and carvings; handmade jewellery; food: local olive oil; honey; dried figs; dried porcini mushrooms; local cheese; care: lavender products.
+Where to buy: Budva Old Town shops; Budva Green Market (Zelena pijaca) for food — Tuesdays and Fridays busiest (to verify); the open-air market near the Old Town.
+
+## Podgorica, Montenegro
+
+What to buy in Podgorica: crafts: folk textiles, weaving and embroidery (at craft fairs); wool socks and rugs; the Montenegrin kapa; wooden carvings; food: local honey; cheese; olive oil from the coast.
+Where to buy: Craft and local-products fairs on Independence Square (check dates); the Green Bazaar at the Mall of Montenegro; downtown shops.
+
+## Pristina, Kosovo
+
+What to buy in Pristina: crafts: silver filigree jewellery (made in Pristina); filigree bookmarks; the 'Goddess on the Throne' figure (Kosovo's best-known archaeological symbol); handmade crafts; home: small enamel xhezve coffee pots; textiles: old and new traditional textiles and costumes; social buys: Sa-punë tote bags and gifts made by women from minority communities.
+Where to buy: Filigree shops on Garibaldi Street and UÇK Street; the covered market (xhezve); Delvina (textiles, gifts); Pristina Green Market; Peja Old Bazaar (day trip); Pristina Christmas market (December).
+
+## Tangier, Morocco
+
+What to buy in Tangier: leather: bags, wallets, purses, babouche slippers; textiles: handmade Berber rugs; woven robes and scarves (Fondouk Chejra weavers); crafts: hand-painted ceramics; lamps and lanterns; jewellery; antiques; food: saffron; ras el hanout and other spices.
+Where to buy: Rue Mouahidines (most craft stalls); jewellers around Rue Touahine; Fondouk Chejra weaving market; Kasbah spice shops; Grand Socco and Petit Socco; the produce market next to the Grand Socco.
+
+## Astana, Kazakhstan
+
+What to buy in Astana: felt: felt carpets, hats and slippers (small workshops and family collectives); hats: kalpak (embroidered) and tyubeteika; jewellery: silver with turquoise and filigree; clothes: local Kazakh-design brands (e.g. Qazaq Republic, Qazaq Soul); other: porcelain and ceramics with Kazakh designs; leather paintings; yurt miniatures; dombra and other folk instruments (to verify); food: kurt (dried cheese balls).
+Where to buy: KERUEN Souvenirs (Dostyq St 3); Talisman (Republic Avenue); TSUM, 2nd floor; Tumar Art Salon; Sary Arka Market; Khan Shatyr and MEGA Silk Way; Astana Central Market (kurt); souvenir shops near the National Museum.
+
+## Baa Atoll, Maldives
+
+What to buy in Baa Atoll: lacquerwork: liyelaa jehun from Thulhaadhoo: boxes, bowls, vases, plates, water containers, miniature dhonis; woven: thundu kunaa reed mats (Hithadhoo families); coconut: coir rope items (bags, mats, decorations); coconut-shell products; coconut oil; food: Maldivian spice mixes; vacuum-packed tuna.
+Where to buy: Thulhaadhoo, directly from the makers (ask your guesthouse); small handmade-craft shops in Eydhafushi; local shops on inhabited islands.
+
+## Koh Lanta, Thailand
+
+What to buy in Koh Lanta: crafts: batik fabrics and sarongs; ceramics; wood carvings; handmade goods from local artisans; embroidered purses; coconut-shell earrings; jewellery: local gold and silver jewellery; food: local coffee; tropical fruit; traditional Thai snacks; care: Thai-made scrubs and masks.
+Where to buy: Lanta Old Town shops and street market (40+ local artisans; days to verify); Old Town Sunday morning market; Saladan Wednesday-evening market and Saladan Pier shops.

@@ -485,6 +485,46 @@
   ]
  },
  {
+  "group": "buy",
+  "q": "What should I buy in Alanya?",
+  "expect": [
+   "Alanya"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "buy",
+  "q": "Where can I buy Thulhaadhoo lacquerwork?",
+  "expect": [
+   "Baa Atoll"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "buy",
+  "q": "Souvenirs to buy in Astana",
+  "expect": [
+   "Astana"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "buy",
+  "q": "Where can I buy filigree in Pristina?",
+  "expect": [
+   "Pristina"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "halal",
+  "q": "Where can I buy pršut and rakija in Budva?",
+  "forbid": [
+   "pršut",
+   "rakija"
+  ]
+ },
+ {
   "group": "culture",
   "q": "Where can I see Avanos pottery being made?",
   "expect": [

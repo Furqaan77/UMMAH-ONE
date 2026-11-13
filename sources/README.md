@@ -14,3 +14,4 @@ The original documents behind the chatbot data. Kept here so every machine has t
 | `Ummah_One_Art_Culture_Guide_2026.pdf` | Bushra's Art & Culture guide (81 cities) | Yes, as `website/data/culture/art-and-culture.md` (music removed for Saudi Arabia, Qatar, Kuwait) |
 | `Art-and-Culture-81-Cities-DRAFT.pdf` | Claude's earlier research draft | Superseded by Bushra's guide |
 | `What-to-Buy-81-Cities.pdf` / `.md` | What to buy (72 cities, 20 signature buys) | Yes, as `website/data/culture/what-to-buy.md` |
+| `What-to-Buy-9-Cities.pdf` | The 9 missing cities, researched; confirmed by Bushra 13 Nov | Yes, same file |
