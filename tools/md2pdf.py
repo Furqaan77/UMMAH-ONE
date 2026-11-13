@@ -105,10 +105,10 @@ while i < len(lines):
 
 def footer(c, d):
     c.saveState(); c.setFont("S", 7.5); c.setFillColor(INK2)
-    c.drawString(LM, 22, "Ummah One · Plan generated from prompt.md")
+    c.drawString(LM, 22, os.environ.get("PDF_FOOTER", "Ummah One · Plan generated from prompt.md"))
     c.drawRightString(W - RM, 22, f"Page {d.page}"); c.restoreState()
 
 
 SimpleDocTemplate(OUT, pagesize=A4, leftMargin=LM, rightMargin=RM, topMargin=36, bottomMargin=36,
-                  title="Ummah One — AI Guide Product Plan").build(story, onFirstPage=footer, onLaterPages=footer)
+                  title=os.environ.get("PDF_TITLE", "Ummah One — AI Guide Product Plan")).build(story, onFirstPage=footer, onLaterPages=footer)
 print("built")
