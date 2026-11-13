@@ -42,6 +42,14 @@ Answers from the build question round, 10 November 2026. Skipped questions are i
 - **Disputed foods (Bushra, 11 Nov, option c):** horse meat (kazy) and fermented milks with some alcohol (kymyz/kumys, shubat) are removed. Seafood (shrimp, squid, octopus, mussels) is kept. Riding a horse is not affected.
 - Lists to extend: `website/lib/rag/haram.ts`.
 
+## Shopping guide and travel convenience (13 Nov 2026, Bushra's 3 PDFs)
+- Art and culture now also has `culture/shopping-craft-guide.md`: 76 cities plus Malaysia's 20 crafts.
+- Travel now also has `travel/travel-convenience.md`: ease-of-visit scores out of 10, which are estimates and to verify.
+- Removed under the halal and no-music rules: wine and vineyard visits, Berenice Beach Club, Maraya, the Riyadh Boulevard venues, and the Sheikh Jaber centre. Details are in WORKLOG.md.
+
+## Design update (13 Nov 2026, Bushra's "PICS FOR DESIGN" screenshots)
+Replaces the design below on the website (the app keeps the old one for now). Light grey page; white floating round buttons and input pill with soft shadows; grey pill chips; light-blue for selected items, send and voice; frosted-glass menus. Actions under an answer: copy, share, read aloud, 👍, 👎, … (time, show sources, report, model name, longer, shorter, retry). 👍 and 👎 open a feedback sheet (reasons, comment, opt-in to save the question and answer). Voice mode button when the input is empty. Language picker under the title.
+
 ## Design (from the Qwen chat screenshots)
 - Plain white background; large, bold, dark text; long answers in short paragraphs
 - Top bar: ☰ menu (left), "Ummah One" title (centre-left), new-chat icon (right)

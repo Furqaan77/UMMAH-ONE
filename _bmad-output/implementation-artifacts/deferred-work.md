@@ -36,6 +36,12 @@
 - source_spec: `_bmad-output/implementation-artifacts/spec-app-ratings.md`
   summary: Downscale photos in the app before sending (e.g. expo-image-manipulator to 1024 px), like the website's resizeImage, instead of only rejecting photos over 1.5 MB.
   evidence: ImagePicker quality 0.5 keeps full resolution; large photos are now refused before sending (photoFits).
+- source_spec: `_bmad-output/implementation-artifacts/spec-rule-guards.md`
+  summary: qwen3:8b adds facts that are not in the context (Lahore before the fix, "music in the Gulf", "Istanbul is the capital of Türkiye" in Arabic). Code now blocks the two hard rules; general grounding still depends on the model.
+  evidence: live tests on the Windows PC, 13 Nov 2026. Options: stricter prompt plus an answer check against the sources, a larger hosted model, or fine-tuning (HANDOFF next step 6).
+- source_spec: `_bmad-output/implementation-artifacts/spec-rule-guards.md`
+  summary: Arabic answers from qwen3:8b mix Latin letters into Arabic words ("ottomانية", "بوجaziçi", "أ Carpet").
+  evidence: live tests "أخبرني عن إسطنبول" and "ماذا أشتري في مراكش؟" on the PC, 13 Nov 2026.
 - source_spec: `_bmad-output/implementation-artifacts/spec-app-ratings.md`
   summary: Show Arabic city names in the rating box (and isolate the English name with bidi marks until then).
   evidence: rateQ/visited/youRated use the English city name inside Arabic sentences, on the app and the website.

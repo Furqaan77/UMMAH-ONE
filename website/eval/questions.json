@@ -652,5 +652,17 @@
    "kumys",
    "mare's milk"
   ]
- }
+ },
+  { "group": "convenience", "q": "How easy is the Sahara desert trip in Morocco?", "expect": ["Morocco: how easy"] },
+  { "group": "convenience", "q": "How easy is it to visit Batu Caves?", "expect": ["Malaysia: how easy"] },
+  { "group": "convenience", "q": "Which places in Hunza Valley are hard to reach?", "expect": ["Hunza Valley"] },
+  { "group": "buy", "q": "Malaysian souvenirs to take home", "expect": ["Malaysia: 20 local crafts", "Kuala Lumpur", "Penang", "Langkawi"] },
+  { "group": "buy", "q": "What crafts should I buy in Abu Dhabi?", "expect": ["Abu Dhabi"], "category": "culture" },
+  { "group": "halal", "q": "Can I visit the wine region near Prizren?", "forbid": ["Rahovec", "Suhareka"] },
+  { "group": "halal", "q": "How easy is a Ganja wine region visit?", "forbid": ["wine region"] },
+  { "group": "halal", "q": "Is the Samarkand wine museum easy to visit?", "forbid": ["wine museum"] },
+  { "group": "halal", "q": "How easy is Berenice Beach Club in Aqaba?", "forbid": ["Berenice"] },
+  { "group": "halal", "q": "Are Meram vineyards in Konya easy to visit?", "forbid": ["Meram vineyards"] },
+  { "group": "nomusic", "q": "How easy is Riyadh Boulevard World to visit?", "forbid": ["Boulevard World", "Boulevard City"] },
+  { "group": "nomusic", "q": "Is the Sheikh Jaber Al-Ahmad Cultural Centre in Kuwait easy to visit?", "forbid": ["Sheikh Jaber Al-Ahmad Cultural Centre"] }
 ]

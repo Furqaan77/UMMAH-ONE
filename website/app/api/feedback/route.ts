@@ -9,6 +9,8 @@ type Feedback = {
   messageId: string;
   rating: "up" | "down";
   comment?: string;
+  /** Reason chips from the feedback sheet. Kept inside `comment` so the Supabase table does not change. */
+  reasons?: unknown;
   question?: string;
   answer?: string;
 };
@@ -22,13 +24,16 @@ export async function POST(req: Request) {
   const fb = (read.value ?? {}) as Feedback;
   if (!fb.messageId || (fb.rating !== "up" && fb.rating !== "down")) return new Response("Bad request", { status: 400 });
 
+  const reasons = Array.isArray(fb.reasons) ? fb.reasons.filter((r): r is string => typeof r === "string").slice(0, 8).map((r) => r.slice(0, 60)) : [];
+  const text = typeof fb.comment === "string" ? fb.comment : "";
+  const comment = [reasons.length ? `[${reasons.join(", ")}]` : "", text].filter(Boolean).join(" ");
   const row = {
     chat_id: fb.chatId,
     message_id: fb.messageId,
     rating: fb.rating,
-    comment: fb.comment?.slice(0, 2000) ?? null,
-    question: fb.question?.slice(0, 4000) ?? null,
-    answer: fb.answer?.slice(0, 8000) ?? null,
+    comment: comment.slice(0, 2000) || null,
+    question: typeof fb.question === "string" ? fb.question.slice(0, 4000) : null,
+    answer: typeof fb.answer === "string" ? fb.answer.slice(0, 8000) : null,
     created_at: new Date().toISOString(),
   };
 

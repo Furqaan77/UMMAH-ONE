@@ -1,10 +1,13 @@
-import { search, label, IndexMissing } from "@/lib/rag/search";
+import { search, label, placesIn, IndexMissing } from "@/lib/rag/search";
 import type { Chunk } from "@/lib/rag/types";
 import { detectLang, type Lang } from "@/lib/i18n";
 import { LABEL_RULE, buildContext, type EnjoymentLabel } from "@/lib/ratings/labels";
 import { ratableCity, travelCities } from "@/lib/ratings/cities";
 import { ratingStore } from "@/lib/ratings/store";
 import { LIMITS, checkChatMessages, clientIp, limit, readJson, tooMany } from "@/lib/limits";
+import { NO_MUSIC_RULE, asksMusic, blockedReply, noMusicCountries, noMusicReply } from "@/lib/rag/rules";
+import { findBlocked } from "@/lib/rag/blocked";
+import { arabicHints } from "@/lib/rag/arabic";
 
 export const runtime = "nodejs";
 
@@ -14,7 +17,13 @@ const OLLAMA_URL = process.env.OLLAMA_URL ?? "http://localhost:11434";
 const TEXT_MODEL = process.env.OLLAMA_MODEL ?? "qwen3:4b-instruct";
 const VISION_MODEL = process.env.OLLAMA_VISION_MODEL ?? "qwen2.5vl:3b";
 
-function systemPrompt(context: string, lang: Lang | "auto") {
+type Style = "longer" | "shorter";
+const STYLE_RULE: Record<Style, string> = {
+  longer: "\n- The user asked for a LONGER answer: give more detail from the CONTEXT (still only from the CONTEXT).",
+  shorter: "\n- The user asked for a SHORTER answer: reply in 2–4 short sentences or bullets.",
+};
+
+function systemPrompt(context: string, lang: Lang | "auto", noMusic: boolean, style?: Style) {
   const langRule =
     lang === "auto"
       ? "Reply in the same language the user writes in (English or Arabic)."
@@ -25,15 +34,16 @@ function systemPrompt(context: string, lang: Lang | "auto") {
 
 RULES
 - Answer ONLY from the CONTEXT below. If the answer is not in the context, reply: "I don't have that information yet. The Ummah One team is adding it." (in the user's language). Never guess or use outside knowledge. Never cite Wikipedia.
-- Use plain, simple language and short paragraphs.
+- Keep it very simple: start with the direct answer, then short sentences and everyday words. Use a short bullet list for places or things to buy (usually 5–8 items, the best first). No long introductions.
+- Ease-of-visit scores (out of 10): give the score and say what it means in plain words (e.g. "very easy: metro goes there"). Shopping: say what to buy, then one short tip on checking it is real.
 - Do not give visa rules, prices, maps, day-by-day itineraries, or prayer times.
 - No sectarian or political content.
-- Halal only: never recommend or describe food or drink with pork or alcohol, or places whose main offer is alcohol (bars, pubs, beach clubs). If the user asks for them, say kindly that Ummah One only recommends halal options. You may repeat warnings from the context, such as "some stalls use pork, look for halal signs".
+- Halal only: never recommend or describe food or drink with pork or alcohol, or places whose main offer is alcohol (bars, pubs, beach clubs). If the user asks for them, say kindly that Ummah One only recommends halal options. You may repeat a pork or alcohol warning only if it is written in the CONTEXT; never add one yourself.
 - Keep dish names and ingredients exactly as in the context. When replying in Arabic, keep the original dish name in Latin letters in brackets.
 - For travel questions, remind the user to check official travel advice.
 - For trip recommendations, ask for any missing details: budget, travel month, interests, travel style, number of days (students: field of study and level). Say WHY you recommend each place.
-${LABEL_RULE}
-- ${langRule}
+${noMusic ? NO_MUSIC_RULE + "\n" : ""}${LABEL_RULE}
+- ${langRule}${style ? STYLE_RULE[style] : ""}
 
 CONTEXT
 ${context}`;
@@ -44,12 +54,13 @@ export async function POST(req: Request) {
   // A rejected request never reaches search or the model.
   const rl = limit(`chat:${clientIp(req)}`, { minute: LIMITS.chatPerMinute, day: LIMITS.chatPerDay });
   if (!rl.ok) return tooMany(rl.retryAfter);
-  const read = await readJson<{ messages?: unknown; lang?: Lang | "auto" }>(req, LIMITS.body.chat);
+  const read = await readJson<{ messages?: unknown; lang?: Lang | "auto"; style?: unknown }>(req, LIMITS.body.chat);
   if (!read.ok) return read.res;
   const all = Array.isArray(read.value?.messages) ? (read.value.messages as unknown[]) : [];
   const recentMsgs = all.slice(-LIMITS.messagesPerRequest);
   const bad = checkChatMessages(recentMsgs);
   if (bad) return new Response(bad, { status: 400 });
+  const style: Style | undefined = read.value?.style === "longer" || read.value?.style === "shorter" ? read.value.style : undefined;
   const body = { messages: recentMsgs as Msg[], lang: read.value?.lang ?? "auto" };
   const messages = body.messages;
   const last = messages[messages.length - 1];
@@ -61,6 +72,10 @@ export async function POST(req: Request) {
   let askedCity: string | null = null;
   let labels: Record<string, EnjoymentLabel> = {};
   let labelsAvailable = true;
+  let blocked: string[] = [];
+  let askedCountries: string[] = [];
+  let namedPlace = false;
+  let namedRegion = false;
   // Team labels load alongside the search; if they fail, the model is told they are unavailable (not "unrated").
   const labelsP = ratingStore()
     .getLabels()
@@ -72,6 +87,27 @@ export async function POST(req: Request) {
   try {
     const r = await search(last.content);
     hits = r.chunks;
+    blocked = r.blocked;
+    askedCountries = r.countries;
+    namedPlace = r.places.length > 0;
+    namedRegion = r.places.some((p) => p.kind === "region");
+    // A follow-up that names no place ("is there music there?") is about the place in the latest earlier
+    // user message that names one.
+    if (!namedPlace && !blocked.length)
+      for (let i = messages.length - 2; i >= 0; i--) {
+        if (messages[i].role !== "user") continue;
+        const earlierBlocked = findBlocked(`${messages[i].content} ${arabicHints(messages[i].content)}`);
+        if (earlierBlocked.length) {
+          blocked = earlierBlocked;
+          hits = [];
+          break;
+        }
+        const p = placesIn(messages[i].content);
+        if (p.places.length) {
+          askedCountries = p.countries;
+          break;
+        }
+      }
     const cities = travelCities();
     // Only labels for current travel cities are used.
     labels = Object.fromEntries(Object.entries(await labelsP).filter(([c]) => cities.includes(c)));
@@ -87,6 +123,26 @@ export async function POST(req: Request) {
   const sources = hits.map((h) => ({ id: h.id, title: label(h), source: h.source }));
   const replyLang: Lang = body.lang === "auto" ? detectLang(last.content) : body.lang;
 
+  // Hard rules answered in code, never by the model: removed places, and music in Saudi Arabia, Qatar, Kuwait.
+  const fixed = blocked.length
+    ? blockedReply(blocked, replyLang)
+    : asksMusic(last.content) && noMusicCountries(askedCountries).length
+      ? noMusicReply(replyLang)
+      : null;
+  if (fixed) {
+    const out = [{ type: "sources", sources: [], model: null }, { type: "text", text: fixed }].map((o) => JSON.stringify(o) + "\n").join("");
+    return new Response(out, { headers: { "Content-Type": "application/x-ndjson; charset=utf-8", "Cache-Control": "no-store" } });
+  }
+
+  // The no-music rule goes in the prompt only when it can matter: those countries asked about or in the sources,
+  // no place named, or a music question about a region ("music in the Gulf"). Elsewhere the model tends to
+  // repeat the rule aloud.
+  const noMusic =
+    !namedPlace ||
+    (namedRegion && asksMusic(last.content)) ||
+    noMusicCountries(askedCountries).length > 0 ||
+    noMusicCountries(hits.map((h) => h.meta.country ?? "")).length > 0;
+
   const hasImage = messages.some((m) => m.image);
   const model = hasImage ? VISION_MODEL : TEXT_MODEL;
 
@@ -94,7 +150,7 @@ export async function POST(req: Request) {
   const stream = new ReadableStream({
     async start(controller) {
       const send = (obj: unknown) => controller.enqueue(enc.encode(JSON.stringify(obj) + "\n"));
-      send({ type: "sources", sources });
+      send({ type: "sources", sources, model });
       if (place) send({ type: "place", ...place });
       if (searchError) {
         send({ type: "error", text: searchError });
@@ -112,7 +168,7 @@ export async function POST(req: Request) {
             think: false,
             options: { num_ctx: 8192 }, // room for the longer city guides
             messages: [
-              { role: "system", content: systemPrompt(context, body.lang) },
+              { role: "system", content: systemPrompt(context, body.lang, noMusic, style) },
               ...messages.map((m) => ({
                 role: m.role,
                 content: m.content,

@@ -38,7 +38,7 @@ function hasPhrase(text: string, phrase: string): boolean {
 }
 
 // ---------- places and categories ----------
-type Place = { kind: "city" | "country" | "region"; value: string };
+export type Place = { kind: "city" | "country" | "region"; value: string };
 
 const ALIASES: Record<string, Place> = {
   turkey: { kind: "country", value: "Türkiye" },
@@ -64,7 +64,9 @@ const CATEGORY_WORDS: Record<string, string[]> = {
   handicraft: ["craft", "handicraft", "carpet", "calligraphy", "pottery"],
   heritage: ["heritage", "unesco", "monument"],
   // Art and culture (12 Nov 2026) covers culture, art, music, clothes, fashion, markets and handicrafts.
-  culture: ["culture", "festival", "music", "art", "museum", "poetry", "dance", "theatre", "dervish", "clothe", "clothing", "fashion", "abaya", "kaftan", "modest", "market", "bazaar", "souk", "souq", "craft", "handicraft", "carpet", "calligraphy", "pottery", "silk", "embroidery", "perfume", "oud", "frankincense", "copperwork", "filigree", "leather", "batik", "buy", "buying", "shopping", "souvenir", "gift"],
+  culture: ["culture", "festival", "music", "art", "museum", "poetry", "dance", "theatre", "dervish", "clothe", "clothing", "fashion", "abaya", "kaftan", "modest", "market", "bazaar", "souk", "souq", "craft", "handicraft", "carpet", "calligraphy", "pottery", "silk", "embroidery", "perfume", "oud", "frankincense", "copperwork", "filigree", "leather", "batik", "buy", "buying", "shopping", "souvenir", "gift", "keepsake", "authentic", "genuine", "fake", "pearl", "pewter"],
+  // Travel convenience guide (13 Nov 2026): how easy each place is to visit.
+  travel: ["easy", "easiest", "easier", "convenient", "convenience", "accessible", "access", "reach", "transport", "taxi", "metro", "hardest", "difficult", "remote"],
   business: ["business", "shop", "brand", "artist", "seller"],
   about: ["ummah", "halal-friendliness", "label", "population"],
 };
@@ -132,6 +134,7 @@ type Loaded = {
   names: [string, Place][];
   categories: Set<string>;
   regionOf: Map<string, string>; // city or country → region
+  countryOf: Map<string, string>; // city → country
 };
 let cache: Loaded | null = null;
 
@@ -154,11 +157,14 @@ export function loadIndex(store = new JsonStore()): Loaded {
     return { tf, len: toks.length };
   });
   const regionOf = new Map<string, string>();
-  for (const c of index.chunks)
+  const countryOf = new Map<string, string>();
+  for (const c of index.chunks) {
+    if (c.meta.city && c.meta.country && !countryOf.has(c.meta.city)) countryOf.set(c.meta.city, c.meta.country);
     if (c.meta.region) {
       if (c.meta.city) regionOf.set(c.meta.city, c.meta.region);
       if (c.meta.country) regionOf.set(c.meta.country, c.meta.region);
     }
+  }
   cache = {
     path: store.path,
     mtimeMs,
@@ -169,13 +175,38 @@ export function loadIndex(store = new JsonStore()): Loaded {
     names: buildNames(index.chunks),
     categories: new Set(index.chunks.map((c) => c.category)),
     regionOf,
+    countryOf,
   };
   return cache;
 }
 
+function countriesOf(places: Place[], L: Loaded): string[] {
+  return [
+    ...new Set(
+      places.flatMap((p) => (p.kind === "country" ? [p.value] : p.kind === "city" && L.countryOf.has(p.value) ? [L.countryOf.get(p.value)!] : [])),
+    ),
+  ];
+}
+
+/** Places and their countries named in a text (English or Arabic), without searching. */
+export function placesIn(text: string, store?: JsonStore): { places: Place[]; countries: string[] } {
+  const L = loadIndex(store);
+  const places = detectPlaces(`${text} ${arabicHints(text)}`, L.names);
+  return { places, countries: countriesOf(places, L) };
+}
+
 // ---------- search ----------
 export type SearchOptions = { k?: number; store?: JsonStore; embedder?: Embedder };
-export type SearchResult = { chunks: Chunk[]; places: Place[]; categories: string[]; usedVectors: boolean };
+export type SearchResult = {
+  chunks: Chunk[];
+  places: Place[];
+  /** Countries of the places asked about: named countries plus the country of each named city. */
+  countries: string[];
+  categories: string[];
+  usedVectors: boolean;
+  /** Removed places named in the question. When not empty, nothing else is searched. */
+  blocked: string[];
+};
 
 export async function search(query: string, opts: SearchOptions = {}): Promise<SearchResult> {
   const k = opts.k ?? TOP_K;
@@ -184,10 +215,12 @@ export async function search(query: string, opts: SearchOptions = {}): Promise<S
   const q = `${query} ${arabicHints(query)}`.trim();
 
   // Never search for a removed place.
-  if (findBlocked(q).length) return { chunks: [], places: [], categories: [], usedVectors: false };
+  const blocked = findBlocked(q);
+  if (blocked.length) return { chunks: [], places: [], countries: [], categories: [], usedVectors: false, blocked };
 
   const places = detectPlaces(q, L.names);
   const categories = detectCategories(q, L.categories);
+  const askedCountries = countriesOf(places, L);
 
   // Place filter: matching city/country/region, region-level summaries of those places, and chunks with no place.
   const cities = new Set(places.filter((p) => p.kind === "city").map((p) => p.value));
@@ -269,7 +302,7 @@ export async function search(query: string, opts: SearchOptions = {}): Promise<S
   if (categories.length) for (const i of score.keys()) if (categories.includes(chunks[i].category)) score.set(i, score.get(i)! + 1 / (RRF_K + 1));
 
   const top = [...score].sort((a, b) => b[1] - a[1]).slice(0, k).map(([i]) => chunks[i]);
-  return { chunks: top, places, categories, usedVectors };
+  return { chunks: top, places, countries: askedCountries, categories, usedVectors, blocked: [] };
 }
 
 /** "Dubai, UAE › 20 Things to Do in Dubai" — what the user sees in "Sources used". */

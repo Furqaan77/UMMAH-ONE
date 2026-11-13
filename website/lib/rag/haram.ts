@@ -9,7 +9,7 @@ export const HARAM_WORDS = [
   "pork", "pig", "pigs", "swine", "ham", "bacon", "lard", "prosciutto", "pancetta", "salami", "pepperoni", "chorizo",
   "gelatin", "gelatine", "blood sausage", "black pudding",
   // alcohol
-  "alcohol", "alcoholic", "wine", "wines", "winery", "vineyard", "beer", "beers", "brewery", "ale", "lager", "vodka",
+  "alcohol", "alcoholic", "wine", "wines", "winery", "wineries", "vineyard", "vineyards", "beer", "beers", "brewery", "ale", "lager", "vodka",
   "whisky", "whiskey", "brandy", "cognac", "rakija", "raki", "rakı", "ouzo", "arak", "arrack", "liqueur", "liquor",
   "sake", "soju", "mirin", "cocktail", "cocktails", "champagne", "cider", "toddy", "palm wine", "rum",
 ];
@@ -30,6 +30,8 @@ export const HARAM_DISHES = [
 const VENUE = "pubs?|taverns?|konoba|nightclubs?|night clubs?|beach clubs?|rooftop lounges?|cocktail lounges?|wine bars?|(?<!(?:juice|sand|snack|salad|coffee|tea|shisha|milkshake|fruit)\\s)bars?";
 const VENUES = new RegExp(`\\b(?:[Aa]t|[Ii]n|[Tt]o|[Vv]isit|[Vv]isiting|[Tt]ry|[Ee]njoy|[Jj]oin)\\s+(?:a|an|the|one of the|some)?\\s*(?:[\\p{Ll}-]+\\s+){0,2}?(${VENUE})\\b`, "u");
 
+const NAMED_CLUB = /\p{Lu}[\p{L}'’-]*\s+Beach Clubs?\b/u;
+
 // Proper names that contain a haram word but are not food or drink.
 const NAME_EXCEPTIONS = /\bwadi rum\b|\brumi\b|\brum\s+(?:desert|village)\b/gi;
 
@@ -41,7 +43,9 @@ export function haramReason(item: string): string | null {
   const w = WORDS.exec(t);
   if (w) return w[2].toLowerCase();
   const v = VENUES.exec(t); // case-sensitive: "Bar" (the Montenegrin town) is not a venue
-  return v ? v[1].toLowerCase() : null;
+  if (v) return v[1].toLowerCase();
+  // A beach club with a name ("the Berenice Beach Club") is a recommendation, whatever verb comes before it.
+  return NAMED_CLUB.test(t) ? "beach club" : null;
 }
 
 const ITEM_START = /^\s*(\d+[.)]|[-*•])\s+/;
