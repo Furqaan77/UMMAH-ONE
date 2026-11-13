@@ -16,3 +16,10 @@
 - source_spec: food data + halal rule (11 Nov 2026)
   summary: Arabic answers from qwen3:4b mistranslate some ingredients (e.g. "apricots" → "apples", harira called a salad), even with correct sources.
   evidence: live chat "ماذا آكل في مراكش؟" vs data. Model limit on 8 GB; options: a larger model on a 16 GB+ machine/server, or answer dish lists in English with Arabic notes.
+
+- source_spec: `_bmad-output/implementation-artifacts/spec-city-ratings.md`
+  summary: Rate-limit /api/place-rating (per IP per city) and /api/admin/login (failed attempts), so one person cannot flood ratings or guess the admin password.
+  evidence: deviceId is chosen by the client and there is no throttling (review findings 1 and 3). Fits hosting step 1 (rate and size limits), which is waiting for approval.
+- source_spec: `_bmad-output/implementation-artifacts/spec-city-ratings.md`
+  summary: Add a component or end-to-end test that a "place" stream event shows the rating box under a finished answer in Chat.tsx.
+  evidence: The server side is tested (routes.test.ts); the repo has no component/e2e test setup yet (review finding 28).

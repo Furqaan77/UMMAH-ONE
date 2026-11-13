@@ -1,6 +1,9 @@
 import { search, label, IndexMissing } from "@/lib/rag/search";
 import type { Chunk } from "@/lib/rag/types";
 import { detectLang, type Lang } from "@/lib/i18n";
+import { LABEL_RULE, buildContext, type EnjoymentLabel } from "@/lib/ratings/labels";
+import { ratableCity, travelCities } from "@/lib/ratings/cities";
+import { ratingStore } from "@/lib/ratings/store";
 
 export const runtime = "nodejs";
 
@@ -28,10 +31,11 @@ RULES
 - Keep dish names and ingredients exactly as in the context. When replying in Arabic, keep the original dish name in Latin letters in brackets.
 - For travel questions, remind the user to check official travel advice.
 - For trip recommendations, ask for any missing details: budget, travel month, interests, travel style, number of days (students: field of study and level). Say WHY you recommend each place.
+${LABEL_RULE}
 - ${langRule}
 
 CONTEXT
-${context || "(no matching information in the knowledge base)"}`;
+${context}`;
 }
 
 export async function POST(req: Request) {
@@ -42,12 +46,33 @@ export async function POST(req: Request) {
 
   let hits: Chunk[] = [];
   let searchError = "";
+  let place: { city: string; label: EnjoymentLabel | null } | null = null;
+  let askedCity: string | null = null;
+  let labels: Record<string, EnjoymentLabel> = {};
+  let labelsAvailable = true;
+  // Team labels load alongside the search; if they fail, the model is told they are unavailable (not "unrated").
+  const labelsP = ratingStore()
+    .getLabels()
+    .catch((e) => {
+      console.error("[chat] labels", e);
+      labelsAvailable = false;
+      return {} as Record<string, EnjoymentLabel>;
+    });
   try {
-    hits = (await search(last.content)).chunks;
+    const r = await search(last.content);
+    hits = r.chunks;
+    const cities = travelCities();
+    // Only labels for current travel cities are used.
+    labels = Object.fromEntries(Object.entries(await labelsP).filter(([c]) => cities.includes(c)));
+    // A question about exactly one travel city: the answer gets the rating box and its approved label, if any.
+    askedCity = ratableCity(r.places, cities);
+    if (askedCity) place = { city: askedCity, label: labels[askedCity] ?? null };
   } catch (e) {
     searchError = e instanceof IndexMissing ? e.message : `Search failed: ${e instanceof Error ? e.message : e}`;
   }
-  const context = hits.map((h, i) => `[${i + 1}] (${h.category}) ${label(h)}\n${h.text}`).join("\n\n");
+  const passages = hits.map((h, i) => `[${i + 1}] (${h.category}) ${label(h)}\n${h.text}`);
+  // The team's enjoyment labels always come first; they are the only source for "boring / enjoyable".
+  const context = buildContext({ labels, city: askedCity, passages, labelsAvailable });
   const sources = hits.map((h) => ({ id: h.id, title: label(h), source: h.source }));
   const replyLang: Lang = body.lang === "auto" ? detectLang(last.content) : body.lang;
 
@@ -59,6 +84,7 @@ export async function POST(req: Request) {
     async start(controller) {
       const send = (obj: unknown) => controller.enqueue(enc.encode(JSON.stringify(obj) + "\n"));
       send({ type: "sources", sources });
+      if (place) send({ type: "place", ...place });
       if (searchError) {
         send({ type: "error", text: searchError });
         controller.close();

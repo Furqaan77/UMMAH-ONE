@@ -44,7 +44,14 @@ The search index is saved in `.data/index.json`. It is not committed; rebuild it
 | Mic (browser speech-to-text) | Done (Chrome, Edge, Safari) |
 | Copy, 👍, 👎 ("What was wrong?"), share, retry, report | Done. Feedback saved to `.data/feedback.jsonl`, or Supabase when set |
 | Chat history in the ☰ menu, delete chat | Done, saved on this device for now |
+| City ratings: "How did [city] feel to you?" under answers about one travel city (visitors tick "I have been to", pick Very boring / Boring / Enjoyable / Most enjoyable, optional comment) | Done. Inputs are private (`.data/place-ratings.json`, or Supabase). No city has a label until the team sets one at `/admin` |
 | Phone OTP login + history in Supabase | Next. Tables are ready in `../supabase/schema.sql` |
+
+## Review city ratings (team)
+
+1. Add `ADMIN_PASSWORD=<a long password>` to `.env.local` and restart `npm run dev`.
+2. Open http://localhost:3000/admin and log in.
+3. Read each city's votes and comments, then click a label to set it (or Clear). Only labels you set appear in the chat, and the chatbot uses only these.
 
 ## Files
 
@@ -54,6 +61,9 @@ The search index is saved in `.data/index.json`. It is not committed; rebuild it
 | `app/globals.css` | The design system (colours, sizes, layout) |
 | `app/api/chat/route.ts` | Finds sources, sends them to Qwen, streams the answer |
 | `app/api/feedback/route.ts` | Saves 👍 / 👎 |
+| `app/api/place-rating/route.ts`, `components/PlaceRating.tsx` | Visitor city ratings (one per city per device) |
+| `app/admin/page.tsx`, `app/api/admin/*` | Team page: votes and comments per city; set or clear each city's label. Needs `ADMIN_PASSWORD` in `.env.local` |
+| `lib/ratings/` | Labels, storage (Supabase or `.data/`), checks, admin password |
 | `data/<category>/` | Team data. Travel: `travel/ALL-81-CITIES.md`. Education: `education/university-city-compass.md` (18 cities, scores out of 10). Art and culture: `culture/art-and-culture.md` (81 cities; no music for Saudi Arabia, Qatar, Kuwait) and `culture/what-to-buy.md` (72 cities). Sample: `about/`. Run `npm run ingest` after any change |
 | `lib/rag/` | The RAG: parsers, chunker, embeddings, index, hybrid search |
 | `scripts/ingest.ts` | `npm run ingest`: data → `.data/index.json` |
