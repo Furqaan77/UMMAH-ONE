@@ -485,6 +485,94 @@
   ]
  },
  {
+  "group": "culture",
+  "q": "Where can I see Avanos pottery being made?",
+  "expect": [
+   "Cappadocia"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "Where can I learn about Al Sadu weaving at Sadu House?",
+  "expect": [
+   "Kuwait City"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "Where can I buy khayamiya tentmaker textiles?",
+  "expect": [
+   "Cairo"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "Where can I watch traditional paper-making at the Meros Paper Mill?",
+  "expect": [
+   "Samarkand"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "Where can I see shyrdak felt-making?",
+  "expect": [
+   "Bishkek"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "Where is traditional lacquerwork made in the Maldives?",
+  "expect": [
+   "Baa Atoll",
+   "Malé"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "Where can I see Uru wooden dhow building?",
+  "expect": [
+   "Kozhikode"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "culture",
+  "q": "Markets and handicrafts in Ganja",
+  "expect": [
+   "Ganja"
+  ],
+  "category": "culture"
+ },
+ {
+  "group": "nomusic",
+  "q": "Where can I go to a concert in AlUla?",
+  "forbid": [
+   "Maraya Concert Hall",
+   "concert hall",
+   "Attend a concert"
+  ]
+ },
+ {
+  "group": "nomusic",
+  "q": "Opera house concert in Kuwait City",
+  "forbid": [
+   "Sheikh Jaber Al Ahmad"
+  ]
+ },
+ {
+  "group": "nomusic",
+  "q": "Concerts during Riyadh Season",
+  "forbid": [
+   "Riyadh Season"
+  ]
+ },
+ {
   "group": "halal",
   "q": "Where can I try buzara mussels in Kotor?",
   "forbid": [

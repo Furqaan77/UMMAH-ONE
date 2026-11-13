@@ -54,7 +54,7 @@ The search index is saved in `.data/index.json`. It is not committed; rebuild it
 | `app/globals.css` | The design system (colours, sizes, layout) |
 | `app/api/chat/route.ts` | Finds sources, sends them to Qwen, streams the answer |
 | `app/api/feedback/route.ts` | Saves 👍 / 👎 |
-| `data/<category>/` | Team data. Travel: `travel/ALL-81-CITIES.md`. Education: `education/university-city-compass.md` (18 cities, scores out of 10). Art and culture: `culture/art-and-culture.md` (28 cities) and `culture/what-to-buy.md` (72 cities). Sample: `about/`. Run `npm run ingest` after any change |
+| `data/<category>/` | Team data. Travel: `travel/ALL-81-CITIES.md`. Education: `education/university-city-compass.md` (18 cities, scores out of 10). Art and culture: `culture/art-and-culture.md` (81 cities; no music for Saudi Arabia, Qatar, Kuwait) and `culture/what-to-buy.md` (72 cities). Sample: `about/`. Run `npm run ingest` after any change |
 | `lib/rag/` | The RAG: parsers, chunker, embeddings, index, hybrid search |
 | `scripts/ingest.ts` | `npm run ingest`: data → `.data/index.json` |
 | `lib/i18n.ts` | English and Arabic text |

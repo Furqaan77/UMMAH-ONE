@@ -72,7 +72,7 @@ Where to buy: Qatif markets.
 
 ## Doha, Qatar
 
-What to buy in Doha: Oud, spices, textiles, traditional crafts.
+What to buy in Doha: Oud perfume, spices, textiles, traditional crafts.
 Where to buy: Souq Waqif.
 
 ## Muscat, Oman
@@ -372,8 +372,8 @@ Where to buy: Island craft centres *(to verify)*.
 
 ## Hyderabad, India
 
-What to buy in Hyderabad: Lacquer bangles, Hyderabad pearls.
-Where to buy: Laad Bazaar, Pathergatti.
+What to buy in Hyderabad: Lacquer bangles, Hyderabad pearls, Bidriware metalwork.
+Where to buy: Laad Bazaar, Pathergatti, Shilparamam arts and crafts village.
 
 ## Lucknow, India
 

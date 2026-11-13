@@ -148,7 +148,7 @@ Food leans on the oasis: sweet AlUla dates, citrus, and slow-cooked Saudi dishes
 1. Explore Hegra and stand before Qasr al-Farid, the great lone tomb carved into a single rock.
 2. Watch the sunset at Elephant Rock (Jabal AlFil), then linger in the lounge seating beneath it.
 3. Wander the mud-brick lanes of AlUla Old Town, once home to hundreds of houses.
-4. See Maraya, the mirrored concert hall that reflects the canyon around it.
+4. See Maraya, the mirrored building that reflects the canyon around it.
 5. Visit Dadan, capital of the ancient Dadanite and Lihyanite kingdoms.
 6. Read the inscriptions of Jabal Ikmah, often called an "open-air library."
 7. Take in the vast volcanic landscape from the Harrat Viewpoint.
@@ -157,7 +157,7 @@ Food leans on the oasis: sweet AlUla dates, citrus, and slow-cooked Saudi dishes
 10. Cycle or walk the Oasis Heritage Trail through palm groves and old farms.
 11. Climb a via ferrata route on AlUla's sandstone cliffs.
 12. See the old Hejaz Railway station at Hegra, part of the line built to carry pilgrims.
-13. Attend a concert or festival during Winter at Tantora.
+13. Find the Tantora, the old sundial in AlUla Old Town that once marked the start of the winter planting season.
 14. Ride a camel or horse through the desert canyons.
 15. Browse galleries and cafés in the AlJadidah Arts District.
 16. Visit a date farm in the oasis and taste fresh AlUla dates with Saudi coffee.
@@ -221,7 +221,7 @@ The food is a highlight. Hejazi breakfasts of foul and warm tamees bread, flaky 
 
 Riyadh is a capital in motion—vast, confident, and changing at astonishing speed. Futuristic towers rise above old Najdi mud-brick forts, new boulevards and entertainment districts open every year, and the city feels like it is racing towards its own future while holding tight to its desert roots.
 
-Life here runs late. Days are for work and shade; evenings are for cafés, family outings, and the buzz of Riyadh Season, which fills the cooler months with concerts, food, and festivals. Costs are moderate—cheaper than Dubai for many everyday things, though new luxury hotels and dining spots can be pricey. Summer is extremely hot and dry; October to March is far more pleasant.
+Life here runs late. Days are for work and shade; evenings are for cafés, family outings, and walks along the new boulevards, especially in the cooler months. Costs are moderate—cheaper than Dubai for many everyday things, though new luxury hotels and dining spots can be pricey. Summer is extremely hot and dry; October to March is far more pleasant.
 
 Food is rooted in Najdi tradition: generous platters of kabsa, comforting jareesh, margoog stew, and endless rounds of Saudi coffee with dates. Riyadh also has one of the region's most exciting specialty coffee scenes, and every cuisine you can imagine—all halal.
 
@@ -236,7 +236,7 @@ Food is rooted in Najdi tradition: generous platters of kabsa, comforting jarees
 7. Tour the Murabba Palace in the King Abdulaziz Historical Center.
 8. Pray at Imam Turki bin Abdullah Grand Masjid near the old Deira district.
 9. Browse antiques, carpets, and incense at Souq Al Zal.
-10. Experience Riyadh Season at Boulevard City and Boulevard World (roughly October to March).
+10. Visit the King Fahd National Library, known for its fabric-panelled facade.
 11. Walk or picnic along the green banks of Wadi Hanifah.
 12. Admire the striking architecture of the King Abdullah Financial District.
 13. See the city from the golden Globe of Al Faisaliyah Tower.
@@ -287,7 +287,7 @@ The food is hearty highland fare. Look for areeka, a rich dough dish soaked in g
 17. Try areeka with ghee and Asiri honey, and haneeth lamb.
 18. Buy Asiri honey straight from local beekeepers.
 19. Hike the trails around Al Soudah through clouds and juniper.
-20. Join the summer crowds for the Al Soudah and Abha summer festivals.
+20. Escape the summer heat in Abha's cool mountain air, when the city fills with Saudi families.
 
 ---
 
@@ -399,12 +399,12 @@ The food scene is a delight, and everything is halal. Try Qatari machboos, haree
 1. Stroll the Corniche at sunset and watch the West Bay towers light up across the water.
 2. Explore the Museum of Islamic Art, I. M. Pei's masterpiece, and its treasures spanning fourteen centuries.
 3. Relax in MIA Park beside the museum and see Richard Serra's towering sculpture "7" on the waterfront.
-4. Wander the lanes of Souq Waqif for spices, oud, textiles and traditional crafts.
+4. Wander the lanes of Souq Waqif for spices, oud perfume, textiles and traditional crafts.
 5. Step into the Falcon Souq and the nearby Falcon Hospital to see Qatar's beloved birds up close.
 6. Visit the National Museum of Qatar, Jean Nouvel's dramatic building inspired by the desert rose.
 7. Pray at or admire the Imam Muhammad ibn Abdul Wahhab Masjid, Qatar's state masjid with its sea of sandstone domes.
 8. Look up at the spiral minaret of the Abdulla Bin Zaid Al Mahmoud Islamic Cultural Center, formerly known as Fanar.
-9. Spend an evening at Katara Cultural Village, with its amphitheatre, tiled Katara Masjid and beach.
+9. Spend an evening at Katara Cultural Village, with its tiled Katara Masjid and beach.
 10. Wander the marinas and Venetian-style Qanat Quartier of The Pearl-Qatar.
 11. Explore Msheireb Downtown and learn the city's story at the Msheireb Museums' restored heritage houses.
 12. Take a traditional dhow cruise from the Corniche out into Doha Bay.
@@ -566,7 +566,7 @@ Kuwaitis love to eat, and the restaurant scene is huge. Try machboos, mutabbaq s
 4. Eat at one of the simple grill restaurants inside Souq Al Mubarakiya.
 5. Discover world-class Islamic art from Dar al-Athar al-Islamiyyah at the Amricani Cultural Centre.
 6. Spend a day at the Sheikh Abdullah Al Salem Cultural Centre, one of the largest museum complexes in the world.
-7. Catch a concert at the Sheikh Jaber Al Ahmad Cultural Centre, Kuwait's striking opera house.
+7. Visit the Scientific Center Kuwait in Salmiya, with its aquarium on the waterfront.
 8. Walk through Al Shaheed Park, a green oasis with museums and gardens in the city centre.
 9. See textiles, jewellery and manuscripts at the Tareq Rajab Museum.
 10. Learn about Bedouin weaving at Sadu House on the waterfront.
