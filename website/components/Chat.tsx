@@ -184,7 +184,7 @@ export default function Chat() {
         signal: ctrl.signal,
         body: JSON.stringify({
           lang: langSetting,
-          messages: withLatestPhotos(history.slice(-LIMITS.messagesPerRequest)).map((m) => ({ role: m.role, content: m.content, image: m.image && m.image !== "attached" ? m.image : undefined })),
+          messages: withLatestPhotos(history.filter((m) => !m.error).slice(-LIMITS.messagesPerRequest).map((m) => (m.role === "assistant" && m.content.length > LIMITS.historyChars ? { ...m, content: m.content.slice(0, LIMITS.historyChars) } : m))).map((m) => ({ role: m.role, content: m.content, image: m.image && m.image !== "attached" ? m.image : undefined })),
         }),
       });
       if (!res.ok) {
@@ -192,7 +192,7 @@ export default function Chat() {
         const why = res.status === 400 ? await res.text().catch(() => "") : "";
         const wait = Number(res.headers.get("retry-after"));
         const text =
-          res.status === 429 ? (Number.isFinite(wait) && wait > 120 ? t.tooManyToday : t.tooManyMessages)
+          res.status === 429 ? (Number.isFinite(wait) && wait > LIMITS.chatPerMinute.windowMs / 1000 ? t.tooManyToday : t.tooManyMessages)
           : res.status === 413 ? t.tooLarge
           : why === CHAT_ERRORS.tooLong ? t.msgTooLong
           : why === CHAT_ERRORS.tooManyPhotos ? t.tooManyPhotos
