@@ -6,6 +6,8 @@ Newest first. Each entry: what was done, the decisions taken (and by whom), and 
 
 ## 13 Nov 2026 (Mac)
 
+**Later on 13 Nov:** Local contributors brief and agreement drafted (`planning/Local_Contributors_Brief.md`, PDF on the Mac Desktop) and waiting for Bushra's check. 5 open choices: ownership (licence or transfer), pay per country (10 AED an hour may be below some minimum wages — to verify), payment method, 10 pilot cities, governing law. `tools/md2pdf.py` now takes `PDF_FOOTER` and `PDF_TITLE`.
+
 **Later on 13 Nov:** What to Buy finished for all 81 cities. The 9 missing cities were researched (her Art & Culture guide plus 35 web sources) and confirmed by Bushra. Halal and wildlife items were left out. Eval 87/87, tests 87/87. Source PDF: `sources/What-to-Buy-9-Cities.pdf`.
 
 **Decisions (Bushra)**
