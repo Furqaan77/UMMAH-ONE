@@ -6,6 +6,8 @@ Newest first. Each entry: what was done, the decisions taken (and by whom), and 
 
 ## 13 Nov 2026 (Mac)
 
+**Later on 13 Nov:** `START_HERE_PROMPT.md` added: a copy-paste first message for Claude on the PC. It says which files to read, asks for a summary, then walks through setup and tests.
+
 **Later on 13 Nov:** Rating box and limit messages added to the mobile app (BMAD `spec-app-ratings.md`, one-shot review: 12 findings, 7 fixed). Error messages are no longer sent back to the model (app and website). Website tests 91/91; app type-check OK; iOS bundle OK. Not yet tried on a phone.
 
 **Later on 13 Nov:** Local contributors brief and agreement drafted (`planning/Local_Contributors_Brief.md`, PDF on the Mac Desktop) and waiting for Bushra's check. 5 open choices: ownership (licence or transfer), pay per country (10 AED an hour may be below some minimum wages — to verify), payment method, 10 pilot cities, governing law. `tools/md2pdf.py` now takes `PDF_FOOTER` and `PDF_TITLE`.
