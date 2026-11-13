@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Read **HANDOFF.md** first: the machines, the setup, the current state and the next steps. Then **WORKLOG.md** for what was done and why. **PROJECT_CONTEXT.md** has the full history of the plan.
+New session on a new machine? Paste **START_HERE_PROMPT.md** first. Then read **HANDOFF.md**: the machines, the setup, the current state and the next steps. Then **WORKLOG.md** for what was done and why. **PROJECT_CONTEXT.md** has the full history of the plan.
 
 ## People
 - **Mr Tanveer**: project owner. **Bushra**: runs the sessions and makes the day-to-day decisions. **Furqaan**: developer (GitHub Furqaan77).

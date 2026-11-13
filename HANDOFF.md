@@ -1,5 +1,7 @@
 # HANDOFF: Read This First on a New Machine
 
+> **New Claude session?** Paste the prompt in `START_HERE_PROMPT.md` as your first message.
+
 For Bushra and any Claude session on the Windows PC. Updated 13 Nov 2026.
 
 ## 1. The setup
@@ -78,8 +80,8 @@ Older files and commit messages say "Furqaan" where they mean the person making 
    - Never commit `.env.local`.
 6. Build the search index, then check it. Run each command in `website\`:
    - `npm run ingest`: builds `website\.data\index.json`. It isn't in git, so every machine builds its own.
-   - `npm test`: expected 87 of 87 tests pass.
-   - `npm run eval`: expected 82/82 (the pass mark is 90%).
+   - `npm test`: expected all tests pass (91 on 13 Nov 2026).
+   - `npm run eval`: expected 87/87 (the pass mark is 90%).
    - `npm run dev`: then open http://localhost:3000 for the chat and http://localhost:3000/admin for ratings.
 
 Windows notes:
