@@ -29,9 +29,20 @@ import { C, F } from "./src/theme";
 import { T, detectLang, type Lang, type LangSetting } from "./src/i18n";
 import { API_URL } from "./src/config";
 import { speech } from "./src/speech";
+import PlaceRating from "./src/PlaceRating";
+import { LIMITS, chatErrorKey, historyForRequest, photoFits, type EnjoymentLabel } from "./src/limits";
 
 type Source = { id: string; title: string; source: string };
-type Message = { id: string; role: "user" | "assistant"; content: string; image?: string; sources?: Source[]; error?: boolean; rating?: "up" | "down" };
+type Message = {
+  id: string;
+  role: "user" | "assistant";
+  content: string;
+  image?: string;
+  sources?: Source[];
+  error?: boolean;
+  rating?: "up" | "down";
+  place?: { city: string; label: EnjoymentLabel | null };
+};
 type ChatT = { id: string; title: string; messages: Message[]; updatedAt: number };
 
 const uid = () => Math.random().toString(36).slice(2, 10) + Date.now().toString(36);
@@ -93,7 +104,17 @@ function Chat() {
     })();
   }, []);
   useEffect(() => {
-    if (ready) AsyncStorage.setItem(CHATS_KEY, JSON.stringify(chats.map((c) => ({ ...c, messages: c.messages.map(({ image, ...m }) => ({ ...m, image: image ? "attached" : undefined })) })))).catch(() => {});
+    // Saved chats keep the rating box but not the label: a label the team later changes or clears must not linger.
+    if (ready)
+      AsyncStorage.setItem(
+        CHATS_KEY,
+        JSON.stringify(
+          chats.map((c) => ({
+            ...c,
+            messages: c.messages.map(({ image, place, ...m }) => ({ ...m, image: image ? "attached" : undefined, place: place ? { city: place.city, label: null } : undefined })),
+          })),
+        ),
+      ).catch(() => {});
   }, [chats, ready]);
   useEffect(() => {
     if (ready) AsyncStorage.setItem(LANG_KEY, JSON.stringify(langSetting)).catch(() => {});
@@ -126,9 +147,16 @@ function Chat() {
         signal: ctrl.signal,
         body: JSON.stringify({
           lang: langSetting,
-          messages: history.map((m) => ({ role: m.role, content: m.content, image: m.image && m.image !== "attached" ? m.image : undefined })),
+          messages: historyForRequest(history).map((m) => ({ role: m.role, content: m.content, image: m.image && m.image !== "attached" ? m.image : undefined })),
         }),
       });
+      if (!res.ok) {
+        // Limits: 429 too many, 413 too large, 400 message or photo rejected.
+        const why = res.status === 400 ? await res.text().catch(() => "") : "";
+        const text = t[chatErrorKey(res.status, why, res.headers.get("retry-after"))];
+        patchMsg(chatId, aId, (m) => ({ ...m, sources: [], content: text, error: true }));
+        return;
+      }
       if (!res.body) throw new Error("No response");
       const reader = res.body.getReader();
       const dec = new TextDecoder();
@@ -141,8 +169,9 @@ function Chat() {
         buf = lines.pop() ?? "";
         for (const line of lines) {
           if (!line.trim()) continue;
-          const ev = JSON.parse(line) as { type: string; text?: string; sources?: Source[] };
+          const ev = JSON.parse(line) as { type: string; text?: string; sources?: Source[]; city?: string; label?: EnjoymentLabel | null };
           if (ev.type === "sources") patchMsg(chatId, aId, (m) => ({ ...m, sources: ev.sources }));
+          else if (ev.type === "place" && ev.city) patchMsg(chatId, aId, (m) => ({ ...m, place: { city: ev.city!, label: ev.label ?? null } }));
           else if (ev.type === "text") patchMsg(chatId, aId, (m) => ({ ...m, content: m.content + (ev.text ?? "") }));
           else if (ev.type === "error") patchMsg(chatId, aId, (m) => ({ ...m, content: ev.text ?? "Error", error: true }));
         }
@@ -213,21 +242,23 @@ function Chat() {
     const idx = current.messages.findIndex((x) => x.id === m.id);
     const question = current.messages.slice(0, idx).reverse().find((x) => x.role === "user")?.content;
     try {
-      await fetch(`${API_URL}/api/feedback`, {
+      const res = await fetch(`${API_URL}/api/feedback`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ chatId: current.id, messageId: m.id, rating, comment, question, answer: m.content }),
       });
-      flash(t.thanks);
+      flash(res.ok ? t.thanks : res.status === 429 ? t.tooManyFeedback : t.feedbackError);
     } catch {
-      flash("Could not send feedback");
+      flash(t.feedbackError);
     }
   }
 
   async function pickPhoto() {
     const r = await ImagePicker.launchImageLibraryAsync({ mediaTypes: ["images"], quality: 0.5, base64: true, allowsEditing: false });
     if (!r.canceled && r.assets[0]?.base64) {
-      setImage(`data:image/jpeg;base64,${r.assets[0].base64}`);
+      const dataUrl = `data:image/jpeg;base64,${r.assets[0].base64}`;
+      if (!photoFits(dataUrl)) return flash(t.photoBad); // checked before sending, not after a round trip
+      setImage(dataUrl);
       setPlusOpen(false);
     }
   }
@@ -377,6 +408,10 @@ function Chat() {
                     </Pressable>
                   </View>
                 )}
+
+                {m.place && !m.error && !(streaming && m.id === lastAssistantId) && !!m.content && (
+                  <PlaceRating city={m.place.city} label={m.place.label} lang={uiLang} t={t} flash={flash} rtl={rtl} />
+                )}
               </View>
             ),
           )}
@@ -426,6 +461,7 @@ function Chat() {
                 placeholderTextColor={C.placeholder}
                 multiline
                 numberOfLines={1}
+                maxLength={LIMITS.messageChars}
               />
               <Pressable style={st.mic} onPress={toggleMic} accessibilityLabel={t.mic}>
                 <I.Mic size={24} color={listening ? C.danger : "#555"} />

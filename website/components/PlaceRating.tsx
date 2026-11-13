@@ -85,7 +85,14 @@ export default function PlaceRating({ city, label, lang, t, flash }: { city: str
         </div>
       ) : (
         <div className="place-box">
-          <div className="place-q">{t.rateQ(city)}</div>
+          <div className="place-q">
+            {t.rateQ(city)}
+            {editing && rated && (
+              <button className="link-btn" style={{ marginInlineStart: 10 }} onClick={() => setEditing(false)}>
+                {t.cancel}
+              </button>
+            )}
+          </div>
           <label className="place-visited">
             <input type="checkbox" checked={visited} onChange={(e) => setVisited(e.target.checked)} />
             <span>{t.visited(city)}</span>

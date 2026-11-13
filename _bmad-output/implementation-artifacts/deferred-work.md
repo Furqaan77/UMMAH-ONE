@@ -33,3 +33,9 @@
 - source_spec: `_bmad-output/implementation-artifacts/spec-rate-limits.md`
   summary: Add UI tests for the 429/413/400 messages in Chat.tsx, PlaceRating.tsx and the admin page.
   evidence: No component test setup in the repo (review finding 21).
+- source_spec: `_bmad-output/implementation-artifacts/spec-app-ratings.md`
+  summary: Downscale photos in the app before sending (e.g. expo-image-manipulator to 1024 px), like the website's resizeImage, instead of only rejecting photos over 1.5 MB.
+  evidence: ImagePicker quality 0.5 keeps full resolution; large photos are now refused before sending (photoFits).
+- source_spec: `_bmad-output/implementation-artifacts/spec-app-ratings.md`
+  summary: Show Arabic city names in the rating box (and isolate the English name with bidi marks until then).
+  evidence: rateQ/visited/youRated use the English city name inside Arabic sentences, on the app and the website.
