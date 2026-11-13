@@ -53,6 +53,10 @@ export default function PlaceRating({ city, label, lang, t, flash }: { city: str
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ deviceId: deviceId(), city, label: choice, visited, comment: comment.trim() || undefined }),
       });
+      if (res.status === 429) {
+        flash(t.tooManyRatings);
+        return;
+      }
       if (!res.ok) throw new Error(String(res.status));
       try {
         localStorage.setItem(RATED_KEY, JSON.stringify({ ...loadRated(), [city]: choice }));

@@ -23,3 +23,13 @@
 - source_spec: `_bmad-output/implementation-artifacts/spec-city-ratings.md`
   summary: Add a component or end-to-end test that a "place" stream event shows the rating box under a finished answer in Chat.tsx.
   evidence: The server side is tested (routes.test.ts); the repo has no component/e2e test setup yet (review finding 28).
+
+- source_spec: `_bmad-output/implementation-artifacts/spec-rate-limits.md`
+  summary: Done 13 Nov 2026: the rate-limit item above (ratings and admin login) is covered by spec-rate-limits (in-memory, per IP). Still open: move the counters to Supabase or Redis when hosting is chosen.
+  evidence: lib/limits.ts keeps counters per server process; several serverless instances would each count separately.
+- source_spec: `_bmad-output/implementation-artifacts/spec-rate-limits.md`
+  summary: When hosting is chosen, set TRUST_PROXY_HOPS for its proxy and make sure every request has a real client IP (no shared "local" counter), so one person cannot lock out the admin login for everyone.
+  evidence: Without proxy headers all visitors share the "local" key (review finding 2).
+- source_spec: `_bmad-output/implementation-artifacts/spec-rate-limits.md`
+  summary: Add UI tests for the 429/413/400 messages in Chat.tsx, PlaceRating.tsx and the admin page.
+  evidence: No component test setup in the repo (review finding 21).
