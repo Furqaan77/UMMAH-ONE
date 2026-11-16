@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import * as I from "./Icons";
 import Answer from "./Answer";
 import PlaceRating from "./PlaceRating";
@@ -558,6 +559,7 @@ export default function Chat() {
                   </button>
                 ))}
               </div>
+              <Link className="check-link" href="/check">{t.checkGuide}</Link>
             </div>
           )}
 
@@ -759,6 +761,9 @@ export default function Chat() {
         <button className="drawer-new" onClick={newChat}>
           <I.Pencil size={20} /> {t.newChat}
         </button>
+        <Link className="drawer-new" href="/check">
+          <I.Pencil size={20} /> {t.checkGuideShort}
+        </Link>
         <div className="drawer-label">{t.history}</div>
         <div className="drawer-list">
           {chats.length === 0 && <div className="drawer-empty">{t.noHistory}</div>}

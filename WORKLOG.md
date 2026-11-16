@@ -4,6 +4,21 @@ Newest first. Each entry: what was done, the decisions taken (and by whom), and 
 
 ---
 
+## 16 Nov 2026 (Windows PC)
+
+**Testers' link and "Help check the guide" page (Bushra: ready in 2 hours, for 50–100 travellers)**
+- Public link through ngrok (free plan; ngrok updated to 3.39 because the account needs 3.29 or newer). The link works only while this PC and VS Code are on, and changes if ngrok restarts.
+- New page `/check` (English and Arabic). Bushra's choices:
+  - inside the website, not Google Forms;
+  - anonymous (no name, email or IP stored);
+  - all 5 parts: things to do, what to buy and where, halal food, ease-of-visit scores, how the city felt;
+  - a "What's missing?" box per part, plus a free-writing section per city.
+  - Each city asks for the visit month and year.
+- Answers are saved to `website/.data/guide-check.jsonl`. Nothing changes the chatbot data until the team has checked it.
+- Links to the page: on the chat welcome screen and in the menu.
+- Still to do: an `/admin` screen that sums up the answers (agree/disagree per item), and tests for `/api/guide-check`.
+- Checks: tests 95/95, type-check clean, lint 0 errors. Tried on phone and desktop sizes; saving and bad inputs tested.
+
 ## 13 Nov 2026 (Windows PC)
 
 **Later on 13 Nov: wording check (Bushra)**
