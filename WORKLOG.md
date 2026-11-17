@@ -4,6 +4,18 @@ Newest first. Each entry: what was done, the decisions taken (and by whom), and 
 
 ---
 
+## 17 Nov 2026 (Windows PC)
+
+**Admin review of tester answers: `/admin/guide` (Bushra's choices: one password; Mr Tanveer approves, then Bushra checks and publishes)**
+- Answers grouped by city and item with counts (e.g. "Correct 3, Don't know 1"), plus testers' free-text notes.
+- Approve or Reject on each item, with an optional "What should the guide say?" text. Decisions are appended to `website/.data/guide-check-decisions.jsonl`; the latest one wins.
+- A "Waiting to publish" list shows approved items. The page never writes to the chatbot data or the index: publishing stays manual.
+- Uses the existing `ADMIN_PASSWORD` login. Linked from `/admin` (city ratings).
+- Daily backup (Windows task "UmmahOne-Questionnaire-Backup", 11 pm) copies the answers and decisions to `Desktop/Ummah One/Questionnaire-answers-backup/` (outside the repo).
+- Also today: "Closed" renamed "Not open" on the form. Nomad Watch facts for 78 cities collected for review only (`planning/nomad-watch/`, CC BY 4.0, no beer prices, not in the chatbot). PDF of the cities and universities in `planning/`.
+- Checks: tests 101/101, type-check clean, lint 0 errors. Tried live through ngrok on desktop and phone sizes.
+- Deferred: mark approved items as "published" once they are added.
+
 ## 16 Nov 2026 (Windows PC)
 
 **Testers' link and "Help check the guide" page (Bushra: ready in 2 hours, for 50–100 travellers)**

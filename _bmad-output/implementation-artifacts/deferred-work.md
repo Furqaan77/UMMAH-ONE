@@ -45,3 +45,6 @@
 - source_spec: `_bmad-output/implementation-artifacts/spec-app-ratings.md`
   summary: Show Arabic city names in the rating box (and isolate the English name with bidi marks until then).
   evidence: rateQ/visited/youRated use the English city name inside Arabic sentences, on the app and the website.
+- source_spec: `_bmad-output/implementation-artifacts/spec-guide-check-review.md`
+  summary: Mark approved guide-check items as "published" once they are added to website/data/, so the "Waiting to publish" list stays short.
+  evidence: The review page lists every approved item forever; publishing is manual for now (Bushra's choice b, 17 Nov 2026).
