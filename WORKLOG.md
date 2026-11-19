@@ -4,6 +4,14 @@ Newest first. Each entry: what was done, the decisions taken (and by whom), and 
 
 ---
 
+## 19 Nov 2026 (Windows PC)
+
+**First traveller tips published (Bushra: "publish just the 4 Almaty tips")**
+- Mr Tanveer had approved all 341 items from 7 cities, with no "what the guide should say" text. Publishing all of them was unsafe: "Approve" alone does not say whether the tester or the guide is right, and in Kazan one tester marked 13 of 20 items Wrong or Not open (including the Kul Sharif Masjid; to verify).
+- Published only the 4 free-text tips from Almaty testers, in the new file `website/data/travel/traveller-tips.md`. Everything else in the guides is unchanged.
+- Ingest: 760 chunks (+2). Eval 99/99, tests 101/101. Live answer for Almaty includes the tips.
+- Next: ask Mr Tanveer to approve only items he wants changed, and to write the new text.
+
 ## 17 Nov 2026 (Windows PC)
 
 **Admin review of tester answers: `/admin/guide` (Bushra's choices: one password; Mr Tanveer approves, then Bushra checks and publishes)**
