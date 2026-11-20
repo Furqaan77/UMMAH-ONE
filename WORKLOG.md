@@ -6,6 +6,12 @@ Newest first. Each entry: what was done, the decisions taken (and by whom), and 
 
 ## 20 Nov 2026 (Windows PC)
 
+**Third publish (Bushra: "publish whatever done till now", after PR #12 was merged)**
+- Istanbul: 5 approved texts (Basilica Cistern, Grand Bazaar, Spice Bazaar, Kadıköy ferry, leather goods) and 1 tester note added to `traveller-tips.md`, in neutral wording ("I would…" removed).
+- Sharjah: 1 approved tester note added.
+- Ingest: 766 chunks. Eval 99/99, tests 101/101. "Is the Basilica Cistern worth it?" finds the tip first.
+- Known gap: shopping questions ("Is the Grand Bazaar worth visiting?") search only the shopping and culture guides, so they miss the travel tips file. To fix later.
+
 **Second publish of approved survey items (Bushra: "publish whatever is done till now")**
 - Abu Dhabi: 11 approved texts and 1 approved tester note added to `website/data/travel/traveller-tips.md`. They were rewritten in simple, neutral English with the reviewer's facts kept; "I recommend" wording was removed.
 - Abu Dhabi ease score: Corniche Beach 9.4 → 8/10 (approved text), and the list was re-sorted.
