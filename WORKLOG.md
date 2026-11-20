@@ -4,6 +4,50 @@ Newest first. Each entry: what was done, the decisions taken (and by whom), and 
 
 ---
 
+## 20 Nov 2026 (Windows PC)
+
+**Second publish of approved survey items (Bushra: "publish whatever is done till now")**
+- Abu Dhabi: 11 approved texts and 1 approved tester note added to `website/data/travel/traveller-tips.md`. They were rewritten in simple, neutral English with the reviewer's facts kept; "I recommend" wording was removed.
+- Abu Dhabi ease score: Corniche Beach 9.4 → 8/10 (approved text), and the list was re-sorted.
+- Dubai: 3 approved tester notes added. "La Mer is closed" and "Jebel Jais is in Ras Al Khaimah" are marked "to verify".
+- Not published: approvals with no text (the guide stays as it is), rejections, 1 Dubai note that was a request rather than a tip, and 147 items with no decision yet (incl. Istanbul, Riyadh, Sharjah).
+- Ingest: 764 chunks. Eval 99/99, tests 101/101. Live answers for SeaWorld and Corniche Beach use the new text.
+
+## 19 Nov 2026 (Windows PC)
+
+**First traveller tips published (Bushra: "publish just the 4 Almaty tips")**
+- Mr Tanveer had approved all 341 items from 7 cities, with no "what the guide should say" text. Publishing all of them was unsafe: "Approve" alone does not say whether the tester or the guide is right, and in Kazan one tester marked 13 of 20 items Wrong or Not open (including the Kul Sharif Masjid; to verify).
+- Published only the 4 free-text tips from Almaty testers, in the new file `website/data/travel/traveller-tips.md`. Everything else in the guides is unchanged.
+- Ingest: 760 chunks (+2). Eval 99/99, tests 101/101. Live answer for Almaty includes the tips.
+- Next: ask Mr Tanveer to approve only items he wants changed, and to write the new text.
+
+## 17 Nov 2026 (Windows PC)
+
+**Admin review of tester answers: `/admin/guide` (Bushra's choices: one password; Mr Tanveer approves, then Bushra checks and publishes)**
+- Answers grouped by city and item with counts (e.g. "Correct 3, Don't know 1"), plus testers' free-text notes.
+- Approve or Reject on each item, with an optional "What should the guide say?" text. Decisions are appended to `website/.data/guide-check-decisions.jsonl`; the latest one wins.
+- A "Waiting to publish" list shows approved items. The page never writes to the chatbot data or the index: publishing stays manual.
+- Uses the existing `ADMIN_PASSWORD` login. Linked from `/admin` (city ratings).
+- Daily backup (Windows task "UmmahOne-Questionnaire-Backup", 11 pm) copies the answers and decisions to `Desktop/Ummah One/Questionnaire-answers-backup/` (outside the repo).
+- Also today: "Closed" renamed "Not open" on the form. Nomad Watch facts for 78 cities collected for review only (`planning/nomad-watch/`, CC BY 4.0, no beer prices, not in the chatbot). PDF of the cities and universities in `planning/`.
+- Checks: tests 101/101, type-check clean, lint 0 errors. Tried live through ngrok on desktop and phone sizes.
+- Deferred: mark approved items as "published" once they are added.
+
+## 16 Nov 2026 (Windows PC)
+
+**Testers' link and "Help check the guide" page (Bushra: ready in 2 hours, for 50–100 travellers)**
+- Public link through ngrok (free plan; ngrok updated to 3.39 because the account needs 3.29 or newer). The link works only while this PC and VS Code are on, and changes if ngrok restarts.
+- New page `/check` (English and Arabic). Bushra's choices:
+  - inside the website, not Google Forms;
+  - anonymous (no name, email or IP stored);
+  - all 5 parts: things to do, what to buy and where, halal food, ease-of-visit scores, how the city felt;
+  - a "What's missing?" box per part, plus a free-writing section per city.
+  - Each city asks for the visit month and year.
+- Answers are saved to `website/.data/guide-check.jsonl`. Nothing changes the chatbot data until the team has checked it.
+- Links to the page: on the chat welcome screen and in the menu.
+- Still to do: an `/admin` screen that sums up the answers (agree/disagree per item), and tests for `/api/guide-check`.
+- Checks: tests 95/95, type-check clean, lint 0 errors. Tried on phone and desktop sizes; saving and bad inputs tested.
+
 ## 13 Nov 2026 (Windows PC)
 
 **Later on 13 Nov: wording check (Bushra)**

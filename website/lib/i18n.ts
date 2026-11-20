@@ -82,6 +82,8 @@ export const T = {
     shareChat: "Share chat",
     suggestions: "Try asking",
     suggest: ["Tell me about Konya", "What should I buy in Marrakesh?", "Which university city is good for medicine?"],
+    checkGuide: "Been to one of our cities? Help check the guide",
+    checkGuideShort: "Help check the guide",
   },
   ar: {
     placeholder: "اسأل Ummah One",
@@ -162,6 +164,8 @@ export const T = {
     shareChat: "مشاركة المحادثة",
     suggestions: "جرّب أن تسأل",
     suggest: ["أخبرني عن قونية", "ماذا أشتري في مراكش؟", "أي مدينة جامعية جيدة لدراسة الطب؟"],
+    checkGuide: "هل زرت إحدى مدننا؟ ساعدنا في مراجعة الدليل",
+    checkGuideShort: "ساعدنا في مراجعة الدليل",
   },
 };
 

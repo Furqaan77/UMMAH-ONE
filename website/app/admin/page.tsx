@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Fragment, useCallback, useEffect, useState } from "react";
 import { LABELS, LABEL_NAMES, type EnjoymentLabel } from "@/lib/ratings/labels";
 
@@ -122,7 +123,10 @@ export default function Admin() {
     <main className="admin">
       <div className="admin-head">
         <h1>City ratings</h1>
-        <button className="link-btn" onClick={logout}>Log out</button>
+        <div className="place-labels">
+          <Link className="link-btn" href="/admin/guide">Guide check review</Link>
+          <button className="link-btn" onClick={logout}>Log out</button>
+        </div>
       </div>
       <p className="admin-note">
         {totalInputs} visitor inputs · {cities.filter((c) => c.label).length} of {cities.length} cities labelled. Visitor inputs are private. Only the label you set is shown in the chat.

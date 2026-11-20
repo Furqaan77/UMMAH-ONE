@@ -36,18 +36,18 @@ How easy it is to visit places in Abu Dhabi (ease-of-visit score out of 10, easi
 1. Sheikh Zayed Grand Mosque: 9.9/10, very easy. Major city landmark with straightforward taxi access and visitor facilities.
 2. Louvre Abu Dhabi: 9.7/10, very easy. On Saadiyat Island; taxi access is simple, but public transit is less direct.
 3. Qasr Al Watan: 9.5/10, very easy. Central presidential-palace district; taxi access and visitor infrastructure are strong.
-4. Corniche Beach: 9.4/10, very easy. Urban waterfront with paved paths and multiple access points.
-5. Qasr Al Hosn: 9.3/10, very easy. Central heritage site, easy by taxi and bus.
-6. Abrahamic Family House: 9.2/10, very easy. Saadiyat-adjacent cultural district; easiest by taxi.
-7. Emirates Palace: 9.1/10, very easy. Easy taxi access; large grounds mean extra walking.
-8. Heritage Village: 9/10, very easy. Corniche location; straightforward taxi access and mostly level paths.
-9. Mangrove National Park: 8.5/10, easy. Kayak operators and road access; water activity depends on tide and operator.
-10. Yas Marina Circuit: 8.5/10, easy. Good road access on Yas Island; event days affect traffic.
-11. Ferrari World: 8.4/10, easy. Yas Island attractions are easy by taxi, but distances between venues are significant.
-12. Warner Bros. World: 8.4/10, easy. Indoor theme park with easy Yas Island road access.
-13. Yas Waterworld: 8.3/10, easy. Easy road access; large park and substantial walking.
-14. SeaWorld Abu Dhabi: 8.3/10, easy. Modern indoor venue on Yas Island; convenient by taxi.
-15. Jubail Mangrove Park: 8.1/10, easy. Boardwalk access is simple once there; taxi/car is most practical.
+4. Qasr Al Hosn: 9.3/10, very easy. Central heritage site, easy by taxi and bus.
+5. Abrahamic Family House: 9.2/10, very easy. Saadiyat-adjacent cultural district; easiest by taxi.
+6. Emirates Palace: 9.1/10, very easy. Easy taxi access; large grounds mean extra walking.
+7. Heritage Village: 9/10, very easy. Corniche location; straightforward taxi access and mostly level paths.
+8. Mangrove National Park: 8.5/10, easy. Kayak operators and road access; water activity depends on tide and operator.
+9. Yas Marina Circuit: 8.5/10, easy. Good road access on Yas Island; event days affect traffic.
+10. Ferrari World: 8.4/10, easy. Yas Island attractions are easy by taxi, but distances between venues are significant.
+11. Warner Bros. World: 8.4/10, easy. Indoor theme park with easy Yas Island road access.
+12. Yas Waterworld: 8.3/10, easy. Easy road access; large park and substantial walking.
+13. SeaWorld Abu Dhabi: 8.3/10, easy. Modern indoor venue on Yas Island; convenient by taxi.
+14. Jubail Mangrove Park: 8.1/10, easy. Boardwalk access is simple once there; taxi/car is most practical.
+15. Corniche Beach: 8/10, easy. Urban waterfront with paved paths and multiple access points.
 16. Al Ain Oasis: 7.8/10, fairly easy. Requires an intercity transfer to Al Ain; shaded paths inside.
 17. Al Ain Palace Museum: 7.6/10, fairly easy. Central Al Ain location; easier with taxi or car.
 18. Jebel Hafeet: 6.8/10, needs planning. Mountain road drive required; no practical public-transport visit.
