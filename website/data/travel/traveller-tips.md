@@ -31,3 +31,16 @@ Tips written by travellers who visited these cities, in the "Help check the guid
 - Travellers also suggest Jebel Jais, water sports and Al Seef. Jebel Jais is in Ras Al Khaimah, outside Dubai (to verify).
 - Global Village is worth a visit if you are there in season.
 - Dubai is an international hub more than a centre of Emirati culture: you can find food from all over the world, and shopping is not limited to the things listed in this guide.
+
+## Istanbul, Türkiye
+
+- Basilica Cistern: a different experience from Istanbul's mosques, palaces and museums. Worth it for a first visit if the ticket fits your budget, but see Hagia Sophia, the Blue Mosque, Süleymaniye Mosque and Topkapı Palace first.
+- Grand Bazaar: historic, beautiful and fun to explore, but very commercial, with high tourist prices. Spend 60–90 minutes walking its old lanes, looking at the craftsmanship and browsing the shops.
+- Spice Bazaar: not worth a special trip across the city on its own. It is worthwhile together with the Rüstem Pasha Mosque, the old shopping streets around it and the Eminönü waterfront.
+- Ferry to Kadıköy: the ferry ride and the neighbourhood together are better than the food market alone. After the historic sights of Sultanahmet, Kadıköy is a refreshing change.
+- Leather goods: a reviewer rated Istanbul 8.5/10 for buying leather goods, but only 6.5/10 for bargains.
+- Take time to read about the history of the artefacts you see. A traveller said it made them feel closer to the Prophet (peace be upon him) and his companions.
+
+## Sharjah, UAE
+
+- A traveller said Sharjah is the most cultural emirate of the UAE. Several smaller organisations there also share the culture and products of other countries.
