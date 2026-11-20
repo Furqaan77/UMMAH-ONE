@@ -4,6 +4,15 @@ Newest first. Each entry: what was done, the decisions taken (and by whom), and 
 
 ---
 
+## 20 Nov 2026 (Windows PC)
+
+**Second publish of approved survey items (Bushra: "publish whatever is done till now")**
+- Abu Dhabi: 11 approved texts and 1 approved tester note added to `website/data/travel/traveller-tips.md`. They were rewritten in simple, neutral English with the reviewer's facts kept; "I recommend" wording was removed.
+- Abu Dhabi ease score: Corniche Beach 9.4 → 8/10 (approved text), and the list was re-sorted.
+- Dubai: 3 approved tester notes added. "La Mer is closed" and "Jebel Jais is in Ras Al Khaimah" are marked "to verify".
+- Not published: approvals with no text (the guide stays as it is), rejections, 1 Dubai note that was a request rather than a tip, and 147 items with no decision yet (incl. Istanbul, Riyadh, Sharjah).
+- Ingest: 764 chunks. Eval 99/99, tests 101/101. Live answers for SeaWorld and Corniche Beach use the new text.
+
 ## 19 Nov 2026 (Windows PC)
 
 **First traveller tips published (Bushra: "publish just the 4 Almaty tips")**
