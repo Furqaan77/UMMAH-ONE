@@ -13,7 +13,7 @@ export type NotePart = "thingsMissing" | "buyMissing" | "halalNote" | "easeMissi
 export type Decision = "approved" | "rejected";
 export const NOTE_PARTS: NotePart[] = ["thingsMissing", "buyMissing", "halalNote", "easeMissing", "more"];
 
-type Mark = { item: string; mark: string };
+type Mark = { item: string; mark: string; why?: string };
 export type AnswerRow = {
   at: string;
   lang?: string;
@@ -30,7 +30,8 @@ export type DecisionRow = { at: string; key: string; decision: Decision; text: s
 
 /** newCounts: disagreeing marks (wrong, not open, easier, harder) from answers saved after the latest decision.
  *  Not empty = the item needs a fresh look. "Correct", "Feels right" and "Don't know" only confirm, so they don't count. */
-export type ReviewItem = { key: string; kind: Kind; item: string; counts: Record<string, number>; decision: DecisionRow | null; newCounts: Record<string, number> };
+/** reasons: the testers' "Tell us why" texts for disagreeing marks (from 23 Nov 2026). */
+export type ReviewItem = { key: string; kind: Kind; item: string; counts: Record<string, number>; decision: DecisionRow | null; newCounts: Record<string, number>; reasons: { mark: string; text: string; at: string }[] };
 export type ReviewNote = { key: string; part: NotePart; text: string; at: string; visit: string | null; lang: string; decision: DecisionRow | null };
 export type CityReview = {
   city: string;
@@ -63,11 +64,12 @@ export function summarizeAnswers(rows: AnswerRow[], decisions: DecisionRow[]): C
         const key = itemKey(r.city, kind, m.item);
         let it = c.byKey.get(key);
         if (!it) {
-          it = { key, kind, item: m.item, counts: {}, decision: latest.get(key) ?? null, newCounts: {} };
+          it = { key, kind, item: m.item, counts: {}, decision: latest.get(key) ?? null, newCounts: {}, reasons: [] };
           c.byKey.set(key, it);
           c.items.push(it);
         }
         bump(it.counts, m.mark);
+        if (typeof m.why === "string" && m.why) it.reasons.push({ mark: m.mark, text: m.why, at: r.at });
         if (it.decision && r.at > it.decision.at && !AGREE.has(m.mark)) bump(it.newCounts, m.mark); // ISO timestamps compare as text
       }
     if (r.halal) bump(c.halal, r.halal);

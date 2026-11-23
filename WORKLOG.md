@@ -6,6 +6,13 @@ Newest first. Each entry: what was done, the decisions taken (and by whom), and 
 
 ## 23 Nov 2026 (Windows PC)
 
+**Questionnaire: "Tell us why" box (Bushra: "yes")**
+- Problem: 149 marks of Wrong / Not open / Easier / Harder came with no reason, so Mr Tanveer could not tell what to change. Only 8 of 21 testers wrote any text.
+- Now: picking Wrong, Not open, Easier or Harder opens an optional "Tell us why" box under that item (English and Arabic, up to 1,000 characters). The reason shows under the item on the admin review page.
+- The end-of-section boxes now say "Anything to add or correct here? (optional)" instead of "What's missing?".
+- Old answers are unchanged. Spec: `_bmad-output/implementation-artifacts/spec-guide-check-why.md`. Tests 103/103, type check clean.
+- Arabic labels are simple wording (to verify by an Arabic speaker).
+
 **Admin review: new answers re-open items (Bushra chose option 1)**
 - Problem: a decision was per item, so a new answer for an item Mr Tanveer had already approved did not show under "Needs decision". The 21 Nov Almaty answer was hidden this way.
 - Fix: when a new answer after the decision disagrees with the guide (Wrong, Not open, Easier, Harder), the item goes back to "Needs decision" and shows "New since the decision: …". New "Correct", "Feels right" and "Don't know" marks only confirm the guide, so they don't re-open an item.

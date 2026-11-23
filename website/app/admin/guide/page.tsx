@@ -202,6 +202,9 @@ export default function GuideReview() {
                       <tr key={i.key}>
                         <td><span className="rv-kind">{KIND_NAME[i.kind]}</span>{i.item}</td>
                         <td>{Object.entries(i.counts).map(([m, n]) => <div key={m}>{MARKS[i.kind][m] ?? m}: <strong className="rv-n">{n}</strong></div>)}
+                          {(i.reasons ?? []).map((w, k) => (
+                            <div key={k} className="rv-why" dir="auto">“{w.text}” <span className="rv-when">({MARKS[i.kind][w.mark] ?? w.mark}, {date(w.at)})</span></div>
+                          ))}
                           {i.decision && Object.keys(i.newCounts).length > 0 && (
                             <div className="rv-new">
                               New since the decision: {Object.entries(i.newCounts).map(([m, n]) => `${MARKS[i.kind][m] ?? m} ${n}`).join(", ")}

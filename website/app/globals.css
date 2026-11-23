@@ -377,6 +377,7 @@ html[dir="rtl"] .drawer { transform: translateX(100%); }
 .rv-text { white-space: pre-wrap; }
 .admin-table td strong.rv-n { display: inline; }
 .rv-when { font-size: 12px; color: var(--muted); align-self: center; }
+.rv-why { margin-top: 4px; font-size: 13px; white-space: pre-wrap; }
 .rv-new { margin-top: 4px; padding: 2px 8px; border-radius: 8px; background: var(--accent-soft); color: var(--text); font-size: 13px; font-weight: 600; }
 .rv-actions { display: grid; gap: 6px; min-width: 220px; }
 .rv-actions textarea { width: 100%; padding: 6px 10px; border: 1px solid var(--line); border-radius: 12px; font: inherit; font-size: 14px; background: var(--surface); color: var(--text); resize: vertical; }
@@ -404,6 +405,8 @@ html[dir="rtl"] .drawer { transform: translateX(100%); }
 .gc-items li p::before { content: counter(gc) ". "; color: var(--muted); font-weight: 600; }
 .gc-choices { display: flex; flex-wrap: wrap; gap: 8px; }
 .gc-choices .chip { min-height: 40px; }
+.gc-why { display: grid; gap: 4px; font-size: 14px; color: var(--muted); }
+.gc-why textarea { width: 100%; resize: vertical; border: 0; border-radius: 12px; padding: 8px 12px; font: inherit; font-size: 16px; background: var(--soft); color: var(--text); outline: none; }
 .gc-text { display: grid; gap: 6px; font-size: 15px; font-weight: 600; }
 .gc-text textarea { width: 100%; resize: vertical; border: 0; border-radius: 16px; padding: 10px 14px; font: inherit; font-size: 16px; font-weight: 500; background: var(--soft); color: var(--text); outline: none; }
 .gc-submit { display: block; width: 100%; min-height: 50px; border-radius: 999px; background: var(--accent); color: var(--text); font-size: 17px; font-weight: 700; }

@@ -11,6 +11,9 @@ export const runtime = "nodejs";
 
 const HOUR = 60 * 60 * 1000;
 const MAX_TEXT = 4000;
+const MAX_WHY = 1000;
+/** Marks that disagree with the guide; only these can carry a "why" (23 Nov 2026). */
+const DISAGREE = new Set(["wrong", "closed", "easier", "harder"]);
 const THING = ["correct", "wrong", "closed", "unknown"] as const;
 const BUY = ["correct", "wrong", "unknown"] as const;
 const EASE = ["right", "easier", "harder", "unknown"] as const;
@@ -18,13 +21,19 @@ const HALAL = ["easy", "ok", "hard"] as const;
 
 type Body = Record<string, unknown>;
 
-const text = (v: unknown) => (typeof v === "string" ? Array.from(v.replace(/\u0000/g, "").trim()).slice(0, MAX_TEXT).join("") || null : null);
+const text = (v: unknown, max = MAX_TEXT) => (typeof v === "string" ? Array.from(v.replace(/\u0000/g, "").trim()).slice(0, max).join("") || null : null);
 const pick = <T extends string>(v: unknown, allowed: readonly T[]): T | null => (typeof v === "string" && (allowed as readonly string[]).includes(v) ? (v as T) : null);
 
-/** Each guide item with the tester's mark (unmarked items are left out). */
-function marks<T extends string>(items: string[], given: unknown, allowed: readonly T[]) {
+/** Each guide item with the tester's mark (unmarked items are left out), plus the reason for a disagreeing mark. */
+function marks<T extends string>(items: string[], given: unknown, allowed: readonly T[], reasons?: unknown) {
   const arr = Array.isArray(given) ? given : [];
-  return items.map((item, i) => ({ item, mark: pick(arr[i], allowed) })).filter((x) => x.mark);
+  const why = Array.isArray(reasons) ? reasons : [];
+  return items.flatMap((item, i) => {
+    const mark = pick(arr[i], allowed);
+    if (!mark) return [];
+    const w = DISAGREE.has(mark) ? text(why[i], MAX_WHY) : null;
+    return [w ? { item, mark, why: w } : { item, mark }];
+  });
 }
 
 export async function GET() {
@@ -52,13 +61,13 @@ export async function POST(req: Request) {
     city: guide.city,
     country: guide.country,
     visit: `${year}-${String(month).padStart(2, "0")}`,
-    things: marks(guide.things, b.things, THING),
+    things: marks(guide.things, b.things, THING, b.thingsWhy),
     thingsMissing: text(b.thingsMissing),
-    buy: marks(guide.buy, b.buy, BUY),
+    buy: marks(guide.buy, b.buy, BUY, b.buyWhy),
     buyMissing: text(b.buyMissing),
     halal: pick(b.halal, HALAL),
     halalNote: text(b.halalNote),
-    ease: marks(guide.ease.map((e) => `${e.name} (${e.score}/10)`), b.ease, EASE),
+    ease: marks(guide.ease.map((e) => `${e.name} (${e.score}/10)`), b.ease, EASE, b.easeWhy),
     easeMissing: text(b.easeMissing),
     feel: pick(b.feel, LABELS),
     more: text(b.more),
