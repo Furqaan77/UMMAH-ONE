@@ -17,8 +17,10 @@ const PART_NAME: Record<NotePart, string> = {
   more: "Anything else",
 };
 type Filter = "all" | "open" | "approved" | "rejected";
-type Row = { key: string; decision: DecisionRow | null };
-const pass = (f: Filter, r: Row) => (f === "all" ? true : f === "open" ? !r.decision : r.decision?.decision === f);
+type Row = { key: string; decision: DecisionRow | null; newCounts?: Record<string, number> };
+/** No decision yet, or new answers came in after the decision. */
+const needsDecision = (r: Row) => !r.decision || Object.keys(r.newCounts ?? {}).length > 0;
+const pass = (f: Filter, r: Row) => (f === "all" ? true : f === "open" ? needsDecision(r) : r.decision?.decision === f);
 const date = (s: string) => new Date(s).toLocaleDateString();
 
 // Team only (Mr Tanveer). Approve or reject what testers said. Approved items wait for Bushra to publish;
@@ -80,7 +82,7 @@ export default function GuideReview() {
     if (res.status === 401) return setState("login");
     if (!res.ok) return setError(`Could not save the decision: ${await res.text()}`);
     const saved = ((await res.json()) as { decision: DecisionRow }).decision;
-    const set = <T extends Row>(r: T): T => (r.key === key ? { ...r, decision: saved } : r);
+    const set = <T extends Row>(r: T): T => (r.key === key ? { ...r, decision: saved, ...(r.newCounts ? { newCounts: {} } : {}) } : r);
     setCities((cs) => cs.map((c) => ({ ...c, items: c.items.map(set), notes: c.notes.map(set) })));
   }
 
@@ -119,11 +121,11 @@ export default function GuideReview() {
     );
 
   const all = cities.flatMap((c) => [
-    ...c.items.map((i) => ({ city: c.city, label: `${KIND_NAME[i.kind]}: ${i.item}`, key: i.key, decision: i.decision })),
+    ...c.items.map((i) => ({ city: c.city, label: `${KIND_NAME[i.kind]}: ${i.item}`, key: i.key, decision: i.decision, newCounts: i.newCounts })),
     ...c.notes.map((n) => ({ city: c.city, label: `${PART_NAME[n.part]}: ${n.text}`, key: n.key, decision: n.decision })),
   ]);
   const approved = all.filter((r) => r.decision?.decision === "approved");
-  const open = all.filter((r) => !r.decision).length;
+  const open = all.filter(needsDecision).length;
   const answers = cities.reduce((s, c) => s + c.answers, 0);
 
   const actions = (r: Row) => (
@@ -199,7 +201,13 @@ export default function GuideReview() {
                     {items.map((i) => (
                       <tr key={i.key}>
                         <td><span className="rv-kind">{KIND_NAME[i.kind]}</span>{i.item}</td>
-                        <td>{Object.entries(i.counts).map(([m, n]) => <div key={m}>{MARKS[i.kind][m] ?? m}: <strong className="rv-n">{n}</strong></div>)}</td>
+                        <td>{Object.entries(i.counts).map(([m, n]) => <div key={m}>{MARKS[i.kind][m] ?? m}: <strong className="rv-n">{n}</strong></div>)}
+                          {i.decision && Object.keys(i.newCounts).length > 0 && (
+                            <div className="rv-new">
+                              New since the decision: {Object.entries(i.newCounts).map(([m, n]) => `${MARKS[i.kind][m] ?? m} ${n}`).join(", ")}
+                            </div>
+                          )}
+                        </td>
                         <td>{actions(i)}</td>
                       </tr>
                     ))}

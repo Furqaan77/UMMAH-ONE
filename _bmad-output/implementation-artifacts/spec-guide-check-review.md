@@ -83,6 +83,8 @@ Decisions (Bushra, 17 Nov 2026):
 
 ## Spec Change Log
 
+- **23 Nov 2026 (Bushra):** new answers re-open a decided item. An answer saved after the item's latest decision that disagrees with the guide (wrong, closed, easier, harder) counts in `newCounts`. Such items show under "Needs decision" with a "New since the decision" line until a new decision is saved. Confirming marks (correct, right, unknown) don't re-open. Reason: the 21 Nov Almaty answer was hidden because its items were already approved.
+
 ## Review Triage Log
 
 Self-review of the diff (no reviewer subagents in this session), 17 Nov 2026.
