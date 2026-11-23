@@ -46,6 +46,20 @@ test("latest decision wins (approve, then reject)", () => {
   assert.equal(b.items[0].decision?.decision, "rejected");
 });
 
+test("new disagreeing answers after a decision are counted, so the item needs a fresh look", () => {
+  const key = itemKey("Almaty", "thing", "Kok-Tobe hill");
+  const rows = [row("2026-11-16T10:00:00Z", "correct"), row("2026-11-21T05:00:00Z", "closed")];
+  const [a] = summarizeAnswers(rows, [{ at: "2026-11-20T12:00:00Z", key, decision: "approved", text: null }]);
+  assert.deepEqual(a.items[0].counts, { correct: 1, closed: 1 });
+  assert.deepEqual(a.items[0].newCounts, { closed: 1 });
+  const [b] = summarizeAnswers(rows, [{ at: "2026-11-22T09:00:00Z", key, decision: "approved", text: null }]);
+  assert.deepEqual(b.items[0].newCounts, {});
+  const [c] = summarizeAnswers(rows, []);
+  assert.deepEqual(c.items[0].newCounts, {});
+  const [d] = summarizeAnswers([...rows, row("2026-11-21T06:00:00Z", "correct")], [{ at: "2026-11-20T12:00:00Z", key, decision: "approved", text: null }]);
+  assert.deepEqual(d.items[0].newCounts, { closed: 1 }, "a new 'correct' only confirms, so it is not counted");
+});
+
 test("files: missing file is empty, broken lines are skipped, decisions are appended", async () => {
   const dir = await mkdtemp(path.join(os.tmpdir(), "gc-review-"));
   try {

@@ -28,7 +28,9 @@ export type AnswerRow = {
 } & Partial<Record<NotePart, string | null>>;
 export type DecisionRow = { at: string; key: string; decision: Decision; text: string | null };
 
-export type ReviewItem = { key: string; kind: Kind; item: string; counts: Record<string, number>; decision: DecisionRow | null };
+/** newCounts: disagreeing marks (wrong, not open, easier, harder) from answers saved after the latest decision.
+ *  Not empty = the item needs a fresh look. "Correct", "Feels right" and "Don't know" only confirm, so they don't count. */
+export type ReviewItem = { key: string; kind: Kind; item: string; counts: Record<string, number>; decision: DecisionRow | null; newCounts: Record<string, number> };
 export type ReviewNote = { key: string; part: NotePart; text: string; at: string; visit: string | null; lang: string; decision: DecisionRow | null };
 export type CityReview = {
   city: string;
@@ -44,6 +46,7 @@ export const itemKey = (city: string, kind: Kind, item: string) => `${city}|${ki
 export const noteKey = (city: string, at: string, part: NotePart) => `${city}|note|${at}|${part}`;
 
 const KINDS: [Kind, "things" | "buy" | "ease"][] = [["thing", "things"], ["buy", "buy"], ["ease", "ease"]];
+const AGREE = new Set(["correct", "right", "unknown"]);
 const bump = (o: Record<string, number>, k: string) => (o[k] = (o[k] ?? 0) + 1);
 
 /** Group answers by city and item. The latest decision for each key wins. */
@@ -60,11 +63,12 @@ export function summarizeAnswers(rows: AnswerRow[], decisions: DecisionRow[]): C
         const key = itemKey(r.city, kind, m.item);
         let it = c.byKey.get(key);
         if (!it) {
-          it = { key, kind, item: m.item, counts: {}, decision: latest.get(key) ?? null };
+          it = { key, kind, item: m.item, counts: {}, decision: latest.get(key) ?? null, newCounts: {} };
           c.byKey.set(key, it);
           c.items.push(it);
         }
         bump(it.counts, m.mark);
+        if (it.decision && r.at > it.decision.at && !AGREE.has(m.mark)) bump(it.newCounts, m.mark); // ISO timestamps compare as text
       }
     if (r.halal) bump(c.halal, r.halal);
     if (r.feel) bump(c.feel, r.feel);

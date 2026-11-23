@@ -4,6 +4,15 @@ Newest first. Each entry: what was done, the decisions taken (and by whom), and 
 
 ---
 
+## 23 Nov 2026 (Windows PC)
+
+**Admin review: new answers re-open items (Bushra chose option 1)**
+- Problem: a decision was per item, so a new answer for an item Mr Tanveer had already approved did not show under "Needs decision". The 21 Nov Almaty answer was hidden this way.
+- Fix: when a new answer after the decision disagrees with the guide (Wrong, Not open, Easier, Harder), the item goes back to "Needs decision" and shows "New since the decision: …". New "Correct", "Feels right" and "Don't know" marks only confirm the guide, so they don't re-open an item.
+- Now open: 20 ease-of-visit items (10 Almaty, 10 Dubai). Approve or Reject again to close one. Nothing in the chatbot data changed.
+- Files: `website/lib/guide-check/review.ts`, `website/app/admin/guide/page.tsx`, `globals.css`, 1 new test. Tests 102/102, type check clean.
+- Also: the website and ngrok had stopped at 10:29 pm on 20 Nov and were restarted on 21 Nov (same link). Survey so far: 20 answers, 11 of 81 cities.
+
 ## 20 Nov 2026 (Windows PC)
 
 **Third publish (Bushra: "publish whatever done till now", after PR #12 was merged)**
