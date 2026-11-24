@@ -117,6 +117,25 @@ img { max-width: 100%; }
 .pop-label { font-size: 14px; color: var(--muted); font-weight: 600; padding: 8px 14px 4px; }
 .pop-sep { height: 1px; background: rgba(0, 0, 0, 0.08); margin: 6px 10px; }
 .pop-check { width: 20px; display: inline-grid; place-items: center; color: var(--accent-ink); }
+/* "View all 81 cities" (24 Nov 2026): in the page on phones, a panel on the left on wide screens. */
+.cities { margin: 0 0 18px; }
+.cities-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; background: var(--surface); box-shadow: var(--shadow); font-weight: 600; font-size: 15px; color: var(--text); }
+.cities-btn .chev { transition: transform .2s; }
+.cities.open .cities-btn .chev { transform: rotate(180deg); }
+.cities-list { margin-top: 10px; max-height: 55vh; overflow-y: auto; background: var(--surface); border-radius: 20px; box-shadow: var(--shadow); padding: 6px 8px 10px; }
+.cities-country { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 700; padding: 12px 10px 4px; }
+.cities-item { display: block; width: 100%; text-align: start; padding: 8px 12px; border-radius: 999px; font-size: 15px; color: var(--text); }
+.cities-item:hover:not(:disabled) { background: var(--soft); }
+.cities-item:disabled { opacity: .5; }
+@media (min-width: 1000px) {
+  .cities { position: fixed; top: 76px; inset-inline-start: 16px; z-index: 11; width: 260px; max-height: calc(100dvh - 92px); display: flex; flex-direction: column; align-items: flex-start; margin: 0; }
+  .cities-list { flex: 1; min-height: 0; max-height: none; width: 100%; }
+  .thread, .composer-wrap { transition: margin .25s ease; }
+  /* Shift the conversation right: clear the panel, or move it a little when the screen is wide. */
+  .app.cities-open { --shift: max(292px, calc((100% - var(--maxw)) / 2 + 140px)); }
+  .app.cities-open .thread { margin-inline-start: var(--shift); margin-inline-end: auto; }
+  .app.cities-open .composer-wrap { width: calc(100% - var(--shift) - 16px); margin-inline-start: var(--shift); margin-inline-end: auto; }
+}
 .click-away { position: fixed; inset: 0; z-index: 9; }
 
 /* ---------- Welcome ---------- */

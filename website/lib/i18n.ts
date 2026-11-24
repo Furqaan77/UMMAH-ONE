@@ -84,6 +84,9 @@ export const T = {
     suggest: ["Tell me about Konya", "What should I buy in Marrakesh?", "Which university city is good for medicine?"],
     checkGuide: "Been to one of our cities? Help check the guide",
     checkGuideShort: "Help check the guide",
+    viewCities: (n: number) => `View all ${n} cities`,
+    hideCities: "Hide cities",
+    cityPrompt: (city: string, country: string) => `Tell me about ${city}, ${country}`,
   },
   ar: {
     placeholder: "اسأل Ummah One",
@@ -166,6 +169,9 @@ export const T = {
     suggest: ["أخبرني عن قونية", "ماذا أشتري في مراكش؟", "أي مدينة جامعية جيدة لدراسة الطب؟"],
     checkGuide: "هل زرت إحدى مدننا؟ ساعدنا في مراجعة الدليل",
     checkGuideShort: "ساعدنا في مراجعة الدليل",
+    viewCities: (n: number) => `عرض جميع المدن (${n})`,
+    hideCities: "إخفاء المدن",
+    cityPrompt: (city: string, country: string) => `أخبرني عن ${city}، ${country}`,
   },
 };
 
