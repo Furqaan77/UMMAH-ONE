@@ -93,3 +93,32 @@ test("admin guide-check route: 503 off, 401 without cookie, 400 for bad input (n
   assert.equal((await route.POST(post({ key: "Nowhere|thing|nothing", decision: "approved" }, cookie))).status, 400);
   process.env.ADMIN_PASSWORD = "";
 });
+
+test("save route: a reason is kept only for Wrong / Not open / Easier / Harder, cut to 1,000 characters", async () => {
+  const { cityGuides } = await import("./content");
+  const g = cityGuides().find((c) => c.city === "Almaty")!; // loads (and caches) the guide before leaving the website folder
+  const route = await import("../../app/api/guide-check/route");
+  const home = process.cwd();
+  const dir = await mkdtemp(path.join(os.tmpdir(), "gc-why-"));
+  try {
+    process.chdir(dir);
+    const body = {
+      city: "Almaty", visitMonth: 8, visitYear: 2025, lang: "en",
+      things: ["wrong", "correct", "closed"], thingsWhy: ["Closed for repairs", "ignored", "x".repeat(5000)],
+      ease: ["harder"], easeWhy: ["  Steep path  "],
+    };
+    const res = await route.POST(new Request("http://x/api", { method: "POST", headers: { "Content-Type": "application/json", "x-forwarded-for": "10.9.9.9" }, body: JSON.stringify(body) }));
+    assert.equal(res.status, 200);
+    const row = JSON.parse((await readFile(path.join(dir, ".data", ANSWERS_FILE), "utf8")).trim()) as AnswerRow;
+    assert.deepEqual(row.things?.[0], { item: g.things[0], mark: "wrong", why: "Closed for repairs" });
+    assert.deepEqual(row.things?.[1], { item: g.things[1], mark: "correct" }, "no reason for an agreeing mark");
+    assert.equal(row.things?.[2].why?.length, 1000);
+    assert.equal(row.ease?.[0].why, "Steep path");
+    const [c] = summarizeAnswers([row], []);
+    assert.deepEqual(c.items[0].reasons, [{ mark: "wrong", text: "Closed for repairs", at: row.at }]);
+    assert.deepEqual(c.items[1].reasons, []);
+  } finally {
+    process.chdir(home);
+    await rm(dir, { recursive: true, force: true });
+  }
+});

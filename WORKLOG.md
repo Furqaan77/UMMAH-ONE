@@ -4,7 +4,23 @@ Newest first. Each entry: what was done, the decisions taken (and by whom), and 
 
 ---
 
+## 24 Nov 2026 (Windows PC)
+
+**Chat: "View all 81 cities" (Bushra's answers: click asks about the city; grouped by country; on phones the list pushes the chat down)**
+- A "View all 81 cities" button at the top left of the chat. It opens the list of cities grouped by country.
+- Clicking a city asks "Tell me about <city>, <country>".
+- Wide screens: the list stays on the left and the questions and answers shift right. Phones: the list opens above the chat and closes after a click.
+- The list comes from `ALL-81-CITIES.md`, so the number updates itself. English and Arabic labels (Arabic to verify).
+- Spec: `_bmad-output/implementation-artifacts/spec-chat-city-list.md`. Tests 103/103, type check clean. Checked with screenshots at 1400px, 1024px and 412px.
+
 ## 23 Nov 2026 (Windows PC)
+
+**Questionnaire: "Tell us why" box (Bushra: "yes")**
+- Problem: 149 marks of Wrong / Not open / Easier / Harder came with no reason, so Mr Tanveer could not tell what to change. Only 8 of 21 testers wrote any text.
+- Now: picking Wrong, Not open, Easier or Harder opens an optional "Tell us why" box under that item (English and Arabic, up to 1,000 characters). The reason shows under the item on the admin review page.
+- The end-of-section boxes now say "Anything to add or correct here? (optional)" instead of "What's missing?".
+- Old answers are unchanged. Spec: `_bmad-output/implementation-artifacts/spec-guide-check-why.md`. Tests 103/103, type check clean.
+- Arabic labels are simple wording (to verify by an Arabic speaker).
 
 **Admin review: new answers re-open items (Bushra chose option 1)**
 - Problem: a decision was per item, so a new answer for an item Mr Tanveer had already approved did not show under "Needs decision". The 21 Nov Almaty answer was hidden this way.

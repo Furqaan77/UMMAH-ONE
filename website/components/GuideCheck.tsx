@@ -9,6 +9,8 @@ import { LABELS, LABEL_NAMES } from "@/lib/ratings/labels";
 
 type Lang = "en" | "ar";
 type Marks = (string | null)[];
+/** Marks that open the "Tell us why" box. */
+const DISAGREE = new Set(["wrong", "closed", "easier", "harder"]);
 
 function Choice({ options, value, onChange, name }: { options: Record<string, string>; value: string | null; onChange: (v: string | null) => void; name: string }) {
   return (
@@ -39,6 +41,7 @@ export default function GuideCheck({ cities }: { cities: CityGuide[] }) {
   const [halal, setHalal] = useState<string | null>(null);
   const [feel, setFeel] = useState<string | null>(null);
   const [txt, setTxt] = useState<Record<string, string>>({});
+  const [why, setWhy] = useState<Record<string, string>>({}); // key: "things:3"
   const [state, setState] = useState<"idle" | "sending" | "done">("idle");
   const [err, setErr] = useState("");
 
@@ -54,6 +57,7 @@ export default function GuideCheck({ cities }: { cities: CityGuide[] }) {
     setHalal(null);
     setFeel(null);
     setTxt({});
+    setWhy({});
     setErr("");
     setState("idle");
   }
@@ -71,6 +75,21 @@ export default function GuideCheck({ cities }: { cities: CityGuide[] }) {
     </label>
   );
 
+  /** Optional reason box, shown only while the item has a disagreeing mark. */
+  const whyBox = (part: string, i: number, mark: string | null | undefined) =>
+    mark && DISAGREE.has(mark) ? (
+      <label className="gc-why">
+        <span>{t.why}</span>
+        <textarea rows={2} maxLength={1000} value={why[`${part}:${i}`] ?? ""} onChange={(e) => setWhy({ ...why, [`${part}:${i}`]: e.target.value })} />
+      </label>
+    ) : null;
+  /** Reasons as a list aligned with the items; reasons for agreeing marks are dropped. */
+  const reasons = (part: string, ms: Marks, n: number) =>
+    Array.from({ length: n }, (_, i) => {
+      const m = ms[i];
+      return m && DISAGREE.has(m) ? why[`${part}:${i}`] ?? "" : "";
+    });
+
   async function send() {
     if (!g || !month || !year) return setErr(t.needCity);
     setErr("");
@@ -79,7 +98,12 @@ export default function GuideCheck({ cities }: { cities: CityGuide[] }) {
       const res = await fetch("/api/guide-check", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ city: g.city, visitMonth: Number(month), visitYear: Number(year), lang, things, buy, ease, halal, feel, ...txt }),
+        body: JSON.stringify({
+          city: g.city, visitMonth: Number(month), visitYear: Number(year), lang, things, buy, ease, halal, feel, ...txt,
+          thingsWhy: reasons("things", things, g.things.length),
+          buyWhy: reasons("buy", buy, g.buy.length),
+          easeWhy: reasons("ease", ease, g.ease.length),
+        }),
       });
       if (res.ok) {
         setState("done");
@@ -142,7 +166,7 @@ export default function GuideCheck({ cities }: { cities: CityGuide[] }) {
                 <p className="gc-hint">{t.p1Hint}</p>
                 <ol className="gc-items">
                   {g.things.map((it, i) => (
-                    <li key={i}><p dir="ltr">{it}</p><Choice name={it} options={t.thing} value={things[i] ?? null} onChange={setAt(things, setThings, i)} /></li>
+                    <li key={i}><p dir="ltr">{it}</p><Choice name={it} options={t.thing} value={things[i] ?? null} onChange={setAt(things, setThings, i)} />{whyBox("things", i, things[i])}</li>
                   ))}
                 </ol>
                 {area("thingsMissing", t.missing)}
@@ -153,7 +177,7 @@ export default function GuideCheck({ cities }: { cities: CityGuide[] }) {
                 <p className="gc-hint">{t.p2Hint}</p>
                 <ol className="gc-items">
                   {g.buy.map((it, i) => (
-                    <li key={i}><p dir="ltr">{it}</p><Choice name={it} options={t.buy} value={buy[i] ?? null} onChange={setAt(buy, setBuy, i)} /></li>
+                    <li key={i}><p dir="ltr">{it}</p><Choice name={it} options={t.buy} value={buy[i] ?? null} onChange={setAt(buy, setBuy, i)} />{whyBox("buy", i, buy[i])}</li>
                   ))}
                 </ol>
                 {area("buyMissing", t.missing)}
@@ -173,7 +197,7 @@ export default function GuideCheck({ cities }: { cities: CityGuide[] }) {
                     <p className="gc-hint">{t.p4Hint}</p>
                     <ol className="gc-items">
                       {g.ease.map((e, i) => (
-                        <li key={i}><p dir="ltr"><b>{e.name}</b> · {e.score}/10, {e.band}</p><Choice name={e.name} options={t.ease} value={ease[i] ?? null} onChange={setAt(ease, setEase, i)} /></li>
+                        <li key={i}><p dir="ltr"><b>{e.name}</b> · {e.score}/10, {e.band}</p><Choice name={e.name} options={t.ease} value={ease[i] ?? null} onChange={setAt(ease, setEase, i)} />{whyBox("ease", i, ease[i])}</li>
                       ))}
                     </ol>
                   </>

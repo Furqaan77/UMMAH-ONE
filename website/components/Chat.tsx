@@ -89,7 +89,9 @@ function speechRec(): (new () => SpeechRec) | null {
 
 type Menu = { kind: "more"; id: string; up: boolean } | { kind: "lang" } | { kind: "chat" } | null;
 
-export default function Chat() {
+export type CityGroup = { country: string; cities: string[] };
+
+export default function Chat({ cities = [] }: { cities?: CityGroup[] }) {
   const [chats, setChats] = useState<ChatT[]>([]);
   const [currentId, setCurrentId] = useState<string | null>(null);
   const [langSetting, setLangSetting] = useState<LangSetting>("auto");
@@ -98,6 +100,8 @@ export default function Chat() {
   const [image, setImage] = useState<string | null>(null);
   const [streaming, setStreaming] = useState(false);
   const [drawer, setDrawer] = useState(false);
+  const [citiesOpen, setCitiesOpen] = useState(false);
+  const cityCount = cities.reduce((n, g) => n + g.cities.length, 0);
   const [plusOpen, setPlusOpen] = useState(false);
   const [openSources, setOpenSources] = useState<Record<string, boolean>>({});
   const [copied, setCopied] = useState<string | null>(null);
@@ -483,7 +487,7 @@ export default function Chat() {
   const sheetMsg = sheet && messages.find((m) => m.id === sheet.id);
 
   return (
-    <div className="app">
+    <div className={`app ${citiesOpen ? "cities-open" : ""}`}>
       {/* Top bar: floating round buttons over the conversation */}
       <header className="topbar">
         <button className="round-btn" aria-label="Menu" onClick={() => setDrawer(true)}>
@@ -536,6 +540,41 @@ export default function Chat() {
       {/* Messages */}
       <main className="scroll" ref={scrollRef} onScroll={onScroll}>
         <div className="thread">
+          {cityCount > 0 && (
+            <nav className={`cities ${citiesOpen ? "open" : ""}`} aria-label={t.viewCities(cityCount)}>
+              <button className="cities-btn" aria-expanded={citiesOpen} onClick={() => {
+                  const opening = !citiesOpen;
+                  setCitiesOpen(opening);
+                  // Phones: the list opens at the top of the chat, so bring it into view.
+                  if (opening && window.matchMedia("(max-width: 999px)").matches) requestAnimationFrame(() => scrollRef.current?.scrollTo({ top: 0, behavior: "smooth" }));
+                }}>
+                <I.Globe size={18} /> {citiesOpen ? t.hideCities : t.viewCities(cityCount)} <I.ChevronDown size={16} className="chev" />
+              </button>
+              {citiesOpen && (
+                <div className="cities-list">
+                  {cities.map((g) => (
+                    <div key={g.country} className="cities-group">
+                      <div className="cities-country">{g.country}</div>
+                      {g.cities.map((c) => (
+                        <button
+                          key={c}
+                          className="cities-item"
+                          disabled={streaming}
+                          onClick={() => {
+                            send(t.cityPrompt(c, g.country));
+                            // Phones: close the list so the answer is in view. Wide screens keep it open.
+                            if (window.matchMedia("(max-width: 999px)").matches) setCitiesOpen(false);
+                          }}
+                        >
+                          {c}
+                        </button>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </nav>
+          )}
           {messages.length === 0 && (
             <div className="welcome">
               <Image src="/logo-mark.png" alt="Ummah One" width={64} height={59} priority />
