@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 
 // Tiny, safe renderer: paragraphs, "- " bullets, "1. " lists, **bold**. No HTML injection.
+// fold: "## " sections become closed headings that open on click (city overview, 25 Nov 2026).
 
 function inline(text: string) {
   const parts = text.split(/(\*\*[^*]+\*\*)/g);
@@ -9,8 +10,44 @@ function inline(text: string) {
   );
 }
 
-export default function Answer({ text }: { text: string }) {
-  const blocks = text.replace(/\r/g, "").split(/\n{2,}/);
+export default function Answer({ text, fold }: { text: string; fold?: boolean }) {
+  const clean = text.replace(/\r/g, "");
+  if (fold) {
+    // Split at "## " headings: the part before the first heading and the last plain paragraph stay open.
+    const parts = clean.split(/\n(?=## )/);
+    const head = parts[0].startsWith("## ") ? "" : parts.shift()!;
+    const sections = parts.map((p) => {
+      const [first, ...rest] = p.split("\n");
+      return { title: first.replace(/^##\s+/, ""), body: rest.join("\n").trim() };
+    });
+    // A trailing plain paragraph after the last list belongs outside the fold.
+    const last = sections[sections.length - 1];
+    let tail = "";
+    if (last) {
+      const m = /\n{2,}([^\n-][^\n]*)$/.exec(last.body);
+      if (m) {
+        tail = m[1];
+        last.body = last.body.slice(0, m.index);
+      }
+    }
+    return (
+      <>
+        {head && <Blocks text={head} />}
+        {sections.map((s, i) => (
+          <details key={i} className="fold">
+            <summary>{s.title}</summary>
+            <Blocks text={s.body} />
+          </details>
+        ))}
+        {tail && <Blocks text={tail} />}
+      </>
+    );
+  }
+  return <Blocks text={clean} />;
+}
+
+function Blocks({ text }: { text: string }) {
+  const blocks = text.split(/\n{2,}/);
   return (
     <>
       {blocks.map((block, bi) => {

@@ -67,7 +67,7 @@ test("chat route: blocked places and music in Saudi Arabia, Qatar, Kuwait get fi
   await fixed("Concerts in Doha", /does not cover music/);
   await fixed("Music in Saudi", /does not cover music/);
   await fixed("ما هي الموسيقى في الكويت؟", /الموسيقى/);
-  await toModel("Tell me about Riyadh");
+  await toModel("What should I do in Riyadh?");
   await toModel("Where can I buy oud in Doha?");
   await toModel("Music in Istanbul");
 
@@ -77,6 +77,23 @@ test("chat route: blocked places and music in Saudi Arabia, Qatar, Kuwait get fi
   assert.match((await followUp("Tell me about Jeddah")).find((e) => e.type === "text")?.text ?? "", /does not cover music/);
   assert.equal((await followUp("Tell me about Bursa")).some((e) => e.type === "error"), true);
   assert.match((await followUp("Tell me about Lahore")).find((e) => e.type === "text")?.text ?? "", /does not cover Lahore/);
+});
+
+test("chat route: \"Tell me about Dubai\" gets the folded city overview from the data, not the model", { skip: !hasIndex && "run npm run ingest first" }, async () => {
+  const { POST } = await import("../../app/api/chat/route");
+  const ev = await events(await POST(post({ messages: [{ role: "user", content: "Tell me about Dubai, UAE" }], lang: "en" })));
+  assert.equal(ev.some((e) => e.type === "error"), false, "model was called");
+  assert.ok(ev.some((e) => e.type === "fold"));
+  assert.ok(ev.some((e) => e.type === "place"));
+  const text = ev.filter((e) => e.type === "text").map((e) => e.text).join("");
+  for (const h of ["## Places to visit", "## Food", "## Shopping", "## Vibe"]) assert.ok(text.includes(h), h);
+  assert.match(text, /Burj Khalifa — Observation decks/);
+  assert.match(text, /Turkish — Pide/);
+  assert.match(text, /Tranquility & Peace 5\/10 · Healing 6\/10/);
+  assert.doesNotMatch(text, /tiramisu|mapo tofu/i);
+  // Arabic, or a question about one part, still goes to the model.
+  assert.equal((await events(await POST(post({ messages: [{ role: "user", content: "Tell me about Dubai" }], lang: "ar" })))).some((e) => e.type === "fold"), false);
+  assert.equal((await events(await POST(post({ messages: [{ role: "user", content: "Where can I ski in Dubai?" }], lang: "en" })))).some((e) => e.type === "fold"), false);
 });
 
 test("chat route: place event only for one travel city", { skip: !hasIndex && "run npm run ingest first" }, async () => {

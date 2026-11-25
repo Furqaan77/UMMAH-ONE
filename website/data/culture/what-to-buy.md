@@ -17,7 +17,6 @@ Part of Ummah One's art and culture guide: the best things to buy in each city a
 - Silk scarves: Bursa (Koza Han (old silk market))
 - Hand-hammered copper coffee sets: Sarajevo (Kazandžiluk (coppersmiths' street))
 - Silver filigree: Prizren (Old-town filigree workshops)
-- Ohrid pearls: Ohrid (Old town shops)
 - Lanterns, perfume oils: Cairo (Khan el-Khalili)
 - Argan oil: Essaouira (Women's cooperatives)
 - Batik and silver: Yogyakarta (Malioboro Street, Kotagede)
@@ -185,21 +184,6 @@ Where to buy: Kujundžiluk (old bazaar street).
 What to buy in Sarajevo: Hand-hammered copper coffee sets, rahat lokum.
 Where to buy: Kazandžiluk, Baščaršija.
 
-## Ohrid, North Macedonia
-
-What to buy in Ohrid: Ohrid pearls, handmade paper.
-Where to buy: Old town, paper workshop near St Sophia.
-
-## Skopje, North Macedonia
-
-What to buy in Skopje: Textiles, spices, household goods.
-Where to buy: Bezisten (Old Bazaar), Bit Pazar.
-
-## Tetovo, North Macedonia
-
-What to buy in Tetovo: Šar mountain cheese, spices.
-Where to buy: Town market.
-
 ## Tirana, Albania
 
 What to buy in Tirana: Olives, cheese, honey; Ottoman bazaar crafts.
@@ -314,11 +298,6 @@ Where to buy: Mehrgon Market.
 
 What to buy in Kazan: Chak-chak (Tatar honey sweet).
 Where to buy: Chak-Chak Museum area, Old Tatar Quarter.
-
-## Bali, Indonesia
-
-What to buy in Bali: Art and crafts.
-Where to buy: Ubud Art Market.
 
 ## Yogyakarta, Indonesia
 

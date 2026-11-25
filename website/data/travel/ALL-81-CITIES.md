@@ -1,4 +1,4 @@
-# One Ummah City Guides — 81 Cities
+# One Ummah City Guides — 77 Cities
 
 # Middle East and Gulf — UAE and Saudi Arabia
 
@@ -6,9 +6,9 @@
 
 **Halal food and Islamic culture:** Halal food is the norm across the whole city, the adhan sounds five times a day, and a masjid is never far away—from the elegant Jumeirah Masjid to prayer rooms in every mall.
 
-**Calm:** Tranquility & Peace 3/10 · Healing 3/10
+**Calm:** Tranquility & Peace 5/10 · Healing 6/10
 
-**Character:** Traditional 3/10 · Historic & Vintage 3/10 · Cultural 8/10 · Modern 10/10
+**Character:** Traditional 9/10 · Historic & Vintage 8/10 · Cultural 8/10 · Modern 10/10
 
 **Energy:** Busy & Loud 9/10 · Too Much Tourism 9/10
 
@@ -18,28 +18,54 @@ The pace is quick and cosmopolitan—more than eight in ten residents come from 
 
 Food is one of Dubai's greatest pleasures. You can eat your way around the world—Lebanese, Indian, Pakistani, Japanese, Italian, Thai, and beyond—and nearly all of it is halal. Masjids are everywhere, the adhan drifts over the skyline five times a day, and finding a prayer room in a mall is never hard. Summer is fiercely hot; November to March is the sweet spot.
 
-### 20 Things to Do in Dubai
+### Places to Visit in Dubai
 
-1. Visit the Burj Khalifa and enjoy the panoramic view from the observation deck.
-2. Watch the Dubai Fountain show dance across Burj Lake after sunset.
-3. Explore the Dubai Mall, one of the largest shopping centres in the world, with its aquarium and endless food court.
-4. Take a traditional abra boat ride across Dubai Creek.
-5. Wander the wind-tower lanes of Al Fahidi Historical Neighbourhood and visit Al Fahidi Fort, Dubai's oldest building.
-6. Browse the Gold Souk, Spice Souk, Textile Souk, and Perfume Souk in Deira and Bur Dubai.
-7. Go on a desert safari for dune bashing, camel rides, and dinner under the stars.
-8. Relax on Jumeirah Beach, Kite Beach, or La Mer with the Burj Al Arab on the horizon.
-9. Drive out along the Palm Jumeirah and see the landmark Atlantis The Royal.
-10. Enjoy dinner by the water in Dubai Marina as the towers light up.
-11. Step inside the Museum of the Future, as striking outside as it is within.
-12. Visit Global Village for food, crafts, and pavilions from dozens of countries (open roughly October to May).
-13. Escape to Hatta for kayaking on the turquoise Hatta Dam and cooler air in the Hajar Mountains.
-14. Stand on the glass floor of the Dubai Frame in Zabeel Park, with old Dubai on one side and new Dubai on the other.
-15. Spend an evening at a rooftop lounge, beach club, or late-night shisha café overlooking the skyline.
-16. See the city from above on a helicopter tour or seaplane flight.
-17. Walk through a living rainforest at The Green Planet in City Walk.
-18. Ski or meet the penguins at Ski Dubai inside Mall of the Emirates.
-19. Eat your way around the world—Lebanese mezze, Pakistani karahi, Japanese ramen, Thai curries—almost all of it halal.
-20. Take a sunset dhow cruise along the Creek or the Marina with dinner on board.
+1. Burj Khalifa — Observation decks and skyline views.
+2. Dubai Mall — Shopping, dining, aquarium, and ice rink.
+3. Desert Safari — Best experience.
+4. The Dubai Fountain — Choreographed water, light, and music shows.
+5. Mall of the Emirates — Major shopping center home to Ski Dubai and entertainment venues.
+6. Museum of the Future — Futuristic science, technology, and innovation exhibits.
+7. Dubai Frame — Sky bridge views of old and modern Dubai.
+8. Souk Madinat Jumeirah — Arabian-style marketplace with waterways and dining.
+9. Hop-on, hop-off bus — Sightseeing bus tours connecting major landmarks and districts across the city.
+10. Al Fahidi Historical Neighbourhood — Wind-tower architecture, courtyards, and cultural spaces.
+11. Dubai Gold Souk — Traditional gold and jewelry market.
+12. Dubai Spice Souk — Traditional spice, herb, and incense market.
+13. Palm Jumeirah — Palm-shaped island with resorts, beaches, and waterfront dining.
+14. Dubai Marina — Waterfront district with promenade walks, dining, and boat tours.
+15. JBR — Urban beachfront with water sports and promenade dining.
+16. Jumeirah Mosque — Landmark mosque known for Islamic architecture and cultural visits.
+17. Kite Beach — Public beach with water sports, running track, and food spots.
+18. Global Village — Seasonal cultural, shopping, and dining destination with country pavilions.
+19. Dubai Miracle Garden — Seasonal flower garden with large floral displays.
+20. The Green Planet — Indoor tropical rainforest bio-dome.
+21. IMG Worlds of Adventure — Indoor theme park with themed zones and rides.
+22. The View at The Palm — Observation deck overlooking Palm Jumeirah and the Gulf.
+23. Sky Views Observatory — Glass slide, edge walk, and downtown skyline views.
+24. Al Shindagha Museum — Heritage museum exploring Emirati history and creek culture.
+25. Dubai Creek — Historic waterway with abra boat rides and traditional trading activity.
+26. Souk Al Seef — Creekside promenade with heritage-style architecture, shops, and dining.
+27. Dubai Opera — Performing arts venue hosting concerts, theater, and live shows.
+28. Dubai Safari Park — Wildlife park featuring themed habitats, animals, safari drives, and conservation zones.
+
+### Food in Dubai
+
+1. Turkish — Pide, Adana kebab, iskender kebab, grilled steaks, lahmacun, manti, and baklava.
+2. Syrian — Charcoal grills, muhammara, kibbeh, shish barak, fattoush, yalanji, and Arabic pastries.
+3. Indian — Butter chicken, dal makhani, dosa, chaat, idli sambar, palak paneer, and gulab jamun.
+4. Lebanese — Shawarma, hummus, tabbouleh, mixed grills, manakish, moutabal, and kunafa.
+5. Pakistani — Chicken karahi, seekh kebabs, nihari, halwa puri, mutton biryani, chapli kebab, and haleem.
+6. Emirati — Machboos, harees, balaleet, luqaimat, thareed, saloona, and regag.
+7. Persian (Iranian) — Chelo kebab, saffron tahdig rice, ghormeh sabzi, fesenjan, zereshk polo, mirza ghasemi, and ash reshteh.
+8. Japanese — Sushi, sashimi, ramen, wagyu teppanyaki, tempura, gyoza, and katsu curry.
+9. Italian — Neapolitan pizza, handmade pasta, risotto, lasagna, burrata caprese, and gnocchi.
+10. Egyptian — Koshary, feteer meshaltet, ful medames, stuffed pigeon, molokhia, ta'ameya, and hawawshi.
+11. Chinese — Dim sum, hand-pulled noodles, hotpot, Peking duck, kung pao chicken, and spring rolls.
+12. Yemeni — Chicken mandi, lamb madhbi, hanith, masoub, saltah, fahsah, and mutabbaq.
+13. Thai — Pad thai, green curry, tom yum soup, mango sticky rice, massaman curry, papaya salad, and pad kra pao.
+14. Moroccan — Lamb tagine, couscous, pastilla, harira soup, zaalouk, kefta tagine, and rfissa.
+15. Afghan — Kabuli pulao, mantu dumplings, chapli kebab, bolani, ashak, borani banjan, and sheer khurma.
 
 ---
 
@@ -374,7 +400,6 @@ Being on the Gulf, seafood is the star: hamour, safi, and shrimp, often served w
 20. Take a day trip to Jubail to swim at Al Fanateer Beach.
 
 ---
-
 
 # Middle East and Gulf — Qatar, Oman, Bahrain, Kuwait, Jordan and Azerbaijan
 
@@ -746,7 +771,6 @@ The food is classic Azerbaijani home cooking: plov, dolma, piti, tandir bread an
 18. Take a day trip to Naftalan, famous for its unusual therapeutic oil baths.
 19. Take a longer day trip to Sheki to see the Palace of the Sheki Khans and its caravanserai.
 20. Try Azerbaijani dishes such as plov, piti, dolma and tandir bread fresh from the oven.
-
 
 # Türkiye
 
@@ -1287,7 +1311,6 @@ The food is classic Anatolian comfort cooking. Try Ankara tava, a baked rice and
 19. Take a day trip to Gordion to see the great tumulus linked to King Midas.
 20. Take a longer day trip to Hattusa, the ancient capital of the Hittite Empire.
 
-
 # Balkans
 
 ## Kotor, Montenegro
@@ -1489,123 +1512,6 @@ The pace is unhurried, built around long coffees and evening strolls along Ferha
 
 ---
 
-## Ohrid, North Macedonia
-
-**Halal food and Islamic culture:** Halal-friendly grills and bakeries can be found around the old bazaar, and Ohrid's Muslim community keeps Islamic culture alive at the Ali Pasha Masjid.
-
-**Calm:** Tranquility & Peace 9/10 · Healing 9/10
-
-**Character:** Traditional 7/10 · Historic & Vintage 9/10 · Cultural 8/10 · Modern 3/10
-
-**Energy:** Busy & Loud 3/10 · Too Much Tourism 6/10
-
-Ohrid is serene and timeless—a hillside town of red roofs, Byzantine churches, and cobbled lanes tumbling down to one of the oldest and deepest lakes in Europe. The water is astonishingly clear, the mountains of Galičica rise behind it, and the whole town seems to glow at sunset. Summer brings swimmers and festival crowds; the rest of the year it is quiet, spiritual, and slow, made for long walks along the shore.
-
-It is very affordable, costing a fraction of what you would pay on the Italian lakes or the Croatian coast. Life revolves around the lake, and so does dinner: grilled lake fish at waterfront restaurants (the famous Ohrid trout is protected, so menus often feature other local fish instead), alongside Macedonian staples like šopska salad and ajvar. Ohrid has a Muslim community and Ottoman heritage of its own, and halal-friendly grills and bakeries can be found around the old bazaar.
-
-### 20 Things to Do in Ohrid
-
-1. Photograph the Church of St John at Kaneo, perched on a cliff above the lake.
-2. Walk the wooden boardwalk that skirts the cliffs along the water's edge.
-3. Climb to Samuel's Fortress for wide views over the town and the lake.
-4. Sit on the stone seats of the Ancient Theatre, dating back to the Hellenistic era.
-5. Visit Plaošnik, the reconstructed church of St Clement and St Panteleimon on the site of an early Slavic university.
-6. Step inside the Church of St Sophia to see its remarkable medieval frescoes.
-7. Admire the icons at the Icon Gallery, one of the finest collections of Byzantine art in the region.
-8. Explore the Robev Family House, a grand 19th-century mansion now part of the National Museum.
-9. Visit the Ali Pasha Masjid and rest beneath the ancient Činar plane tree in the old bazaar.
-10. Watch handmade paper being pressed at the old paper workshop near St Sophia.
-11. Shop for authentic Ohrid pearls, crafted by hand from a secret family recipe.
-12. Take a boat to the Bay of Bones, a reconstructed prehistoric stilt village built over the water.
-13. Cruise down the lake to the Monastery of St Naum and row through the springs of the Black Drim.
-14. Hike or drive into Galičica National Park for views of both Lake Ohrid and Lake Prespa.
-15. Swim at Lagadin or one of the pebbly beaches south of town.
-16. Kayak across the lake's glass-clear water in the early morning.
-17. Take a day trip to Struga to walk along the Black Drim River where it flows out of the lake.
-18. Visit the village of Vevčani for its mountain springs and charming traditional houses.
-19. Dine on fresh grilled lake fish at a waterfront restaurant in the old town.
-20. Watch the sunset from Kaneo as the lake turns gold and pink.
-
----
-
-## Skopje, North Macedonia
-
-**Halal food and Islamic culture:** Halal food is easy to find in the Old Bazaar, and Islamic culture fills its lanes, from the 15th-century Mustafa Pasha Masjid to Ottoman tea houses and hammams.
-
-**Calm:** Tranquility & Peace 5/10 · Healing 4/10
-
-**Character:** Traditional 6/10 · Historic & Vintage 7/10 · Cultural 7/10 · Modern 7/10
-
-**Energy:** Busy & Loud 6/10 · Too Much Tourism 4/10
-
-Skopje is a city of striking contrasts. On one side of the Vardar River, a forest of grand statues, columns, and neoclassical façades rises from the controversial "Skopje 2014" project; on the other, the Old Bazaar unfolds in a warren of Ottoman caravanserais, masjids, and tea houses that feel centuries removed. The city was largely rebuilt after a devastating earthquake in 1963, and it wears its history in layers—sometimes surreal, always interesting.
-
-The pace is relaxed and sociable, with crowded café terraces and long evening walks along the river. It is one of Europe's cheapest capitals, often a third of the price of Western European cities. For Muslim travellers, the Old Bazaar is a joy—Turkish and Albanian grills, bakeries, and sweet shops make halal food easy to find. Don't leave without trying tavče gravče (baked beans in a clay pot), ajvar, kebapi, and burek with drinking yogurt.
-
-### 20 Things to Do in Skopje
-
-1. Cross the 15th-century Stone Bridge over the Vardar, the city's most enduring symbol.
-2. Get lost in the Old Bazaar (Čaršija), one of the largest Ottoman bazaars surviving in the Balkans.
-3. Visit the Mustafa Pasha Masjid, a graceful 15th-century masjid overlooking the bazaar.
-4. Walk the ramparts of Kale Fortress for views across the city to Mount Vodno.
-5. See the art exhibitions inside the Daut Pasha Hamam, a domed Ottoman bathhouse turned National Gallery.
-6. Step into the courtyards of Kapan Han and Suli Han, two of the bazaar's historic caravanserais.
-7. Browse the covered Bezisten, the old market hall for textiles and goods.
-8. Admire the extraordinary carved walnut iconostasis inside the half-sunken Church of St Saviour.
-9. Visit the Memorial House of Mother Teresa, who was born in Skopje in 1910.
-10. Stand in Macedonia Square beneath the giant Warrior on a Horse statue and fountain.
-11. Tour the Archaeological Museum of North Macedonia on the riverbank.
-12. See the Old Railway Station, its clock frozen at the moment of the 1963 earthquake, now home to the city museum.
-13. Ride the cable car up Mount Vodno to the Millennium Cross for sweeping views.
-14. Take a day trip to Matka Canyon to kayak or boat to the Vrelo Cave.
-15. Explore the Museum of Contemporary Art, founded with works donated by artists after the earthquake.
-16. See the arches of the Skopje Aqueduct on the edge of the city.
-17. Shop with locals at Bit Pazar, the busy open-air market for produce, spices, and household goods.
-18. Try tavče gravče, North Macedonia's national dish, baked and served in a clay pot.
-19. Eat kebapi and fresh lepinja bread at a grill in the Old Bazaar.
-20. Start the day like a local with burek and a glass of drinking yogurt.
-
----
-
-## Tetovo, North Macedonia
-
-**Halal food and Islamic culture:** Halal food is everywhere in this Muslim-majority city, and Islamic culture is beautifully expressed in the Painted Masjid (Šarena Džamija) and the Arabati Baba Tekke.
-
-**Calm:** Tranquility & Peace 7/10 · Healing 6/10
-
-**Character:** Traditional 9/10 · Historic & Vintage 7/10 · Cultural 7/10 · Modern 3/10
-
-**Energy:** Busy & Loud 5/10 · Too Much Tourism 1/10
-
-Tetovo is grounded, genuine, and refreshingly untouristy. Set at the foot of the Šar Mountains in the fertile Polog Valley, it is the heart of North Macedonia's Albanian community—a busy, youthful city of street markets, minarets, and lively cafés, with snow-capped peaks looming over the rooftops for much of the year. It is not a polished destination, but that is part of its appeal: here you see everyday Balkan life as it is lived.
-
-It is extremely affordable, even by regional standards—a fraction of the cost of Western Europe. As a Muslim-majority city, halal food is everywhere, from grills and bakeries to traditional restaurants. Tetovo is famous for its beans—tetovski grav, slow-baked in clay pots—and for flaky burek and pite, rich local cheeses, and syrupy Ottoman-style sweets. Evenings bring the xhiro, the leisurely promenade where whole families stroll and greet one another.
-
-### 20 Things to Do in Tetovo
-
-1. Visit the Painted Masjid (Šarena Džamija), whose walls are covered in colourful floral and geometric designs.
-2. Find the türbe (tomb) of the two sisters who funded the Painted Masjid in its peaceful garden.
-3. See the old Ottoman hammam beside the Painted Masjid on the banks of the Pena River.
-4. Explore the Arabati Baba Tekke, a historic Bektashi dervish lodge set in walled gardens.
-5. Hike up to Tetovo Kale, the hilltop fortress overlooking the city and the Polog Valley.
-6. Stroll along the Pena River through the old Čaršija district.
-7. Shop the busy market for fresh produce, spices, and mountain cheese from the Šar Mountains.
-8. Join the evening xhiro, the traditional promenade along the main street.
-9. Sip a macchiato at a local café, an essential part of Albanian daily life.
-10. Try tetovski grav, the city's famous beans baked slowly in a clay pot.
-11. Eat freshly baked burek and pite at a local bakery.
-12. Drive up to Popova Šapka, the mountain resort high above the city, for fresh air and views.
-13. Ski or snowboard at Popova Šapka during the winter season.
-14. Hike to Titov Vrv, one of the highest peaks of the Šar Mountains.
-15. Trek to Bogovinje Lake, a glacial lake set in the high pastures of the Šar range.
-16. Visit the Monastery of St Athanasius at Lešok, just outside Tetovo.
-17. Take a day trip to Gostivar to see its 18th-century clock tower and old town centre.
-18. Explore Mavrovo National Park and see the half-submerged Church of St Nicholas in Lake Mavrovo.
-19. Visit the Monastery of St John Bigorski, famous for its intricately carved wooden iconostasis.
-20. Wander the mountain village of Galičnik, known for its traditional stone houses and summer wedding festival.
-
----
-
 ## Tirana, Albania
 
 **Halal food and Islamic culture:** Halal-friendly food is widely available in this Muslim-majority capital, and Islamic culture is proudly kept alive at the beautifully painted Et'hem Bey Masjid.
@@ -1724,7 +1630,6 @@ Pristina is one of the most affordable capitals on the continent, with prices fa
 20. Feast on pite, grilled meats, and stuffed peppers at a family-run eatery in the city centre.
 
 ---
-
 
 # North Africa
 
@@ -2228,7 +2133,6 @@ The food is classic Sahel: fish couscous, grilled sea bream, smoky salata mechou
 19. Buy makroudh, Kairouan's famous date-filled semolina pastries, by the box.
 20. Relax in a traditional hammam in the medina after a day of exploring.
 
-
 # Central Asia
 
 ## Samarkand, Uzbekistan
@@ -2694,47 +2598,7 @@ The food is the highlight for many visitors. Try echpochmak (triangular meat pie
 
 ---
 
-
 # Southeast and South Asia
-
-## Bali, Indonesia
-
-**Halal food and Islamic culture:** Bali is Hindu-majority, but halal food is easy to find at Muslim-run warungs, Javanese and Padang restaurants, and many hotels, and masjids are active in Denpasar, Kuta, and Nusa Dua.
-
-**Calm:** Tranquility & Peace 6/10 · Healing 10/10
-
-**Character:** Traditional 9/10 · Historic & Vintage 7/10 · Cultural 9/10 · Modern 5/10
-
-**Energy:** Busy & Loud 7/10 · Too Much Tourism 10/10
-
-Bali feels like a living painting—emerald rice terraces, incense curling from tiny offerings, temple gates silhouetted against the sea. The island is Hindu-majority, and that spiritual rhythm shapes everything, from morning ceremonies to the gamelan music drifting out of village courtyards. Life moves at two speeds: the buzz of Canggu and Seminyak, and the slower, greener calm of Ubud and the north.
-
-It is good value by Western standards, though prices in the trendy beach areas can creep toward European levels. Muslim travellers should plan meals a little, because many Balinese dishes use pork. Halal food is still easy to find—Javanese and Padang warungs, Muslim-run eateries, and halal-certified restaurants are common, and Muslim villages such as Pegayaman and Kepaon have deep roots. Look for ayam betutu, fish sate lilit, nasi campur, and fresh seafood grilled on Jimbaran Beach.
-
-### 20 Things to Do in Bali
-
-1. Watch the sun set over the Indian Ocean at Uluwatu Temple, followed by the Kecak fire dance on the clifftop.
-2. Walk through the Tegallalang Rice Terraces north of Ubud in the soft morning light.
-3. Explore the Sacred Monkey Forest Sanctuary in the heart of Ubud.
-4. Visit Tanah Lot, the sea temple perched on a rock off the west coast.
-5. Hike Mount Batur before dawn to watch the sunrise over Lake Batur.
-6. Visit the Puja Mandala complex in Nusa Dua, where the Ibnu Batutah Grand Masjid stands beside a church and temples.
-7. Join the purification ritual at Tirta Empul, the holy spring temple near Tampaksiring.
-8. Take a boat to Nusa Penida to see Kelingking Beach and the clear pool of Angel's Billabong.
-9. Snorkel or dive the USAT Liberty shipwreck at Tulamben.
-10. Stroll the Campuhan Ridge Walk outside Ubud before the heat of the day.
-11. Photograph Pura Ulun Danu Bratan, the temple that seems to float on Lake Bratan.
-12. Climb to the famous "Gates of Heaven" at Pura Lempuyang in East Bali.
-13. Wander the UNESCO-listed Jatiluwih Rice Terraces in the island's cool highlands.
-14. Cool off beneath the falls at Tegenungan or Gitgit Waterfall.
-15. Browse the Ubud Art Market and visit Ubud Palace, where Legong dance performances are held in the evening.
-16. Learn to surf on the gentle waves of Kuta or Canggu.
-17. Rise early to look for dolphins off Lovina Beach on the north coast.
-18. Explore the royal water gardens of Tirta Gangga and Taman Ujung in Karangasem.
-19. Feast on grilled seafood on the sand at Jimbaran Bay as the sun goes down.
-20. Seek out halal versions of Balinese classics—ayam betutu, fish sate lilit, and nasi campur—at Muslim-run warungs.
-
----
 
 ## Yogyakarta, Indonesia
 

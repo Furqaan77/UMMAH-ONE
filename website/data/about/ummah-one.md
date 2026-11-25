@@ -6,7 +6,7 @@ Ummah One is an AI guide. It helps people find Muslim travel cities that match t
 To get a travel recommendation, tell the AI your budget, travel month, interests, travel style and number of days. Students: say your field of study and level.
 
 ## Halal-friendliness labels
-These cities have a "halal-friendliness" label: check halal food and Muslim-friendly options before you go: Bali (Indonesia), Kotor (Montenegro), Budva (Montenegro), Podgorica (Montenegro), Ohrid (North Macedonia). Source: Ummah One team research (prompt.md), to verify.
+These cities have a "halal-friendliness" label: check halal food and Muslim-friendly options before you go: Kotor (Montenegro), Budva (Montenegro), Podgorica (Montenegro). Source: Ummah One team research (prompt.md), to verify.
 
 ## Muslim population facts
 - Lucknow (India) is about 26% Muslim (city, 2011 census).

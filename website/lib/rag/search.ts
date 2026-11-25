@@ -47,7 +47,6 @@ const ALIASES: Record<string, Place> = {
   saudi: { kind: "country", value: "Saudi Arabia" },
   ksa: { kind: "country", value: "Saudi Arabia" },
   bosnia: { kind: "country", value: "Bosnia and Herzegovina" },
-  macedonia: { kind: "country", value: "North Macedonia" },
   balkan: { kind: "region", value: "Balkans" },
   "middle east": { kind: "region", value: "Middle East and Gulf" },
   gulf: { kind: "region", value: "Middle East and Gulf" },

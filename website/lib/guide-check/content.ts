@@ -5,7 +5,8 @@ import path from "node:path";
 import { removeHaramItems } from "../rag/haram";
 
 export type EaseItem = { name: string; score: number; band: string };
-export type CityGuide = { city: string; country: string; things: string[]; buy: string[]; ease: EaseItem[] };
+/** intro: first paragraph of the city text. food: "### Food in X" list (Dubai so far). vibe: the Calm / Character / Energy lines. */
+export type CityGuide = { city: string; country: string; things: string[]; buy: string[]; ease: EaseItem[]; intro: string; food: string[]; vibe: string[] };
 
 const DATA = () => path.join(process.cwd(), "data");
 const read = (rel: string) => readFileSync(path.join(DATA(), rel), "utf8").replace(/\r/g, "");
@@ -29,7 +30,7 @@ const EASE = /^\d+\.\s+(.+?):\s*([\d.]+)\/10,\s*([^.]+)\./;
 
 let cache: { at: number; cities: CityGuide[] } | null = null;
 
-/** All 81 cities with their things to do, what to buy and ease-of-visit items. Cached for a minute. */
+/** All cities with their things to do, what to buy and ease-of-visit items. Cached for a minute. */
 export function cityGuides(): CityGuide[] {
   if (cache && Date.now() - cache.at < 60_000) return cache.cities;
   const travel = sections(read("travel/ALL-81-CITIES.md"));
@@ -46,10 +47,11 @@ export function cityGuides(): CityGuide[] {
 
   const cities: CityGuide[] = [];
   for (const [city, { country, lines }] of travel) {
-    // "### 20 Things to Do in X" sits inside the city section in the travel guide.
-    const start = lines.findIndex((l) => /^### 20 Things to Do/.test(l));
-    const list = start < 0 ? [] : lines.slice(start + 1).filter((l) => /^\d+\.\s/.test(l));
-    const things = removeHaramItems(list.join("\n")).text.split("\n").filter(Boolean).map((l) => l.replace(/^\d+\.\s+/, "").trim());
+    // "### 20 Things to Do in X" (or "### Places to Visit in X", Dubai from 25 Nov 2026) sits inside the city section.
+    const things = clean(subList(lines, /^### (20 Things to Do|Places to Visit)/));
+    const food = clean(subList(lines, /^### Food in/));
+    const vibe = lines.filter((l) => /^\*\*(Calm|Character|Energy):\*\*/.test(l)).map((l) => l.replace(/\*\*/g, "").trim());
+    const intro = lines.find((l) => l.trim() && !l.startsWith("**") && !l.startsWith("#") && !/^\d+\.\s/.test(l) && l.trim() !== "---")?.trim() ?? "";
 
     let buy = (shop.get(city)?.lines ?? []).filter((l) => l.startsWith("- ")).map((l) => l.slice(2).trim());
     if (!buy.length) {
@@ -61,11 +63,21 @@ export function cityGuides(): CityGuide[] {
 
     let e = parseEase(ease.get(city)?.lines ?? []);
     if (!e.length) e = (countryEase.get(country) ?? []).filter((it) => it.name.toLowerCase().includes(city.toLowerCase()));
-    cities.push({ city, country, things, buy: removeHaramItems(buy.map((b) => `- ${b}`).join("\n")).text.split("\n").filter(Boolean).map((b) => b.slice(2)), ease: e });
+    cities.push({ city, country, things, intro, food, vibe, buy: removeHaramItems(buy.map((b) => `- ${b}`).join("\n")).text.split("\n").filter(Boolean).map((b) => b.slice(2)), ease: e });
   }
   cache = { at: Date.now(), cities };
   return cities;
 }
+
+/** Numbered items under a "### …" heading, up to the next heading. */
+function subList(lines: string[], heading: RegExp): string[] {
+  const start = lines.findIndex((l) => heading.test(l));
+  if (start < 0) return [];
+  const rest = lines.slice(start + 1);
+  const stop = rest.findIndex((l) => /^#{1,3} /.test(l));
+  return (stop < 0 ? rest : rest.slice(0, stop)).filter((l) => /^\d+\.\s/.test(l));
+}
+const clean = (list: string[]) => removeHaramItems(list.join("\n")).text.split("\n").filter(Boolean).map((l) => l.replace(/^\d+\.\s+/, "").trim());
 
 function parseEase(lines: string[]): EaseItem[] {
   return lines.map((l) => EASE.exec(l)).filter((m): m is RegExpExecArray => !!m).map((m) => ({ name: m[1].trim(), score: Number(m[2]), band: m[3].trim() }));
