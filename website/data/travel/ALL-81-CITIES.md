@@ -12,11 +12,11 @@
 
 **Energy:** Busy & Loud 9/10 · Too Much Tourism 9/10
 
-Dubai is dazzling—ultra-modern, high-tech, polished, and full of ambition. Glass towers rise straight out of the desert, highways hum through the night, and the whole city seems built for the future. Yet the old Dubai still breathes along the Creek, where wooden abras cross the water and spice sellers call out from shaded lanes.
+Dubai is dazzling—ultra-modern, high-tech, polished, and full of ambition. Glass towers rise straight out of the desert, highways hum through the night, and the whole city seems built for the future. Yet the old Dubai still breathes along the Creek, where wooden abras cross the water and spice sellers call out from shaded lanes. Food is one of Dubai's greatest pleasures. You can eat your way around the world—Lebanese, Indian, Pakistani, Japanese, Italian, Thai, and beyond—and nearly all of it is halal.
 
 The pace is quick and cosmopolitan—more than eight in ten residents come from abroad, and you hear dozens of languages in a single afternoon. Dubai can be expensive, especially for hotels and nights out, but it is often not quite as costly as London or New York. Metro rides, street food, and Creek-side cafés keep it manageable.
 
-Food is one of Dubai's greatest pleasures. You can eat your way around the world—Lebanese, Indian, Pakistani, Japanese, Italian, Thai, and beyond—and nearly all of it is halal. Masjids are everywhere, the adhan drifts over the skyline five times a day, and finding a prayer room in a mall is never hard. Summer is fiercely hot; November to March is the sweet spot.
+Masjids are everywhere, the adhan drifts over the skyline five times a day, and finding a prayer room in a mall is never hard. Summer is fiercely hot; November to March is the sweet spot.
 
 ### Places to Visit in Dubai
 
