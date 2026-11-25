@@ -270,9 +270,9 @@ What to buy in Istanbul (shopping and craft ideas):
 
 Where it comes from: Istanbul is a major retail hub, but İznik ceramics, Avanos pottery and other named regional crafts are not automatically Istanbul-made. Ask for the workshop location and avoid paying an Istanbul premium for a mass-produced imitation.
 
-## Cappadocia (Göreme), Türkiye
+## Cappadocia, Türkiye
 
-What to buy in Cappadocia (Göreme) (shopping and craft ideas):
+What to buy in Cappadocia (shopping and craft ideas):
 - Avanos red-clay pottery
 - Handwoven carpets
 - Onyx objects
@@ -505,48 +505,6 @@ What to buy in Sarajevo (shopping and craft ideas):
 - Leather slippers
 - Calligraphy
 - Bosnian coffee
-
-Where it comes from: Not confirmed by local buyers or makers yet: this is a shortlist of ideas, not proof the items are made here.
-
-## Ohrid, North Macedonia
-
-What to buy in Ohrid (shopping and craft ideas):
-- Ohrid pearl-style jewellery (traditional local technique; not natural pearls)
-- Ohrid filigree
-- Handwoven textiles
-- Embroidery
-- Woodcarving
-- Ceramics
-- Honey
-- Herbal teas
-
-Where it comes from: Not confirmed by local buyers or makers yet: this is a shortlist of ideas, not proof the items are made here. Ohrid pearl-style jewellery is a locally associated technique; it should not be sold or described as natural pearl without independent gemological documentation.
-
-## Skopje, North Macedonia
-
-What to buy in Skopje (shopping and craft ideas):
-- Macedonian filigree
-- Woven textiles
-- Embroidered garments
-- Woodcarving
-- Ceramics
-- Ajvar and pepper products
-- Honey
-- Leather goods
-
-Where it comes from: Not confirmed by local buyers or makers yet: this is a shortlist of ideas, not proof the items are made here.
-
-## Tetovo, North Macedonia
-
-What to buy in Tetovo (shopping and craft ideas):
-- Polog wool textiles
-- Traditional embroidery
-- Handwoven rugs
-- Woodcarving
-- Local honey
-- Ajvar
-- Ceramics
-- Painted decorative craft
 
 Where it comes from: Not confirmed by local buyers or makers yet: this is a shortlist of ideas, not proof the items are made here.
 
@@ -844,20 +802,6 @@ What to buy in Kazan (shopping and craft ideas):
 
 Where it comes from: Not confirmed by local buyers or makers yet: this is a shortlist of ideas, not proof the items are made here. Ichigi leather boots and Tatar skullcaps are culturally specific Tatar products. Ask for local workshop provenance and genuine leather/material details.
 
-## Bali, Indonesia
-
-What to buy in Bali (shopping and craft ideas):
-- Balinese silver jewellery
-- Batik (Indonesian national craft; not Bali-exclusive)
-- Woodcarving
-- Ikat textiles
-- Natural-dye cloth
-- Rattan and bamboo crafts
-- Ceramics
-- Coffee and spices
-
-Where it comes from: Indonesia's official tourism source identifies Celuk as Bali's silver centre. Batik is an Indonesian-wide craft, while Bali is better represented by Celuk silver and local woodcarving villages such as Mas.
-
 ## Yogyakarta, Indonesia
 
 What to buy in Yogyakarta (shopping and craft ideas):
@@ -1060,9 +1004,9 @@ What to buy in Lucknow (shopping and craft ideas):
 
 Where it comes from: Not confirmed by local buyers or makers yet: this is a shortlist of ideas, not proof the items are made here.
 
-## Zanzibar City (Stone Town), Tanzania
+## Zanzibar City, Tanzania
 
-What to buy in Zanzibar City (Stone Town) (shopping and craft ideas):
+What to buy in Zanzibar City (shopping and craft ideas):
 - Kanga cloth (East African regional textile; not Zanzibar-exclusive)
 - Kikoi cloth (East African coastal textile; verify where woven)
 - Zanzibar spices

@@ -5,6 +5,8 @@ import { LABEL_RULE, buildContext, type EnjoymentLabel } from "@/lib/ratings/lab
 import { ratableCity, travelCities } from "@/lib/ratings/cities";
 import { ratingStore } from "@/lib/ratings/store";
 import { LIMITS, checkChatMessages, clientIp, limit, readJson, tooMany } from "@/lib/limits";
+import { cityGuides } from "@/lib/guide-check/content";
+import { cityOverview, isOverviewQuestion } from "@/lib/guide-check/overview";
 import { NO_MUSIC_RULE, asksMusic, blockedReply, noMusicCountries, noMusicReply } from "@/lib/rag/rules";
 import { findBlocked } from "@/lib/rag/blocked";
 import { arabicHints } from "@/lib/rag/arabic";
@@ -130,6 +132,14 @@ export async function POST(req: Request) {
     : asksMusic(last.content) && noMusicCountries(askedCountries).length
       ? noMusicReply(replyLang)
       : null;
+  // A plain "Tell me about <city>" (English): the city's own data as folded sections, built in code (25 Nov 2026).
+  const hasImage = messages.some((m) => m.image);
+  const guide = !fixed && !searchError && askedCity && replyLang === "en" && !style && !hasImage ? cityGuides().find((g) => g.city === askedCity) : undefined;
+  if (guide && isOverviewQuestion(last.content, guide.city, guide.country)) {
+    const evs = [{ type: "sources", sources, model: null }, ...(place ? [{ type: "place", ...place }] : []), { type: "fold" }, { type: "text", text: cityOverview(guide) }];
+    return new Response(evs.map((o) => JSON.stringify(o) + "\n").join(""), { headers: { "Content-Type": "application/x-ndjson; charset=utf-8", "Cache-Control": "no-store" } });
+  }
+
   if (fixed) {
     const out = [{ type: "sources", sources: [], model: null }, { type: "text", text: fixed }].map((o) => JSON.stringify(o) + "\n").join("");
     return new Response(out, { headers: { "Content-Type": "application/x-ndjson; charset=utf-8", "Cache-Control": "no-store" } });
@@ -144,7 +154,6 @@ export async function POST(req: Request) {
     noMusicCountries(askedCountries).length > 0 ||
     noMusicCountries(hits.map((h) => h.meta.country ?? "")).length > 0;
 
-  const hasImage = messages.some((m) => m.image);
   const model = hasImage ? VISION_MODEL : TEXT_MODEL;
 
   const enc = new TextEncoder();

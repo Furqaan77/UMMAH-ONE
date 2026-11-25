@@ -18,11 +18,11 @@ function tmpData(files: Record<string, string>): string {
   return dir;
 }
 
-test("city guides: all 81 cities, overview + things to do, with place meta", async () => {
+test("city guides: all 77 cities (Bali and North Macedonia removed 25 Nov 2026), overview + things to do, with place meta", async () => {
   const { chunks } = (await chunkAll(DATA));
   const travel = chunks.filter((c) => c.file === "ALL-81-CITIES.md");
   const cities = new Set(travel.map((c) => c.meta.city).filter(Boolean));
-  assert.equal(cities.size, 81);
+  assert.equal(cities.size, 77);
   // The heritage list (24 places, user's list only) is one chunk with no single city.
   const heritage = travel.filter((c) => c.title.startsWith("Heritage Cities"));
   assert.equal(heritage.length, 1);
@@ -32,7 +32,7 @@ test("city guides: all 81 cities, overview + things to do, with place meta", asy
   for (const city of cities) {
     const mine = travel.filter((c) => c.meta.city === city);
     assert.ok(mine.some((c) => c.section === c.title), `${city}: overview`);
-    assert.ok(mine.some((c) => /Things to Do/.test(c.section)), `${city}: things to do`);
+    assert.ok(mine.some((c) => /Things to Do|Places to Visit/.test(c.section)), `${city}: things to do`);
   }
   const dubai = travel.find((c) => c.title === "Dubai, UAE")!;
   assert.deepEqual(dubai.meta, { region: "Middle East and Gulf", city: "Dubai", country: "UAE" });

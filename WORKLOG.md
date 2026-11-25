@@ -4,6 +4,18 @@ Newest first. Each entry: what was done, the decisions taken (and by whom), and 
 
 ---
 
+## 25 Nov 2026 (Windows PC)
+
+**City replies with closed headings; Dubai update; country order; 4 cities removed (Bushra's answers in chat)**
+- "Tell me about <city>" (English) now gets a reply built from our data, not the AI: a short intro, then closed headings **Places to visit, Food, Shopping, Vibe**. Clicking one opens it. Same for all cities; Food shows only where we have a food list (Dubai so far).
+- Dubai: the 28 places from Bushra replace the old 20 things to do. New Food list (15 cuisines); tiramisu and mapo tofu removed (alcohol / pork). Vibe: Tranquility 5, Healing 6, Traditional 9, Historic 8, Cultural 8, Modern 10, Busy & Loud 9, Too Much Tourism 9.
+- City list follows Bushra's country order (Algeria shows once its data is added).
+- Removed from all chatbot data: Ohrid, Skopje, Tetovo (North Macedonia) and Bali. Now 77 cities, 28 countries. Jakarta and Algeria: waiting for Bushra's data.
+- Ingest: 733 chunks. Tests 105/105. Eval 98/99 (pass): "Where can I ski indoors?" no longer finds Dubai (new text says "home to Ski Dubai").
+- The questionnaire now shows Dubai's 28 new places.
+- City names shortened (Bushra): "Cappadocia (Göreme)" → Cappadocia, "Zanzibar City (Stone Town)" → Zanzibar City. Places inside the text (Göreme Open-Air Museum, Stone Town alleys) are unchanged; "Göreme" and "Stone Town" still find the city in search.
+- Dubai description (the open text above the headings) now includes its food sentences, moved up from the third paragraph (Bushra).
+
 ## 24 Nov 2026 (Windows PC)
 
 **Chat: "View all 81 cities" (Bushra's answers: click asks about the city; grouped by country; on phones the list pushes the chat down)**

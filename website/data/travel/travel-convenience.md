@@ -473,9 +473,9 @@ How easy it is to visit places in Istanbul (ease-of-visit score out of 10, easie
 19. Camlica Tower: 7.7/10, fairly easy.
 20. Princes' Islands: 7/10, fairly easy. Needs its own transfer or extra time; check road, boat or trail conditions first.
 
-## Cappadocia (Göreme), Türkiye
+## Cappadocia, Türkiye
 
-How easy it is to visit places in Cappadocia (Göreme) (ease-of-visit score out of 10, easiest first):
+How easy it is to visit places in Cappadocia (ease-of-visit score out of 10, easiest first):
 
 1. Göreme Open-Air Museum: 8.4/10, easy.
 2. Göreme town centre: 8.1/10, easy.
@@ -896,81 +896,6 @@ How easy it is to visit places in Sarajevo (ease-of-visit score out of 10, easie
 18. Morina Han: 7.3/10, fairly easy.
 19. Bijambare caves: 6.4/10, needs planning. Needs its own transfer or extra time; check road, boat or trail conditions first.
 20. Skakavac Waterfall: 6.3/10, needs planning. Needs its own transfer or extra time; check road, boat or trail conditions first.
-
-## Ohrid, North Macedonia
-
-How easy it is to visit places in Ohrid (ease-of-visit score out of 10, easiest first):
-
-1. Ohrid Old Town: 8.7/10, easy.
-2. Church of St John at Kaneo: 8.4/10, easy.
-3. Samuel's Fortress: 8.3/10, easy.
-4. Church of St Sophia: 8.2/10, easy.
-5. Ancient Theatre: 8.1/10, easy.
-6. Plaošnik: 8/10, easy.
-7. Bay of Bones Museum: 8/10, easy.
-8. Robev Family House: 7.8/10, fairly easy.
-9. St Naum Monastery: 7.7/10, fairly easy.
-10. Ohrid Boardwalk: 7.6/10, fairly easy.
-11. Kaneo viewpoint: 7.2/10, fairly easy.
-12. Trpejca village: 7.1/10, fairly easy.
-13. Potpesh Beach: 6.6/10, needs planning. Needs its own transfer or extra time; check road, boat or trail conditions first.
-14. Vevnani Springs: 6.6/10, needs planning.
-15. Labino Beach: 6.5/10, needs planning. Needs its own transfer or extra time; check road, boat or trail conditions first.
-16. Kališta Monastery: 6.5/10, needs planning.
-17. Ljubaništa Beach: 6.2/10, needs planning. Needs its own transfer or extra time; check road, boat or trail conditions first.
-18. Galicica National Park: 6.2/10, needs planning.
-19. Bay of Bones boat trip: 6/10, needs planning. Needs its own transfer or extra time; check road, boat or trail conditions first.
-20. Struga day trip: 5.9/10, hard or remote. Needs its own transfer or extra time; check road, boat or trail conditions first.
-
-## Skopje, North Macedonia
-
-How easy it is to visit places in Skopje (ease-of-visit score out of 10, easiest first):
-
-1. Old Bazaar: 9.6/10, very easy.
-2. Stone Bridge: 9.5/10, very easy.
-3. Macedonia Square: 9.4/10, very easy.
-4. Kale Fortress: 9.1/10, very easy.
-5. Memorial House of Mother Teresa: 9/10, very easy.
-6. Church of St Clement: 8.9/10, easy.
-7. Museum of the Macedonian Struggle: 8.9/10, easy.
-8. Archaeological Museum: 8.8/10, easy.
-9. Millennium Cross: 8.5/10, easy.
-10. Vodno cable car: 8.3/10, easy.
-11. City Park: 8.2/10, easy.
-12. Aqueduct of Skopje: 8.1/10, easy.
-13. Macedonian Village: 7.9/10, fairly easy.
-14. Matka Canyon: 7.8/10, fairly easy. Needs its own transfer or extra time; check road, boat or trail conditions first.
-15. Kuršumli An: 7.8/10, fairly easy.
-16. Daut Pasha Hamam: 7.7/10, fairly easy.
-17. Mustafa Pasha Mosque: 7.7/10, fairly easy.
-18. Canyon Matka boat trip: 7.4/10, fairly easy. Needs its own transfer or extra time; check road, boat or trail conditions first.
-19. Stobi archaeological site: 7.4/10, fairly easy.
-20. Tetovo Painted Mosque day trip: 6.8/10, needs planning.
-
-## Tetovo, North Macedonia
-
-How easy it is to visit places in Tetovo (ease-of-visit score out of 10, easiest first):
-
-1. Painted Mosque: 8/10, easy.
-2. Tetovo Old Bazaar: 7.8/10, fairly easy.
-3. Arabati Baba Tekke: 7.7/10, fairly easy.
-4. Sharena Džamija courtyard: 7.5/10, fairly easy.
-5. Popova Šapka ski area: 7.4/10, fairly easy.
-6. Leshok Monastery: 7.3/10, fairly easy.
-7. Banja of Tetovo: 7.2/10, fairly easy.
-8. Vratnica village: 6.8/10, needs planning.
-9. Bigorski Monastery: 6.4/10, needs planning.
-10. Jelak mountain area: 6.3/10, needs planning. Needs its own transfer or extra time; check road, boat or trail conditions first.
-11. Galinnik village: 6.3/10, needs planning.
-12. Šar Mountains viewpoints: 6.2/10, needs planning. Needs its own transfer or extra time; check road, boat or trail conditions first.
-13. Vevnani Springs: 6.2/10, needs planning.
-14. Bogovinje Lake: 6.1/10, needs planning. Needs its own transfer or extra time; check road, boat or trail conditions first.
-15. Gostivar town: 6.1/10, needs planning.
-16. Mavrovo National Park day trip: 6/10, needs planning.
-17. Source of Vardar: 6/10, needs planning.
-18. Šar Planina hiking trails: 5.9/10, hard or remote.
-19. Tetovo city park: 5.9/10, hard or remote.
-20. Mavrovo Lake: 5.7/10, hard or remote. Needs its own transfer or extra time; check road, boat or trail conditions first.
 
 ## Tirana, Albania
 
@@ -1494,31 +1419,6 @@ How easy it is to visit places in Kazan (ease-of-visit score out of 10, easiest 
 19. Sviyazhsk Island: 6.9/10, needs planning. Needs its own transfer or extra time; check road, boat or trail conditions first.
 20. Blue Lakes: 6.8/10, needs planning. Needs its own transfer or extra time; check road, boat or trail conditions first.
 
-## Bali, Indonesia
-
-How easy it is to visit places in Bali (ease-of-visit score out of 10, easiest first):
-
-1. Uluwatu Temple: 8.4/10, easy.
-2. Tanah Lot: 8.1/10, easy.
-3. Tegallalang Rice Terraces: 7.9/10, fairly easy.
-4. Besakih Temple: 7.9/10, fairly easy.
-5. Tirta Empul: 7.8/10, fairly easy.
-6. Mount Batur sunrise: 7.6/10, fairly easy.
-7. Kintamani viewpoint: 7.5/10, fairly easy.
-8. Nusa Penida: 7.4/10, fairly easy.
-9. Ubud Monkey Forest: 7.2/10, fairly easy. Needs its own transfer or extra time; check road, boat or trail conditions first.
-10. Ubud Palace: 7.1/10, fairly easy.
-11. Angel's Billabong: 7/10, fairly easy.
-12. Ubud Art Market: 7/10, fairly easy.
-13. Campuhan Ridge Walk: 6.7/10, needs planning.
-14. Kelingking Beach: 6.5/10, needs planning. Needs its own transfer or extra time; check road, boat or trail conditions first.
-15. Broken Beach: 6.4/10, needs planning. Needs its own transfer or extra time; check road, boat or trail conditions first.
-16. Jatiluwih Rice Terraces: 6.4/10, needs planning.
-17. Ulun Danu Beratan Temple: 6.4/10, needs planning.
-18. Amed coast: 6.2/10, needs planning.
-19. Sekumpul Waterfall: 5.8/10, hard or remote. Needs its own transfer or extra time; check road, boat or trail conditions first.
-20. Tegenungan Waterfall: 5.7/10, hard or remote. Needs its own transfer or extra time; check road, boat or trail conditions first.
-
 ## Yogyakarta, Indonesia
 
 How easy it is to visit places in Yogyakarta (ease-of-visit score out of 10, easiest first):
@@ -1794,9 +1694,9 @@ How easy it is to visit places in Lucknow (ease-of-visit score out of 10, easies
 19. Regional Science City: 6.9/10, needs planning.
 20. Dewa Sharif day trip: 6/10, needs planning. Needs its own transfer or extra time; check road, boat or trail conditions first.
 
-## Zanzibar City (Stone Town), Tanzania
+## Zanzibar City, Tanzania
 
-How easy it is to visit places in Zanzibar City (Stone Town) (ease-of-visit score out of 10, easiest first):
+How easy it is to visit places in Zanzibar City (ease-of-visit score out of 10, easiest first):
 
 1. Stone Town historic centre: 8.2/10, easy.
 2. House of Wonders exterior/area: 8.1/10, easy.

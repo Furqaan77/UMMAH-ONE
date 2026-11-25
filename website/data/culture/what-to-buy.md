@@ -17,7 +17,6 @@ Part of Ummah One's art and culture guide: the best things to buy in each city a
 - Silk scarves: Bursa (Koza Han (old silk market))
 - Hand-hammered copper coffee sets: Sarajevo (Kazandžiluk (coppersmiths' street))
 - Silver filigree: Prizren (Old-town filigree workshops)
-- Ohrid pearls: Ohrid (Old town shops)
 - Lanterns, perfume oils: Cairo (Khan el-Khalili)
 - Argan oil: Essaouira (Women's cooperatives)
 - Batik and silver: Yogyakarta (Malioboro Street, Kotagede)
@@ -120,9 +119,9 @@ Where to buy: Central bazaar.
 What to buy in Istanbul: Carpets, lamps, ceramics, gold, spices.
 Where to buy: Grand Bazaar, Spice Bazaar (Eminönü).
 
-## Cappadocia (Göreme), Türkiye
+## Cappadocia, Türkiye
 
-What to buy in Cappadocia (Göreme): Avanos pottery *(to verify)*.
+What to buy in Cappadocia: Avanos pottery *(to verify)*.
 Where to buy: Avanos *(to verify)*.
 
 ## Bodrum, Türkiye
@@ -184,21 +183,6 @@ Where to buy: Kujundžiluk (old bazaar street).
 
 What to buy in Sarajevo: Hand-hammered copper coffee sets, rahat lokum.
 Where to buy: Kazandžiluk, Baščaršija.
-
-## Ohrid, North Macedonia
-
-What to buy in Ohrid: Ohrid pearls, handmade paper.
-Where to buy: Old town, paper workshop near St Sophia.
-
-## Skopje, North Macedonia
-
-What to buy in Skopje: Textiles, spices, household goods.
-Where to buy: Bezisten (Old Bazaar), Bit Pazar.
-
-## Tetovo, North Macedonia
-
-What to buy in Tetovo: Šar mountain cheese, spices.
-Where to buy: Town market.
 
 ## Tirana, Albania
 
@@ -315,11 +299,6 @@ Where to buy: Mehrgon Market.
 What to buy in Kazan: Chak-chak (Tatar honey sweet).
 Where to buy: Chak-Chak Museum area, Old Tatar Quarter.
 
-## Bali, Indonesia
-
-What to buy in Bali: Art and crafts.
-Where to buy: Ubud Art Market.
-
 ## Yogyakarta, Indonesia
 
 What to buy in Yogyakarta: Batik, silver, bakpia pastries.
@@ -380,9 +359,9 @@ Where to buy: Laad Bazaar, Pathergatti, Shilparamam arts and crafts village.
 What to buy in Lucknow: Chikankari embroidery.
 Where to buy: Chowk, Aminabad.
 
-## Zanzibar City (Stone Town), Tanzania
+## Zanzibar City, Tanzania
 
-What to buy in Zanzibar City (Stone Town): Spices (cloves, nutmeg, vanilla, cinnamon).
+What to buy in Zanzibar City: Spices (cloves, nutmeg, vanilla, cinnamon).
 Where to buy: Spice farms, Darajani Market.
 
 ## Antalya, Türkiye

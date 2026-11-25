@@ -24,6 +24,7 @@ type Message = {
   place?: { city: string; label: EnjoymentLabel | null };
   at?: number; // when the answer was made
   model?: string | null; // null: a fixed reply from Ummah One's rules
+  fold?: boolean; // city overview: "## " sections are shown folded (25 Nov 2026)
 };
 type ChatT = { id: string; title: string; messages: Message[]; updatedAt: number };
 
@@ -282,6 +283,7 @@ export default function Chat({ cities = [] }: { cities?: CityGroup[] }) {
           if (!line.trim()) continue;
           const ev = JSON.parse(line) as { type: string; text?: string; sources?: Source[]; model?: string | null; city?: string; label?: EnjoymentLabel | null };
           if (ev.type === "sources") patchMsg(chatId, aId, (m) => ({ ...m, sources: ev.sources, model: ev.model === undefined ? undefined : ev.model }));
+          else if (ev.type === "fold") patchMsg(chatId, aId, (m) => ({ ...m, fold: true }));
           else if (ev.type === "place" && ev.city) patchMsg(chatId, aId, (m) => ({ ...m, place: { city: ev.city!, label: ev.label ?? null } }));
           else if (ev.type === "text") {
             full += ev.text ?? "";
@@ -638,7 +640,7 @@ export default function Chat({ cities = [] }: { cities?: CityGroup[] }) {
                 )}
 
                 <div className={`answer ${m.error ? "error" : ""}`} dir="auto">
-                  <Answer text={m.content} />
+                  <Answer text={m.content} fold={m.fold} />
                   {streaming && m.id === lastAssistantId && <span className="caret" />}
                 </div>
 

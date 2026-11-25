@@ -122,3 +122,11 @@ test("save route: a reason is kept only for Wrong / Not open / Easier / Harder, 
     await rm(dir, { recursive: true, force: true });
   }
 });
+
+test("overview question: only a plain 'about <city>' question", async () => {
+  const { isOverviewQuestion } = await import("./overview");
+  for (const q of ["Tell me about Dubai, UAE", "tell me about dubai", "Dubai?", "What about Dubai", "Can you tell me more about Dubai please", "Cappadocia"])
+    assert.equal(isOverviewQuestion(q, q.includes("Cappadocia") ? "Cappadocia (Göreme)" : "Dubai", q.includes("Cappadocia") ? "Türkiye" : "UAE"), true, q);
+  for (const q of ["What should I buy in Dubai?", "Is Dubai safe?", "Halal food in Dubai", "Tell me about Abu Dhabi"])
+    assert.equal(isOverviewQuestion(q, "Dubai", "UAE"), false, q);
+});

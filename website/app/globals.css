@@ -136,6 +136,14 @@ img { max-width: 100%; }
   .app.cities-open .thread { margin-inline-start: var(--shift); margin-inline-end: auto; }
   .app.cities-open .composer-wrap { width: calc(100% - var(--shift) - 16px); margin-inline-start: var(--shift); margin-inline-end: auto; }
 }
+/* Folded city overview sections (25 Nov 2026) */
+.fold { margin: 8px 0; border-radius: 16px; background: var(--surface); box-shadow: var(--shadow); }
+.fold > summary { list-style: none; cursor: pointer; padding: 12px 16px; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: space-between; }
+.fold > summary::-webkit-details-marker { display: none; }
+.fold > summary::after { content: ""; width: 8px; height: 8px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(45deg); transition: transform .2s; margin-inline-start: 12px; }
+.fold[open] > summary::after { transform: rotate(-135deg); }
+.fold > :not(summary) { margin-inline: 16px; }
+.fold > :last-child { margin-bottom: 14px; }
 .click-away { position: fixed; inset: 0; z-index: 9; }
 
 /* ---------- Welcome ---------- */

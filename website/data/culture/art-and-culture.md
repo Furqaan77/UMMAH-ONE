@@ -37,7 +37,7 @@ Ummah One's art and culture guide for all 81 cities: culture, art and music; clo
 - Carpets: Konya and Istanbul (Türkiye), Baku (Azerbaijan), Bukhara (Uzbekistan), Marrakesh (Morocco)
 - Calligraphy: Istanbul (Türkiye)
 - Silk and embroidery (suzani): Bukhara and Samarkand (Uzbekistan)
-- Wood carving: Khiva (Uzbekistan), Essaouira (Morocco), Bali (Indonesia), Zanzibar (Tanzania, carved doors)
+- Wood carving: Khiva (Uzbekistan), Essaouira (Morocco), Zanzibar (Tanzania, carved doors)
 - Copperwork: Sarajevo and Mostar (Bosnia and Herzegovina)
 - Silver filigree: Prizren (Kosovo)
 - Silver and batik: Yogyakarta (Indonesia)
@@ -205,9 +205,9 @@ Art and culture in Istanbul:
 - Clothes, fashion and markets: Grand Bazaar; Spice Bazaar; Arasta Bazaar; Kadıköy Market; modest fashion brands.
 - Handicraft places: Grand Bazaar and Arasta Bazaar for carpets, ceramics, lamps and calligraphy; the Turkish and Islamic Arts Museum for historic craft examples.
 
-## Cappadocia (Göreme), Türkiye
+## Cappadocia, Türkiye
 
-Art and culture in Cappadocia (Göreme):
+Art and culture in Cappadocia:
 
 - Culture, art and music: Göreme Open-Air Museum.
 - Clothes, fashion and markets: Göreme town shops; Avanos market and pottery shops.
@@ -341,30 +341,6 @@ Art and culture in Sarajevo:
 - Culture, art and music: Film festivals; Bosnian music; National Museum; Gazi Husrev-beg Museum.
 - Clothes, fashion and markets: Baščaršija; Kazandžiluk (Coppersmith Street); Gazi Husrev-beg Street.
 - Handicraft places: Kazandžiluk for copperware and metal engraving; Baščaršija for traditional crafts, filigree jewellery and textiles.
-
-## Ohrid, North Macedonia
-
-Art and culture in Ohrid:
-
-- Culture, art and music: Icon Gallery; summer festivals.
-- Clothes, fashion and markets: Ohrid Old Bazaar; shops along the lakeside old town.
-- Handicraft places: Ohrid Pearl workshops and shops in the Old Town; National Workshop for Handmade Paper for traditional paper-making demonstrations.
-
-## Skopje, North Macedonia
-
-Art and culture in Skopje:
-
-- Culture, art and music: National Gallery at Daut Pasha Hamam; Museum of Contemporary Art.
-- Clothes, fashion and markets: Old Bazaar (Čaršija); Bit Pazar; Bezisten.
-- Handicraft places: Old Bazaar artisan lanes for filigree jewellery, copperwork, woodcraft and traditional souvenirs; the Museum of Macedonia for cultural context.
-
-## Tetovo, North Macedonia
-
-Art and culture in Tetovo:
-
-- Culture, art and music: Arabati Baba Tekke; Galičnik Summer Wedding Festival (in the Mavrovo mountains, a day trip).
-- Clothes, fashion and markets: Tetovo Green Market and the town centre bazaar streets.
-- Handicraft places: The Painted Mosque (Šarena Džamija) for its decorative art; local embroidery and textile sellers in the town market.
 
 ## Tirana, Albania
 
@@ -578,14 +554,6 @@ Art and culture in Kazan:
 - Clothes, fashion and markets: Kazan Kremlin souvenir shops; Bauman Street; Central Market.
 - Handicraft places: Kazan Kremlin craft and souvenir shops and the Chak-Chak Museum shop for Tatar-themed gifts; look for ichigi leather boots, tubeteika caps and Tatar leather mosaic products.
 
-## Bali, Indonesia
-
-Art and culture in Bali:
-
-- Culture, art and music: Gamelan music; Legong and Kecak dance performances.
-- Clothes, fashion and markets: Ubud Art Market; Sukawati Art Market; Seminyak boutiques.
-- Handicraft places: Mas village for woodcarving workshops; Celuk village for silver jewellery; Ubud Art Market for locally made crafts and textiles.
-
 ## Yogyakarta, Indonesia
 
 Art and culture in Yogyakarta:
@@ -700,9 +668,9 @@ Art and culture in Lucknow:
 - Clothes, fashion and markets: Chowk; Aminabad; Hazratganj; Janpath Market.
 - Handicraft places: Chowk and Aminabad for Chikankari embroidery shops; Rifa-e-Aam Club and local artisan boutiques may host craft exhibitions; confirm current events.
 
-## Zanzibar City (Stone Town), Tanzania
+## Zanzibar City, Tanzania
 
-Art and culture in Zanzibar City (Stone Town):
+Art and culture in Zanzibar City:
 
 - Culture, art and music: Taarab music; Dhow Countries Music Academy; Palace Museum.
 - Clothes, fashion and markets: Darajani Market; Gizenga Street; Hurumzi Street shops.
