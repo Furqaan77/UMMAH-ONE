@@ -205,9 +205,9 @@ Art and culture in Istanbul:
 - Clothes, fashion and markets: Grand Bazaar; Spice Bazaar; Arasta Bazaar; Kadıköy Market; modest fashion brands.
 - Handicraft places: Grand Bazaar and Arasta Bazaar for carpets, ceramics, lamps and calligraphy; the Turkish and Islamic Arts Museum for historic craft examples.
 
-## Cappadocia (Göreme), Türkiye
+## Cappadocia, Türkiye
 
-Art and culture in Cappadocia (Göreme):
+Art and culture in Cappadocia:
 
 - Culture, art and music: Göreme Open-Air Museum.
 - Clothes, fashion and markets: Göreme town shops; Avanos market and pottery shops.
@@ -668,9 +668,9 @@ Art and culture in Lucknow:
 - Clothes, fashion and markets: Chowk; Aminabad; Hazratganj; Janpath Market.
 - Handicraft places: Chowk and Aminabad for Chikankari embroidery shops; Rifa-e-Aam Club and local artisan boutiques may host craft exhibitions; confirm current events.
 
-## Zanzibar City (Stone Town), Tanzania
+## Zanzibar City, Tanzania
 
-Art and culture in Zanzibar City (Stone Town):
+Art and culture in Zanzibar City:
 
 - Culture, art and music: Taarab music; Dhow Countries Music Academy; Palace Museum.
 - Clothes, fashion and markets: Darajani Market; Gizenga Street; Hurumzi Street shops.

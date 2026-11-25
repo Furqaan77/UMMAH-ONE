@@ -97,7 +97,7 @@ test("real index: 77 travel cities; question detection", { skip: !hasIndex && "r
   assert.equal(ratableCity(detectPlaces("Tell me about Konya", names), cities), "Konya");
   assert.equal(ratableCity(detectPlaces("Compare Bodrum and Fethiye", names), cities), null);
   assert.equal(ratableCity(detectPlaces("Which places are most enjoyable?", names), cities), null);
-  assert.equal(ratableCity(detectPlaces("Tell me about Stone Town", names), cities), "Zanzibar City (Stone Town)");
+  assert.equal(ratableCity(detectPlaces("Tell me about Stone Town", names), cities), "Zanzibar City");
 });
 
 test("bad bodies and comment edge cases", () => {

@@ -473,9 +473,9 @@ How easy it is to visit places in Istanbul (ease-of-visit score out of 10, easie
 19. Camlica Tower: 7.7/10, fairly easy.
 20. Princes' Islands: 7/10, fairly easy. Needs its own transfer or extra time; check road, boat or trail conditions first.
 
-## Cappadocia (Göreme), Türkiye
+## Cappadocia, Türkiye
 
-How easy it is to visit places in Cappadocia (Göreme) (ease-of-visit score out of 10, easiest first):
+How easy it is to visit places in Cappadocia (ease-of-visit score out of 10, easiest first):
 
 1. Göreme Open-Air Museum: 8.4/10, easy.
 2. Göreme town centre: 8.1/10, easy.
@@ -1694,9 +1694,9 @@ How easy it is to visit places in Lucknow (ease-of-visit score out of 10, easies
 19. Regional Science City: 6.9/10, needs planning.
 20. Dewa Sharif day trip: 6/10, needs planning. Needs its own transfer or extra time; check road, boat or trail conditions first.
 
-## Zanzibar City (Stone Town), Tanzania
+## Zanzibar City, Tanzania
 
-How easy it is to visit places in Zanzibar City (Stone Town) (ease-of-visit score out of 10, easiest first):
+How easy it is to visit places in Zanzibar City (ease-of-visit score out of 10, easiest first):
 
 1. Stone Town historic centre: 8.2/10, easy.
 2. House of Wonders exterior/area: 8.1/10, easy.

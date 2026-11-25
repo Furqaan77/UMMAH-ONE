@@ -270,9 +270,9 @@ What to buy in Istanbul (shopping and craft ideas):
 
 Where it comes from: Istanbul is a major retail hub, but İznik ceramics, Avanos pottery and other named regional crafts are not automatically Istanbul-made. Ask for the workshop location and avoid paying an Istanbul premium for a mass-produced imitation.
 
-## Cappadocia (Göreme), Türkiye
+## Cappadocia, Türkiye
 
-What to buy in Cappadocia (Göreme) (shopping and craft ideas):
+What to buy in Cappadocia (shopping and craft ideas):
 - Avanos red-clay pottery
 - Handwoven carpets
 - Onyx objects
@@ -1004,9 +1004,9 @@ What to buy in Lucknow (shopping and craft ideas):
 
 Where it comes from: Not confirmed by local buyers or makers yet: this is a shortlist of ideas, not proof the items are made here.
 
-## Zanzibar City (Stone Town), Tanzania
+## Zanzibar City, Tanzania
 
-What to buy in Zanzibar City (Stone Town) (shopping and craft ideas):
+What to buy in Zanzibar City (shopping and craft ideas):
 - Kanga cloth (East African regional textile; not Zanzibar-exclusive)
 - Kikoi cloth (East African coastal textile; verify where woven)
 - Zanzibar spices

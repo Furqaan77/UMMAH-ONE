@@ -119,9 +119,9 @@ Where to buy: Central bazaar.
 What to buy in Istanbul: Carpets, lamps, ceramics, gold, spices.
 Where to buy: Grand Bazaar, Spice Bazaar (Eminönü).
 
-## Cappadocia (Göreme), Türkiye
+## Cappadocia, Türkiye
 
-What to buy in Cappadocia (Göreme): Avanos pottery *(to verify)*.
+What to buy in Cappadocia: Avanos pottery *(to verify)*.
 Where to buy: Avanos *(to verify)*.
 
 ## Bodrum, Türkiye
@@ -359,9 +359,9 @@ Where to buy: Laad Bazaar, Pathergatti, Shilparamam arts and crafts village.
 What to buy in Lucknow: Chikankari embroidery.
 Where to buy: Chowk, Aminabad.
 
-## Zanzibar City (Stone Town), Tanzania
+## Zanzibar City, Tanzania
 
-What to buy in Zanzibar City (Stone Town): Spices (cloves, nutmeg, vanilla, cinnamon).
+What to buy in Zanzibar City: Spices (cloves, nutmeg, vanilla, cinnamon).
 Where to buy: Spice farms, Darajani Market.
 
 ## Antalya, Türkiye

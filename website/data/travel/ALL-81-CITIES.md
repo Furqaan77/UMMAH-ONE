@@ -817,7 +817,7 @@ The food alone is worth the trip. Think lavish Turkish breakfasts, smoky kebabs,
 
 ---
 
-## Cappadocia (Göreme), Türkiye
+## Cappadocia, Türkiye
 
 **Halal food and Islamic culture:** Halal food is standard across Türkiye, and village masjids in Göreme, Ürgüp, Avanos, and Nevşehir call the faithful to prayer five times a day.
 
@@ -3160,7 +3160,7 @@ It is very affordable, and it is a dream for food lovers. Lucknow's Awadhi cuisi
 
 # East Africa
 
-## Zanzibar City (Stone Town), Tanzania
+## Zanzibar City, Tanzania
 
 **Halal food and Islamic culture:** Zanzibar is almost entirely Muslim, so halal food is everywhere, and Stone Town's Swahili-Omani Islamic culture lives in its many masjids and Qur'an schools.
 
@@ -3176,7 +3176,7 @@ Stone Town is a labyrinth of history. Narrow alleys twist between coral-stone ho
 
 Zanzibar is mostly Muslim, so halal food is easy to find and the island feels welcoming for Muslim visitors—dress modestly in town, especially during Ramadan. It is moderately priced: local meals are cheap, while beach resorts and tours can be expensive. Food is a highlight, shaped by the spice trade: pilau, biryani, coconut curries, fresh seafood, and the famous Forodhani night market with its "Zanzibar pizza" and urojo soup. The long rains from roughly March to May are the quietest time to visit.
 
-### 20 Things to Do in Stone Town
+### 20 Things to Do in Zanzibar City
 
 1. Lose yourself in the alleys of Stone Town, looking out for its famous carved wooden doors.
 2. Eat Zanzibar pizza, seafood skewers, and sugarcane juice at the Forodhani Gardens night market.

@@ -13,6 +13,7 @@ Newest first. Each entry: what was done, the decisions taken (and by whom), and 
 - Removed from all chatbot data: Ohrid, Skopje, Tetovo (North Macedonia) and Bali. Now 77 cities, 28 countries. Jakarta and Algeria: waiting for Bushra's data.
 - Ingest: 733 chunks. Tests 105/105. Eval 98/99 (pass): "Where can I ski indoors?" no longer finds Dubai (new text says "home to Ski Dubai").
 - The questionnaire now shows Dubai's 28 new places.
+- City names shortened (Bushra): "Cappadocia (Göreme)" → Cappadocia, "Zanzibar City (Stone Town)" → Zanzibar City. Places inside the text (Göreme Open-Air Museum, Stone Town alleys) are unchanged; "Göreme" and "Stone Town" still find the city in search.
 - Dubai description (the open text above the headings) now includes its food sentences, moved up from the third paragraph (Bushra).
 
 ## 24 Nov 2026 (Windows PC)
