@@ -7,7 +7,8 @@ The original documents behind the chatbot data. Kept here so every machine has t
 | File | What it is | Used in the chatbot? |
 |---|---|---|
 | `Halal Travel — 81 City Guides.pdf` | The 81 city guides | Yes, as `website/data/travel/ALL-81-CITIES.md` |
-| `Halal Food — 81 Cities.pdf` | Halal food for 81 cities | **No.** Bushra's decision (12 Nov): keep the PDF, keep it out of the chatbot |
+| `Halal Food — 81 Cities.pdf` | Halal food for 81 cities | **No.** Bushra's decision (12 Nov): keep the PDF, keep it out of the chatbot. Replaced by the Expanded Food Companion below |
+| `Ummah_One_Expanded_Halal_Food_Companion.pdf` | Food for 81 places: 5 dishes, more to try, where to eat, a tip (26 Nov 2026) | Yes, as "### Food in <city>" in `website/data/travel/ALL-81-CITIES.md` (76 cities; Dubai keeps its 15 cuisines; Bali and Algeria not added; horse meat, kymyz, black risotto, buzara and venues flagged for alcohol taken out) |
 | `University Cities — 18 Cities, 10 Priorities.pdf` | The original University City Compass (scores out of 5) | Source of Part 2 |
 | `University-Cities-18-Cities-10-Priorities.md` | The same, with scores doubled to /10 | Draft |
 | `University-Cities-Rated-out-of-10.pdf` | Rated on Bushra's 10 criteria (12 scores changed) | Yes, as `website/data/education/university-city-compass.md` |

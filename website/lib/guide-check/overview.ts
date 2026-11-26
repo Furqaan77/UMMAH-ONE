@@ -23,7 +23,7 @@ export function cityOverview(g: CityGuide): string {
   const parts: string[] = [];
   if (g.intro) parts.push(g.intro);
   if (g.things.length) parts.push(`## Places to visit\n\n${list(g.things)}`);
-  if (g.food.length) parts.push(`## Food\n\n${list(g.food)}`);
+  if (g.food.length) parts.push([`## Food\n\n${list(g.food)}`, ...(g.foodNotes ?? [])].join("\n\n"));
   if (g.buy.length) parts.push(`## Shopping\n\n${list(g.buy)}`);
   if (g.vibe.length) parts.push(`## Vibe\n\n${list(g.vibe)}`);
   parts.push("Open a heading to see more. Check official travel advice before you go.");

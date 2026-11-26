@@ -4,6 +4,15 @@ Newest first. Each entry: what was done, the decisions taken (and by whom), and 
 
 ---
 
+## 26 Nov 2026 (Windows PC)
+
+**Food for every city, from Bushra's PDF (Bushra: "use this")**
+- Source: `sources/Ummah_One_Expanded_Halal_Food_Companion.pdf`. Each city in `ALL-81-CITIES.md` now has "### Food in <city>": 5 dishes, "Also try", **Where to eat** and a **Tip**.
+- 76 cities added. Dubai keeps Bushra's 15 cuisines (question asked). Bali skipped (removed). Algiers, Oran and Constantine waiting: Algeria has no city data yet.
+- Halal: left out horse meat (kazy: Almaty, Astana, Kazan), kymyz (Turkistan, Bishkek), black risotto and buzara (Kotor), and 8 venues the PDF flags for alcohol or fermentation (Vefa Bozacısı, two konobas, La Table by Madada, Dinarjat, Dar El Jeld, Platan, Qazaq Gourmet). 6 tips reworded so they keep the warning without naming those foods.
+- The "Tell me about <city>" reply now shows the Food heading for all cities, with where to eat and the tip.
+- Ingest rebuilt. Tests 105/105. Eval 98/99 (same miss: indoor skiing). Spec: `_bmad-output/implementation-artifacts/spec-city-food-guide.md`.
+
 ## 25 Nov 2026 (Windows PC)
 
 **City replies with closed headings; Dubai update; country order; 4 cities removed (Bushra's answers in chat)**

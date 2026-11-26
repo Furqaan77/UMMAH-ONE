@@ -108,6 +108,19 @@ The food scene mixes Emirati tradition with the whole Arab and South Asian world
 19. Watch craftspeople at work in the Heritage Village on the Breakwater.
 20. Meet sea turtles, penguins, and dolphins at SeaWorld Yas Island.
 
+### Food in Abu Dhabi
+
+1. Thareed — tender meat and vegetables layered over broth-soaked flatbread.
+2. Balaleet — sweet saffron vermicelli crowned with a savoury omelette; breakfast royalty.
+3. Grilled hammour — the Gulf's beloved grouper, simply grilled with lemon and spices.
+4. Harees — Abu Dhabi's heritage wheat dish, slow-beaten until creamy.
+5. Dates and gahwa — fresh khalas dates with cardamom coffee, the eternal welcome.
+6. Also try: Luqaimat; chebab; machboos; saloona (vegetable and meat stew)
+
+**Where to eat:** Al Fanar (machboos, harees); Meylas (Emirati breakfast and heritage dishes); Mina Fish Market (choose fish and arrange cooking). Check the dish, opening times and halal status before you go.
+
+**Tip:** Mina seafood is more distinctive than mall dining; agree cooking fee and fish weight first.
+
 ---
 
 ## Sharjah, UAE
@@ -148,6 +161,19 @@ Food here is simple and satisfying: shawarma and grilled meats from Syrian and L
 18. Visit the Sharjah International Book Fair, one of the largest in the world (each November).
 19. Buy fresh fish and dates at the Souq Al Jubail market.
 20. Feast on shawarma, mixed grills, and kunafa at the city's Levantine restaurants.
+
+### Food in Sharjah
+
+1. Chebab — Emirati saffron pancakes served with cream cheese and date syrup.
+2. Machboos samak — spiced fish rice, the coastal Emirati staple.
+3. Samboosa — crisp triangular pastries, the Gulf's answer to the samosa.
+4. Regag bread — paper-thin crispy bread from heritage souk griddles.
+5. Karak tea — strong, sweet, milky tea; Sharjah runs on it.
+6. Also try: Balaleet; luqaimat; harees; Pakistani grills and Syrian pastries.
+
+**Where to eat:** Arabian Tea House (breakfast, chebab); Al Fanar (machboos and Emirati dishes); Al Amoor (Egyptian ful and falafel). Check the dish, opening times and halal status before you go.
+
+**Tip:** Try heritage breakfast around Heart of Sharjah; karak alone is not a special culinary outing.
 
 ---
 
@@ -192,6 +218,19 @@ Food leans on the oasis: sweet AlUla dates, citrus, and slow-cooked Saudi dishes
 19. See large-scale desert art at Desert X AlUla when the exhibition is running.
 20. Take a day trip to Khaybar to see its historic oasis and ancient fortifications.
 
+### Food in AlUla
+
+1. Kabsa — Saudi Arabia's iconic spiced rice with chicken or lamb.
+2. Jareesh — crushed-wheat porridge with yoghurt and caramelised onions.
+3. Margoog — hearty stew with torn flatbread simmered into the sauce.
+4. AlUla dates — fresh from the oasis, among the finest in the Kingdom.
+5. Saudi coffee with cardamom — poured endlessly in every majlis.
+6. Also try: Oasis oranges (seasonal); traditional breads; lamb mandi.
+
+**Where to eat:** Tofareya (traditional Saudi cuisine); Suhail (Saudi regional dishes). Check the dish, opening times and halal status before you go.
+
+**Tip:** Prioritise oasis produce and old-town Saudi cooking; destination restaurants may be expensive and seasonal.
+
 ---
 
 ## Jeddah, Saudi Arabia
@@ -232,6 +271,19 @@ The food is a highlight. Hejazi breakfasts of foul and warm tamees bread, flaky 
 18. Experience Ramadan nights in Al-Balad, when the old quarter fills with lanterns, food stalls, and families.
 19. Watch the Saudi Arabian Grand Prix on the Jeddah Corniche Circuit (held each spring).
 20. Take a day trip to Taif to ride the Al Hada cable car and visit the rose farms.
+
+### Food in Jeddah
+
+1. Saleeg — Hejazi creamy white rice cooked in milk and broth, topped with chicken.
+2. Mutabbaq — the famous stuffed pancake of the old town, sweet or savoury.
+3. Sayadieh — spiced fish and rice from the Red Sea catch.
+4. Ful and tamees — fava beans with fluffy tandoor flatbread, Jeddah's breakfast.
+5. Grilled Red Sea shrimp — straight from the fish market to the grill.
+6. Also try: Hejaz-style rice bukhari; masoub (banana and bread); manto dumplings; sambousak.
+
+**Where to eat:** Al Saddah (rice and meat dishes); Al Baik (fried chicken and shrimp); Twina Seafood (seafood); Foul Tamees shops in Al Balad (breakfast). Check the dish, opening times and halal status before you go.
+
+**Tip:** Start with ful and tamees in Al Balad; fried chicken is popular but less distinctive than Hejazi seafood.
 
 ---
 
@@ -274,6 +326,19 @@ Food is rooted in Najdi tradition: generous platters of kabsa, comforting jarees
 19. See art studios and exhibitions in Diriyah's JAX District.
 20. Spend an evening at Via Riyadh or along Tahlia Street for dinner and people-watching.
 
+### Food in Riyadh
+
+1. Najdi kabsa — the capital's definitive plate of spiced rice and meat.
+2. Jareesh — crushed wheat with yoghurt, beloved Najdi comfort food.
+3. Matazeez — hand-pressed wheat dumplings in rich tomato-meat sauce.
+4. Kleeja — cardamom-spiced wheat cookies from Qassim, perfect with coffee.
+5. Gursan — thin bread soaked in meat broth until silky.
+6. Also try: Margoog; haneeth; hanini (dates and wheat); Saudi coffee.
+
+**Where to eat:** Najd Village (jareesh, matazeez, traditional Najdi plates); Al Romansiah (kabsa and rice dishes); Al Najdiyah Village (Najdi cuisine). Check the dish, opening times and halal status before you go.
+
+**Tip:** Choose a Najdi sampler rather than multiple near-identical rice meals.
+
 ---
 
 ## Abha, Saudi Arabia
@@ -314,6 +379,19 @@ The food is hearty highland fare. Look for areeka, a rich dough dish soaked in g
 18. Buy Asiri honey straight from local beekeepers.
 19. Hike the trails around Al Soudah through clouds and juniper.
 20. Escape the summer heat in Abha's cool mountain air, when the city fills with Saudi families.
+
+### Food in Abha
+
+1. Haneeth — lamb slow-roasted in an underground pit with mountain herbs.
+2. Areeka — warm mashed bread with ghee, dates, and honey — Asir's dessert crown.
+3. Aseeda — soft wheat dough with ghee and honey, eaten by hand.
+4. Mifa bread — griddled Asiri flatbread with ghee.
+5. Asiri honey — prized mountain honey, best over fresh bread and cream.
+6. Also try: Tasabea (milk-based dough dish); southern mandi; date and honey bread.
+
+**Where to eat:** Al Romansiah (rice and lamb); local haneeth ovens (slow-roasted meat); Tuesday Market honey sellers (Asiri honey). Check the dish, opening times and halal status before you go.
+
+**Tip:** Regional haneeth and areeka are more worthwhile than generic kabsa; ask for local honey origin.
 
 ---
 
@@ -358,6 +436,19 @@ Food centres on the oasis harvest: Khalas dates, Hasawi red rice, and generous r
 19. Picnic in Jawatha Park among the palms near the masjid site.
 20. Join the crowds at the Al Ahsa Dates Festival during harvest season.
 
+### Food in Al Ahsa
+
+1. Hassawi red rice — the oasis's own rice, nutty and aromatic, with chicken or fish.
+2. Khalas dates — the famous soft caramel dates of the oasis.
+3. Machboos dajaj — spiced chicken rice, eastern-province style.
+4. Maamoul — date-filled semolina cookies from the souk ovens.
+5. Kleeja hassawiya — the oasis's spiced biscuit with coffee.
+6. Also try: Hassawi bread; date molasses; local citrus in season.
+
+**Where to eat:** Al Qaisariya Souq (dates and traditional bakeries); local Hassawi rice kitchens (red rice by advance request). Check the dish, opening times and halal status before you go.
+
+**Tip:** Red rice is the essential local target; do not assume standard restaurant rice is Hassawi.
+
 ---
 
 ## Dammam, Saudi Arabia
@@ -398,6 +489,19 @@ Being on the Gulf, seafood is the star: hamour, safi, and shrimp, often served w
 18. Hop between Khobar's specialty coffee shops along Prince Turki Street.
 19. Shop at Al Rashid Mall or the Mall of Dhahran.
 20. Take a day trip to Jubail to swim at Al Fanateer Beach.
+
+### Food in Dammam
+
+1. Shrimp machboos — Gulf shrimp over spiced rice, the coast on a plate.
+2. Grilled hammour — fresh grouper from the fish market.
+3. Kabsa — the national dish, done eastern style.
+4. Harees — creamy wheat and meat, a Ramadan favourite.
+5. Luqaimat — syrup-drenched dough balls from corniche stalls.
+6. Also try: Sayadieh; grilled shrimp; eastern Saudi rice dishes.
+
+**Where to eat:** Al Romansiah (kabsa); Dammam fish market (fresh fish and nearby grills); Al Sanbok (Al Khobar) (seafood, verify preparation). Check the dish, opening times and halal status before you go.
+
+**Tip:** Travel to nearby Khobar only if seafood is a priority; compare fish by weight.
 
 ---
 
@@ -442,6 +546,19 @@ The food scene is a delight, and everything is halal. Try Qatari machboos, haree
 19. Walk Lusail Boulevard and the colourful Old Doha Port at Mina District.
 20. Try Qatari dishes such as machboos, harees, balaleet and luqaimat, finished with a cup of karak.
 
+### Food in Doha
+
+1. Machboos — Qatar's spiced rice national dish with chicken, lamb, or fish.
+2. Harees — velvet-smooth wheat and chicken, a heritage dish.
+3. Thareed — bread soaked in rich stew, the "Qatari lasagna.".
+4. Luqaimat — crisp syrup dumplings, Souq Waqif's favourite sweet.
+5. Karak tea — the spiced milk tea that fuels Doha's evenings.
+6. Also try: Madrouba (slow-cooked rice porridge); balaleet; regag; Qatari saloona.
+
+**Where to eat:** Shay Al Shomoos (traditional breakfast); Jiwan (contemporary Qatari cuisine); Al Jasra Traditional Food (heritage plates); Chapati & Karak (tea and chapati). Check the dish, opening times and halal status before you go.
+
+**Tip:** Souq Waqif is atmospheric but compare prices with neighbourhood eateries.
+
 ---
 
 ## Muscat, Oman
@@ -482,6 +599,19 @@ Food is hearty and fragrant. Look for shuwa (slow-roasted marinated meat), mashu
 18. Explore the terraced villages of Jebel Akhdar, especially during the spring rose season.
 19. Spend a night in a desert camp in the Wahiba Sands.
 20. Try Omani classics such as shuwa, mashuai, harees and Omani halwa with a cup of qahwa.
+
+### Food in Muscat
+
+1. Shuwa — lamb marinated and slow-cooked underground for a day; Oman's pride.
+2. Mashuai — roast kingfish with lemon rice.
+3. Mishkak — charcoal-grilled marinated beef skewers, Omani street food.
+4. Omani halwa — saffron-rosewater confection served with coffee.
+5. Kahwa — pale cardamom coffee, poured as a welcome everywhere.
+6. Also try: Omani bread; qabooli (spiced rice); maqbous; Omani seafood curry.
+
+**Where to eat:** Bait Al Luban (Omani regional dishes); Ubhar (modern Omani cooking); Mutrah fish market (fish); Al Diwaniya Omani Sweets (halwa). Check the dish, opening times and halal status before you go.
+
+**Tip:** Shuwa may need advance ordering; do not mistake ordinary grilled lamb for pit-cooked shuwa.
 
 ---
 
@@ -524,6 +654,19 @@ Food is simple and satisfying: grilled fish, mishkak skewers, fresh coconut wate
 19. Venture into the dunes of the Rub' al Khali on an overnight desert trip.
 20. Try Dhofari favourites such as mishkak, grilled kingfish, shuwa and fresh camel milk.
 
+### Food in Salalah
+
+1. Madhbi — meat grilled on hot river stones, Dhofar's signature.
+2. Camel mishkak — tender camel skewers, a local delicacy.
+3. Shuwa — the slow pit-roasted lamb of festive Dhofar.
+4. Coconut everything — fresh coconut from roadside stalls in this tropical corner.
+5. Dhofari halwa — rich with ghee and nuts, served with bitter coffee.
+6. Also try: Dhofari dried fish; local bananas and papaya; coconut water; camel meat.
+
+**Where to eat:** Bin Ateeq (Omani traditional food); local madhbi grills in Salalah (stone-cooked meat); Al Haffa fruit stalls (tropical fruit). Check the dish, opening times and halal status before you go.
+
+**Tip:** Madhbi and fruit stalls beat generic resort buffets; check seasonal fruit availability.
+
 ---
 
 ## Manama, Bahrain
@@ -564,6 +707,19 @@ Bahraini cuisine is a quiet star. Look for machboos, muhammar (sweet saffron ric
 18. Walk the waterfront at Bahrain Bay with views of the Bahrain World Trade Center.
 19. Catch a performance at the striking Bahrain National Theatre beside the museum.
 20. Try Bahraini dishes such as machboos, muhammar with grilled fish, and gahwa with dates.
+
+### Food in Manama
+
+1. Machboos — Bahrain's spiced rice, the everyday national dish.
+2. Muhammar — sweet rice served with fried fish; sweet-savoury magic.
+3. Bamia — okra and lamb stew, comfort in a bowl.
+4. Samboosa — crisp pastries from the Manama Souq stalls.
+5. Bahraini halwa — sticky saffron sweet from the old sweet shops of Muharraq.
+6. Also try: Balaleet; tikka Bahraini; khanfaroosh (sweet fritters); khubz.
+
+**Where to eat:** Haji's Cafe (Bahraini breakfast); Emmawash (breakfast and traditional plates); Showaiter sweet shops in Muharraq (halwa). Check the dish, opening times and halal status before you go.
+
+**Tip:** Muharraq halwa and old souq breakfast are more memorable than international mall food.
 
 ---
 
@@ -606,6 +762,19 @@ Kuwaitis love to eat, and the restaurant scene is huge. Try machboos, mutabbaq s
 19. Take a ferry to Failaka Island to see its Bronze Age and Hellenistic ruins.
 20. Try Kuwaiti dishes such as machboos, mutabbaq samak, quzi and gabout.
 
+### Food in Kuwait City
+
+1. Machboos zubaidi — spiced rice with the beloved pomfret fish.
+2. Mutabbaq samak — slow-cooked fish over caramelised onion rice.
+3. Gers ogaily — saffron and cardamom sponge cake with sesame.
+4. Gabout — flour dumplings stuffed with meat in broth.
+5. Harees — smooth wheat porridge, the taste of Kuwaiti Ramadan.
+6. Also try: Murabyan (shrimp rice); tashreeb; mutabbaq fish; balaleet.
+
+**Where to eat:** Freej Swaileh (Kuwaiti home-style dishes); Dar Hamad (premium Kuwaiti cooking); Souq Al Mubarakiya (fish and sweets). Check the dish, opening times and halal status before you go.
+
+**Tip:** Prioritise seafood rice and souq dining; expensive modern cafes rarely add culinary value.
+
 ---
 
 ## Amman, Jordan
@@ -647,6 +816,19 @@ The food is pure comfort. Jordan's national dish, mansaf—lamb cooked in fermen
 19. Watch the sun set over the city from the terrace of the Wild Jordan Center.
 20. Try Jordanian dishes such as mansaf, maqluba, musakhan and mujaddara.
 
+### Food in Amman
+
+1. Mansaf — Jordan's national dish: lamb in fermented yoghurt sauce over rice.
+2. Hashem's falafel — the legendary downtown falafel and hummus feast.
+3. Habibah's knafeh — hot cheese pastry worth the queue.
+4. Musakhan — sumac chicken over taboon bread with caramelised onions.
+5. Maqluba — the "upside-down" rice, flipped theatrically at the table.
+6. Also try: Galayet bandora (tomato skillet); mutabbal; arayes; qatayef (seasonal)
+
+**Where to eat:** Hashem (falafel, hummus); Habibah Sweets (knafeh); Sufra (Jordanian plates); Al Quds Restaurant (mansaf). Check the dish, opening times and halal status before you go.
+
+**Tip:** Eat downtown breakfast and knafeh, then a proper mansaf; avoid over-ordering mezze.
+
 ---
 
 ## Aqaba, Jordan
@@ -687,6 +869,19 @@ Seafood is the star here. Try sayadieh, Aqaba's signature dish of spiced fish ov
 18. Explore Little Petra (Siq al-Barid), a quieter Nabataean site just north of Petra.
 19. Eat at Aqaba's fish restaurants, choosing the catch fresh and having it grilled your way.
 20. Try sayadieh, the city's classic fish-and-rice dish, served with tahini sauce and toasted pine nuts.
+
+### Food in Aqaba
+
+1. Sayadieh — Aqaba's signature: spiced fish over caramelised onion rice.
+2. Grilled Red Sea fish — choose it at the market, eat it by the water.
+3. Mixed grill mezze — kebabs, hummus, and fresh bread by the marina.
+4. Mansaf — the national dish, served in the town's Jordanian kitchens.
+5. Knafeh — the perfect finish after a day on the reef.
+6. Also try: Aqawi fish preparations; shrimp; sesame bread; Arabic ice cream.
+
+**Where to eat:** Ali Baba Restaurant (seafood and grills); Al-Shami Restaurant (Levantine grills); downtown fish shops (sayadieh by request). Check the dish, opening times and halal status before you go.
+
+**Tip:** Ask whether fish is local, frozen or imported; marina views alone do not justify a premium.
 
 ---
 
@@ -731,6 +926,19 @@ Azerbaijani food is generous and fragrant. Try shah plov baked in a crisp lavash
 19. Take a day trip to Shamakhi to see its historic Juma Masjid, one of the oldest in the Caucasus.
 20. Try Azerbaijani dishes such as shah plov, dushbara, qutab, dolma and lyulya kebab.
 
+### Food in Baku
+
+1. Shah plov — saffron rice with lamb, dried fruit, and chestnuts under a bread crust.
+2. Qutab — thin griddled pancakes stuffed with greens or meat.
+3. Dushbara — tiny lamb dumplings in clear broth, a spoonful each.
+4. Lyulya kebab — minced lamb grilled on wide skewers over coals.
+5. Pakhlava — Baku's diamond-cut baklava with saffron and nuts.
+6. Also try: Piti (lamb and chickpea stew, Sheki origin); dolma; saj; gutab with herbs.
+
+**Where to eat:** Firuze (Azerbaijani dishes); Dolma Restaurant (dolma and national dishes); Shirvanshah Museum Restaurant (traditional menu). Check the dish, opening times and halal status before you go.
+
+**Tip:** Try qutab and plov; reserve premium heritage interiors for one meal and check alcohol service.
+
 ---
 
 ## Ganja, Azerbaijan
@@ -771,6 +979,19 @@ The food is classic Azerbaijani home cooking: plov, dolma, piti, tandir bread an
 18. Take a day trip to Naftalan, famous for its unusual therapeutic oil baths.
 19. Take a longer day trip to Sheki to see the Palace of the Sheki Khans and its caravanserai.
 20. Try Azerbaijani dishes such as plov, piti, dolma and tandir bread fresh from the oven.
+
+### Food in Ganja
+
+1. Dovga — warm yoghurt soup with herbs and rice, Ganja's comfort bowl.
+2. Dushbara — tiny dumplings, said to be best in Ganja.
+3. Kufta-bozbash — giant meatball soup with chickpeas and plum.
+4. Lula kebab — smoky minced lamb with lavash and sumac onions.
+5. Ganja pakhlava — local-style layered nut pastry.
+6. Also try: Ganja-style dovga; local plov; seasonal fruit and preserves.
+
+**Where to eat:** Ganja central bazaar (pastry and produce); local Azerbaijani kitchens (dovga, kebabs); Ganja pakhlava bakeries (sweets). Check the dish, opening times and halal status before you go.
+
+**Tip:** Seek a local bakery rather than relying on hotel menus; named restaurant menus remain a gap.
 
 # Türkiye
 
@@ -815,6 +1036,19 @@ The food alone is worth the trip. Think lavish Turkish breakfasts, smoky kebabs,
 19. Visit the elegant Ortaköy Masjid beneath the Bosphorus Bridge and try a loaded kumpir baked potato.
 20. Take a ferry to Büyükada, the largest of the Princes' Islands, for quiet lanes and sea air.
 
+### Food in Istanbul
+
+1. Turkish breakfast — a feast of cheeses, olives, honey, kaymak, eggs, and endless tea.
+2. Döner kebab — the vertical rotisserie that conquered the world, a major Turkish specialty.
+3. Balik ekmek — grilled fish sandwich by the Galata Bridge.
+4. Simit — sesame-crusted bread rings, Istanbul's daily bread.
+5. Baklava — Karaköy's pistachio layers, the city's sweetest legacy.
+6. Also try: Lahmacun; pide; kuru fasulye; kokoreç (if comfortable with offal); sütlaç; profiteroles; Turkish ice cream.
+
+**Where to eat:** Karaköy Güllüoğlu (baklava); Tarihi Sultanahmet Köftecisi (köfte); Hamdi (kebabs); Çiya Sofrası (regional Anatolian cooking); Hafiz Mustafa (sweets). Check the dish, opening times and halal status before you go.
+
+**Tip:** Cross to Kadıköy for regional dishes; avoid inflated breakfast spreads and compare fish-sandwich quality.
+
 ---
 
 ## Cappadocia, Türkiye
@@ -855,6 +1089,19 @@ Local food is hearty and rustic: testi kebab cooked in a sealed clay pot, mantı
 18. Visit Ürgüp's old stone mansions and the famous Three Graces (Üç Güzeller) fairy chimneys.
 19. Crack open a sizzling testi kebab at your table.
 20. Sample Kayseri-style mantı and pastırma in a local restaurant.
+
+### Food in Cappadocia
+
+1. Testi kebab — meat and vegetables slow-cooked in a sealed clay pot, cracked open at your table.
+2. Manti — tiny Anatolian dumplings with yoghurt and chilli butter.
+3. Gözleme — hand-rolled flatbread stuffed with cheese and greens.
+4. Pottery beans — kuru fasulye baked in clay pots, a village classic.
+5. Dried apricot desserts — from the region's famous orchards.
+6. Also try: Nevşehir tava (baked meat and vegetables); pumpkin seeds; stuffed vine leaves.
+
+**Where to eat:** Dibek (testi kebab); Topdeck Cave Restaurant (Anatolian home-style dishes); local gözleme stalls (flatbread). Check the dish, opening times and halal status before you go.
+
+**Tip:** Preorder genuine slow-cooked testi kebab; some tourist versions prioritise the pot-breaking show.
 
 ---
 
@@ -897,6 +1144,19 @@ The food is fresh and simple: grilled fish, şiş köfte, and Antalya's own piya
 19. Try Antalya's tahini-dressed piyaz alongside a plate of şiş köfte.
 20. Drink fresh-pressed orange or pomegranate juice from a street stall in the old town.
 
+### Food in Antalya
+
+1. Antalya piyaz — white bean salad with tahini, unique to this city.
+2. Şiş köfte — Antalya's grilled minced-meat skewers.
+3. Hibeş — lemony tahini-cumin meze of the Mediterranean coast.
+4. Tandır kebab — slow-roasted lamb falling off the bone.
+5. Kabak tatlısı — candied pumpkin with tahini and walnuts.
+6. Also try: Serpme börek (hand-stretched pastry); tahini pumpkin dessert; regional orange preserves.
+
+**Where to eat:** 7 Mehmet (regional Turkish cooking); Piyazcı Ahmet (piyaz and köfte); Börekçi Tevfik (börek). Check the dish, opening times and halal status before you go.
+
+**Tip:** Tahini piyaz paired with şiş köfte is the real priority; beachfront menus often cost more.
+
 ---
 
 ## Bodrum, Türkiye
@@ -937,6 +1197,19 @@ The food is Aegean through and through: olive oil-soaked vegetables, wild herbs,
 18. Taste Bodrum's famous mandarins in winter, fresh or as jam.
 19. Try çökertme kebabı and a spread of Aegean olive oil mezes.
 20. Take a ferry to the Greek island of Kos, if your visa allows it.
+
+### Food in Bodrum
+
+1. Çökertme kebabı — Bodrum's own: veal strips over crispy potatoes with garlic yoghurt.
+2. Grilled Aegean fish — levrek or çipura, simply grilled at the marina.
+3. Aegean mezes — herb salads, octopus, and olive-oil dishes.
+4. Gözleme — village griddled flatbreads at the markets.
+5. Mandarin lokma — syrup doughnuts scented with Bodrum mandarins.
+6. Also try: Kabak çiçeği dolması (stuffed squash blossoms); wild herb dishes; Bodrum mandarin products.
+
+**Where to eat:** Kısmet Lokantası (home-style Aegean dishes); Bodrum market (gözleme and seasonal herbs); local fish restaurants (grilled fish). Check the dish, opening times and halal status before you go.
+
+**Tip:** Ask about wine in seafood sauces; modest lokantas may offer more local variety than marina restaurants.
 
 ---
 
@@ -979,6 +1252,19 @@ Food is honest and homely: gözleme, village breakfasts, and in nearby Denizli, 
 19. Try Denizli kebabı, slow-cooked lamb served on thin bread, in nearby Denizli.
 20. Eat freshly made gözleme and drink cold ayran at a family restaurant in the village.
 
+### Food in Pamukkale
+
+1. Denizli tandır kebab — pit-roasted lamb, famous across Türkiye.
+2. Keşkek — ceremonial wheat-and-meat paste, UNESCO-listed heritage.
+3. Çöp şiş — tiny grilled skewers from the region's barbecue houses.
+4. Bazlama — fluffy village flatbread with butter and cheese.
+5. Village breakfast — farmhouse spreads in the valleys around the travertines.
+6. Also try: Denizli kebabı; local grapes; tahini pide.
+
+**Where to eat:** Kebapçı Enver (Denizli) (Denizli lamb kebab); Denizli Bayramyeri kebab shops (lamb); village breakfast kitchens (breads). Check the dish, opening times and halal status before you go.
+
+**Tip:** Go into Denizli for kebab rather than relying on travertine tourist menus.
+
 ---
 
 ## Fethiye, Türkiye
@@ -1019,6 +1305,19 @@ The signature food experience is the fish market: choose your catch at the centr
 18. Browse the old Paspatur bazaar quarter in the town centre.
 19. Sail the green, sheltered bays around Göcek.
 20. Embark on a multi-day "Blue Voyage" gulet cruise along the Lycian coast.
+
+### Food in Fethiye
+
+1. Fish market dinner — pick your fish, the surrounding restaurants grill it.
+2. Grilled calamari — Fethiye's kalamar is famous.
+3. Pide — canoe-shaped Turkish pizza from wood ovens.
+4. Gözleme — made by village women at roadside stands.
+5. Fresh mezes — olive-oil vegetables and yoghurt dips of the Lycian coast.
+6. Also try: Çıntar mushrooms (seasonal); stuffed squash blossoms; tahini pide.
+
+**Where to eat:** Fethiye Fish Market (select fish and cooking restaurant); Mozaik Bahçe (southeastern Turkish plates); village gözleme stalls (flatbread). Check the dish, opening times and halal status before you go.
+
+**Tip:** Agree fish price and separate cooking charge; market is more interesting than international resort meals.
 
 ---
 
@@ -1061,6 +1360,19 @@ Izmir's food is distinctive. Breakfast means boyoz, a flaky pastry brought by th
 19. Visit Foça, a quiet fishing town known for its rare Mediterranean monk seals.
 20. Stroll Kültürpark, the city's big green park in the centre of Izmir.
 
+### Food in Izmir
+
+1. Boyoz — flaky, buttery pastry, Izmir's breakfast icon.
+2. Kumru — the famous sesame-bread sandwich of Çeşme.
+3. İzmir köfte — meatballs baked with tomato and peppers.
+4. Gevrek — Izmir's crispier answer to simit, with tea on the Kordon.
+5. Şambali — semolina-almond street dessert with clotted cream.
+6. Also try: Söğüş (cold chopped offal); lokma; stuffed mussels with halal checks; şevketibostan (wild thistle)
+
+**Where to eat:** Dostlar Fırını (boyoz); Kemeraltı söğüş shops (offal); Hisarönü Şambalicisi (şambali); kumru shops in Kemeraltı (sandwiches). Check the dish, opening times and halal status before you go.
+
+**Tip:** Boyoz and şambali are highly distinctive; processed meats in kumru need sourcing checks.
+
 ---
 
 ## Trabzon, Türkiye
@@ -1101,6 +1413,19 @@ The food is famously hearty. Try Akçaabat köfte, buttery Trabzon pide, kuymak 
 18. Walk around peaceful Sera Lake on the edge of the city.
 19. Take a day trip to Karaca Cave, full of colourful stalactites.
 20. Take a day trip to Rize's tea plantations and the hot springs of the Ayder Plateau.
+
+### Food in Trabzon
+
+1. Akçaabat köfte — garlicky grilled meatballs, the region's pride.
+2. Kuymak (mıhlama) — molten cheese and cornmeal, stretched gloriously.
+3. Hamsi — Black Sea anchovies, fried, grilled, or baked in rice.
+4. Trabzon pidesi — boat-shaped pide with butter and egg.
+5. Laz böreği — custard-filled pastry, the sweet of the Black Sea.
+6. Also try: Hamsili pilav; karalahana soup; Akçaabat meatballs; Hamsiköy sütlaç.
+
+**Where to eat:** Nihat Usta (Akçaabat) (köfte); Cemilusta (Akçaabat köfte and regional food); Hamsiköy sütlaç shops (rice pudding). Check the dish, opening times and halal status before you go.
+
+**Tip:** Anchovies are seasonal; don't pay a premium for purported fresh hamsi out of season.
 
 ---
 
@@ -1145,6 +1470,19 @@ Bursa is the birthplace of İskender kebab: thin slices of döner over bread, dr
 19. Take a day trip to İznik, famous for its tiles and its own Hagia Sophia masjid.
 20. Spend an afternoon by the sea in the coastal town of Mudanya.
 
+### Food in Bursa
+
+1. İskender kebab — döner over bread with tomato sauce and browned butter, invented here.
+2. Cantık — Bursa's small meat pide.
+3. Kestane şekeri — candied chestnuts, the city's sweet symbol.
+4. Kemalpaşa tatlısı — syrupy cheese dessert of the Bursa region.
+5. Village breakfast in Cumalıkızık — homemade everything in a 700-year-old village.
+6. Also try: Tahinli pide; süt helvası (baked milk dessert); İnegöl köfte.
+
+**Where to eat:** Kebapçı İskender (İskender); Pideli Köfteci (Kayhan-style meatballs); Kafkas (candied chestnuts); Cumalıkızık breakfast houses (breakfast). Check the dish, opening times and halal status before you go.
+
+**Tip:** One excellent İskender beats multiple generic kebabs; village breakfast is atmospheric but tourist-priced.
+
 ---
 
 ## Marmaris, Türkiye
@@ -1186,6 +1524,19 @@ Fresh seafood, grilled meats, and Aegean olive oil dishes fill the menus, but th
 19. Hike or cycle in Marmaris National Park.
 20. Buy a jar of Marmaris pine honey to take home.
 
+### Food in Marmaris
+
+1. Grilled sea bream — harbour-fresh, by the marina.
+2. Pine honey — Marmaris produces most of Türkiye's famous pine honey.
+3. Köfte — grilled meatballs in the old-town lokantas.
+4. Pide and lahmacun — wood-fired favourites after boat days.
+5. Meze spreads — olive-oil dishes and salads with pine-scented air.
+6. Also try: Muğla köftesi; local pine honey with yoghurt; Aegean herb meze.
+
+**Where to eat:** Marmaris covered bazaar and local lokantas (köfte, pide); local honey producers (pine honey); waterfront fish kitchens (fish). Check the dish, opening times and halal status before you go.
+
+**Tip:** Buy honey from traceable producers; marina meals are often about location rather than local food.
+
 ---
 
 ## Alanya, Türkiye
@@ -1226,6 +1577,19 @@ Alanya's Seljuk heritage gives it real depth: the Red Tower and the medieval shi
 18. Take a day trip to the Manavgat Waterfall and its local market.
 19. Stroll the harbour in the evening as the castle lights up.
 20. Taste Alanya's small, sweet local bananas from a roadside stall.
+
+### Food in Alanya
+
+1. Grilled fish — straight off the harbour boats.
+2. Gözleme — cheese-and-potato flatbreads of the Taurus villages.
+3. Alanya köfte — local grilled meatballs with mountain herbs.
+4. Fresh pomegranate and orange juice — from the region's orchards.
+5. Baklava — pistachio layers at the harbour patisseries.
+6. Also try: Gülüklü soup (chicken and meatball soup); Alanya bohçası; avocado and tropical fruit.
+
+**Where to eat:** Alanya municipal markets (fruit); local ev yemekleri kitchens (gülüklü soup by request); local gözleme stalls (flatbread). Check the dish, opening times and halal status before you go.
+
+**Tip:** Ask for gülüklü soup rather than generic resort food; local specialties can require advance notice.
 
 ---
 
@@ -1270,6 +1634,19 @@ The food is generous and meat-focused. Try etli ekmek, a long, thin flatbread to
 19. Take a day trip to Çatalhöyük, one of the world's oldest known settlements.
 20. Take a day trip to Beyşehir to see the UNESCO-listed wooden Eşrefoğlu Masjid.
 
+### Food in Konya
+
+1. Etli ekmek — long, thin "bread with meat," Konya's answer to pizza.
+2. Fırın kebabı — oven-roasted lamb, tender for a reason: centuries of practice.
+3. Tandır — clay-oven lamb with warm flatbread.
+4. Bamya çorbası — okra soup, a Seljuk-era wedding dish.
+5. Höşmerim — creamy cheese-semolina dessert of the region.
+6. Also try: Bıçak arası; tirit; yağ somunu; sac arası dessert.
+
+**Where to eat:** Ali Baba Fırın Kebap (lamb); Celal Bey Etli Ekmek (etli ekmek); Tiritçi Mithat (tirit); Halk Etliekmek (flatbread). Check the dish, opening times and halal status before you go.
+
+**Tip:** Prioritise etli ekmek, fırın kebabı and tirit; these are much more distinctive than ordinary döner.
+
 ---
 
 ## Ankara, Türkiye
@@ -1311,6 +1688,19 @@ The food is classic Anatolian comfort cooking. Try Ankara tava, a baked rice and
 19. Take a day trip to Gordion to see the great tumulus linked to King Midas.
 20. Take a longer day trip to Hattusa, the ancient capital of the Hittite Empire.
 
+### Food in Ankara
+
+1. Ankara döner — the capital's own döner tradition.
+2. Beypazarı güveç — slow-baked lamb stew from the nearby Ottoman town.
+3. Simit — Ankara claims the crunchiest in Türkiye.
+4. Tahinli çörek — swirled tahini pastry from Beypazarı ovens.
+5. Aşure — Noah's pudding, the sweet of grains, fruits, and blessing.
+6. Also try: Ankara tava (lamb and pasta or rice); Ankara simidi; Beypazarı kurusu.
+
+**Where to eat:** Boğaziçi Lokantası (Turkish home-style food); Özler Döner (döner); Beypazarı bakeries (dry biscuits and tahini pastries). Check the dish, opening times and halal status before you go.
+
+**Tip:** Beypazarı specialties require a day trip or specialist shops; capital-city food is less distinctive than Konya.
+
 # Balkans
 
 ## Kotor, Montenegro
@@ -1349,6 +1739,17 @@ It is noticeably cheaper than Croatia's Dalmatian coast or Western Europe, thoug
 18. Take a day trip to Herceg Novi to see Kanli Kula, the Ottoman-era fortress overlooking the town.
 19. Wander the marina at Porto Montenegro in nearby Tivat, the bay's glossy yachting hub.
 20. Try fresh mussels buzara and black risotto at a konoba (traditional tavern) on the water's edge.
+
+### Food in Kotor
+
+1. Grilled calamari — stuffed or plain, straight from the Adriatic.
+2. Grilled sea bass — the catch of the day in waterfront konobas.
+3. Priganice — honey-drizzled dough puffs of the Montenegrin coast.
+4. Also try: Boka-style fish soup; olive oil; local cheese; priganice.
+
+**Where to eat:** Galion (seafood); Kotor green market (cheese and produce). Check the dish, opening times and halal status before you go.
+
+**Tip:** Check shellfish suitability, and ask for seafood cooked without alcohol.
 
 ---
 
@@ -1389,6 +1790,19 @@ Prices are moderate by European standards—cheaper than the French Riviera or I
 19. Feast on grilled fish, octopus salad, and squid at a seafront restaurant.
 20. Try priganice with honey and local cheese for a sweet Montenegrin breakfast.
 
+### Food in Budva
+
+1. Grilled Adriatic fish — sea bass and bream at the harbour.
+2. Seafood risotto — the Riviera staple.
+3. Octopus salad — light, lemony, and fresh.
+4. Ćevapi — grilled minced-meat fingers in flatbread.
+5. Baklava — the Ottoman sweet legacy of the coast.
+6. Also try: Fish soup; coastal olive oil; grilled vegetables; priganice.
+
+**Where to eat:** Jadran Kod Krsta (seafood); local bakeries (cheese or spinach pies). Check the dish, opening times and halal status before you go.
+
+**Tip:** Not a strong halal-meat destination; avoid assuming ćevapi are halal and insist on alcohol-free cooking.
+
 ---
 
 ## Podgorica, Montenegro
@@ -1427,6 +1841,19 @@ It is one of the more affordable capitals in Europe, far cheaper than Western Eu
 18. See the Niagara waterfalls on the Cijevna River just outside the city, best after spring rains.
 19. Drive through the Morača Canyon to the 13th-century Morača Monastery.
 20. Take a longer day trip to Durmitor National Park to see the Black Lake and the Đurđevića Tara Bridge.
+
+### Food in Podgorica
+
+1. Kačamak — creamy potato-cornmeal mash with cheese and kaymak.
+2. Grilled lamb — mountain lamb at its simplest and best.
+3. Cicvara — rich cornmeal porridge with cheese, highland comfort.
+4. Burek — flaky meat pie from the old-town bakeries.
+5. Baklava — syrupy layers from the Stara Varoš sweet shops.
+6. Also try: Lamb under sač; cheese pies; roasted peppers; local honey.
+
+**Where to eat:** Pod Volat (regional grills); Stara Varoš bakeries (burek); local halal-labelled Bosniak grills (meat only after verification). Check the dish, opening times and halal status before you go.
+
+**Tip:** Traditional restaurants may serve pork; cheese dishes and verified halal grills are better starting points.
 
 ---
 
@@ -1469,6 +1896,19 @@ Mostar is very affordable compared with Western Europe, and even cheaper once yo
 19. Try Mostar-style ćevapi and klepe, the city's little meat-filled dumplings topped with yogurt.
 20. Linger over lunch on a terrace overlooking the Neretva as the evening light hits the bridge.
 
+### Food in Mostar
+
+1. Ćevapi — Mostar's smoky grilled fingers in warm somun.
+2. Begova čorba — the "bey's soup," creamy chicken and okra.
+3. Burek — spiral meat pie, king of Bosnian bakeries.
+4. Tufahije — poached apples with walnut cream.
+5. Baklava — with Bosnian coffee in the old bazaar.
+6. Also try: Sogan dolma (stuffed onions); klepe dumplings; japrak (leaf rolls)
+
+**Where to eat:** Hindin Han (Bosnian plates); Šadrvan (traditional dishes); Tima-Irma (grills); old bazaar cafes (coffee). Check the dish, opening times and halal status before you go.
+
+**Tip:** Old Bridge views are costly; check meat sourcing and alcohol in mixed restaurants.
+
 ---
 
 ## Sarajevo, Bosnia and Herzegovina
@@ -1510,6 +1950,19 @@ The pace is unhurried, built around long coffees and evening strolls along Ferha
 19. Try burek and other pita pies fresh from the oven, served with yogurt.
 20. Sip Bosnian coffee from a copper džezva with a cube of rahat lokum, then finish with tufahija or baklava.
 
+### Food in Sarajevo
+
+1. Ćevapi u somunu — the definitive Bosnian plate, in Baščaršija where it belongs.
+2. Burek — Sarajevo's flaky, juicy meat pie.
+3. Begova čorba — slow chicken soup of the Ottoman courts.
+4. Tufahija — walnut-stuffed poached apple in syrup.
+5. Bosnian coffee with rahat lokum — the ritual that defines the city.
+6. Also try: Klepe; sogan dolma; sirnica cheese pie; hurmašice.
+
+**Where to eat:** Ćevabdžinica Željo (ćevapi); Buregdžinica Bosna (pies); Aščinica Hadžibajrić (stews); Baklava Shop (sweets). Check the dish, opening times and halal status before you go.
+
+**Tip:** Try different pie fillings and a traditional aščinica, not just repeated ćevapi.
+
 ---
 
 ## Tirana, Albania
@@ -1548,6 +2001,19 @@ Life is lively, sociable, and lived outdoors—coffee culture here is close to a
 18. Try tavë kosi and fërgesë at a traditional Albanian restaurant.
 19. Grab a warm slice of byrek from a neighbourhood bakery for breakfast.
 20. Join the locals for an endless macchiato at a café terrace and watch the city go by.
+
+### Food in Tirana
+
+1. Byrek — flaky spinach or meat pie, Albania's daily bread.
+2. Tavë kosi — the national baked lamb-and-yoghurt dish.
+3. Fërgesë — baked peppers, tomato, and cottage cheese, Tirana's own.
+4. Qofte — herb-flecked grilled meatballs.
+5. Trileçe — the three-milk cake that conquered the Balkans.
+6. Also try: Fërgesë tiranase; qofte; petulla fritters; stuffed peppers.
+
+**Where to eat:** Oda (traditional Albanian cuisine); Tek Zgara Tirones (grills); Pazari i Ri (bakeries and produce). Check the dish, opening times and halal status before you go.
+
+**Tip:** Pork and alcohol are common even at traditional venues; ask about meat and shared preparation.
 
 ---
 
@@ -1590,6 +2056,19 @@ The pace is slow and friendly, and the town is very affordable—among the cheap
 19. Drive up to Prevalla in the Sharr Mountains for alpine meadows and fresh mountain air.
 20. Take a day trip toward Gjakova (about an hour away) to watch cliff divers leap into the White Drin River at the Holy Bridge (Ura e Shenjtë).
 
+### Food in Prizren
+
+1. Qebapa — Prizren calls itself Kosovo's grill capital; taste why.
+2. Flija — the slow-baked layered specialty.
+3. Sarma — vine or cabbage rolls with minced meat.
+4. Burek — Shadervan square's bakeries set the standard.
+5. Baklava — from generations-old sweet shops.
+6. Also try: Elbasan tava; pite; local peppers and ajvar; sutlijaš rice pudding.
+
+**Where to eat:** Shadervan-area qebaptore (grills); Beska (traditional grills, verify meat); old-town bakeries (pite). Check the dish, opening times and halal status before you go.
+
+**Tip:** Seek flija by advance request; ordinary grill plates are less memorable than a traditional family meal.
+
 ---
 
 ## Pristina, Kosovo
@@ -1628,6 +2107,19 @@ Pristina is one of the most affordable capitals on the continent, with prices fa
 18. Order a macchiato at a café on the boulevard and join Pristina's favourite pastime.
 19. Try flija, Kosovo's slow-cooked layered pancake-pie, at a traditional restaurant.
 20. Feast on pite, grilled meats, and stuffed peppers at a family-run eatery in the city centre.
+
+### Food in Pristina
+
+1. Qebapa — the grill houses of the capital vary in quality.
+2. Flija — layered and slow-baked, worth the wait.
+3. Byrek — the breakfast of the entire city.
+4. Trileçe — Pristina's patisserie pride.
+5. Macchiato — famously among the best coffee in Europe.
+6. Also try: Mantia (small meat pies); pite; Kosovo-style peppers; local pastries.
+
+**Where to eat:** Liburnia (Kosovo-style meals); Tiffany (traditional Albanian dishes); local qebaptore (grills). Check the dish, opening times and halal status before you go.
+
+**Tip:** Coffee culture is a highlight; confirm halal meat even in majority-Muslim areas.
 
 ---
 
@@ -1674,6 +2166,19 @@ The food is a joy: slow-cooked tanjia, fragrant tagines, Friday couscous, harira
 19. Take a day trip to the Ouzoud Waterfalls, Morocco's highest falls, home to wild Barbary macaques.
 20. Join a cooking class to learn tagine, Moroccan salads, and fresh khobz bread from local cooks.
 
+### Food in Marrakesh
+
+1. Lamb tagine — slow-cooked with apricots and almonds under the conical lid.
+2. Friday couscous — the weekly mountain of semolina, vegetables, and broth.
+3. Tanjia — Marrakesh's own: meat slow-cooked for hours in a clay urn.
+4. Harira — tomato-lentil soup that breaks the fast.
+5. Msemen with mint tea — square griddled pancakes with honey.
+6. Also try: Mechoui (slow-roasted lamb); zaalouk; rfissa; chebakia.
+
+**Where to eat:** Mechoui Alley (roasted lamb and tanjia); Chez Lamine Hadj Mustapha (lamb); Amal (Moroccan home-style food); Café des Épices (light meals and tea). Check the dish, opening times and halal status before you go.
+
+**Tip:** Tanjia and mechoui are the priority; Jemaa el-Fnaa stalls can have aggressive pricing, agree total first.
+
 ---
 
 ## Essaouira, Morocco
@@ -1715,6 +2220,19 @@ Seafood rules here. Pick sardines, sea bream, and calamari straight from the har
 19. Take a day trip to Imsouane, a tiny fishing village famous for its long, gentle surf waves.
 20. Join a cooking class to learn tagine, Moroccan salads, and the art of mint tea.
 
+### Food in Essaouira
+
+1. Grilled sardines — port-side, charcoal-fresh, unforgettable.
+2. Seafood tagine — the Atlantic catch under Moroccan spices.
+3. Grilled calamari — from the boat to your plate in an hour.
+4. Amlou — argan oil, almond, and honey spread — Essaouira's gold.
+5. Mint tea on the ramparts — the ritual, with an ocean view.
+6. Also try: Fish chermoula; fish pastilla; local argan oil and amlou.
+
+**Where to eat:** Port fish grills (sardines); local argan cooperatives (amlou). Check the dish, opening times and halal status before you go.
+
+**Tip:** Ask for price per weight and preparation fee; choose freshly cooked fish rather than elaborate tourist platters.
+
 ---
 
 ## Tangier, Morocco
@@ -1755,6 +2273,19 @@ Food here blends Moroccan and Mediterranean: hearty bissara for breakfast, fried
 18. Take a day trip to Chefchaouen, the famous blue-washed town in the Rif Mountains.
 19. Take a day trip to Asilah, a whitewashed seaside town known for its murals and ramparts.
 20. Explore the UNESCO-listed medina of Tetouan, with its distinctly Andalusian character.
+
+### Food in Tangier
+
+1. Fish tagine — the Strait's catch with chermoula spices.
+2. Pastilla — the sweet-savoury pigeon (or chicken) pie of Fassi tradition.
+3. Bissara — silky fava-bean soup with cumin and olive oil.
+4. Harira — the hearty soup of Ramadan evenings.
+5. Mint tea at Café Hafa — since 1921, above the sea.
+6. Also try: Calentita (chickpea bake); Moroccan northern seafood; goat cheese.
+
+**Where to eat:** Saveur de Poisson (seafood); Café Hafa (mint tea); local medina bakeries (calentita). Check the dish, opening times and halal status before you go.
+
+**Tip:** Seafood set menus may be good but check price and cooking ingredients; tea at Hafa is about the view.
 
 ---
 
@@ -1799,6 +2330,19 @@ The food is classic Moroccan done well: chicken pastilla dusted with cinnamon, r
 19. Taste rfissa and a crisp chicken pastilla, two of the region's celebrated dishes.
 20. Take a train day trip to Meknes and the Roman ruins of Volubilis.
 
+### Food in Rabat
+
+1. Pastilla — crisp layers, savoury filling, dusted sugar and cinnamon.
+2. Couscous — Friday's mountain of semolina in the medina homes.
+3. Tagine kefta — spiced meatballs with eggs poached in tomato.
+4. Grilled sardines — Bouregreg river-mouth style.
+5. Cornes de gazelle — almond-paste crescents, Morocco's elegant cookie.
+6. Also try: Rfissa; chicken with preserved lemon; briouats; sellou.
+
+**Where to eat:** Dar Naji (Moroccan dishes); medina bakeries (almond sweets). Check the dish, opening times and halal status before you go.
+
+**Tip:** Try a Moroccan home-style meal; pastilla and couscous are national rather than unique to Rabat.
+
 ---
 
 ## Casablanca, Morocco
@@ -1839,6 +2383,19 @@ The food scene is the country's most varied: seafood straight from the port, tra
 18. Try sfenj, Morocco's airy fried doughnuts, from a street stall for breakfast.
 19. Enjoy a seafood lunch at one of the restaurants by the fishing port.
 20. Take a day trip to El Jadida to see its UNESCO-listed Portuguese fortress and atmospheric cistern.
+
+### Food in Casablanca
+
+1. Seafood tagine — Atlantic fish and prawns with chermoula.
+2. Grilled fish at the port — pick it, weigh it, eat it.
+3. Couscous — done rich and generous, Casablanca style.
+4. Harira with chebakia — soup and sesame-honey coils at sunset.
+5. Moroccan salads — a dozen small plates before the main.
+6. Also try: Maakouda (potato fritters); Moroccan breakfast; fish chermoula; almond pastries.
+
+**Where to eat:** La Sqala (Moroccan breakfast and tagines); Pâtisserie Bennis Habous (pastries); Central Market (fish grills). Check the dish, opening times and halal status before you go.
+
+**Tip:** Habous pastries and market seafood beat generic luxury dining; verify fish price and cooking fees.
 
 ---
 
@@ -1883,6 +2440,19 @@ The food is hearty and humble: koshari, ful medames, crispy ta'ameya, molokhia, 
 19. Eat a heaping bowl of koshari at Abou Tarek, a downtown institution.
 20. Explore the leafy island neighbourhood of Zamalek and ride up the Cairo Tower for panoramic views.
 
+### Food in Cairo
+
+1. Koshary — the national bowl: rice, lentils, pasta, crispy onions, garlic vinegar.
+2. Ful and taameya — fava beans and Egyptian falafel, breakfast of the pharaohs.
+3. Molokhia — the green jute-leaf stew, garlicky and rich.
+4. Mahshi — vegetables stuffed with herbed rice.
+5. Kunafa — Cairo's crisp, syrupy Ramadan dessert.
+6. Also try: Hawawshi; feteer meshaltet; stuffed pigeon; kebda; Egyptian rice pudding.
+
+**Where to eat:** Abou Tarek (koshary); Felfela (Egyptian dishes); Sobhy Kaber (grills and molokhia); El Tabei El Domyati (ful and taameya). Check the dish, opening times and halal status before you go.
+
+**Tip:** Koshary, ful and hawawshi are high-value; don't limit the city to hotel buffets.
+
 ---
 
 ## Alexandria, Egypt
@@ -1923,6 +2493,19 @@ Food is the city's great love: pick your fish by weight and have it grilled or f
 18. Dive or snorkel among submerged ancient ruins in the Eastern Harbour with a licensed operator.
 19. Take a day trip to El Alamein to visit its moving war cemeteries and military museum.
 20. Take a day trip to Rashid (Rosetta), with its Ottoman-era houses and masjids near where the Rosetta Stone was found.
+
+### Food in Alexandria
+
+1. Kebda iskandarani — Alexandrian liver, fiery with garlic and chilli.
+2. Grilled sea bass — the Mediterranean catch at Anfushi.
+3. Sayadiyah — fishermen's spiced fish and rice.
+4. Shrimp casserole — baked in tomato and garlic.
+5. Feteer meshaltet — the layered "Egyptian pancake" with honey.
+6. Also try: Alexandrian sausage; seafood soup; ice cream; feteer.
+
+**Where to eat:** Mohamed Ahmed (ful and taameya); Balbaa Village (grills and seafood); Fish Market (seafood); local kebda shops (liver sandwiches). Check the dish, opening times and halal status before you go.
+
+**Tip:** Liver sandwiches are a distinctive cheap meal; choose busy stalls and fresh hot cooking.
 
 ---
 
@@ -1965,6 +2548,19 @@ Food leans toward fresh seafood, Egyptian grills, and Bedouin specialities such 
 19. Feast on freshly grilled fish and seafood at the restaurants of the Old Market.
 20. Take a sunset camel ride through the desert outside town.
 
+### Food in Sharm El Sheikh
+
+1. Grilled Red Sea fish — the day's catch by the marina.
+2. Sayadiyah — the Red Sea fishermen's rice dish.
+3. Bedouin zarb — meat slow-cooked in desert sand ovens.
+4. Koshary — Egypt's beloved bowl, even at the resort.
+5. Kunafa — syrupy threads after a day on the reef.
+6. Also try: Bedouin flatbread; seafood soup; Egyptian grilled kofta.
+
+**Where to eat:** Fares Seafood (fish and seafood); El Masrien (Egyptian grills); Old Market (local sweets and bread). Check the dish, opening times and halal status before you go.
+
+**Tip:** Resort restaurants are convenient but less distinctive; arrange a reputable Bedouin meal rather than a staged buffet if possible.
+
 ---
 
 ## Hurghada, Egypt
@@ -2005,6 +2601,19 @@ The food is simple and satisfying: fish grilled by the kilo, flaky feteer meshal
 18. Try feteer meshaltet, a flaky layered pastry served with honey, cheese, or molasses.
 19. Head out on a deep-sea fishing trip into the open Red Sea.
 20. Cool off with fresh mango, guava, or strawberry juice from a local juice bar.
+
+### Food in Hurghada
+
+1. Grilled fish — grouper and snapper from the local boats.
+2. Seafood sayadiyah — Hurghada's signature rice.
+3. Bedouin dinner — grilled meats and fresh bread under desert stars.
+4. Koshary — cheap, cheerful, and everywhere.
+5. Sugarcane juice — pressed fresh at the juice stands.
+6. Also try: Shrimp tagine; fresh fish soup; Egyptian hawawshi.
+
+**Where to eat:** El Halaka (seafood); Star Fish (seafood); El Dahar local kitchens (koshary and grills). Check the dish, opening times and halal status before you go.
+
+**Tip:** Fish market and El Dahar offer better local character than resort buffets; agree weight and price.
 
 ---
 
@@ -2049,6 +2658,19 @@ The cuisine is bold and fiery, built on harissa, olive oil, and couscous. Try cr
 19. Take a day trip to Dougga, one of the best-preserved Roman towns in North Africa.
 20. Take a day trip to the Roman Water Temple in Zaghouan, source of Carthage's ancient aqueduct.
 
+### Food in Tunis
+
+1. Brik — crisp pastry with a runny egg inside; eat it over the plate.
+2. Couscous with fish — the coastal Tunisian way.
+3. Ojja — eggs poached in spicy tomato sauce.
+4. Lablabi — chickpea soup over torn bread, Tunis's soul food.
+5. Makroudh — semolina date diamonds fried in oil.
+6. Also try: Fricassé (fried sandwich); mlawi flatbread; kafteji; bambalouni.
+
+**Where to eat:** Fondouk El Attarine (traditional dishes); Medina stalls (brik and fricassé). Check the dish, opening times and halal status before you go.
+
+**Tip:** Brik, lablabi and ojja are inexpensive essentials; ask about harissa heat and tuna/fish sourcing.
+
 ---
 
 ## Djerba, Tunisia
@@ -2089,6 +2711,19 @@ The food is a treat: riz djerbien, rice steamed with herbs, vegetables, and fish
 18. Stay in a traditional houch, a Djerbian courtyard house converted into a guesthouse.
 19. Take a day trip to Matmata to see its troglodyte homes, including the famous Hotel Sidi Driss.
 20. Take a day trip to the Berber hilltop village of Chenini and the granaries of Ksar Ouled Soltane near Tataouine.
+
+### Food in Djerba
+
+1. Octopus couscous — the island's proud signature.
+2. Grilled fish — from Houmt Souk's morning catch.
+3. Brik — the island's crisp egg pastry.
+4. Harissa mezze — the fiery red paste of Tunisia, tamed with olive oil.
+5. Dates and mint tea — Djerba's palm-grove close.
+6. Also try: Djerbian rice (rouz jerbi); fish chermoula; bsissa (roasted grain mix)
+
+**Where to eat:** Restaurant Essofra (Houmt Souk) (Tunisian cooking); Houmt Souk fish market (fish); local bakeries (brik). Check the dish, opening times and halal status before you go.
+
+**Tip:** Djerbian steamed rice is worth seeking specifically; seafood menus can be tourist-priced.
 
 ---
 
@@ -2133,6 +2768,19 @@ The food is classic Sahel: fish couscous, grilled sea bream, smoky salata mechou
 19. Buy makroudh, Kairouan's famous date-filled semolina pastries, by the box.
 20. Relax in a traditional hammam in the medina after a day of exploring.
 
+### Food in Sousse
+
+1. Couscous — fluffy semolina with lamb or fish.
+2. Grilled sardines — Sahel-coast style.
+3. Ojja — spicy tomato-and-egg skillet.
+4. Tajine tunisien — the baked egg-and-meat "cake," unlike Morocco's.
+5. Makroudh — date-filled semolina sweets.
+6. Also try: Kafteji; fricassé; slata mechouia (grilled pepper salad); bambalouni.
+
+**Where to eat:** Medina street stalls (fricassé and kafteji); Restaurant du Peuple (Tunisian dishes); local fish grills (sardines). Check the dish, opening times and halal status before you go.
+
+**Tip:** Eat in the medina rather than relying on Port El Kantaoui resort menus.
+
 # Central Asia
 
 ## Samarkand, Uzbekistan
@@ -2175,6 +2823,19 @@ The food is generous and comforting. Samarkand plov—rice, carrots, and tender 
 18. Take a day trip to Shahrisabz, Timur's birthplace, to see the colossal ruins of the Ak-Saray Palace.
 19. Ride the Afrosiyob high-speed train onward to Bukhara.
 20. Linger over green tea and sweet halva in a traditional choyxona.
+
+### Food in Samarkand
+
+1. Samarkand plov — the city's layered plov, cooked in vast kazans.
+2. Non — the famous stamped bread, carried home by the bagful.
+3. Samsa — tandoor-baked meat pastries.
+4. Shashlik — smoky skewers at Siyob Bazaar.
+5. Samarkand halva — dense, nutty, unforgettable.
+6. Also try: Kazan kebab; mastava rice soup; regional dried fruits; nishalda (seasonal)
+
+**Where to eat:** Bibikhanum Teahouse (plov, shashlik); Siyob Bazaar (bread and halva); local osh centre (plov). Check the dish, opening times and halal status before you go.
+
+**Tip:** Lunch is the best time for plov; compare bakery bread rather than paying for generic souvenir loaves.
 
 ---
 
@@ -2219,6 +2880,19 @@ The cuisine is rich and homely. Try Bukharan plov, slow-cooked shashlik, and fre
 19. Dine on shashlik and tandir-baked bread in a restored merchant-house courtyard.
 20. Climb to a rooftop terrace at sunset to watch the domes and minarets turn amber.
 
+### Food in Bukhara
+
+1. Bukhara plov — the ancient city's own take on the national dish.
+2. Shashlik — lamb skewers beside Lyabi Hauz.
+3. Samsa — crisp from the tandoor.
+4. Lagman — hand-pulled noodle soup.
+5. Non — Bukhara's golden, sesame-topped bread.
+6. Also try: Kazan kebab; Bukhara-style osh; pumpkin manti; shurpa.
+
+**Where to eat:** Old Bukhara (samsa, manti, kazan kebab); Minzifa (Uzbek plates); local osh centres (plov). Check the dish, opening times and halal status before you go.
+
+**Tip:** Ask for local plov rather than a generic tourist menu; check alcohol at terrace restaurants.
+
 ---
 
 ## Tashkent, Uzbekistan
@@ -2259,6 +2933,19 @@ Food is everywhere and taken seriously. Tashkent's plov centres serve hundreds o
 18. Escape to the mountains on a day trip to Chimgan and the Charvak Reservoir.
 19. Ski or ride the gondola at the Amirsoy mountain resort in the Western Tian Shan.
 20. Find a quiet moment in the Japanese Garden near the TV Tower.
+
+### Food in Tashkent
+
+1. Plov at Besh Qozon — watch a tonne of plov cooked in one giant kazan.
+2. Lagman — hand-pulled noodles, Tashkent's favourite bowl.
+3. Manti — steamed dumplings with pumpkin or lamb.
+4. Samsa — from Chorsu Bazaar's tandoors.
+5. Chuchvara — tiny dumplings in broth.
+6. Also try: Norin (cold noodles and meat); kazan kebab; shurpa; Uzbek tea and dried fruit.
+
+**Where to eat:** Besh Qozon (plov); Afsona (Uzbek cuisine); Chorsu Bazaar (samsa and bread); local norin shops (noodles). Check the dish, opening times and halal status before you go.
+
+**Tip:** Go for plov at lunchtime; confirm meat and sausage sourcing and avoid over-ordering.
 
 ---
 
@@ -2303,6 +2990,19 @@ Khorezmian food has its own personality. Try shivit oshi—vivid green dill nood
 19. Spend a night in a yurt camp near Ayaz Kala under vast desert skies.
 20. Return to Itchan Kala after dark to wander its quiet, lantern-lit lanes.
 
+### Food in Khiva
+
+1. Shivit oshi — green dill noodles, unique to Khorezm.
+2. Tuhum barak — delicate egg-filled dumplings.
+3. Gumma — fried meat pies of the oasis.
+4. Khorezm plov — with the region's famous yellow carrots.
+5. Melons — Khorezm's legendary sweet melons in season.
+6. Also try: Khorezm chalov; pumpkin manti; shurpa; sesame halva.
+
+**Where to eat:** Khorezm Art Restaurant (shivit oshi, tukhum barak); Zarafshon Cafe (shivit oshi and manti); Terrassa Cafe (regional food). Check the dish, opening times and halal status before you go.
+
+**Tip:** Green dill noodles and egg dumplings are the real regional highlights; don't spend every meal on plov.
+
 ---
 
 ## Almaty, Kazakhstan
@@ -2344,6 +3044,18 @@ The food scene is varied and generous. Try beshbarmak, kazy horse sausage, baurs
 19. Sample kumys, the tangy fermented mare's milk beloved across the steppe.
 20. Spend an afternoon café-hopping in the leafy streets of the city centre.
 
+### Food in Almaty
+
+1. Beshbarmak — the national dish: boiled meat over wide noodles, "five fingers.".
+2. Baursak — golden fried dough puffs.
+3. Lagman — Dungan-style noodles, a city favourite.
+4. Plov — Green Bazaar's kazans never stop.
+5. Also try: Kuyrdak (fried meat and offal); Uyghur lagman; Dungan noodles; kurt dairy.
+
+**Where to eat:** Navat (Central Asian dishes); Green Bazaar (dried fruit and dairy); local halal Uyghur kitchens (lagman). Check the dish, opening times and halal status before you go.
+
+**Tip:** Check halal logos and meat sourcing; fermented drinks may contain alcohol.
+
 ---
 
 ## Astana, Kazakhstan
@@ -2384,6 +3096,18 @@ Food leans traditional Kazakh—beshbarmak, kazy, kuyrdak, and baursak—alongsi
 18. Take a day trip to Korgalzhyn Nature Reserve to see flamingos on the steppe lakes.
 19. Escape to the pine forests and lakes of Burabay for a weekend.
 20. Catch a football match at the Astana Arena, with its retractable roof.
+
+### Food in Astana
+
+1. Beshbarmak — the Kazakh table's centrepiece.
+2. Baursak with kaymak — fried dough with clotted cream.
+3. Manti — steamed dumplings with sour cream.
+4. Shelpek — crispy fried flatbread of the steppe.
+5. Also try: Kuyrdak; kurt; irimshik (curd); Central Asian lagman.
+
+**Where to eat:** Navat (regional dishes); local halal national restaurants (beshbarmak). Check the dish, opening times and halal status before you go.
+
+**Tip:** A traditional Kazakh meal is worthwhile but fine dining can be costly; don't assume all sausage is halal.
 
 ---
 
@@ -2428,6 +3152,18 @@ Food here reflects the south's warm climate and Uzbek influence: hearty plov, sa
 19. Shop for Kazakh crafts and felt souvenirs near the Karavan Saray.
 20. Join celebrations for Nauryz in March, when the city fills with music and traditional games.
 
+### Food in Turkistan
+
+1. Plov — served generously to pilgrims for centuries.
+2. Beshbarmak — the hospitality dish of the south.
+3. Samsa — tandoor pastries at the bazaar.
+4. Baursak — golden puffs with tea.
+5. Also try: Tandoor samsa; southern shashlik; kurt; dried fruits.
+
+**Where to eat:** Karavansaray-area national cuisine restaurants (plov); central bazaar (samsa); halal-labelled local kitchens (beshbarmak). Check the dish, opening times and halal status before you go.
+
+**Tip:** Choose busy lunch kitchens rather than generic tourist complex food; avoid fermented milk drinks, which can contain alcohol.
+
 ---
 
 ## Shymkent, Kazakhstan
@@ -2468,6 +3204,19 @@ The food is the star. Shymkent is famous for its shashlik, generous plov, samsa,
 18. Visit Kazygurt Mountain, linked by local legend to Noah's Ark.
 19. Escape to the Kaskasu gorge for fresh mountain air and hiking.
 20. Join the crowds at a home match of FC Ordabasy, the city's passionately supported football club.
+
+### Food in Shymkent
+
+1. Shymkent plov — locals swear theirs is Kazakhstan's best.
+2. Samsa — from street-corner tandoors.
+3. Shashlik — southern-style skewers.
+4. Lagman — the Uzbek-Kazakh noodle bowl.
+5. Beshbarmak — hospitality on a platter.
+6. Also try: Tandoor samsa; kazan kebab; Uzbek-style manti; sour dairy drinks.
+
+**Where to eat:** Shymkent central bazaar (samsa); local osh centres (plov); halal-labelled shashlik houses (skewers). Check the dish, opening times and halal status before you go.
+
+**Tip:** Southern Uzbek-influenced cooking is the draw; check meat certification and alcohol service.
 
 ---
 
@@ -2510,6 +3259,18 @@ Food is hearty and deeply rooted in nomadic tradition. Try beshbarmak, lagman, m
 19. Take a day trip to the Burana Tower, a Silk Road minaret near Tokmok.
 20. Browse the Alamedin Bazaar for fresh fruit, nuts, honey, and everyday local life.
 
+### Food in Bishkek
+
+1. Beshbarmak — Kyrgyzstan's nomadic national dish.
+2. Lagman — hand-pulled noodles, Dungan heritage.
+3. Manti — steamed to perfection at Osh Bazaar.
+4. Boorsok — fried dough of the yurt tables.
+5. Also try: Ashlan-fu (Dungan cold noodle dish, Karakol origin); oromo steamed roll; shorpo.
+
+**Where to eat:** Faiza (lagman, manti); Navat (Central Asian dishes); Osh Bazaar (boorsok and local snacks). Check the dish, opening times and halal status before you go.
+
+**Tip:** Try Dungan noodles; avoid fermented milk drinks, which can contain alcohol.
+
 ---
 
 ## Dushanbe, Tajikistan
@@ -2550,6 +3311,19 @@ The food is simple, fresh, and delicious. Qurutob—flatbread layered with yoghu
 18. Escape to the mountains on a day trip up the Varzob Gorge.
 19. Visit the turquoise lake of Iskanderkul in the Fann Mountains.
 20. Use Dushanbe as your base for a journey along the Pamir Highway.
+
+### Food in Dushanbe
+
+1. Qurutob — the national dish: bread soaked in yoghurt sauce with onions and herbs.
+2. Osh (plov) — Tajikistan's rice pilaf with yellow carrots.
+3. Lagman — noodle soup of the chaikhanas.
+4. Sambusa — baked pastries with greens or meat.
+5. Non with chay — bread and tea, the Tajik ritual.
+6. Also try: Fatir flatbread; shurbo; mantu; fresh mulberries in season.
+
+**Where to eat:** Qurutobkhona in central Dushanbe (qurutob); Mehrgon market (bread and fruit); local oshkhona (plov). Check the dish, opening times and halal status before you go.
+
+**Tip:** Qurutob is the distinctive priority; named restaurants and current menus need local confirmation.
 
 ---
 
@@ -2596,6 +3370,18 @@ The food is the highlight for many visitors. Try echpochmak (triangular meat pie
 19. Travel to Bolgar, where the Volga Bulgars embraced Islam in 922.
 20. Visit the White Masjid in Bolgar and see the world's largest printed Qur'an.
 
+### Food in Kazan
+
+1. Echpochmak — the triangular Tatar pie of meat, potato, and onion.
+2. Chak-chak — honey-drenched fried dough, Tatarstan's celebration sweet.
+3. Kystyby — griddled flatbread with mashed potato.
+4. Talkysh kaleve — spun-honey pyramids, the Kazan delicacy.
+5. Also try: Azu (meat and potato stew); elesh pie; gubadiya (layered pie); Tatar tea.
+
+**Where to eat:** Tubatay (Tatar pies and quick meals); Tatarskaya Usadba (traditional food, verify halal); Chak-Chak Museum (sweets and tea experience). Check the dish, opening times and halal status before you go.
+
+**Tip:** Check current halal labels; traditional Tatar food is not automatically halal in mixed kitchens.
+
 ---
 
 # Southeast and South Asia
@@ -2639,6 +3425,19 @@ It is also one of Indonesia's most affordable cities. A comfortable guesthouse, 
 19. Try sate klathak—goat satay grilled on iron bicycle-spoke skewers—in the Bantul area.
 20. Photograph the Tugu Monument, the city's symbolic landmark, lit up at night.
 
+### Food in Yogyakarta
+
+1. Gudeg — the sweet jackfruit stew that defines Jogja, with chicken and egg.
+2. Sate klathak — minimalist lamb satay grilled on iron skewers.
+3. Nasi kucing — "cat rice" parcels from the angkringan street carts.
+4. Bakpia — sweet mung-bean pastries, the city's gift-box staple.
+5. Wedang ronde — warm ginger drink with glutinous rice balls, for cool evenings.
+6. Also try: Bakmi Jawa; soto; oseng mercon (fiery beef); kipo (rice cake)
+
+**Where to eat:** Gudeg Yu Djum (gudeg); Sate Klathak Pak Pong (lamb satay); Bakpia Pathok 25 (bakpia); angkringan stalls (nasi kucing). Check the dish, opening times and halal status before you go.
+
+**Tip:** Gudeg can be very sweet; order one portion first. Choose busy carts with fresh hot food.
+
 ---
 
 ## Kuala Lumpur, Malaysia
@@ -2677,6 +3476,19 @@ For a city of its polish, KL is remarkably affordable, far cheaper than Singapor
 18. Stroll the Perdana Botanical Gardens and visit the KL Bird Park.
 19. Ride the Awana Skyway cable car up to the cool air of Genting Highlands.
 20. Drive out to Kajang for the town's famous charcoal-grilled satay.
+
+### Food in Kuala Lumpur
+
+1. Nasi lemak — coconut rice with sambal, anchovies, egg, and peanuts; the national breakfast.
+2. Satay — charcoal skewers with peanut sauce, best at Kampung Baru.
+3. Roti canai — flaky griddled flatbread with dhal, the mamak-stall icon.
+4. Curry laksa — rich coconut-noodle soup.
+5. Cendol — shaved ice with pandan noodles and palm sugar.
+6. Also try: Nasi kerabu; rendang; nasi kandar; teh tarik; banana leaf rice; Hainanese chicken rice at halal outlets.
+
+**Where to eat:** Nasi Lemak Wanjo (nasi lemak); Village Park (nasi lemak); Satay Kajang Haji Samuri (satay); Restoran Kudu Bin Abdul (nasi kandar); local certified mamak shops (roti canai). Check the dish, opening times and halal status before you go.
+
+**Tip:** Kampung Baru and mamak breakfasts deliver better local value than mall chains; check JAKIM for exact branch.
 
 ---
 
@@ -2719,6 +3531,19 @@ Prices are friendly: heritage guesthouses and hawker meals cost a fraction of wh
 19. Step onto the glass Rainbow Skywalk at The TOP, Komtar.
 20. Cool down with a bowl of cendol and taste tangy assam laksa, Penang's signature noodle soup.
 
+### Food in Penang
+
+1. Nasi kandar — Penang-born Muslim Indian rice drowned in mixed curries.
+2. Assam laksa — sour, fishy, fiery; ranked among the world's best dishes.
+3. Char kway teow — smoky wok-fried noodles (seek a verified halal stall).
+4. Mee sotong — mamak noodles with squid sambal at the Esplanade.
+5. Penang cendol — the famous Lebuh Keng Kwee bowl.
+6. Also try: Murtabak; pasembur; mee goreng mamak; nasi dalca; halal rojak.
+
+**Where to eat:** Hameediyah (nasi kandar and murtabak); Line Clear (nasi kandar); Hameed Pata Mee Sotong (squid noodles); Deen Maju (nasi kandar); Key's Char Koay Teow (noodles, verify current halal status). Check the dish, opening times and halal status before you go.
+
+**Tip:** Most classic Chinese hawker versions may use pork or lard; seek verified Muslim stalls, not simply pork-free signage.
+
 ---
 
 ## Langkawi, Malaysia
@@ -2757,6 +3582,19 @@ It is also duty-free, which keeps prices pleasantly low for a beach destination�
 18. Learn about rice farming at Laman Padi Langkawi in Pantai Cenang.
 19. Visit the Galeria Perdana, home to gifts presented to Malaysia's former prime minister.
 20. Take a sunset dinner cruise around the islands.
+
+### Food in Langkawi
+
+1. Grilled seafood — beach shacks serve the Andaman catch, confirm halal preparation.
+2. Laksa Kedah — the state of Kedah's own rice-noodle laksa.
+3. Satay — night-market skewers with peanut sauce.
+4. Nasi lemak — the breakfast you will crave daily.
+5. Kuih — colourful Malay cakes from the rotating pasar malam.
+6. Also try: Nasi dagang; ikan bakar; pulut durian (seasonal); Malay kuih.
+
+**Where to eat:** Nasi Dagang Pak Malau (nasi dagang); rotating night markets (satay and kuih); local Muslim ikan bakar kitchens (fish). Check the dish, opening times and halal status before you go.
+
+**Tip:** Night markets offer better value than beach clubs; not all beach seafood kitchens are halal.
 
 ---
 
@@ -2797,6 +3635,19 @@ The Maldives is fully Muslim, so Malé is entirely halal and no alcohol is serve
 19. Join a sunset dolphin cruise from the harbour.
 20. Watch the seaplanes come and go from Velana International Airport, the gateway to the atolls.
 
+### Food in Malé
+
+1. Mas huni — tuna, coconut, onion, and chilli with roshi flatbread; the national breakfast.
+2. Garudhiya — clear fish broth with rice, lime, and chilli.
+3. Masroshi — stuffed tuna-coconut flatbread.
+4. Maldivian fish curry (riha) — tuna simmered in coconut and spice.
+5. Hedhikaa — the afternoon "short eats" of the local cafés.
+6. Also try: Gulha (tuna balls); bajiya (savoury pastry); fihunu mas (grilled fish); bondibaiy (sweet rice)
+
+**Where to eat:** Seagull Cafe (café meals, check local menu); local hotaa tea shops (mas huni and hedhikaa); Malé fish market (tuna). Check the dish, opening times and halal status before you go.
+
+**Tip:** Eat breakfast in a hotaa rather than resort-style cafes; snacks are best freshly fried.
+
 ---
 
 ## Baa Atoll, Maldives
@@ -2835,6 +3686,19 @@ The atoll has two sides. Its private-island resorts are among the most luxurious
 18. Watch a bodu beru drumming and dancing performance under the stars.
 19. Look for reef sharks and eagle rays on a guided dive along the outer reef.
 20. Stargaze from the beach, far from any city lights.
+
+### Food in Baa Atoll
+
+1. Mas huni — the island breakfast, best with fresh roshi.
+2. Tuna curry — the Maldives runs on its pole-caught tuna.
+3. Grilled reef fish — caught at sunset, grilled under the stars.
+4. Roshi and rihaakuru — flatbread with the famous fish paste.
+5. Coconut desserts — island sweets of coconut and palm honey.
+6. Also try: Gulha; masroshi; coconut flatbread; local tuna sambol.
+
+**Where to eat:** Dharavandhoo and Thulhaadhoo guesthouse kitchens (local meals by arrangement); island hotaa (short eats). Check the dish, opening times and halal status before you go.
+
+**Tip:** Resorts may serve pork and alcohol; confirm separate preparation. Independent restaurant choices vary by island.
 
 ---
 
@@ -2875,6 +3739,19 @@ It is very affordable, with homely guesthouses and hearty meals at modest prices
 19. Admire the massive Batura and Passu glaciers from the Karakoram Highway.
 20. Return in October and November when the valley's poplars and orchards blaze with autumn colour.
 
+### Food in Hunza Valley
+
+1. Chapshuro — the valley's meat-filled "Hunza pie," griddled golden.
+2. Dawdo soup — apricot-oil noodle soup, the winter warmer.
+3. Gyal pancakes — buckwheat pancakes with apricot oil.
+4. Dried apricots and mulberries — the valley's famous harvest.
+5. Walnut cake — Karimabad cafés' beloved slice with mountain tea.
+6. Also try: Diram fitti (sprouted wheat cake); burus (local cheese); mulberry products.
+
+**Where to eat:** Hunza Food Pavilion (regional cooking); Cafe de Hunza (walnut cake); Karimabad family kitchens (chapshuro and dawdo). Check the dish, opening times and halal status before you go.
+
+**Tip:** Local family cooking is more distinctive than continental cafe meals; fruit availability is seasonal.
+
 ---
 
 ## Skardu, Pakistan
@@ -2913,6 +3790,19 @@ It is affordable, though hotels fill up and prices climb in the short summer sea
 18. Try Balti dishes like mamtu, kisir, and salty butter tea.
 19. Shop the Skardu bazaar for dried apricots, nuts, and gemstones.
 20. Stargaze under some of the clearest skies in Pakistan.
+
+### Food in Skardu
+
+1. Mamtu — Balti steamed dumplings, the region's signature.
+2. Balay — hearty noodle soup of the Balti mountains.
+3. Apricot dishes — soup, oil, and preserves from the orchards.
+4. Grilled trout — cold-stream fish of the northern valleys.
+5. Butter tea and Balti bread — the mountain breakfast.
+6. Also try: Kisiri (grain dish); khambir-style bread; local buckwheat preparations.
+
+**Where to eat:** Skardu bazaar (bread and dried fruit); Balti family kitchens or guesthouses (mamtu and balay by request). Check the dish, opening times and halal status before you go.
+
+**Tip:** Traditional Balti dishes may need preordering; do not expect all trout to be locally caught.
 
 ---
 
@@ -2955,6 +3845,19 @@ Satun is very affordable, and halal food is the norm rather than the exception. 
 19. Browse the evening night market in Satun town.
 20. Take the ferry from Tammalang to Langkawi for an easy hop into Malaysia.
 
+### Food in Satun
+
+1. Khao mok gai — Thai-Muslim chicken biryani with crispy shallots.
+2. Roti mataba — stuffed crispy roti, the south's favourite.
+3. Sup hang wua — rich oxtail soup of the Muslim south.
+4. Grilled seafood — the Andaman catch at Pak Bara's stalls.
+5. Roti with teh tarik — the sweet ending of every Satun evening.
+6. Also try: Southern yellow curry; nasi kerabu-style rice; roti with curry; fresh tropical fruit.
+
+**Where to eat:** Satun municipal market (Muslim breakfast stalls); Pak Bara seafood stalls (fish); local Muslim roti shops (roti and tea). Check the dish, opening times and halal status before you go.
+
+**Tip:** Choose Muslim-owned stalls with fresh cooking; fish sauce and shared wok preparation require checks.
+
 ---
 
 ## Koh Lanta, Thailand
@@ -2993,6 +3896,19 @@ It is noticeably cheaper than Phuket or Phi Phi, with beach bungalows and family
 18. Browse the stalls and seafood restaurants of Saladan, the island's main village.
 19. Eat a fragrant massaman curry and fresh grilled fish at a halal beachfront restaurant.
 20. Start the day with roti and sweet tea from a local Muslim stall.
+
+### Food in Koh Lanta
+
+1. Massaman curry — the southern Muslim curry, rich with potato and peanut.
+2. Grilled fish — from the Muslim fishing villages of the old town.
+3. Khao mok gai — southern chicken biryani, island style.
+4. Roti — banana or egg, made by Lanta's Muslim roti masters.
+5. Seafood BBQ — beachside grills from Klong Dao to Kantiang.
+6. Also try: Tom yum; southern turmeric fish; halal pad Thai; mango sticky rice.
+
+**Where to eat:** Klong Dao and Saladan Muslim-run kitchens (rice and roti); Lanta Old Town seafood kitchens (grilled fish); local halal-labelled stalls (massaman). Check the dish, opening times and halal status before you go.
+
+**Tip:** Check alcohol in sauces, shared grills and meat sourcing; beach BBQ is not automatically halal.
 
 ---
 
@@ -3035,6 +3951,19 @@ Kozhikode is very affordable, and it is one of India's great food cities for Mus
 19. Try fresh pathiri with chicken curry or fish curry for a classic Malabar meal.
 20. Visit during the monsoon to see Kerala's countryside at its most vibrant green.
 
+### Food in Kozhikode
+
+1. Kozhikode biryani — light, fragrant, and legendary across India.
+2. Kozhikode halwa — the glossy sweet of SM Street's halwa shops.
+3. Unnakaya — banana fritters stuffed with coconut and egg.
+4. Pathiri with chicken curry — Malabar's thin rice bread and rich curry.
+5. Sulaimani — spiced lemon tea, the perfect Malabar finish.
+6. Also try: Chatti pathiri; kallummakkaya (mussels); Malabar parotta; beef fry; banana chips.
+
+**Where to eat:** Paragon (biryani and seafood); Rahmath (biryani); Bombay Hotel (snacks and Malabar food); SM Street halwa shops (halwa). Check the dish, opening times and halal status before you go.
+
+**Tip:** Try Malabar snacks and fish as well as biryani; shellfish suitability depends on your practice.
+
 ---
 
 ## Lakshadweep, India
@@ -3073,6 +4002,19 @@ It is not a casual trip. All visitors need an entry permit from the Lakshadweep 
 18. Try octopus fry, tuna curry, and sweet kilanji pancakes.
 19. Watch the sun set over the lagoon from the beach.
 20. Stargaze over the open sea, far from any city lights.
+
+### Food in Lakshadweep
+
+1. Mas (tuna) dishes — dried and fresh tuna, the islands' lifeblood.
+2. Coconut fish curry — lagoon fish in island coconut milk.
+3. Grilled reef fish — your catch, grilled on the beach.
+4. Rice with coconut roti — the island staple.
+5. Banana fritters — sweet island snacks with evening tea.
+6. Also try: Tuna pickle; coconut sambol; local rice cakes; dried tuna.
+
+**Where to eat:** Agatti and permitted-island guesthouse kitchens (prearranged tuna and coconut meals); accommodation dining (breakfast and snacks). Check the dish, opening times and halal status before you go.
+
+**Tip:** Limited independent dining and visitor permits make advance meal planning essential; don't promise beach-caught reef fish.
 
 ---
 
@@ -3115,6 +4057,19 @@ It is very affordable, even compared with other major Indian cities. For Muslim 
 19. Pick up a box of fruit biscuits from Karachi Bakery.
 20. Watch the sunset from the Taramati Baradari pavilion near Golconda.
 
+### Food in Hyderabad
+
+1. Hyderabadi biryani — the kacchi-style dum biryani, India's most famous.
+2. Haleem — the slow-pounded wheat-meat delicacy of Ramadan.
+3. Irani chai with Osmania biscuits — the old city's ritual.
+4. Shami kebab — silken lentil-meat patties of the Nizam's tables.
+5. Qubani ka meetha — apricot dessert with cream.
+6. Also try: Paya; marag (mutton soup); patthar ka gosht; double ka meetha; khichdi kheema.
+
+**Where to eat:** Shadab (biryani); Shah Ghouse (biryani and haleem seasonally); Pista House (haleem and bakery); Nimrah Cafe (Irani chai and Osmania biscuits); Hotel Nayaab (paya and breakfast). Check the dish, opening times and halal status before you go.
+
+**Tip:** Haleem is particularly seasonal; compare biryani styles and avoid waiting hours just for a brand name.
+
 ---
 
 ## Lucknow, India
@@ -3155,6 +4110,19 @@ It is very affordable, and it is a dream for food lovers. Lucknow's Awadhi cuisi
 18. Visit the ruins of Dilkusha Kothi, an old nawabi hunting lodge.
 19. See the historic Chhatar Manzil, a riverside palace of the nawabs.
 20. Walk through Sikandar Bagh, a garden linked to the events of 1857.
+
+### Food in Lucknow
+
+1. Galouti kebab — the melt-in-the-mouth kebab of Tunday Kababi.
+2. Lucknowi biryani — the subtle, fragrant Awadhi style.
+3. Nihari — slow-cooked shank stew, breakfast of Nawabs.
+4. Sheermal — saffron flatbread of the Awadhi court.
+5. Kulfi — dense, creamy, pistachio-topped.
+6. Also try: Kakori kebab; boti kebab; kulcha nihari; basket chaat; malai makhan (winter)
+
+**Where to eat:** Tunday Kababi (galouti); Rahim's (nihari and kulcha); Idris Biryani (biryani); Prakash Kulfi (kulfi); Royal Cafe (basket chaat). Check the dish, opening times and halal status before you go.
+
+**Tip:** Clarify buffalo versus mutton at kebab shops; winter malai makhan and morning nihari are time-sensitive.
 
 ---
 
@@ -3198,6 +4166,19 @@ Zanzibar is mostly Muslim, so halal food is easy to find and the island feels we
 18. Visit Kizimkazi to see dolphins and the ancient masjid with its early-12th-century inscription.
 19. Have lunch at The Rock, a restaurant perched on a rock in the sea near Michamvi.
 20. Join a Safari Blue dhow trip to the sandbanks of Menai Bay.
+
+### Food in Zanzibar City
+
+1. Zanzibar pizza — the folded, griddled street "pizza" of Forodhani Gardens.
+2. Urojo — the famous "Zanzibar mix" soup with mango, bhajia, and cassava.
+3. Mishkaki — Swahili marinated meat skewers.
+4. Octopus curry — coconut-rich, a taste of the Swahili coast.
+5. Pilau ya kuku — spice-island chicken pilau, fragrant with cloves.
+6. Also try: Zanzibar biryani; coconut beans; mandazi; vitumbua (rice cakes); sugarcane juice.
+
+**Where to eat:** Lukmaan (Swahili curries, rice); Passing Show (local dishes); Forodhani Gardens (pizza and mishkaki); Darajani Market (spices and snacks). Check the dish, opening times and halal status before you go.
+
+**Tip:** Forodhani seafood may be displayed for long periods; select freshly cooked items and confirm price before ordering.
 
 ---
 
