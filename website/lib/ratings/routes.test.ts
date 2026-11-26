@@ -91,6 +91,12 @@ test("chat route: \"Tell me about Dubai\" gets the folded city overview from the
   assert.match(text, /Turkish — Pide/);
   assert.match(text, /Tranquility & Peace 5\/10 · Healing 6\/10/);
   assert.doesNotMatch(text, /tiramisu|mapo tofu/i);
+  // Food guide (26 Nov 2026): every city has a Food section with where to eat and a tip; horse meat and kymyz stay out.
+  const kaz = (await events(await POST(post({ messages: [{ role: "user", content: "Tell me about Astana" }], lang: "en" })))).filter((e) => e.type === "text").map((e) => e.text).join("");
+  assert.match(kaz, /## Food\n\n- Beshbarmak/);
+  assert.match(kaz, /\*\*Where to eat:\*\* Navat/);
+  assert.match(kaz, /\*\*Tip:\*\*/);
+  assert.doesNotMatch(kaz, /kazy|horse|kymyz/i);
   // Arabic, or a question about one part, still goes to the model.
   assert.equal((await events(await POST(post({ messages: [{ role: "user", content: "Tell me about Dubai" }], lang: "ar" })))).some((e) => e.type === "fold"), false);
   assert.equal((await events(await POST(post({ messages: [{ role: "user", content: "Where can I ski in Dubai?" }], lang: "en" })))).some((e) => e.type === "fold"), false);

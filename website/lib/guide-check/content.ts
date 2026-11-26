@@ -5,8 +5,8 @@ import path from "node:path";
 import { removeHaramItems } from "../rag/haram";
 
 export type EaseItem = { name: string; score: number; band: string };
-/** intro: first paragraph of the city text. food: "### Food in X" list (Dubai so far). vibe: the Calm / Character / Energy lines. */
-export type CityGuide = { city: string; country: string; things: string[]; buy: string[]; ease: EaseItem[]; intro: string; food: string[]; vibe: string[] };
+/** intro: first paragraph of the city text. food: "### Food in X" list; foodNotes: its "Where to eat" / "Tip" lines. vibe: the Calm / Character / Energy lines. */
+export type CityGuide = { city: string; country: string; things: string[]; buy: string[]; ease: EaseItem[]; intro: string; food: string[]; foodNotes: string[]; vibe: string[] };
 
 const DATA = () => path.join(process.cwd(), "data");
 const read = (rel: string) => readFileSync(path.join(DATA(), rel), "utf8").replace(/\r/g, "");
@@ -50,6 +50,8 @@ export function cityGuides(): CityGuide[] {
     // "### 20 Things to Do in X" (or "### Places to Visit in X", Dubai from 25 Nov 2026) sits inside the city section.
     const things = clean(subList(lines, /^### (20 Things to Do|Places to Visit)/));
     const food = clean(subList(lines, /^### Food in/));
+    // "**Where to eat:**" and "**Tip:**" lines under the food list (food guide, 26 Nov 2026). Warnings stay; haram dish sentences go.
+    const foodNotes = subBlock(lines, /^### Food in/).filter((l) => /^\*\*(Where to eat|Tip):\*\*/.test(l)).map((l) => removeHaramItems(l).text.trim()).filter((l) => !/^\*\*[^*]+:\*\*$/.test(l));
     const vibe = lines.filter((l) => /^\*\*(Calm|Character|Energy):\*\*/.test(l)).map((l) => l.replace(/\*\*/g, "").trim());
     const intro = lines.find((l) => l.trim() && !l.startsWith("**") && !l.startsWith("#") && !/^\d+\.\s/.test(l) && l.trim() !== "---")?.trim() ?? "";
 
@@ -63,20 +65,22 @@ export function cityGuides(): CityGuide[] {
 
     let e = parseEase(ease.get(city)?.lines ?? []);
     if (!e.length) e = (countryEase.get(country) ?? []).filter((it) => it.name.toLowerCase().includes(city.toLowerCase()));
-    cities.push({ city, country, things, intro, food, vibe, buy: removeHaramItems(buy.map((b) => `- ${b}`).join("\n")).text.split("\n").filter(Boolean).map((b) => b.slice(2)), ease: e });
+    cities.push({ city, country, things, intro, food, foodNotes, vibe, buy: removeHaramItems(buy.map((b) => `- ${b}`).join("\n")).text.split("\n").filter(Boolean).map((b) => b.slice(2)), ease: e });
   }
   cache = { at: Date.now(), cities };
   return cities;
 }
 
-/** Numbered items under a "### …" heading, up to the next heading. */
-function subList(lines: string[], heading: RegExp): string[] {
+/** Lines under a "### …" heading, up to the next heading. */
+function subBlock(lines: string[], heading: RegExp): string[] {
   const start = lines.findIndex((l) => heading.test(l));
   if (start < 0) return [];
   const rest = lines.slice(start + 1);
   const stop = rest.findIndex((l) => /^#{1,3} /.test(l));
-  return (stop < 0 ? rest : rest.slice(0, stop)).filter((l) => /^\d+\.\s/.test(l));
+  return (stop < 0 ? rest : rest.slice(0, stop)).map((l) => l.trim());
 }
+/** Numbered items under a "### …" heading, up to the next heading. */
+const subList = (lines: string[], heading: RegExp) => subBlock(lines, heading).filter((l) => /^\d+\.\s/.test(l));
 const clean = (list: string[]) => removeHaramItems(list.join("\n")).text.split("\n").filter(Boolean).map((l) => l.replace(/^\d+\.\s+/, "").trim());
 
 function parseEase(lines: string[]): EaseItem[] {
