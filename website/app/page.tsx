@@ -2,7 +2,7 @@ import Chat, { type CityGroup } from "@/components/Chat";
 import { cityGuides } from "@/lib/guide-check/content";
 
 // Country order for the city list (Bushra, 25 Nov 2026). A country shows only once it has cities in the data
-// (Algeria: data to come). Countries not named here go last, in guide order.
+// (Algeria and Jakarta added 27 Nov 2026). Countries not named here go last, in guide order.
 const COUNTRY_ORDER = [
   "Türkiye", "Malaysia", "UAE", "Morocco", "Egypt", "Indonesia", "Kazakhstan", "Tunisia", "Saudi Arabia", "Kyrgyzstan",
   "Uzbekistan", "Bahrain", "Qatar", "Jordan", "Albania", "Algeria", "Maldives", "Oman", "Azerbaijan", "Tanzania",

@@ -4,6 +4,14 @@ Newest first. Each entry: what was done, the decisions taken (and by whom), and 
 
 ---
 
+## 27 Nov 2026 (Windows PC)
+
+**Jakarta, Algiers, Oran, Constantine added to the chatbot (Bushra: "use algeria and jakarta pdf as your database and in chatbot")**
+- The 4 sections from `planning/Jakarta_Algeria_Cities_DRAFT.md` copied unchanged into `ALL-81-CITIES.md`: Algeria at the end of North Africa, Jakarta after Yogyakarta. Now 81 cities, 29 countries.
+- Vibe ratings are still Claude's estimates; the "(to verify)" marks stay in the text so the chatbot does not state them as fact.
+- Arabic names added (جاكرتا، الجزائر العاصمة، وهران، قسنطينة، الجزائر). The city list and questionnaire pick the cities up from the data; Algeria now shows in Bushra's country order.
+- "Tell me about Jakarta/Algiers/Oran/Constantine" gets the folded overview. Ingest rebuilt. Tests 105/105. Eval 98/99 (same miss: indoor skiing).
+
 ## 26 Nov 2026 (Windows PC)
 
 **Draft: Jakarta and Algeria (Algiers, Oran, Constantine)**

@@ -90,9 +90,9 @@ test("chat: unrated cities are not labelled; approved labels are given to the mo
 
 const hasIndex = existsSync(DEFAULT_INDEX_PATH);
 
-test("real index: 77 travel cities; question detection", { skip: !hasIndex && "run npm run ingest first" }, () => {
+test("real index: 81 travel cities; question detection", { skip: !hasIndex && "run npm run ingest first" }, () => {
   const cities = travelCities();
-  assert.equal(cities.length, 77);
+  assert.equal(cities.length, 81);
   const names = loadIndex().names;
   assert.equal(ratableCity(detectPlaces("Tell me about Konya", names), cities), "Konya");
   assert.equal(ratableCity(detectPlaces("Compare Bodrum and Fethiye", names), cities), null);

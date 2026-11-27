@@ -97,6 +97,14 @@ test("chat route: \"Tell me about Dubai\" gets the folded city overview from the
   assert.match(kaz, /\*\*Where to eat:\*\* Navat/);
   assert.match(kaz, /\*\*Tip:\*\*/);
   assert.doesNotMatch(kaz, /kazy|horse|kymyz/i);
+  // Jakarta and Algeria (27 Nov 2026): checked on the overview code directly (the chat route has a rate limit).
+  const { cityGuides } = await import("../guide-check/content");
+  const { cityOverview } = await import("../guide-check/overview");
+  const ov = (c: string) => cityOverview(cityGuides().find((g) => g.city === c)!);
+  assert.match(ov("Jakarta"), /Istiqlal Masjid[\s\S]*## Food\n\n- Soto Betawi/);
+  assert.match(ov("Oran"), /## Food\n\n- Karantika/);
+  assert.match(ov("Constantine"), /Sidi M'Cid[\s\S]*## Vibe/);
+  assert.match(ov("Algiers"), /\*\*Where to eat:\*\* Dar Lahlou/);
   // Arabic, or a question about one part, still goes to the model.
   assert.equal((await events(await POST(post({ messages: [{ role: "user", content: "Tell me about Dubai" }], lang: "ar" })))).some((e) => e.type === "fold"), false);
   assert.equal((await events(await POST(post({ messages: [{ role: "user", content: "Where can I ski in Dubai?" }], lang: "en" })))).some((e) => e.type === "fold"), false);
