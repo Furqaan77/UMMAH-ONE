@@ -6,6 +6,11 @@ Newest first. Each entry: what was done, the decisions taken (and by whom), and 
 
 ## 26 Nov 2026 (Windows PC)
 
+**Draft: Jakarta and Algeria (Algiers, Oran, Constantine)**
+- `planning/Jakarta_Algeria_Cities_DRAFT.md/.pdf`, same format as the other cities. Bushra confirmed the 3 Algeria cities and Jakarta as its own city (with Yogyakarta).
+- Waiting for Bushra to check the estimated Vibe ratings, the "to verify" items and the Jakarta food. Not in the chatbot yet.
+- Dubai keeps Bushra's 15 cuisines (confirmed).
+
 **Food for every city, from Bushra's PDF (Bushra: "use this")**
 - Source: `sources/Ummah_One_Expanded_Halal_Food_Companion.pdf`. Each city in `ALL-81-CITIES.md` now has "### Food in <city>": 5 dishes, "Also try", **Where to eat** and a **Tip**.
 - 76 cities added. Dubai keeps Bushra's 15 cuisines (question asked). Bali skipped (removed). Algiers, Oran and Constantine waiting: Algeria has no city data yet.
