@@ -12,6 +12,11 @@ Newest first. Each entry: what was done, the decisions taken (and by whom), and 
 - Arabic names added (جاكرتا، الجزائر العاصمة، وهران، قسنطينة، الجزائر). The city list and questionnaire pick the cities up from the data; Algeria now shows in Bushra's country order.
 - "Tell me about Jakarta/Algiers/Oran/Constantine" gets the folded overview. Ingest rebuilt. Tests 105/105. Eval 98/99 (same miss: indoor skiing).
 
+**Indoor skiing fixed; the 16 "to verify" items checked (Bushra: "do these")**
+- Dubai, Mall of the Emirates: now says Ski Dubai is "an indoor ski slope where you can ski and snowboard all year". Eval now 99/99.
+- All 16 "(to verify)" items in the 4 new cities checked by web search and rewritten with what the sources say, e.g. the Pasha Masjid in Oran is listed as closed since 2010 (see from outside); Jakarta's National Museum reopened Oct 2024, closed Mondays; Constantine cable car running since 2008; Djemila about 90 km / 2 hours each way. "Bab El Hamra" renamed to the Porte du Santon (1754); Oran's night lookout changed to sunset at Fort Santa Cruz.
+- Vibe ratings for the 4 cities are still Claude's estimates (opinion, not something a search can check).
+
 ## 26 Nov 2026 (Windows PC)
 
 **Draft: Jakarta and Algeria (Algiers, Oran, Constantine)**
