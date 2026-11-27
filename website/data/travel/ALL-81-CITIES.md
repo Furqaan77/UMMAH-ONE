@@ -24,7 +24,7 @@ Masjids are everywhere, the adhan drifts over the skyline five times a day, and 
 2. Dubai Mall — Shopping, dining, aquarium, and ice rink.
 3. Desert Safari — Best experience.
 4. The Dubai Fountain — Choreographed water, light, and music shows.
-5. Mall of the Emirates — Major shopping center home to Ski Dubai and entertainment venues.
+5. Mall of the Emirates — Major shopping center home to Ski Dubai, an indoor ski slope where you can ski and snowboard all year, and entertainment venues.
 6. Museum of the Future — Futuristic science, technology, and innovation exhibits.
 7. Dubai Frame — Sky bridge views of old and modern Dubai.
 8. Souk Madinat Jumeirah — Arabian-style marketplace with waterways and dining.
@@ -2800,7 +2800,7 @@ Few foreign tourists come, so sights are quiet and people are curious and welcom
 ### 20 Things to Do in Algiers
 
 1. Explore the Casbah, the UNESCO-listed old city, with a local guide.
-2. Visit Djamaa El Djazaïr, the largest masjid in Africa, and see the city from its minaret (to verify: minaret viewing deck open).
+2. Visit Djamaa El Djazaïr, the largest masjid in Africa, and see the city from the observation deck at the top of its minaret.
 3. Pray at the Great Masjid (Djamaa El Kebir), one of the oldest masjids in Algeria.
 4. See the Ketchaoua Masjid at the foot of the Casbah.
 5. Step inside Dar Mustapha Pacha, an Ottoman palace covered in tiles.
@@ -2855,21 +2855,21 @@ Halal food is everywhere, though some seafront restaurants serve alcohol, so ask
 2. Visit the chapel beside Fort Santa Cruz.
 3. Walk the Front de Mer (Boulevard de l'ALN) at sunset with local families.
 4. Explore Sidi El Houari, the old quarter of Spanish and Ottoman Oran.
-5. See the Pasha Masjid, built in 1797 (to verify: open to visitors).
+5. See the Pasha Masjid from outside, built in the 1790s in the old quarter (listed as closed since 2010).
 6. Visit the Abdellah Ben Salem Masjid, a former synagogue turned masjid after independence.
 7. Stand in Place du 1er Novembre, the main square, with its theatre and city hall.
 8. Learn about Algerian history at the Ahmed Zabana National Museum.
-9. See the former Sacred Heart Cathedral, now a public library (to verify: open to visitors).
+9. Step inside the former Sacred Heart Cathedral, now Oran's public library and free to enter.
 10. Walk through the Medina Jdida market for spices, fabrics and karantika.
 11. Swim at the beaches of Aïn El Turck west of the city.
 12. Spend a day at Les Andalouses beach.
-13. Visit Madagh beach, a quieter cove further west (to verify: road access).
+13. Drive about 55 km west along the coast to Madagh beach, a quieter cove (the road down is steep; small free car park).
 14. Walk in the Murdjadjo forest park above the city.
-15. See the Bab El Hamra city gate in the old town (to verify).
+15. See the Porte du Santon, a Spanish city gate from 1754 in the Sidi El Houari quarter.
 16. Watch boats come and go at the old port.
-17. Visit Santa Cruz basilica's lookout at night for the city lights (to verify: evening access).
-18. Take a day trip to Tlemcen for its Great Masjid and Mansourah ruins (about 2–3 hours by road, to verify).
-19. Visit Mostaganem's old town and beaches on a day trip (to verify).
+17. Go back up to Fort Santa Cruz for sunset over the bay; book a ride back down, as taxis are scarce after dark.
+18. Take a day trip to Tlemcen for its Great Masjid and Mansourah ruins (about 150 km, around 2 hours by road).
+19. Visit Mostaganem's old town and beaches on a day trip (about 80 km, around 1 hour by road).
 20. Taste a karantika sandwich with cumin from a street stall.
 
 ### Food in Oran
@@ -2907,8 +2907,8 @@ Constantine is one of Algeria's great centres of Islamic scholarship and Andalus
 2. Cross the Mellah Slimane footbridge into the old town.
 3. See the stone arches of the Sidi Rached bridge.
 4. Cross Bab El Kantara, the iron-arch bridge by the railway station.
-5. Drive over the modern Salah Bey viaduct (opened 2014, to verify).
-6. Ride the city cable car over the gorge (to verify: running).
+5. Drive over the modern Salah Bey viaduct (opened 2014).
+6. Ride the city cable car over the Rhumel gorge (running since 2008; check it is open on the day).
 7. Pray at the Emir Abdelkader Masjid, with its two 107 m minarets (visit outside prayer times).
 8. Visit the Ahmed Bey Palace, built 1825–1835, with its courtyards, gardens and painted tiles.
 9. Pray at the old Great Masjid (Djamaa El Kebir) in the centre.
@@ -2916,12 +2916,12 @@ Constantine is one of Algeria's great centres of Islamic scholarship and Andalus
 11. Browse Rahbet Essouf market for spices, sweets and local food.
 12. See Roman and Numidian finds at the Cirta Museum.
 13. Climb to the Monument aux Morts for a view over the whole gorge and city.
-14. Visit the Sidi Lakhdar Masjid in the old town (to verify).
+14. Visit the Sidi Lakhdar Masjid, built in 1743, with its carved marble columns.
 15. Buy jawziya walnut nougat from a local confectioner.
-16. Visit the Tomb of Massinissa (Soumaa) near El Khroub (to verify).
+16. Visit the Soumaa of El Khroub, a Numidian royal tomb on a hill about 15 km south-east, long called the Tomb of Massinissa.
 17. Take a day trip to the Roman ruins of Tiddis, a hilltop Roman town nearby.
-18. Take a day trip to Djemila, one of the best-preserved Roman towns in North Africa (UNESCO, to verify travel time).
-19. Learn about copper and brass work in the old town workshops (to verify).
+18. Take a day trip to Djemila, one of the best-preserved Roman towns in North Africa (UNESCO; about 90 km, around 2 hours each way, so plan a full day).
+19. See copper and brass work, an old Constantine craft, in the workshops that remain (the trade has shrunk; ask a local guide where to go).
 20. Watch the sunset over the gorge from one of the bridges.
 
 ### Food in Constantine
@@ -3614,7 +3614,7 @@ Indonesia has the world's largest Muslim population, so halal food is the norm, 
 ### 20 Things to Do in Jakarta
 
 1. Pray at Istiqlal Masjid, the largest masjid in Southeast Asia, and see its vast main hall.
-2. Walk through the Tunnel of Friendship that links Istiqlal Masjid with Jakarta Cathedral across the road (to verify: open to visitors).
+2. Walk through the Tunnel of Friendship that links Istiqlal Masjid with Jakarta Cathedral across the road; it is now open to the public.
 3. Ride the lift to the observation deck of Monas, the 132 m National Monument, and visit the independence museum at its base.
 4. Rent a vintage bicycle and circle Fatahillah Square in Kota Tua, the old Dutch quarter.
 5. Visit the Jakarta History Museum in the old City Hall on Fatahillah Square.
@@ -3623,7 +3623,7 @@ Indonesia has the world's largest Muslim population, so halal food is the norm, 
 8. Take a boat from Marina Ancol to the Thousand Islands for snorkelling and beaches at Pulau Tidung or Pulau Pramuka.
 9. Spend a day at Taman Mini Indonesia Indah, a park with houses and crafts from every province.
 10. Discover Betawi culture, food and crafts at the Setu Babakan Betawi Cultural Village.
-11. Visit the National Museum on Medan Merdeka for statues, ceramics and treasures from across the archipelago (to verify: opening times after the 2023 fire).
+11. Visit the National Museum on Medan Merdeka for statues, ceramics and treasures from across the archipelago; it reopened in October 2024 after the 2023 fire and is closed on Mondays.
 12. Join the Sunday morning Car Free Day around Bundaran HI and Jalan Thamrin.
 13. Shop for fabric and modest fashion at Tanah Abang, one of Southeast Asia's largest textile markets.
 14. Hunt for batik at Thamrin City or the batik floors of the big markets.
